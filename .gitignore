@@ -1,0 +1,8 @@
+# Datasets, weights, and generated training output are intentionally excluded.
+*.pt
+*.pth
+*.onnx
+datasets/
+runs/
+__pycache__/
+*.pyc

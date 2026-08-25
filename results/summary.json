@@ -1,0 +1,986 @@
+{
+  "experiment_id": "a2-visdrone-smoke-acce839-final-v2",
+  "topic": "A2",
+  "status": "success",
+  "error": null,
+  "base_ref": "acce839c7e895d6b179de7f7093fa879e237cc7b",
+  "repo_head": "acce839c7e895d6b179de7f7093fa879e237cc7b",
+  "environment": {
+    "python": "3.11.15 | packaged by conda-forge | (main, Jun 11 2026, 03:27:10) [MSC v.1944 64 bit (AMD64)]",
+    "ultralytics": "8.4.101",
+    "torch": "2.5.1+cu121",
+    "cuda_available": true,
+    "device": "NVIDIA GeForce RTX 3060 Laptop GPU"
+  },
+  "budget": {
+    "epochs": 1,
+    "batch": 2,
+    "imgsz": 320,
+    "workers": 0
+  },
+  "dataset": {
+    "dataset": "VisDrone2019-DET",
+    "source_root": "F:\\datasets\\VisDrone",
+    "seed": 20260824,
+    "counts": {
+      "train": 64,
+      "val": 32
+    },
+    "lists": {
+      "train.txt": "afa869832252b721f66bb79262d2cf965740e3fcedf0e49229484ec45883afff",
+      "val.txt": "f29170f7c067d0dfdd65c570cf04cecfbafd5a259d64d4b91d98ea96129e96d7",
+      "VisDrone-smoke.yaml": "1ce6fb8b8761e41082274b4749502894f1b4ac56a0ddfa8b0aaa6f3e40f038a9"
+    },
+    "images": {
+      "train": [
+        "0000002_00005_d_0000014.jpg",
+        "0000141_02651_d_0000021.jpg",
+        "0000142_01458_d_0000030.jpg",
+        "0000150_00430_d_0000069.jpg",
+        "0000220_00001_d_0000001.jpg",
+        "0000243_01500_d_0000004.jpg",
+        "0000256_01924_d_0000027.jpg",
+        "0000256_04356_d_0000036.jpg",
+        "0000270_02601_d_0000366.jpg",
+        "0000331_00601_d_0000844.jpg",
+        "9999937_00000_d_0000057.jpg",
+        "9999937_00000_d_0000061.jpg",
+        "9999937_00000_d_0000105.jpg",
+        "9999937_00000_d_0000199.jpg",
+        "9999940_00000_d_0000057.jpg",
+        "9999942_00000_d_0000034.jpg",
+        "9999942_00000_d_0000061.jpg",
+        "9999942_00000_d_0000161.jpg",
+        "9999943_00000_d_0000039.jpg",
+        "9999945_00000_d_0000112.jpg",
+        "9999945_00000_d_0000168.jpg",
+        "9999948_00000_d_0000008.jpg",
+        "9999951_00000_d_0000251.jpg",
+        "9999951_00000_d_0000271.jpg",
+        "9999951_00000_d_0000283.jpg",
+        "9999955_00000_d_0000062.jpg",
+        "9999955_00000_d_0000227.jpg",
+        "9999955_00000_d_0000238.jpg",
+        "9999955_00000_d_0000275.jpg",
+        "9999955_00000_d_0000363.jpg",
+        "9999955_00000_d_0000386.jpg",
+        "9999960_00000_d_0000045.jpg",
+        "9999960_00000_d_0000082.jpg",
+        "9999960_00000_d_0000086.jpg",
+        "9999962_00000_d_0000069.jpg",
+        "9999962_00000_d_0000070.jpg",
+        "9999962_00000_d_0000094.jpg",
+        "9999962_00000_d_0000101.jpg",
+        "9999964_00000_d_0000012.jpg",
+        "9999964_00000_d_0000017.jpg",
+        "9999964_00000_d_0000026.jpg",
+        "9999965_00000_d_0000023.jpg",
+        "9999965_00000_d_0000076.jpg",
+        "9999966_00000_d_0000084.jpg",
+        "9999967_00000_d_0000036.jpg",
+        "9999969_00000_d_0000035.jpg",
+        "9999975_00000_d_0000034.jpg",
+        "9999977_00000_d_0000030.jpg",
+        "9999977_00000_d_0000064.jpg",
+        "9999981_00000_d_0000066.jpg",
+        "9999982_00000_d_0000009.jpg",
+        "9999982_00000_d_0000165.jpg",
+        "9999982_00000_d_0000180.jpg",
+        "9999984_00000_d_0000075.jpg",
+        "9999985_00000_d_0000079.jpg",
+        "9999989_00000_d_0000013.jpg",
+        "9999990_00000_d_0000067.jpg",
+        "9999997_00000_d_0000034.jpg",
+        "9999997_00000_d_0000062.jpg",
+        "9999998_00126_d_0000104.jpg",
+        "9999998_00363_d_0000315.jpg",
+        "9999999_00227_d_0000096.jpg",
+        "9999999_00396_d_0000173.jpg",
+        "9999999_00873_d_0000400.jpg"
+      ],
+      "val": [
+        "0000001_05249_d_0000009.jpg",
+        "0000024_01000_d_0000014.jpg",
+        "0000069_00483_d_0000002.jpg",
+        "0000103_00180_d_0000026.jpg",
+        "0000117_01731_d_0000089.jpg",
+        "0000153_00801_d_0000001.jpg",
+        "0000162_00001_d_0000001.jpg",
+        "0000163_00001_d_0000001.jpg",
+        "0000193_01876_d_0000113.jpg",
+        "0000242_00001_d_0000001.jpg",
+        "0000242_00627_d_0000003.jpg",
+        "0000244_01000_d_0000003.jpg",
+        "0000249_01514_d_0000005.jpg",
+        "0000269_00001_d_0000348.jpg",
+        "0000271_01601_d_0000381.jpg",
+        "0000276_03001_d_0000522.jpg",
+        "0000277_04401_d_0000560.jpg",
+        "0000280_02401_d_0000624.jpg",
+        "0000280_03001_d_0000627.jpg",
+        "0000287_00001_d_0000759.jpg",
+        "0000287_01801_d_0000768.jpg",
+        "0000289_03201_d_0000827.jpg",
+        "0000289_04601_d_0000834.jpg",
+        "0000291_00601_d_0000871.jpg",
+        "0000291_01001_d_0000873.jpg",
+        "0000291_03601_d_0000886.jpg",
+        "0000330_01601_d_0000808.jpg",
+        "0000330_02001_d_0000810.jpg",
+        "0000333_02745_d_0000015.jpg",
+        "0000335_03921_d_0000063.jpg",
+        "0000346_00001_d_0000346.jpg",
+        "0000359_00393_d_0000701.jpg"
+      ]
+    }
+  },
+  "model": {
+    "path": "F:\\yolo-assets\\YOLO-Master-EsMoE-N.pt",
+    "sha256": "29e1b93f09b16c8cf7c402f36dcaafc19d4812155631ed45b769e941e4c88c32"
+  },
+  "metrics": {
+    "metrics/precision(B)": 0.0,
+    "metrics/recall(B)": 0.0,
+    "metrics/mAP50(B)": 0.0,
+    "metrics/mAP50-95(B)": 0.0,
+    "fitness": 0.0
+  },
+  "assigner": {
+    "note": "Assigner invocations include any epoch attempt repeated by the trainer recovery controller; inspect recovery_events before interpreting sample_evaluations.",
+    "aggregate": {
+      "train": {
+        "assigner_invocations": 64,
+        "sample_evaluations": 128,
+        "positive_total": 15928,
+        "positive_per_sample_mean": 124.4375,
+        "positive_per_sample_min": 6,
+        "positive_per_sample_max": 372,
+        "branches": {
+          "topk_10": {
+            "assigner_invocations": 64,
+            "sample_evaluations": 128,
+            "positive_total": 15928,
+            "positive_per_sample_mean": 124.4375,
+            "positive_per_sample_min": 6,
+            "positive_per_sample_max": 372
+          }
+        }
+      },
+      "val": {
+        "assigner_invocations": 16,
+        "sample_evaluations": 64,
+        "positive_total": 6879,
+        "positive_per_sample_mean": 107.484375,
+        "positive_per_sample_min": 6,
+        "positive_per_sample_max": 241,
+        "branches": {
+          "topk_10": {
+            "assigner_invocations": 16,
+            "sample_evaluations": 64,
+            "positive_total": 6879,
+            "positive_per_sample_mean": 107.484375,
+            "positive_per_sample_min": 6,
+            "positive_per_sample_max": 241
+          }
+        }
+      }
+    },
+    "calls": [
+      {
+        "phase": "train",
+        "topk": 10,
+        "positive_per_image": [
+          18,
+          169
+        ],
+        "positive_total": 187
+      },
+      {
+        "phase": "train",
+        "topk": 10,
+        "positive_per_image": [
+          33,
+          15
+        ],
+        "positive_total": 48
+      },
+      {
+        "phase": "train",
+        "topk": 10,
+        "positive_per_image": [
+          19,
+          82
+        ],
+        "positive_total": 101
+      },
+      {
+        "phase": "train",
+        "topk": 10,
+        "positive_per_image": [
+          80,
+          50
+        ],
+        "positive_total": 130
+      },
+      {
+        "phase": "train",
+        "topk": 10,
+        "positive_per_image": [
+          52,
+          185
+        ],
+        "positive_total": 237
+      },
+      {
+        "phase": "train",
+        "topk": 10,
+        "positive_per_image": [
+          245,
+          133
+        ],
+        "positive_total": 378
+      },
+      {
+        "phase": "train",
+        "topk": 10,
+        "positive_per_image": [
+          129,
+          53
+        ],
+        "positive_total": 182
+      },
+      {
+        "phase": "train",
+        "topk": 10,
+        "positive_per_image": [
+          135,
+          156
+        ],
+        "positive_total": 291
+      },
+      {
+        "phase": "train",
+        "topk": 10,
+        "positive_per_image": [
+          83,
+          88
+        ],
+        "positive_total": 171
+      },
+      {
+        "phase": "train",
+        "topk": 10,
+        "positive_per_image": [
+          78,
+          99
+        ],
+        "positive_total": 177
+      },
+      {
+        "phase": "train",
+        "topk": 10,
+        "positive_per_image": [
+          6,
+          282
+        ],
+        "positive_total": 288
+      },
+      {
+        "phase": "train",
+        "topk": 10,
+        "positive_per_image": [
+          109,
+          59
+        ],
+        "positive_total": 168
+      },
+      {
+        "phase": "train",
+        "topk": 10,
+        "positive_per_image": [
+          65,
+          61
+        ],
+        "positive_total": 126
+      },
+      {
+        "phase": "train",
+        "topk": 10,
+        "positive_per_image": [
+          59,
+          35
+        ],
+        "positive_total": 94
+      },
+      {
+        "phase": "train",
+        "topk": 10,
+        "positive_per_image": [
+          128,
+          65
+        ],
+        "positive_total": 193
+      },
+      {
+        "phase": "train",
+        "topk": 10,
+        "positive_per_image": [
+          121,
+          59
+        ],
+        "positive_total": 180
+      },
+      {
+        "phase": "train",
+        "topk": 10,
+        "positive_per_image": [
+          38,
+          246
+        ],
+        "positive_total": 284
+      },
+      {
+        "phase": "train",
+        "topk": 10,
+        "positive_per_image": [
+          176,
+          52
+        ],
+        "positive_total": 228
+      },
+      {
+        "phase": "train",
+        "topk": 10,
+        "positive_per_image": [
+          91,
+          336
+        ],
+        "positive_total": 427
+      },
+      {
+        "phase": "train",
+        "topk": 10,
+        "positive_per_image": [
+          70,
+          103
+        ],
+        "positive_total": 173
+      },
+      {
+        "phase": "train",
+        "topk": 10,
+        "positive_per_image": [
+          59,
+          206
+        ],
+        "positive_total": 265
+      },
+      {
+        "phase": "train",
+        "topk": 10,
+        "positive_per_image": [
+          167,
+          103
+        ],
+        "positive_total": 270
+      },
+      {
+        "phase": "train",
+        "topk": 10,
+        "positive_per_image": [
+          195,
+          242
+        ],
+        "positive_total": 437
+      },
+      {
+        "phase": "train",
+        "topk": 10,
+        "positive_per_image": [
+          63,
+          142
+        ],
+        "positive_total": 205
+      },
+      {
+        "phase": "train",
+        "topk": 10,
+        "positive_per_image": [
+          125,
+          216
+        ],
+        "positive_total": 341
+      },
+      {
+        "phase": "train",
+        "topk": 10,
+        "positive_per_image": [
+          185,
+          133
+        ],
+        "positive_total": 318
+      },
+      {
+        "phase": "train",
+        "topk": 10,
+        "positive_per_image": [
+          82,
+          180
+        ],
+        "positive_total": 262
+      },
+      {
+        "phase": "train",
+        "topk": 10,
+        "positive_per_image": [
+          107,
+          194
+        ],
+        "positive_total": 301
+      },
+      {
+        "phase": "train",
+        "topk": 10,
+        "positive_per_image": [
+          69,
+          150
+        ],
+        "positive_total": 219
+      },
+      {
+        "phase": "train",
+        "topk": 10,
+        "positive_per_image": [
+          85,
+          152
+        ],
+        "positive_total": 237
+      },
+      {
+        "phase": "train",
+        "topk": 10,
+        "positive_per_image": [
+          296,
+          113
+        ],
+        "positive_total": 409
+      },
+      {
+        "phase": "train",
+        "topk": 10,
+        "positive_per_image": [
+          149,
+          88
+        ],
+        "positive_total": 237
+      },
+      {
+        "phase": "val",
+        "topk": 10,
+        "positive_per_image": [
+          156,
+          11,
+          86,
+          10
+        ],
+        "positive_total": 263
+      },
+      {
+        "phase": "val",
+        "topk": 10,
+        "positive_per_image": [
+          110,
+          74,
+          74,
+          128
+        ],
+        "positive_total": 386
+      },
+      {
+        "phase": "val",
+        "topk": 10,
+        "positive_per_image": [
+          155,
+          87,
+          70,
+          76
+        ],
+        "positive_total": 388
+      },
+      {
+        "phase": "val",
+        "topk": 10,
+        "positive_per_image": [
+          97,
+          112,
+          64,
+          46
+        ],
+        "positive_total": 319
+      },
+      {
+        "phase": "val",
+        "topk": 10,
+        "positive_per_image": [
+          137,
+          127,
+          133,
+          92
+        ],
+        "positive_total": 489
+      },
+      {
+        "phase": "val",
+        "topk": 10,
+        "positive_per_image": [
+          77,
+          142,
+          142,
+          225
+        ],
+        "positive_total": 586
+      },
+      {
+        "phase": "val",
+        "topk": 10,
+        "positive_per_image": [
+          162,
+          238,
+          111,
+          97
+        ],
+        "positive_total": 608
+      },
+      {
+        "phase": "val",
+        "topk": 10,
+        "positive_per_image": [
+          65,
+          139,
+          180,
+          46
+        ],
+        "positive_total": 430
+      },
+      {
+        "phase": "train",
+        "topk": 10,
+        "positive_per_image": [
+          113,
+          186
+        ],
+        "positive_total": 299
+      },
+      {
+        "phase": "train",
+        "topk": 10,
+        "positive_per_image": [
+          124,
+          147
+        ],
+        "positive_total": 271
+      },
+      {
+        "phase": "train",
+        "topk": 10,
+        "positive_per_image": [
+          88,
+          110
+        ],
+        "positive_total": 198
+      },
+      {
+        "phase": "train",
+        "topk": 10,
+        "positive_per_image": [
+          165,
+          85
+        ],
+        "positive_total": 250
+      },
+      {
+        "phase": "train",
+        "topk": 10,
+        "positive_per_image": [
+          9,
+          62
+        ],
+        "positive_total": 71
+      },
+      {
+        "phase": "train",
+        "topk": 10,
+        "positive_per_image": [
+          21,
+          182
+        ],
+        "positive_total": 203
+      },
+      {
+        "phase": "train",
+        "topk": 10,
+        "positive_per_image": [
+          116,
+          69
+        ],
+        "positive_total": 185
+      },
+      {
+        "phase": "train",
+        "topk": 10,
+        "positive_per_image": [
+          175,
+          104
+        ],
+        "positive_total": 279
+      },
+      {
+        "phase": "train",
+        "topk": 10,
+        "positive_per_image": [
+          89,
+          61
+        ],
+        "positive_total": 150
+      },
+      {
+        "phase": "train",
+        "topk": 10,
+        "positive_per_image": [
+          96,
+          372
+        ],
+        "positive_total": 468
+      },
+      {
+        "phase": "train",
+        "topk": 10,
+        "positive_per_image": [
+          38,
+          202
+        ],
+        "positive_total": 240
+      },
+      {
+        "phase": "train",
+        "topk": 10,
+        "positive_per_image": [
+          39,
+          19
+        ],
+        "positive_total": 58
+      },
+      {
+        "phase": "train",
+        "topk": 10,
+        "positive_per_image": [
+          117,
+          105
+        ],
+        "positive_total": 222
+      },
+      {
+        "phase": "train",
+        "topk": 10,
+        "positive_per_image": [
+          50,
+          125
+        ],
+        "positive_total": 175
+      },
+      {
+        "phase": "train",
+        "topk": 10,
+        "positive_per_image": [
+          115,
+          104
+        ],
+        "positive_total": 219
+      },
+      {
+        "phase": "train",
+        "topk": 10,
+        "positive_per_image": [
+          191,
+          131
+        ],
+        "positive_total": 322
+      },
+      {
+        "phase": "train",
+        "topk": 10,
+        "positive_per_image": [
+          261,
+          83
+        ],
+        "positive_total": 344
+      },
+      {
+        "phase": "train",
+        "topk": 10,
+        "positive_per_image": [
+          156,
+          177
+        ],
+        "positive_total": 333
+      },
+      {
+        "phase": "train",
+        "topk": 10,
+        "positive_per_image": [
+          129,
+          240
+        ],
+        "positive_total": 369
+      },
+      {
+        "phase": "train",
+        "topk": 10,
+        "positive_per_image": [
+          118,
+          115
+        ],
+        "positive_total": 233
+      },
+      {
+        "phase": "train",
+        "topk": 10,
+        "positive_per_image": [
+          150,
+          277
+        ],
+        "positive_total": 427
+      },
+      {
+        "phase": "train",
+        "topk": 10,
+        "positive_per_image": [
+          101,
+          169
+        ],
+        "positive_total": 270
+      },
+      {
+        "phase": "train",
+        "topk": 10,
+        "positive_per_image": [
+          72,
+          251
+        ],
+        "positive_total": 323
+      },
+      {
+        "phase": "train",
+        "topk": 10,
+        "positive_per_image": [
+          123,
+          153
+        ],
+        "positive_total": 276
+      },
+      {
+        "phase": "train",
+        "topk": 10,
+        "positive_per_image": [
+          161,
+          153
+        ],
+        "positive_total": 314
+      },
+      {
+        "phase": "train",
+        "topk": 10,
+        "positive_per_image": [
+          124,
+          45
+        ],
+        "positive_total": 169
+      },
+      {
+        "phase": "train",
+        "topk": 10,
+        "positive_per_image": [
+          117,
+          140
+        ],
+        "positive_total": 257
+      },
+      {
+        "phase": "train",
+        "topk": 10,
+        "positive_per_image": [
+          107,
+          150
+        ],
+        "positive_total": 257
+      },
+      {
+        "phase": "train",
+        "topk": 10,
+        "positive_per_image": [
+          142,
+          192
+        ],
+        "positive_total": 334
+      },
+      {
+        "phase": "train",
+        "topk": 10,
+        "positive_per_image": [
+          213,
+          106
+        ],
+        "positive_total": 319
+      },
+      {
+        "phase": "train",
+        "topk": 10,
+        "positive_per_image": [
+          235,
+          92
+        ],
+        "positive_total": 327
+      },
+      {
+        "phase": "train",
+        "topk": 10,
+        "positive_per_image": [
+          155,
+          47
+        ],
+        "positive_total": 202
+      },
+      {
+        "phase": "val",
+        "topk": 10,
+        "positive_per_image": [
+          143,
+          6,
+          71,
+          10
+        ],
+        "positive_total": 230
+      },
+      {
+        "phase": "val",
+        "topk": 10,
+        "positive_per_image": [
+          109,
+          61,
+          73,
+          115
+        ],
+        "positive_total": 358
+      },
+      {
+        "phase": "val",
+        "topk": 10,
+        "positive_per_image": [
+          142,
+          89,
+          72,
+          82
+        ],
+        "positive_total": 385
+      },
+      {
+        "phase": "val",
+        "topk": 10,
+        "positive_per_image": [
+          83,
+          107,
+          83,
+          33
+        ],
+        "positive_total": 306
+      },
+      {
+        "phase": "val",
+        "topk": 10,
+        "positive_per_image": [
+          136,
+          117,
+          126,
+          99
+        ],
+        "positive_total": 478
+      },
+      {
+        "phase": "val",
+        "topk": 10,
+        "positive_per_image": [
+          71,
+          157,
+          163,
+          223
+        ],
+        "positive_total": 614
+      },
+      {
+        "phase": "val",
+        "topk": 10,
+        "positive_per_image": [
+          148,
+          241,
+          115,
+          104
+        ],
+        "positive_total": 608
+      },
+      {
+        "phase": "val",
+        "topk": 10,
+        "positive_per_image": [
+          68,
+          137,
+          182,
+          44
+        ],
+        "positive_total": 431
+      }
+    ]
+  },
+  "recovery_events": [
+    {
+      "epoch_zero_based": 0,
+      "flags_before": {
+        "loss_nonfinite": false,
+        "fitness_nonfinite": false,
+        "gradient_nonfinite": true,
+        "ema_nonfinite": false
+      },
+      "amp_before": true,
+      "diagnostic_before": null,
+      "recovered": true,
+      "amp_after": false
+    }
+  ],
+  "run_dir": "F:\\yolo-runs\\rhino-admission\\a2-visdrone-smoke-acce839-final-v2",
+  "elapsed_seconds": 28.48816752433777,
+  "limitations": [
+    "Admission smoke only: one epoch on a deterministic subset.",
+    "Small/medium/large AP requires the full P0 validation run."
+  ],
+  "artifacts": {
+    "args": {
+      "path": "F:\\yolo-runs\\rhino-admission\\a2-visdrone-smoke-acce839-final-v2\\args.yaml",
+      "bytes": 8238,
+      "sha256": "23ae31333fb8d524f5b0e93e6adf262689865011ab627cf8442f85623efff918"
+    },
+    "results": {
+      "path": "F:\\yolo-runs\\rhino-admission\\a2-visdrone-smoke-acce839-final-v2\\results.csv",
+      "bytes": 383,
+      "sha256": "26d11e2f8d2e20152dfa5e12dfef89923ae4d1dafebcce0f76c36fcd212d7f24"
+    },
+    "best_checkpoint": {
+      "path": "F:\\yolo-runs\\rhino-admission\\a2-visdrone-smoke-acce839-final-v2\\weights\\best.pt",
+      "bytes": 6057341,
+      "sha256": "5a5faa9dd9a98178dc0fe17b15779dd412dc60f09351cc3b5e1fb8259a25b82f"
+    },
+    "last_checkpoint": {
+      "path": "F:\\yolo-runs\\rhino-admission\\a2-visdrone-smoke-acce839-final-v2\\weights\\last.pt",
+      "bytes": 6057341,
+      "sha256": "3feea3066dcecaa57a83e37b62884ccc2775e4a8e92b14f28c149fa8ed611841"
+    }
+  }
+}
