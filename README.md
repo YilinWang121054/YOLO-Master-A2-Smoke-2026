@@ -106,4 +106,4 @@ python scripts/run_a2_smoke.py `
 
 ## 仓库边界
 
-本仓库只用于准入登记表的公开证据链接。smoke 过程中发现的 Windows UTF-8 validator 问题将作为独立分支和独立上游 PR 处理，不与准入证据混合。
+本仓库只用于准入登记表的公开证据链接。smoke 过程中发现的 Windows UTF-8 validator 问题已通过独立分支提交为上游 [PR #235](https://github.com/Tencent/YOLO-Master/pull/235)，修复代码不与准入证据混合。
