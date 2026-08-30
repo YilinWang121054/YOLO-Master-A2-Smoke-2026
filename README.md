@@ -1,6 +1,6 @@
 # YOLO-Master A2 Admission Smoke
 
-本仓库保存腾讯犀牛鸟开源人才计划 YOLO-Master 课题 A2 的准入 smoke 证据。内容只覆盖 A2；它不是上游功能 PR，也不包含 A3/F1 材料。
+本仓库保存腾讯犀牛鸟开源人才计划 YOLO-Master 课题 A2 的准入 smoke 和首轮 baseline 证据。内容只覆盖 A2；它不是上游功能 PR，也不包含 A3/F1 材料。
 
 ## 结论
 
@@ -107,3 +107,12 @@ python scripts/run_a2_smoke.py `
 ## 仓库边界
 
 本仓库只用于准入登记表的公开证据链接。smoke 过程中发现的 Windows UTF-8 validator 问题已通过独立分支提交为上游 [PR #235](https://github.com/Tencent/YOLO-Master/pull/235)，修复代码不与准入证据混合。
+
+## 首轮 baseline
+
+- 实验：[`a2-visdrone-baseline-r1`](docs/first-round-analysis.md)
+- 设置：647 张训练子集、548 张全量验证、3 epoch、640 输入、batch 1、FP32
+- 最终全局指标：precision 0.427、recall 0.085、mAP50 0.0558、mAP50-95 0.0264
+- 机制信号：验证 small GT 平均 3.38 个正样本且 10.98% 空分配，medium/large 平均约 9.90/10.00；该结果只支持后续 STAL 消融假设，不是 AP 提升结论
+- 原始日志、GT 级分配 CSV、summary 和 results.csv：[`results/baseline-r1/`](results/baseline-r1/)
+- 给老师确认的问题：[`teacher-questions.md`](docs/teacher-questions.md)
