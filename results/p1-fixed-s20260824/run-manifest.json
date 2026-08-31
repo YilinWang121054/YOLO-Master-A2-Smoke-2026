@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "experiment_id": "p1-fixed-s20260824",
+  "task": "A2",
+  "lifecycle_status": "running_after_epoch_1",
+  "submitted_at": "2026-09-01T02:28:17+08:00",
+  "last_observed_at": "2026-09-01T02:45:44+08:00",
+  "job_id": "5592201289d7",
+  "code": {
+    "repository": "https://github.com/YilinWang121054/YOLO-Master",
+    "branch": "feat/a2-adaptive-stal",
+    "commit": "52c2befa50706b9dff13b6e0813b19413d9f532d"
+  },
+  "data": {
+    "dataset": "VisDrone2019-DET",
+    "train_images": 6471,
+    "val_images": 548,
+    "config": "configs/VisDrone-full.yaml"
+  },
+  "parameters": {
+    "model": "YOLO-Master v0.1-N",
+    "epochs": 120,
+    "imgsz": 800,
+    "batch": 4,
+    "seed": 20260824,
+    "deterministic": true,
+    "amp": false,
+    "pretrained": false,
+    "optimizer": "auto",
+    "lora_r": 0,
+    "patience": 0,
+    "max_det": 500,
+    "mosaic": 1.0,
+    "close_mosaic": 10,
+    "stal_mode": "fixed"
+  },
+  "epoch_1_observation": {
+    "time_seconds": 972.435,
+    "train_box_loss": 4.56,
+    "train_cls_loss": 5.13646,
+    "train_dfl_loss": 3.65023,
+    "map50": 0.00604,
+    "map50_95": 0.00167,
+    "stderr_bytes": 0
+  },
+  "claim_boundary": "This is an in-progress execution record. It is not evidence for the final APs comparison."
+}
