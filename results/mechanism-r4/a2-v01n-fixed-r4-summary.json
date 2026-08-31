@@ -1,0 +1,535 @@
+{
+  "experiment_id": "a2-v01n-fixed-r4",
+  "topic": "A2",
+  "status": "success",
+  "error": null,
+  "base_ref": "0996b7da14dfaafae9d4488e960814ff19eb19ce",
+  "repo_head": "52c2befa50706b9dff13b6e0813b19413d9f532d",
+  "environment": {
+    "python": "3.11.15 | packaged by conda-forge | (main, Jun 11 2026, 03:27:10) [MSC v.1944 64 bit (AMD64)]",
+    "ultralytics": "8.4.101",
+    "torch": "2.5.1+cu121",
+    "cuda_available": true,
+    "device": "NVIDIA GeForce RTX 3060 Laptop GPU"
+  },
+  "budget": {
+    "epochs": 1,
+    "batch": 4,
+    "imgsz": 800,
+    "workers": 0,
+    "amp": false,
+    "mosaic": false
+  },
+  "stal": {
+    "mode": "fixed",
+    "candidate_scale": 1.5,
+    "min_candidates": 3,
+    "topk_small": 13,
+    "topk_medium": 10,
+    "topk_large": 10
+  },
+  "dataset": {
+    "dataset": "VisDrone2019-DET",
+    "source_root": "F:\\datasets\\VisDrone",
+    "seed": 20260824,
+    "counts": {
+      "train": 64,
+      "val": 32
+    },
+    "lists": {
+      "train.txt": "afa869832252b721f66bb79262d2cf965740e3fcedf0e49229484ec45883afff",
+      "val.txt": "f29170f7c067d0dfdd65c570cf04cecfbafd5a259d64d4b91d98ea96129e96d7",
+      "VisDrone-baseline-r1.yaml": "3304f4c1fa9eb187f97be7864a6ed17db1f61fab701db4a53fdc6ea9529b7f82"
+    },
+    "images": {
+      "train": [
+        "0000002_00005_d_0000014.jpg",
+        "0000141_02651_d_0000021.jpg",
+        "0000142_01458_d_0000030.jpg",
+        "0000150_00430_d_0000069.jpg",
+        "0000220_00001_d_0000001.jpg",
+        "0000243_01500_d_0000004.jpg",
+        "0000256_01924_d_0000027.jpg",
+        "0000256_04356_d_0000036.jpg",
+        "0000270_02601_d_0000366.jpg",
+        "0000331_00601_d_0000844.jpg",
+        "9999937_00000_d_0000057.jpg",
+        "9999937_00000_d_0000061.jpg",
+        "9999937_00000_d_0000105.jpg",
+        "9999937_00000_d_0000199.jpg",
+        "9999940_00000_d_0000057.jpg",
+        "9999942_00000_d_0000034.jpg",
+        "9999942_00000_d_0000061.jpg",
+        "9999942_00000_d_0000161.jpg",
+        "9999943_00000_d_0000039.jpg",
+        "9999945_00000_d_0000112.jpg",
+        "9999945_00000_d_0000168.jpg",
+        "9999948_00000_d_0000008.jpg",
+        "9999951_00000_d_0000251.jpg",
+        "9999951_00000_d_0000271.jpg",
+        "9999951_00000_d_0000283.jpg",
+        "9999955_00000_d_0000062.jpg",
+        "9999955_00000_d_0000227.jpg",
+        "9999955_00000_d_0000238.jpg",
+        "9999955_00000_d_0000275.jpg",
+        "9999955_00000_d_0000363.jpg",
+        "9999955_00000_d_0000386.jpg",
+        "9999960_00000_d_0000045.jpg",
+        "9999960_00000_d_0000082.jpg",
+        "9999960_00000_d_0000086.jpg",
+        "9999962_00000_d_0000069.jpg",
+        "9999962_00000_d_0000070.jpg",
+        "9999962_00000_d_0000094.jpg",
+        "9999962_00000_d_0000101.jpg",
+        "9999964_00000_d_0000012.jpg",
+        "9999964_00000_d_0000017.jpg",
+        "9999964_00000_d_0000026.jpg",
+        "9999965_00000_d_0000023.jpg",
+        "9999965_00000_d_0000076.jpg",
+        "9999966_00000_d_0000084.jpg",
+        "9999967_00000_d_0000036.jpg",
+        "9999969_00000_d_0000035.jpg",
+        "9999975_00000_d_0000034.jpg",
+        "9999977_00000_d_0000030.jpg",
+        "9999977_00000_d_0000064.jpg",
+        "9999981_00000_d_0000066.jpg",
+        "9999982_00000_d_0000009.jpg",
+        "9999982_00000_d_0000165.jpg",
+        "9999982_00000_d_0000180.jpg",
+        "9999984_00000_d_0000075.jpg",
+        "9999985_00000_d_0000079.jpg",
+        "9999989_00000_d_0000013.jpg",
+        "9999990_00000_d_0000067.jpg",
+        "9999997_00000_d_0000034.jpg",
+        "9999997_00000_d_0000062.jpg",
+        "9999998_00126_d_0000104.jpg",
+        "9999998_00363_d_0000315.jpg",
+        "9999999_00227_d_0000096.jpg",
+        "9999999_00396_d_0000173.jpg",
+        "9999999_00873_d_0000400.jpg"
+      ],
+      "val": [
+        "0000001_05249_d_0000009.jpg",
+        "0000024_01000_d_0000014.jpg",
+        "0000069_00483_d_0000002.jpg",
+        "0000103_00180_d_0000026.jpg",
+        "0000117_01731_d_0000089.jpg",
+        "0000153_00801_d_0000001.jpg",
+        "0000162_00001_d_0000001.jpg",
+        "0000163_00001_d_0000001.jpg",
+        "0000193_01876_d_0000113.jpg",
+        "0000242_00001_d_0000001.jpg",
+        "0000242_00627_d_0000003.jpg",
+        "0000244_01000_d_0000003.jpg",
+        "0000249_01514_d_0000005.jpg",
+        "0000269_00001_d_0000348.jpg",
+        "0000271_01601_d_0000381.jpg",
+        "0000276_03001_d_0000522.jpg",
+        "0000277_04401_d_0000560.jpg",
+        "0000280_02401_d_0000624.jpg",
+        "0000280_03001_d_0000627.jpg",
+        "0000287_00001_d_0000759.jpg",
+        "0000287_01801_d_0000768.jpg",
+        "0000289_03201_d_0000827.jpg",
+        "0000289_04601_d_0000834.jpg",
+        "0000291_00601_d_0000871.jpg",
+        "0000291_01001_d_0000873.jpg",
+        "0000291_03601_d_0000886.jpg",
+        "0000330_01601_d_0000808.jpg",
+        "0000330_02001_d_0000810.jpg",
+        "0000333_02745_d_0000015.jpg",
+        "0000335_03921_d_0000063.jpg",
+        "0000346_00001_d_0000346.jpg",
+        "0000359_00393_d_0000701.jpg"
+      ]
+    },
+    "area_definition": {
+      "unit": "original-image pixel squared",
+      "small": "area < 32^2",
+      "medium": "32^2 <= area < 96^2",
+      "large": "area >= 96^2",
+      "status": "COCO-style A2 project bins confirmed by the mentor; not an official VisDrone area split"
+    },
+    "area_stats": {
+      "train": {
+        "images": 64,
+        "gt_count": 3650,
+        "missing_label_files": 0,
+        "area_bins": {
+          "small": 2154,
+          "medium": 1240,
+          "large": 256
+        },
+        "area_px_min": 12.002999820000001,
+        "area_px_median": 703.989,
+        "area_px_mean": 2906.7361317929103,
+        "area_px_max": 159572.0574
+      },
+      "val": {
+        "images": 32,
+        "gt_count": 2228,
+        "missing_label_files": 0,
+        "area_bins": {
+          "small": 1447,
+          "medium": 729,
+          "large": 52
+        },
+        "area_px_min": 6.0004800000000005,
+        "area_px_median": 576.0165600539999,
+        "area_px_mean": 1429.7359424263173,
+        "area_px_max": 40447.947039984
+      }
+    }
+  },
+  "model": {
+    "path": "E:\\desktop\\保研+工作\\就业\\实践\\腾讯犀牛鸟\\YOLO-Master\\ultralytics\\cfg\\models\\master\\v0_1\\det\\yolo-master-n.yaml",
+    "sha256": "700d6af29e3eb1b02392c458b1dbc457efa9b9eda0eb0002c432246019cfed7b"
+  },
+  "metrics": {
+    "metrics/precision(B)": 0.0,
+    "metrics/recall(B)": 0.0,
+    "metrics/mAP50(B)": 0.0,
+    "metrics/mAP50-95(B)": 0.0,
+    "fitness": 0.0
+  },
+  "assigner": {
+    "aggregate": {
+      "train": {
+        "gt_count": 3393,
+        "by_area_bin": {
+          "small": {
+            "gt_count": 2859,
+            "positive_total": 10639,
+            "positive_per_gt_mean": 3.7212311997201817,
+            "positive_per_gt_min": 0,
+            "positive_per_gt_max": 10,
+            "zero_positive_gt_count": 512
+          },
+          "medium": {
+            "gt_count": 495,
+            "positive_total": 4737,
+            "positive_per_gt_mean": 9.56969696969697,
+            "positive_per_gt_min": 1,
+            "positive_per_gt_max": 10,
+            "zero_positive_gt_count": 0
+          },
+          "large": {
+            "gt_count": 39,
+            "positive_total": 390,
+            "positive_per_gt_mean": 10.0,
+            "positive_per_gt_min": 10,
+            "positive_per_gt_max": 10,
+            "zero_positive_gt_count": 0
+          }
+        },
+        "positive_total": 15766,
+        "assigner_invocations": 16
+      },
+      "val": {
+        "gt_count": 2228,
+        "by_area_bin": {
+          "small": {
+            "gt_count": 1959,
+            "positive_total": 7914,
+            "positive_per_gt_mean": 4.039816232771822,
+            "positive_per_gt_min": 0,
+            "positive_per_gt_max": 10,
+            "zero_positive_gt_count": 314
+          },
+          "medium": {
+            "gt_count": 264,
+            "positive_total": 2621,
+            "positive_per_gt_mean": 9.928030303030303,
+            "positive_per_gt_min": 8,
+            "positive_per_gt_max": 10,
+            "zero_positive_gt_count": 0
+          },
+          "large": {
+            "gt_count": 5,
+            "positive_total": 50,
+            "positive_per_gt_mean": 10.0,
+            "positive_per_gt_min": 10,
+            "positive_per_gt_max": 10,
+            "zero_positive_gt_count": 0
+          }
+        },
+        "positive_total": 10585,
+        "assigner_invocations": 4
+      }
+    },
+    "records_count": 5621,
+    "calls": [
+      {
+        "phase": "train",
+        "topk": 10,
+        "positive_per_image": [
+          38,
+          276,
+          62,
+          129
+        ],
+        "positive_total": 505
+      },
+      {
+        "phase": "train",
+        "topk": 10,
+        "positive_per_image": [
+          288,
+          545,
+          293,
+          224
+        ],
+        "positive_total": 1350
+      },
+      {
+        "phase": "train",
+        "topk": 10,
+        "positive_per_image": [
+          453,
+          601,
+          307,
+          94
+        ],
+        "positive_total": 1455
+      },
+      {
+        "phase": "train",
+        "topk": 10,
+        "positive_per_image": [
+          488,
+          63,
+          111,
+          226
+        ],
+        "positive_total": 888
+      },
+      {
+        "phase": "train",
+        "topk": 10,
+        "positive_per_image": [
+          34,
+          197,
+          267,
+          425
+        ],
+        "positive_total": 923
+      },
+      {
+        "phase": "train",
+        "topk": 10,
+        "positive_per_image": [
+          217,
+          215,
+          226,
+          50
+        ],
+        "positive_total": 708
+      },
+      {
+        "phase": "train",
+        "topk": 10,
+        "positive_per_image": [
+          237,
+          436,
+          187,
+          9
+        ],
+        "positive_total": 869
+      },
+      {
+        "phase": "train",
+        "topk": 10,
+        "positive_per_image": [
+          390,
+          292,
+          65,
+          40
+        ],
+        "positive_total": 787
+      },
+      {
+        "phase": "train",
+        "topk": 10,
+        "positive_per_image": [
+          254,
+          229,
+          110,
+          84
+        ],
+        "positive_total": 677
+      },
+      {
+        "phase": "train",
+        "topk": 10,
+        "positive_per_image": [
+          691,
+          176,
+          117,
+          201
+        ],
+        "positive_total": 1185
+      },
+      {
+        "phase": "train",
+        "topk": 10,
+        "positive_per_image": [
+          184,
+          130,
+          235,
+          132
+        ],
+        "positive_total": 681
+      },
+      {
+        "phase": "train",
+        "topk": 10,
+        "positive_per_image": [
+          220,
+          326,
+          456,
+          86
+        ],
+        "positive_total": 1088
+      },
+      {
+        "phase": "train",
+        "topk": 10,
+        "positive_per_image": [
+          287,
+          223,
+          188,
+          232
+        ],
+        "positive_total": 930
+      },
+      {
+        "phase": "train",
+        "topk": 10,
+        "positive_per_image": [
+          588,
+          428,
+          173,
+          219
+        ],
+        "positive_total": 1408
+      },
+      {
+        "phase": "train",
+        "topk": 10,
+        "positive_per_image": [
+          313,
+          282,
+          366,
+          358
+        ],
+        "positive_total": 1319
+      },
+      {
+        "phase": "train",
+        "topk": 10,
+        "positive_per_image": [
+          506,
+          59,
+          117,
+          311
+        ],
+        "positive_total": 993
+      },
+      {
+        "phase": "val",
+        "topk": 10,
+        "positive_per_image": [
+          635,
+          45,
+          203,
+          10,
+          242,
+          186,
+          189,
+          297
+        ],
+        "positive_total": 1807
+      },
+      {
+        "phase": "val",
+        "topk": 10,
+        "positive_per_image": [
+          410,
+          241,
+          192,
+          367,
+          283,
+          342,
+          220,
+          152
+        ],
+        "positive_total": 2207
+      },
+      {
+        "phase": "val",
+        "topk": 10,
+        "positive_per_image": [
+          410,
+          337,
+          369,
+          251,
+          243,
+          439,
+          538,
+          673
+        ],
+        "positive_total": 3260
+      },
+      {
+        "phase": "val",
+        "topk": 10,
+        "positive_per_image": [
+          646,
+          724,
+          372,
+          311,
+          238,
+          347,
+          511,
+          162
+        ],
+        "positive_total": 3311
+      }
+    ]
+  },
+  "recovery_events": [],
+  "run_dir": "F:\\yolo-runs\\rhino-a2\\a2-v01n-fixed-r4",
+  "elapsed_seconds": 20.07489585876465,
+  "limitations": [
+    "Exploratory subset/short run only, not P0/P1.",
+    "Area bins use mentor-confirmed COCO-style thresholds that are not official VisDrone area bins.",
+    "The current run reports global mAP; area-sliced APs require a separate evaluator or validator extension."
+  ],
+  "artifacts": {
+    "args": {
+      "path": "F:\\yolo-runs\\rhino-a2\\a2-v01n-fixed-r4\\args.yaml",
+      "bytes": 8474,
+      "sha256": "cea75baed2f250d4c9149b008ac74e19b1537ac1b7067ff7cc65e91b14a8aba4"
+    },
+    "results": {
+      "path": "F:\\yolo-runs\\rhino-a2\\a2-v01n-fixed-r4\\results.csv",
+      "bytes": 370,
+      "sha256": "025d2c662d21066e7403574db4734042b814afdd2822c6df6e7b2ca688b3ec09"
+    },
+    "best_checkpoint": {
+      "path": "F:\\yolo-runs\\rhino-a2\\a2-v01n-fixed-r4\\weights\\best.pt",
+      "bytes": 15530995,
+      "sha256": "5654f231c325fcfa2685b44230d1467cf8e1da85762b3ac578a5d408eceb60e8"
+    },
+    "last_checkpoint": {
+      "path": "F:\\yolo-runs\\rhino-a2\\a2-v01n-fixed-r4\\weights\\last.pt",
+      "bytes": 15530995,
+      "sha256": "2775689591b605cc089548811b11ea6960980295aa7ec3a10a71761769b1e41c"
+    },
+    "gt_assignment_csv": {
+      "path": "F:\\yolo-runs\\rhino-a2\\a2-v01n-fixed-r4-gt-assignment.csv",
+      "bytes": 225598,
+      "sha256": "12c6b1d7dc8873b4dd2c29bf5077653073f34b4e32ed0cf718a982b214bd2c04"
+    }
+  }
+}

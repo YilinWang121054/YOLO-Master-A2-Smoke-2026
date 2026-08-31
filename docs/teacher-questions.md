@@ -1,10 +1,37 @@
-# A2 需要向老师确认的问题
+# A2 导师确认结论与正式实验契约
 
-1. A2 正式验收对 VisDrone small/medium/large 的面积定义是什么？是否采用 COCO 的 `32^2/96^2` 像素阈值，还是使用 VisDrone 官方评测脚本中的定义？
-2. 首轮 baseline 是否必须使用完整 VisDrone 训练集和指定 epoch？当前已完成的是固定 10% 训练子集、全量验证集、3 epoch 的 exploratory baseline，能否作为机制分析前置证据？
-3. A2 所说的“STAL 式小目标自适应 IoU/标签分配”更希望优先改面积感知 `top-k`，还是优先改 `alpha/beta`、IoU 计算或 warmup？
-4. `topk`、面积阈值和 warmup 是否需要作为 `default.yaml` 的正式配置键，并在 PR 中补齐配置校验和单元测试？
-5. P0/P1 的 small AP 应以哪一个验证划分、哪个 IoU 区间和哪个 checkpoint 作为对比？是否需要报告 AP50、COCO mAP 或二者都要？
-6. 当前 RTX 3060 6 GB 在 AMP 下出现过非有限梯度，FP32 可稳定完成首轮。正式实验是否允许固定 `amp=False`，还是需要同时提交 AMP/FP32 对照？
-7. 训练启用 mosaic 时，GT 面积和正样本统计会受拼接增强影响。机制分析是否建议关闭 mosaic，或要求同时报告增强前后两套统计？
-8. 社区同步应优先创建 Issue 还是 Discussion？后续 STAL 代码是否应单独开 PR，并在 Issue 中关联实验编号和证据仓库？
+更新日期：2026-08-31
+
+## 已确认口径
+
+1. VisDrone 官方 DET 评测没有 small/medium/large 面积分档。本课题补充分析统一采用 COCO-style：small `<32^2`、medium `32^2 <= area < 96^2`、large `>=96^2`。报告必须注明这不是 VisDrone 官方定义。
+2. 评测分档按原始验证图像中的 GT bbox 面积计算；训练时 STAL 的尺度判断按数据增强、resize 后进入 assigner 的实际 bbox 面积计算。
+3. Smoke 仅要求固定子集 1 epoch。P0/P1 正式结论使用 YOLO-Master v0.1-N、完整 VisDrone train、完整 val 548、`imgsz=800`、120 epoch、`patience=0`。子集或短训只能用于参数筛选。
+4. P1 优先研究小目标候选区域扩展、最小正样本保障和面积自适应 top-k。`alpha=0.5`、`beta=6.0` 和当前 CIoU 排序保持不变，留到 P2 独立消融。
+5. 必须包含三组对照：纯 TAL、仓库现有 fixed-stride STAL、新增 adaptive STAL。重新实现现有 fixed-stride 行为不构成本轮新增贡献。
+6. 影响结果的 STAL 参数必须进入 `default.yaml` 或等价集中配置，并完成类型、范围、枚举和参数关系校验。默认配置保持当前 fixed-stride 行为，新机制显式开启。
+7. 单元测试覆盖：关闭 STAL 与纯 TAL 等价、面积阈值边界、空 GT、极小框、重叠 GT、正样本冲突，以及 FP32/AMP 下 mask、top-k、正样本数、loss 和梯度的一致性与有限性。
+8. 主指标为 `APs@[IoU=.50:.95]`，small `<32^2`，`maxDets=500`；“提升 >=1.0”表示至少 1.0 个绝对百分点。还需报告 AP、AP50、AP75、AR500、APm、APl、ARs@500、每档平均正样本数和零正样本 GT 比例。AP50s 仅作辅助诊断。
+9. Mosaic 至少做 baseline/STAL 在 on/off 下的精简交互对照。AMP 先做分配、loss 和梯度一致性检查；若出现明显漂移或短训指标差异，再补完整 AMP on/off 训练对照。
+
+## 当前落实状态
+
+- 首轮 3 epoch 实验已重新定位为 exploratory fixed-stride 机制观测，不能作为 P0/P1。
+- 已完成 `maxDets=500` 的 COCO-style 面积分档 evaluator，并使用原始 VisDrone val GT bbox 计算面积。
+- 本地 A2 分支已实现 `tal/fixed/adaptive` 三模式、集中配置和上述单元测试；默认仍为 `fixed`。
+- adaptive 原型包含：small 候选框尺度扩展、候选不足时补最近网格、small/medium/large 自适应 top-k。最小保障作用于冲突消解前；重叠 GT 在候选集合内按最高 IoU 保持一锚一 GT。
+- v0.1-N、64/32 固定子集、1 epoch、FP32、Mosaic off 三组机制 smoke 已完成。adaptive 相比 fixed 将 train/val small 零正样本比例从 `17.91%/16.03%` 降至 `5.88%/7.66%`；这只作为覆盖机制证据，不作为 APs 结论。
+- smoke 发现并修复了零 IoU 冲突可能将 anchor 分给非候选 GT 的问题；修复后单 GT 正样本数不再超过配置 top-k，并已有回归测试。
+
+## 仍建议向老师确认
+
+下面内容不会阻塞短训筛选，但正式 P0/P1 前最好锁定：
+
+1. “VisDrone 官方总体指标”是否必须调用官方 DET devkit，还是允许使用 COCO evaluator 的同一 IoU 网格、`maxDets=500`，并将 ignore region 按类别复制为 crowd 区域近似处理？两者对 ignored-region FP 的处理可能略有差异。
+2. 正式 120 epoch 是否指定固定 `batch`、优化器、初始权重/从零训练、seed 数量和 checkpoint 选择规则？仓库旧脚本使用 `batch=6`、`optimizer=auto`、从 YAML 建模，但 RTX 3060 6 GB 可能无法复用 batch 6。
+3. P1 的 `>=1.0 APs` 是否要求单 seed 达标，还是至少 2/3 seeds 的均值达标并报告离散度？建议正式结论至少报告多个 seed。
+4. Mosaic on/off 精简交互对照中，是否只要求 pure TAL 与最终 adaptive STAL 两组，还是 fixed-stride 也必须加入该交互对照？
+
+可直接发给老师：
+
+> 老师您好，六点口径已按要求落实。正式实验前还想确认四个协议细节：官方总体指标是否必须使用 VisDrone 官方 DET devkit（尤其 ignored region 处理），还是 COCO evaluator + maxDets=500 可以作为总体指标；120 epoch 是否需固定 batch、优化器、初始化、seed 数和 checkpoint 规则；APs +1.0 是按单 seed 还是多 seed 均值验收；Mosaic on/off 是否只需 pure TAL 与最终 adaptive 两组。当前短训筛选会严格标注 exploratory，不用于 P1 结论。

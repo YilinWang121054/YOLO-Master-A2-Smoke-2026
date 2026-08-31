@@ -1,0 +1,54 @@
+{
+  "protocol": {
+    "dataset": "VisDrone2019-DET val",
+    "metric_unit": "absolute percentage points",
+    "area_definition": {
+      "status": "COCO-style definition adopted by this A2 project; not an official VisDrone area split",
+      "coordinate_space": "original validation-image GT bbox pixels",
+      "small": "area < 32^2",
+      "medium": "32^2 <= area < 96^2",
+      "large": "area >= 96^2"
+    },
+    "max_dets": 500,
+    "ignore_regions": "crowd-per-class",
+    "ignore_note": "crowd-per-class approximates VisDrone class-agnostic ignored-region suppression"
+  },
+  "experiment_limitations": [
+    "Exploratory only: EsMoE-N checkpoint trained on a fixed 10% train subset for 3 epochs at imgsz=640.",
+    "This is not the formal v0.1-N, full-train, imgsz=800, 120-epoch P0/P1 protocol.",
+    "The local 43.8 MB predictions JSON and generated GT JSON are intentionally not published."
+  ],
+  "counts": {
+    "images": 548,
+    "valid_gt": 38759,
+    "ignored_regions": 1410,
+    "coco_annotations_with_crowd_copies": 52859,
+    "predictions": 266602
+  },
+  "metrics": {
+    "AP": 2.857416354590421,
+    "AP50": 5.992607935826514,
+    "AP75": 2.4539940300456684,
+    "AR1": 1.1431559670638491,
+    "AR10": 5.810091932664833,
+    "AR100": 10.365147303536501,
+    "AR500": 10.710622649425733,
+    "APs": 0.9868425476341296,
+    "APm": 5.491564725128479,
+    "APl": 12.349706559176918,
+    "ARs@500": 5.266931586082529,
+    "ARm@500": 17.425544604381788,
+    "ARl@500": 35.000405498813954,
+    "AP50s": 3.2505266573004516
+  },
+  "evaluator": {
+    "implementation": "faster-coco-eval 1.8.0",
+    "iou_thresholds": [0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95],
+    "max_dets": [1, 10, 100, 500],
+    "area_ranges": {
+      "small": [0.0, 1024.0],
+      "medium": [1024.0, 9216.0],
+      "large": [9216.0, 10000000000.0]
+    }
+  }
+}

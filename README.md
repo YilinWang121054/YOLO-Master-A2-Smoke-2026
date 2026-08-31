@@ -1,6 +1,6 @@
 # YOLO-Master A2 Admission Smoke
 
-本仓库保存腾讯犀牛鸟开源人才计划 YOLO-Master 课题 A2 的准入 smoke 和首轮 baseline 证据。内容只覆盖 A2；它不是上游功能 PR，也不包含 A3/F1 材料。
+本仓库保存腾讯犀牛鸟开源人才计划 YOLO-Master 课题 A2 的准入 smoke、首轮探索实验和初步机制分析证据。内容只覆盖 A2；它不是上游功能 PR，也不包含 A3/F1 材料。
 
 ## 结论
 
@@ -116,3 +116,17 @@ python scripts/run_a2_smoke.py `
 - 机制信号：验证 small GT 平均 3.38 个正样本且 10.98% 空分配，medium/large 平均约 9.90/10.00；该结果只支持后续 STAL 消融假设，不是 AP 提升结论
 - 原始日志、GT 级分配 CSV、summary 和 results.csv：[`results/baseline-r1/`](results/baseline-r1/)
 - 给老师确认的问题：[`teacher-questions.md`](docs/teacher-questions.md)
+
+## v0.1-N 三组机制 smoke
+
+在导师确认实验口径后，使用同一固定 64/32 子集补充了 pure TAL、上游 fixed-stride STAL 和新增 adaptive STAL 三组对照。三组均为 v0.1-N、`imgsz=800`、batch 4、1 epoch、FP32、Mosaic off、seed `20260824`，代码对应 [`52c2bef`](https://github.com/YilinWang121054/YOLO-Master/commit/52c2befa50706b9dff13b6e0813b19413d9f532d)。
+
+| 模式 | train small 平均正样本 | train small 零正样本 | val small 平均正样本 | val small 零正样本 |
+| --- | ---: | ---: | ---: | ---: |
+| pure TAL | 3.362 | 26.58% | 3.720 | 21.75% |
+| fixed STAL | 3.721 | 17.91% | 4.040 | 16.03% |
+| adaptive STAL | 6.473 | 5.88% | 6.557 | 7.66% |
+
+adaptive 相比现有 fixed STAL，train/val 的 small 平均正样本分别增加 `2.752`/`2.518`，零正样本比例分别下降 `12.03`/`8.37` 个百分点。三组 1 epoch mAP 均为 0，因此这些数字只支持“正样本覆盖改善”的初步机制判断，不支持 `APs` 提升或 P1 达标结论。
+
+完整报告见 [首轮实验与机制分析](docs/first-round-analysis.md)；三组原始日志、逐 GT CSV、summary、results.csv、固定子集清单和 SHA256 见 [`results/mechanism-r4/`](results/mechanism-r4/)。
