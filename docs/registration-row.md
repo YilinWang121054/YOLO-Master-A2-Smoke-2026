@@ -6,6 +6,8 @@
 
 Issue 待发布评论：[`github-issue-246-update.md`](github-issue-246-update.md)
 
+独立 TAL 冲突修复 PR 待创建材料：[`github-pr-tal-conflict.md`](github-pr-tal-conflict.md)
+
 最终分工：`A2`
 
 | 环境安装 | 基线/最小任务 | 复现命令 | 配置文件 | 完整日志 | 结果证据 | 设计说明 | 风险与降级 | 代码/方案链接 |
