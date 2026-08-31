@@ -130,3 +130,5 @@ python scripts/run_a2_smoke.py `
 adaptive 相比现有 fixed STAL，train/val 的 small 平均正样本分别增加 `2.752`/`2.518`，零正样本比例分别下降 `12.03`/`8.37` 个百分点。三组 1 epoch mAP 均为 0，因此这些数字只支持“正样本覆盖改善”的初步机制判断，不支持 `APs` 提升或 P1 达标结论。
 
 完整报告见 [首轮实验与机制分析](docs/first-round-analysis.md)；三组原始日志、逐 GT CSV、summary、results.csv、固定子集清单和 SHA256 见 [`results/mechanism-r4/`](results/mechanism-r4/)。
+
+社区同步已完成：[Issue #246 进展评论](https://github.com/Tencent/YOLO-Master/issues/246#issuecomment-5482342694)。smoke 中发现的 TAL 全零 IoU 候选冲突问题已作为独立 [PR #253](https://github.com/Tencent/YOLO-Master/pull/253) 提交上游。

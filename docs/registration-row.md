@@ -2,11 +2,11 @@
 
 公开仓库地址：<https://github.com/YilinWang121054/YOLO-Master-A2-Smoke-2026>
 
-社区进度 Issue：<https://github.com/Tencent/YOLO-Master/issues/246>
+社区进度 Issue 评论：<https://github.com/Tencent/YOLO-Master/issues/246#issuecomment-5482342694>
 
-Issue 待发布评论：[`github-issue-246-update.md`](github-issue-246-update.md)
+Issue 已发布评论正文备份：[`github-issue-246-update.md`](github-issue-246-update.md)
 
-独立 TAL 冲突修复 PR 待创建材料：[`github-pr-tal-conflict.md`](github-pr-tal-conflict.md)
+独立 TAL 冲突修复 PR：<https://github.com/Tencent/YOLO-Master/pull/253>；提交材料备份：[`github-pr-tal-conflict.md`](github-pr-tal-conflict.md)
 
 最终分工：`A2`
 

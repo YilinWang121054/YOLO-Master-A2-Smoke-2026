@@ -1,6 +1,10 @@
 # 独立 TAL 冲突修复 PR
 
-创建页面：<https://github.com/Tencent/YOLO-Master/compare/main...YilinWang121054:YOLO-Master:fix/tal-candidate-conflict?expand=1>
+已创建 PR：<https://github.com/Tencent/YOLO-Master/pull/253>
+
+对应 Issue 进展评论：<https://github.com/Tencent/YOLO-Master/issues/246#issuecomment-5482342694>
+
+原始创建页面：<https://github.com/Tencent/YOLO-Master/compare/main...YilinWang121054:YOLO-Master:fix/tal-candidate-conflict?expand=1>
 
 标题：
 
