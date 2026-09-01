@@ -8,7 +8,7 @@
     "old_wrapper_pid": 41676,
     "old_training_pids": [22124, 30836],
     "old_status_file": "F:/YOLO-Master/agent/logs/async-jobs/5592201289d7/status.json",
-    "cause": "undetermined from available logs",
+    "cause": "user-confirmed computer shutdown",
     "last_checkpoint_before_recovery": "F:/YOLO-Master-A2-P1/p1-fixed-s20260824/weights/last.pt",
     "last_completed_epoch_before_recovery": 55
   },
@@ -33,5 +33,5 @@
     "gpu_total_memory_mib": 6144,
     "process_alive": true
   },
-  "claim_boundary": "Recovery success is established from process, log, checkpoint, and GPU evidence. The interruption cause and final scientific outcome remain unverified."
+  "claim_boundary": "Recovery success is established from process, log, checkpoint, and GPU evidence. The interruption was caused by the user's computer shutdown; the final scientific outcome remains unverified."
 }
