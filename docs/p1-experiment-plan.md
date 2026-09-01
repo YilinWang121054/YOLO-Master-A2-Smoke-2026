@@ -66,6 +66,14 @@ Shared settings: full VisDrone train/val, 120 epoch, `imgsz=800`, `batch=4`, `wo
 - **Metric file**: `F:/YOLO-Master-A2-P1/<run>/results.csv`
 - **Metric key**: `metrics/mAP50-95(B)`; APs is computed only after external evaluation
 
+## Interruption Recovery
+
+- Every completed epoch updates `weights/last.pt`; `weights/last_healthy.pt` is the finite-state fallback, and periodic `epoch*.pt` files provide a third recovery tier.
+- `scripts/resume_p1_training.py` validates the checkpoint epoch, optimizer, scaler, dataset config, STAL mode, code commit, CSV/checkpoint alignment, and absence of an active duplicate process before resuming.
+- If `results.csv` is ahead of the latest valid checkpoint after an abrupt interruption, the script preserves a timestamped backup and removes only the uncheckpointed tail before replaying it.
+- The Windows logon task runs the recovery check once after login. It does not loop-retry a crashing job; failures are recorded under `F:/YOLO-Master-A2-P1/recovery-logs/<run>` for inspection.
+- Checkpoints, datasets, and prediction artifacts remain local and are not committed to the public evidence repository.
+
 ## Analysis Plan
 
 - **Primary metric**: COCO-style `APs@[IoU=.50:.95]`, small `<32^2` on original val GT, `maxDets=500`.
