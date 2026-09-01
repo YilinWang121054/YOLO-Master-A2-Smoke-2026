@@ -73,6 +73,7 @@ Shared settings: full VisDrone train/val, 120 epoch, `imgsz=800`, `batch=4`, `wo
 - If `results.csv` is ahead of the latest valid checkpoint after an abrupt interruption, the script preserves a timestamped backup and removes only the uncheckpointed tail before replaying it.
 - The Windows logon task runs the recovery check once after login. It does not loop-retry a crashing job; failures are recorded under `F:/YOLO-Master-A2-P1/recovery-logs/<run>` for inspection.
 - Checkpoints, datasets, and prediction artifacts remain local and are not committed to the public evidence repository.
+- After an interruption, the old async wrapper status may remain stale because its PID belongs to the pre-reboot process. The authoritative recovery evidence is the new resume log, the live training PID, and the checkpoint/CSV state; record the event without guessing the interruption cause.
 
 ## Analysis Plan
 

@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "experiment_id": "p1-fixed-s20260824",
+  "event_type": "interruption_recovered",
+  "observed_at": "2026-09-01T18:00:00+08:00",
+  "interruption": {
+    "old_async_job_id": "5592201289d7",
+    "old_wrapper_pid": 41676,
+    "old_training_pids": [22124, 30836],
+    "old_status_file": "F:/YOLO-Master/agent/logs/async-jobs/5592201289d7/status.json",
+    "cause": "undetermined from available logs",
+    "last_checkpoint_before_recovery": "F:/YOLO-Master-A2-P1/p1-fixed-s20260824/weights/last.pt",
+    "last_completed_epoch_before_recovery": 55
+  },
+  "recovery": {
+    "mechanism": "Windows logon scheduled task",
+    "task_name": "YOLO-Master-A2-P1-Fixed-Resume",
+    "started_at": "2026-09-01T17:48:32+08:00",
+    "pid": 28508,
+    "python_pid": 28664,
+    "command": "yolo train model=F:/YOLO-Master-A2-P1/p1-fixed-s20260824/weights/last.pt resume=True device=0 workers=0",
+    "resume_log": "F:/YOLO-Master-A2-P1/recovery-logs/p1-fixed-s20260824/resume-20260901-174832.stdout.log",
+    "resume_log_confirmation": "Resuming training ... from epoch 56 to 120 total epochs",
+    "checkpoint_validation": "PASS",
+    "duplicate_process_guard": "PASS",
+    "stderr_bytes_at_observation": 0
+  },
+  "current_observation": {
+    "completed_epochs_in_results_csv": 55,
+    "active_epoch": 56,
+    "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU",
+    "gpu_memory_mib": 5929,
+    "gpu_total_memory_mib": 6144,
+    "process_alive": true
+  },
+  "claim_boundary": "Recovery success is established from process, log, checkpoint, and GPU evidence. The interruption cause and final scientific outcome remain unverified."
+}
