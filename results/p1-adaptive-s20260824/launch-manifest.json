@@ -3,7 +3,7 @@
   "experiment_id": "p1-adaptive-s20260824",
   "task": "A2",
   "status": "running",
-  "started_at": "2026-09-02T09:44:00+08:00",
+  "started_at": "2026-09-02T09:46:14+08:00",
   "pid_at_launch": 29200,
   "code": {
     "repository": "https://github.com/YilinWang121054/YOLO-Master",
