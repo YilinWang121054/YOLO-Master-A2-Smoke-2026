@@ -4,14 +4,14 @@
 
 - Origin Skill: experiment-agent
 - Origin Mode: plan
-- Origin Date: 2026-09-01
-- Verification Status: UNVERIFIED
-- Version Label: code_plan_v1
+- Origin Date: 2026-09-02
+- Verification Status: MENTOR-CONFIRMED
+- Version Label: code_plan_v2
 
 ## Experiment Overview
 
 - **Title**: YOLO-Master v0.1-N VisDrone 120-epoch TAL/STAL comparison
-- **Objective**: 在导师确认的正式协议下，检验 adaptive STAL 相对仓库现有 fixed STAL 是否将 `APs@[.50:.95]` 提高至少 1.0 个绝对百分点，并以 pure TAL 作为机制对照。
+- **Objective**: 在导师确认的正式协议下，检验 adaptive STAL 相对仓库现有 fixed STAL 是否将 `APs@[.50:.95]` 提高至少 1.0 个绝对百分点，并以 pure TAL 作为机制对照。总体 AP/AP50/AP75/AR500 必须另用 VisDrone 官方 DET devkit 报告。
 - **Hypothesis**: adaptive STAL 降低 small GT 的零正样本比例，并最终改善 APs；smoke 结果只支持前半句，尚不能证明 APs 改善。
 - **Type**: training
 
@@ -30,7 +30,7 @@
 | Dataset | `configs/VisDrone-full.yaml` | Full 6471-image train and 548-image val splits |
 | Original val GT | `F:/datasets/VisDrone/VisDrone2019-DET-val/annotations` | COCO-style area evaluation source |
 
-## Controlled Matrix
+## First-seed execution matrix (current)
 
 | Order | Run | `stal_mode` | Mosaic | Purpose |
 | ---: | --- | --- | --- | --- |
@@ -40,21 +40,37 @@
 
 Shared settings: full VisDrone train/val, 120 epoch, `imgsz=800`, `batch=4`, `workers=0`, `seed=20260824`, deterministic, FP32, `patience=0`, `optimizer=auto`, `lora_r=0`, no pretrained weights, `max_det=500`, default Mosaic schedule (`mosaic=1.0`, `close_mosaic=10`).
 
-## Protocol Assumptions Pending Mentor Clarification
+## Formal 3-seed matrix (after optimizer freeze)
 
-- Use a single fixed seed for the first formal pass because only one 6 GB GPU is available; multi-seed confirmation is a later robustness stage.
-- Use `batch=4` because it is the largest smoke-verified FP32 batch at `imgsz=800` on this GPU.
-- Use repository reproduction defaults: from-scratch YAML initialization and `optimizer=auto`.
-- Select `best.pt` by the trainer's validation fitness, then run the same external evaluator for every group.
+- Run the same three modes with paired seeds `20260824`, `20260825`, and `20260826` (or an explicitly recorded replacement set), keeping batch, gradient accumulation, effective batch, data split, code commit, and frozen adaptive parameters identical.
+- The current `20260824` fixed/adaptive runs can serve as seed 1 evidence. They do not satisfy the final P1 claim until seeds 2 and 3 are completed and official/devkit plus supplementary metrics are collected for all three.
+- Use epoch-120 `last.pt` as the primary checkpoint for every seed/mode. Record `best.pt` only as a supplementary diagnostic.
+
+## Mentor-Confirmed Formal Protocol (2026-09-02)
+
+- VisDrone overall `AP/AP50/AP75/AR500` must be reported with the official DET devkit (or a strictly aligned Python implementation). The COCO evaluator is supplementary only for `APs/APm/APl`; ignore regions must follow the official filtering rule.
+- `batch=4` is allowed on the RTX 3060 6 GB. All TAL/STAL modes and all seeds must share batch, gradient accumulation, and effective batch.
+- Build from YAML with `pretrained=False`, train the full dataset for 120 epochs, and use `patience=0`. Before the formal multi-seed long runs, resolve `optimizer=auto` and explicitly freeze optimizer, lr, momentum, and weight decay.
+- Use 3 paired seeds. The primary checkpoint is `weights/last.pt` from epoch 120; `best.pt` is supplementary only.
+- P1 acceptance is mean `ΔAPs >= 1.0` absolute percentage point across the 3 seeds, with at least 2/3 seeds positive and per-seed plus mean±std reporting.
+- The default Mosaic-on matrix contains pure TAL, existing fixed-stride STAL, and adaptive STAL. The reduced Mosaic interaction compares pure TAL and final adaptive STAL only; fixed Mosaic-off is conditional.
+- The current adaptive candidate (`small_area=1024`, `medium_area=9216`, `candidate_scale=1.5`, `min_candidates=3`, `topk=13/10/10`) is frozen for the current long run. Optional screening is capped at six 20-epoch full-data configurations and one 120-epoch-equivalent budget; no tuning is allowed after formal long training begins.
+- Mandatory positive-assignment statistics are from the augmented training batches entering the assigner. Report mean, P50/P90, zero-positive ratio, and counts before/after candidate expansion and conflict resolution. Validation data is used for raw area/count distributions unless a validation assigner probe is explicitly run.
+
+## Current validity boundary
+
+- `p1-fixed-s20260824` and the in-progress `p1-adaptive-s20260824` are single-seed runs with shared `batch=4`, YAML initialization, `pretrained=False`, and the frozen adaptive candidate above. They are first-seed evidence, not the final 3-seed P1 claim.
+- The existing COCO-style fixed metrics remain supplementary until official DET-devkit scoring is run on the same predictions.
 
 ## Expected Outputs
 
 | Output | Path | Format | Success Criterion |
 | --- | --- | --- | --- |
 | Training metrics | `F:/YOLO-Master-A2-P1/<run>/results.csv` | CSV | 120 completed epoch rows |
-| Checkpoints | `F:/YOLO-Master-A2-P1/<run>/weights/{best,last}.pt` | PyTorch | Both files exist and are finite/loadable |
+| Checkpoints | `F:/YOLO-Master-A2-P1/<run>/weights/{best,last}.pt` | PyTorch | Epoch-120 `last.pt` is primary; both files are finite/loadable |
 | Raw process log | async job stdout/stderr paths in the agent manifest | text | Process exits with code 0 |
-| COCO-style metrics | evidence repository `results/p1-*/coco-style-metrics.json` | JSON | AP/AP50/AP75/AR500/APs/APm/APl/ARs@500 present |
+| Official metrics | evidence repository `results/p1-*/official-det-metrics.json` | JSON | Official AP/AP50/AP75/AR500 present |
+| COCO-style metrics | evidence repository `results/p1-*/coco-style-metrics.json` | JSON | Supplementary APs/APm/APl/ARs@500 present |
 | Assignment summary | evidence repository `results/p1-*/assignment-summary.json` | JSON | Per-area mean positives and zero-positive ratio present |
 
 ## Monitoring Configuration
@@ -77,8 +93,8 @@ Shared settings: full VisDrone train/val, 120 epoch, `imgsz=800`, `batch=4`, `wo
 
 ## Analysis Plan
 
-- **Primary metric**: COCO-style `APs@[IoU=.50:.95]`, small `<32^2` on original val GT, `maxDets=500`.
-- **Success threshold**: adaptive minus fixed `APs >= 1.0` absolute percentage point.
-- **Required reports**: VisDrone overall AP, AP50, AP75, AR500; APs, APm, APl, ARs@500; per-area mean positive count and zero-positive GT ratio.
-- **Claim boundary**: one-seed full runs can establish the requested first P1 comparison but not variance or statistical robustness.
-- **Next interaction check**: after the three primary runs, repeat fixed and adaptive with Mosaic off; do not launch the full interaction matrix before inspecting the primary result.
+- **Primary metric**: supplementary COCO-style `APs@[IoU=.50:.95]`, small `<32^2` on original val GT, `maxDets=500`.
+- **Official overall metrics**: VisDrone DET devkit `AP/AP50/AP75/AR500`; do not substitute the crowd-per-class COCO approximation.
+- **Success threshold**: 3-seed mean adaptive minus fixed `APs >= 1.0` absolute percentage point, at least 2/3 positive.
+- **Required reports**: official overall metrics; supplementary APs/APm/APl/ARs@500; per-seed and mean±std; training assigner positive statistics and zero-positive ratios.
+- **Next interaction check**: after the default Mosaic-on three-way runs, run Mosaic off for pure TAL and final adaptive STAL only. Add fixed Mosaic-off only if adaptive is unstable versus fixed or the interaction is clearly material.

@@ -1,6 +1,6 @@
 # A2 导师确认结论与正式实验契约
 
-更新日期：2026-08-31
+更新日期：2026-09-02
 
 ## 已确认口径
 
@@ -14,6 +14,15 @@
 8. 主指标为 `APs@[IoU=.50:.95]`，small `<32^2`，`maxDets=500`；“提升 >=1.0”表示至少 1.0 个绝对百分点。还需报告 AP、AP50、AP75、AR500、APm、APl、ARs@500、每档平均正样本数和零正样本 GT 比例。AP50s 仅作辅助诊断。
 9. Mosaic 至少做 baseline/STAL 在 on/off 下的精简交互对照。AMP 先做分配、loss 和梯度一致性检查；若出现明显漂移或短训指标差异，再补完整 AMP on/off 训练对照。
 
+## 2026-09-02 导师统一回复（正式执行口径）
+
+1. **总体指标**：VisDrone 总体 `AP/AP50/AP75/AR500` 必须以官方 DET devkit 为准。可以使用与官方结果严格对齐的 Python 实现，但不能用“COCO evaluator + 按类别复制 crowd 区域”替代官方总体指标。COCO evaluator 只用于补充 `APs/APm/APl`，且必须按官方规则过滤 ignore region。
+2. **120 epoch 协议**：不强制 `batch=6`；RTX 3060 6 GB 可使用 `batch=2` 或 `4`，但全部 TAL/STAL 对照和不同 seed 必须保持相同 batch、梯度累积和有效 batch。统一 YAML 建模、`pretrained=False`、完整训练 120 epoch、`patience=0`。`optimizer=auto` 只能用于确认实际选择；正式长训前必须显式冻结 optimizer、lr、momentum、weight decay 等。建议 3 个配对 seed；主结果使用第 120 轮 `last.pt`，`best.pt` 仅作补充。
+3. **P1 验收**：`APs` 提升按 3 个 seed 的平均提升计算，要求平均 `ΔAPs >= 1.0` 个绝对百分点，且至少 2/3 seed 正向，同时报告每个 seed 和 mean±std。
+4. **Mosaic 交互**：默认 Mosaic-on 主实验必须包含 pure TAL、现有 fixed-stride STAL、最终 adaptive STAL 三组。精简 Mosaic on/off 交互只需 pure TAL 与最终 adaptive STAL；fixed-stride 保留 Mosaic-on 结果即可。若 adaptive 不稳定超过 fixed，或交互效应明显，再补 fixed Mosaic-off。
+5. **adaptive 参数**：`small_area=1024`、`medium_area=9216`、`candidate_scale=1.5`、`min_candidates=3`、`topk=13/10/10` 可作为首个候选配置。允许在长训前做一次有限筛选：最多 6 个配置、每个完整数据集 20 epoch、固定单 seed，总预算不超过一次 120 epoch。以最后 5 epoch 平均 APs 为主，并要求总体 AP 不降超过 0.3、APm/APl 原则上不降超过 0.5、零正样本率不恶化。筛选后只能选一个配置进入正式 3-seed×120e；长训开始后不得调参。P1 先冻结 1024/9216，系统阈值扫描放 P2。
+6. **正样本统计**：最好同时保留训练增强后 assigner 统计和固定验证探针；P1 必交训练阶段真实进入 assigner 的统计。每档报告均值、P50/P90、零正样本比例，以及候选扩展和冲突消解前后的数量变化。原始验证集只统计面积和数量分布；未显式运行 assigner 时不得称为“验证阶段正样本统计”。
+
 ## 当前落实状态
 
 - 首轮 3 epoch 实验已重新定位为 exploratory fixed-stride 机制观测，不能作为 P0/P1。
@@ -23,7 +32,7 @@
 - v0.1-N、64/32 固定子集、1 epoch、FP32、Mosaic off 三组机制 smoke 已完成。adaptive 相比 fixed 将 train/val small 零正样本比例从 `17.91%/16.03%` 降至 `5.88%/7.66%`；这只作为覆盖机制证据，不作为 APs 结论。
 - smoke 发现并修复了零 IoU 冲突可能将 anchor 分给非候选 GT 的问题；修复后单 GT 正样本数不再超过配置 top-k，并已有回归测试。
 
-## 仍建议向老师确认
+## 历史提问（已由上述统一回复闭环）
 
 下面内容不会阻塞短训筛选，但正式 P0/P1 前最好锁定：
 
