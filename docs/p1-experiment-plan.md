@@ -51,6 +51,7 @@ Shared settings: full VisDrone train/val, 120 epoch, `imgsz=800`, `batch=4`, `wo
 - VisDrone overall `AP/AP50/AP75/AR500` must be reported with the official DET devkit (or a strictly aligned Python implementation). The COCO evaluator is supplementary only for `APs/APm/APl`; ignore regions must follow the official filtering rule.
 - `batch=4` is allowed on the RTX 3060 6 GB. All TAL/STAL modes and all seeds must share batch, gradient accumulation, and effective batch.
 - Build from YAML with `pretrained=False`, train the full dataset for 120 epochs, and use `patience=0`. Before the formal multi-seed long runs, resolve `optimizer=auto` and explicitly freeze optimizer, lr, momentum, and weight decay.
+- In the current `20260824` fixed/adaptive first-seed logs, `optimizer=auto` resolved to `MuSGD(lr=0.01, momentum=0.9)` with `weight_decay=0.0005` (and the repository's router learning-rate multiplier). Seeds 2/3 must pass the equivalent explicit optimizer settings instead of relying on auto selection.
 - Use 3 paired seeds. The primary checkpoint is `weights/last.pt` from epoch 120; `best.pt` is supplementary only.
 - P1 acceptance is mean `ΔAPs >= 1.0` absolute percentage point across the 3 seeds, with at least 2/3 seeds positive and per-seed plus mean±std reporting.
 - The default Mosaic-on matrix contains pure TAL, existing fixed-stride STAL, and adaptive STAL. The reduced Mosaic interaction compares pure TAL and final adaptive STAL only; fixed Mosaic-off is conditional.
