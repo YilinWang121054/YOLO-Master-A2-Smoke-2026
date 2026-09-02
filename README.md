@@ -136,3 +136,5 @@ adaptive 相比现有 fixed STAL，train/val 的 small 平均正样本分别增�
 ## fixed STAL 120e 对照已完成
 
 fixed 正式训练已完成 120/120 epoch，并经历一次用户确认的电脑关机后恢复。独立 COCO-style 评测结果为 `AP=21.8304`、`AP50=38.0217`、`AP75=21.6330`、`AR500=38.6685`、`APs=13.4311`、`APm=31.9709`、`APl=40.2977`、`ARs@500=29.0172`（单位均为绝对百分点）。完整指标与协议见 [`docs/p1-fixed-evaluation.md`](docs/p1-fixed-evaluation.md) 和 [`results/p1-fixed-s20260824-metrics.json`](results/p1-fixed-s20260824-metrics.json)；该对照尚不能构成 adaptive 提升结论。
+
+adaptive STAL 120e 已按同一协议启动，当前进度和恢复契约见 [`results/p1-adaptive-s20260824/launch-manifest.json`](results/p1-adaptive-s20260824/launch-manifest.json)。仍需老师确认的总体指标 devkit、seed/验收和 Mosaic 交互等问题见 [`docs/teacher-questions.md`](docs/teacher-questions.md)；这些事项在结果报告中会与已确认口径分开标注。

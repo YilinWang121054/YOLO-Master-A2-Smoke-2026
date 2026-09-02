@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "experiment_id": "p1-adaptive-s20260824",
+  "task": "A2",
+  "status": "running",
+  "started_at": "2026-09-02T09:44:00+08:00",
+  "pid_at_launch": 29200,
+  "code": {
+    "repository": "https://github.com/YilinWang121054/YOLO-Master",
+    "branch": "feat/a2-adaptive-stal",
+    "commit": "52c2befa50706b9dff13b6e0813b19413d9f532d"
+  },
+  "protocol": {
+    "dataset": "VisDrone2019-DET",
+    "train_images": 6471,
+    "val_images": 548,
+    "model": "YOLO-Master v0.1-N",
+    "imgsz": 800,
+    "batch": 4,
+    "workers": 0,
+    "epochs": 120,
+    "seed": 20260824,
+    "deterministic": true,
+    "amp": false,
+    "mosaic": true,
+    "close_mosaic": 10,
+    "max_det": 500,
+    "stal_mode": "adaptive",
+    "stal_small_area": 1024,
+    "stal_medium_area": 9216,
+    "stal_candidate_scale": 1.5,
+    "stal_min_candidates": 3,
+    "stal_topk_small": 13,
+    "stal_topk_medium": 10,
+    "stal_topk_large": 10
+  },
+  "logs": {
+    "stdout_local": "F:/YOLO-Master-A2-P1/recovery-logs/p1-adaptive-s20260824/initial-20260902.stdout.log",
+    "stderr_local": "F:/YOLO-Master-A2-P1/recovery-logs/p1-adaptive-s20260824/initial-20260902.stderr.log"
+  },
+  "recovery": {
+    "task_name": "YOLO-Master-A2-P1-Adaptive-Resume",
+    "config": "configs/p1-adaptive-s20260824.resume.json",
+    "fallback_checkpoint": "F:/YOLO-Master-A2-P1/p1-adaptive-s20260824/weights/last_healthy.pt"
+  },
+  "claim_boundary": "This is a launch/progress record only; no APs conclusion is inferred before the complete run and external evaluation."
+}
