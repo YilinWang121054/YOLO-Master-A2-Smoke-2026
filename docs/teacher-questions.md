@@ -31,7 +31,9 @@
 2. 正式 120 epoch 是否指定固定 `batch`、优化器、初始权重/从零训练、seed 数量和 checkpoint 选择规则？仓库旧脚本使用 `batch=6`、`optimizer=auto`、从 YAML 建模，但 RTX 3060 6 GB 可能无法复用 batch 6。
 3. P1 的 `>=1.0 APs` 是否要求单 seed 达标，还是至少 2/3 seeds 的均值达标并报告离散度？建议正式结论至少报告多个 seed。
 4. Mosaic on/off 精简交互对照中，是否只要求 pure TAL 与最终 adaptive STAL 两组，还是 fixed-stride 也必须加入该交互对照？
+5. 当前 adaptive 正式实验暂定 `small_area=1024`、`medium_area=9216`、`candidate_scale=1.5`、`min_candidates=3`、`topk=13/10/10`。这些参数是否应在 P1 长训前冻结，还是允许基于 smoke 的有限参数筛选；若允许，筛选预算和选择规则是什么？
+6. 每档平均正样本数和零正样本比例是否需要同时报告训练增强后 assigner 统计与原始验证集统计；若只保留一套，老师建议以验证阶段还是训练阶段为准？
 
 可直接发给老师：
 
-> 老师您好，六点口径已按要求落实。正式实验前还想确认四个协议细节：官方总体指标是否必须使用 VisDrone 官方 DET devkit（尤其 ignored region 处理），还是 COCO evaluator + maxDets=500 可以作为总体指标；120 epoch 是否需固定 batch、优化器、初始化、seed 数和 checkpoint 规则；APs +1.0 是按单 seed 还是多 seed 均值验收；Mosaic on/off 是否只需 pure TAL 与最终 adaptive 两组。当前短训筛选会严格标注 exploratory，不用于 P1 结论。
+> 老师您好，六点口径已按要求落实。正式实验前还想确认六个协议细节：官方总体指标是否必须使用 VisDrone 官方 DET devkit（尤其 ignored region 处理），还是 COCO evaluator + maxDets=500 可以作为总体指标；120 epoch 是否需固定 batch、优化器、初始化、seed 数和 checkpoint 规则；APs +1.0 是按单 seed 还是多 seed 均值验收；Mosaic on/off 是否只需 pure TAL 与最终 adaptive 两组；当前 adaptive 的面积阈值、候选扩展、最小候选和 top-k 参数是否需先冻结；正样本统计是否需同时报告训练增强后与验证阶段两套。当前短训筛选会严格标注 exploratory，不用于 P1 结论。
