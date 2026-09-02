@@ -132,3 +132,7 @@ adaptive 相比现有 fixed STAL，train/val 的 small 平均正样本分别增�
 完整报告见 [首轮实验与机制分析](docs/first-round-analysis.md)；三组原始日志、逐 GT CSV、summary、results.csv、固定子集清单和 SHA256 见 [`results/mechanism-r4/`](results/mechanism-r4/)。
 
 社区同步已完成：[Issue #246 进展评论](https://github.com/Tencent/YOLO-Master/issues/246#issuecomment-5482342694)。smoke 中发现的 TAL 全零 IoU 候选冲突问题已作为独立 [PR #253](https://github.com/Tencent/YOLO-Master/pull/253) 提交上游。
+
+## fixed STAL 120e 对照已完成
+
+fixed 正式训练已完成 120/120 epoch，并经历一次用户确认的电脑关机后恢复。独立 COCO-style 评测结果为 `AP=21.8304`、`AP50=38.0217`、`AP75=21.6330`、`AR500=38.6685`、`APs=13.4311`、`APm=31.9709`、`APl=40.2977`、`ARs@500=29.0172`（单位均为绝对百分点）。完整指标与协议见 [`docs/p1-fixed-evaluation.md`](docs/p1-fixed-evaluation.md) 和 [`results/p1-fixed-s20260824-metrics.json`](results/p1-fixed-s20260824-metrics.json)；该对照尚不能构成 adaptive 提升结论。

@@ -1,0 +1,83 @@
+{
+  "protocol": {
+    "dataset": "VisDrone2019-DET val",
+    "metric_unit": "absolute percentage points",
+    "area_definition": {
+      "status": "COCO-style definition adopted by this A2 project; not an official VisDrone area split",
+      "coordinate_space": "original validation-image GT bbox pixels",
+      "small": "area < 32^2",
+      "medium": "32^2 <= area < 96^2",
+      "large": "area >= 96^2"
+    },
+    "max_dets": 500,
+    "ignore_regions": "crowd-per-class",
+    "ignore_note": "crowd-per-class approximates VisDrone class-agnostic ignored-region suppression"
+  },
+  "counts": {
+    "images": 548,
+    "valid_gt": 38759,
+    "ignored_regions": 1410,
+    "coco_annotations": 52859,
+    "predictions": 259126
+  },
+  "metrics": {
+    "AP": 21.83040611788138,
+    "AP50": 38.021687854583675,
+    "AP75": 21.633033740571683,
+    "AR1": 9.403604050140693,
+    "AR10": 27.05226940039975,
+    "AR100": 38.324155214428316,
+    "AR500": 38.668487077138,
+    "APs": 13.43109744864587,
+    "APm": 31.970904840813258,
+    "APl": 40.2976746123229,
+    "ARs@500": 29.01724387279486,
+    "ARm@500": 52.51983133810252,
+    "ARl@500": 61.077521828440275,
+    "AP50s": 28.45000013784264
+  },
+  "evaluator": {
+    "iou_thresholds": [
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.8999999999999999,
+      0.95
+    ],
+    "max_dets": [
+      1,
+      10,
+      100,
+      500
+    ],
+    "area_ranges": {
+      "all": [
+        0,
+        10000000000.0
+      ],
+      "small": [
+        0.0,
+        1024.0
+      ],
+      "medium": [
+        1024.0,
+        9216.0
+      ],
+      "large": [
+        9216.0,
+        10000000000.0
+      ]
+    }
+  },
+  "inputs": {
+    "annotations_dir": "F:\\datasets\\VisDrone\\VisDrone2019-DET-val\\annotations",
+    "images_dir": "F:\\datasets\\VisDrone\\VisDrone2019-DET-val\\images",
+    "predictions": "F:\\YOLO-Master-A2-P1\\p1-fixed-val-json\\predictions.json",
+    "local_ground_truth_json": "F:\\YOLO-Master-A2-P1\\p1-fixed-val-json\\visdrone-val-coco-gt.local.json"
+  }
+}
