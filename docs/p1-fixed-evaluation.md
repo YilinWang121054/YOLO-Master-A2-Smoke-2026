@@ -16,14 +16,14 @@
 
 ## 独立验证
 
-训练结束后用 `best.pt` 在完整 548 张验证集重新推理，生成未上传的 `predictions.json`，再由 [`evaluate_visdrone_coco_style.py`](../scripts/evaluate_visdrone_coco_style.py) 计算 COCO-style 指标。原始验证图像 GT bbox 面积用于分档：small `<32^2`、medium `32^2 <= area < 96^2`、large `>=96^2`。这是本课题采用的补充口径，不是 VisDrone 官方面积分档。
+训练结束后用 `last.pt` 作为主 checkpoint、`best.pt` 作为补充 checkpoint，在完整 548 张验证集重新推理。VisDrone 总体指标使用官方 DET 算法的 Python 移植实现，结果见 [`official-det-metrics.json`](../results/p1-fixed-s20260824/official-det-metrics.json)。原始验证图像 GT bbox 面积分档和 APs/APm/APl 使用 [`evaluate_visdrone_coco_style.py`](../scripts/evaluate_visdrone_coco_style.py) 作为 COCO-style 补充口径；small `<32^2`、medium `32^2 <= area < 96^2`、large `>=96^2`，不是 VisDrone 官方面积分档。
 
 | 指标 | 绝对百分点 |
 | --- | ---: |
-| AP@[.50:.95] | 21.8304 |
-| AP50 | 38.0217 |
-| AP75 | 21.6330 |
-| AR500 | 38.6685 |
+| 官方 AP@[.50:.95] | 22.4055 |
+| 官方 AP50 | 40.5716 |
+| 官方 AP75 | 21.4056 |
+| 官方 AR500 | 39.0019 |
 | APs | 13.4311 |
 | APm | 31.9709 |
 | APl | 40.2977 |
@@ -31,4 +31,3 @@
 | AP50s（辅助） | 28.4500 |
 
 结构化结果见 [`p1-fixed-s20260824-metrics.json`](../results/p1-fixed-s20260824-metrics.json)。结果只建立 fixed 对照，不能单独说明 adaptive 的提升，也不能替代三组完整 P1 对照。
-
