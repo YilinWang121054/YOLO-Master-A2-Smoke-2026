@@ -59,7 +59,8 @@ def running_processes(experiment_id: str, run_dir: Path) -> list[int]:
         lowered = [item.lower() for item in cmdline]
         joined = " ".join(lowered)
         is_yolo_train = "train" in lowered and any(Path(item.strip('"')).name.lower() == "yolo.exe" for item in cmdline)
-        if is_yolo_train and any(needle in joined for needle in needles):
+        is_explicit_runner = any("run_p1_tal_seed1.py" in item for item in lowered)
+        if (is_yolo_train or is_explicit_runner) and any(needle in joined for needle in needles):
             found.append(int(process.info["pid"]))
     return sorted(set(found))
 
