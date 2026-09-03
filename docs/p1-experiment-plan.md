@@ -43,7 +43,7 @@ Shared settings: full VisDrone train/val, 120 epoch, `imgsz=800`, `batch=4`, `wo
 ## Formal 3-seed matrix (after optimizer freeze)
 
 - Run the same three modes with paired seeds `20260824`, `20260825`, and `20260826` (or an explicitly recorded replacement set), keeping batch, gradient accumulation, effective batch, data split, code commit, and frozen adaptive parameters identical.
-- The current `20260824` fixed/adaptive runs can serve as seed 1 evidence. They do not satisfy the final P1 claim until seeds 2 and 3 are completed and official/devkit plus supplementary metrics are collected for all three.
+- The current `20260824` fixed/adaptive runs can serve as seed 1 evidence. Adaptive seed 1 currently gives supplementary `APs=13.2775` versus fixed reference `APs=13.4311` (Δ=-0.1536 pp), so it is not a positive P1 result. These runs do not satisfy the final P1 claim until seeds 2 and 3 are completed and official/devkit plus supplementary metrics are collected for all three.
 - Use epoch-120 `last.pt` as the primary checkpoint for every seed/mode. Record `best.pt` only as a supplementary diagnostic.
 
 ## Mentor-Confirmed Formal Protocol (2026-09-02)
