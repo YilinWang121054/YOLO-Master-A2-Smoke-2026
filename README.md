@@ -133,8 +133,16 @@ adaptive 相比现有 fixed STAL，train/val 的 small 平均正样本分别增�
 
 社区同步已完成：[Issue #246 进展评论](https://github.com/Tencent/YOLO-Master/issues/246#issuecomment-5482342694)。smoke 中发现的 TAL 全零 IoU 候选冲突问题已作为独立 [PR #253](https://github.com/Tencent/YOLO-Master/pull/253) 提交上游。
 
-## fixed STAL 120e 对照已完成
+## P1 seed 1 三组 120e 结果已完成
 
-fixed 正式训练已完成 120/120 epoch，并经历一次用户确认的电脑关机后恢复。独立 COCO-style 评测结果为 `AP=21.8304`、`AP50=38.0217`、`AP75=21.6330`、`AR500=38.6685`、`APs=13.4311`、`APm=31.9709`、`APl=40.2977`、`ARs@500=29.0172`（单位均为绝对百分点）。完整指标与协议见 [`docs/p1-fixed-evaluation.md`](docs/p1-fixed-evaluation.md) 和 [`results/p1-fixed-s20260824-metrics.json`](results/p1-fixed-s20260824-metrics.json)；该对照尚不能构成 adaptive 提升结论。
+fixed STAL、adaptive STAL 和 pure TAL 的 seed `20260824` 均已完成完整 VisDrone train/val、120 epoch。主结果统一使用 epoch-120 `last.pt`；总体 AP/AP50/AP75/AR500 使用 VisDrone DET 官方算法 Python 移植，APs/APm/APl 使用 COCO-style 补充口径。三组统一结果见 [`docs/p1-seed1-comparison.md`](docs/p1-seed1-comparison.md) 和 [`results/p1-seed1-summary.json`](results/p1-seed1-summary.json)。
 
-adaptive STAL 120e 已按同一协议启动，当前进度和恢复契约见 [`results/p1-adaptive-s20260824/launch-manifest.json`](results/p1-adaptive-s20260824/launch-manifest.json)。仍需老师确认的总体指标 devkit、seed/验收和 Mosaic 交互等问题见 [`docs/teacher-questions.md`](docs/teacher-questions.md)；这些事项在结果报告中会与已确认口径分开标注。
+| 模式 | 官方 AP | 官方 AP50 | 官方 AP75 | 官方 AR500 | APs | APm | APl |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| fixed STAL | 22.4055 | 40.5716 | 21.4056 | 39.0019 | 13.4311 | 31.9709 | 40.2977 |
+| adaptive STAL | 22.4328 | 40.3226 | 21.4831 | 38.5890 | 13.2775 | 32.0691 | 40.6922 |
+| pure TAL | 21.5406 | 38.7786 | 20.3948 | 37.8632 | 12.4978 | 31.2384 | 39.7333 |
+
+adaptive 相对 fixed 的 seed-1 `APs` 变化为 `-0.1536` 个百分点，pure TAL 为 `-0.9333` 个百分点。该 seed 不支持“adaptive 已提升”的结论，也不能单独判定 P1 是否达标；P1 仍需 3 个配对 seed 的平均 `ΔAPs >= 1.0` 且至少 2/3 seed 为正向提升。
+
+TAL 结果证据：[`official-det-metrics.json`](results/p1-tal-s20260824/official-det-metrics.json)、[`coco-style-metrics.json`](results/p1-tal-s20260824/coco-style-metrics.json)、[`completion-manifest.json`](results/p1-tal-s20260824/completion-manifest.json)。正式训练 assigner 统计仍需补齐，不能用 `mechanism-r4` 的 1 epoch 子集统计替代。

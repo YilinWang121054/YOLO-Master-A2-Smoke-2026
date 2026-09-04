@@ -1,0 +1,40 @@
+{
+  "protocol": {
+    "dataset": "VisDrone2019-DET val",
+    "checkpoint": "F:/YOLO-Master-A2-P1/p1-tal-s20260824/weights/last.pt",
+    "checkpoint_role": "primary epoch-120 last.pt",
+    "metric_unit": "absolute percentage points",
+    "area_definition": {
+      "status": "COCO-style definition adopted by this A2 project; not an official VisDrone area split",
+      "coordinate_space": "original validation-image GT bbox pixels",
+      "small": "area < 32^2",
+      "medium": "32^2 <= area < 96^2",
+      "large": "area >= 96^2"
+    },
+    "max_dets": 500,
+    "ignore_regions": "crowd-per-class",
+    "ignore_note": "supplementary approximation only; not used for official overall metrics"
+  },
+  "metrics": {
+    "AP": 20.994255436249393,
+    "AP50": 36.45170204696313,
+    "AP75": 20.58720340231814,
+    "AR1": 9.38854509509048,
+    "AR10": 26.21169791652828,
+    "AR100": 37.26143997058238,
+    "AR500": 37.60457448151828,
+    "APs": 12.497775532964353,
+    "APm": 31.23838612013049,
+    "APl": 39.73325257298547,
+    "ARs@500": 27.639925900564155,
+    "ARm@500": 52.09746063924668,
+    "ARl@500": 57.92458437249375,
+    "AP50s": 26.59346092227049
+  },
+  "counts": {
+    "images": 548,
+    "valid_gt": 38759,
+    "ignored_regions": 1410,
+    "predictions": 255737
+  }
+}

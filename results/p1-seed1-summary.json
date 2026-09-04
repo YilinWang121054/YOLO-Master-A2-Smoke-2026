@@ -1,0 +1,37 @@
+{
+  "task": "A2",
+  "status": "seed-1-complete",
+  "metric_unit": "absolute percentage points",
+  "primary_checkpoint": "epoch-120 last.pt",
+  "comparison_metric": "COCO-style APs, small < 32^2 on original validation GT, maxDets=500",
+  "protocol_note": "AP/AP50/AP75/AR500 are from the official VisDrone DET algorithm Python port; APs/APm/APl are supplementary.",
+  "runs": {
+    "fixed": {
+      "experiment_id": "p1-fixed-s20260824",
+      "seed": 20260824,
+      "official": {"AP": 22.40546989440918, "AP50": 40.571563720703125, "AP75": 21.40557289123535, "AR500": 39.0019416809082},
+      "coco_style": {"APs": 13.43109744864587, "APm": 31.970904840813258, "APl": 40.2976746123229, "ARs@500": 29.01724387279486, "AP50s": 28.45000013784264}
+    },
+    "adaptive": {
+      "experiment_id": "p1-adaptive-s20260824",
+      "seed": 20260824,
+      "official": {"AP": 22.43283462524414, "AP50": 40.32261276245117, "AP75": 21.4831485748291, "AR500": 38.5890007019043},
+      "coco_style": {"APs": 13.27746611551447, "APm": 32.069104387078596, "APl": 40.692224172681065, "ARs@500": 28.672518736602072, "AP50s": 28.101717868033084}
+    },
+    "tal": {
+      "experiment_id": "p1-tal-s20260824",
+      "seed": 20260824,
+      "official": {"AP": 21.54059410095215, "AP50": 38.77864074707031, "AP75": 20.394845962524414, "AR500": 37.863162994384766},
+      "coco_style": {"APs": 12.497775532964353, "APm": 31.23838612013049, "APl": 39.73325257298547, "ARs@500": 27.639925900564155, "AP50s": 26.59346092227049}
+    }
+  },
+  "deltas_vs_fixed": {
+    "adaptive": {"APs": -0.1536313331314009, "APm": 0.09819954626533796, "APl": 0.3945495603581644, "ARs@500": -0.3447251356887879},
+    "tal": {"APs": -0.933321915681517, "APm": -0.7325182345476157, "APl": -0.5644220393374293, "ARs@500": -1.3773179722307048}
+  },
+  "acceptance": {
+    "rule": "mean adaptive-fixed APs >= 1.0 pp across 3 paired seeds and at least 2/3 positive",
+    "status": "not_yet_determined",
+    "reason": "Only seed 20260824 is complete; seeds 20260825 and 20260826 remain."
+  }
+}

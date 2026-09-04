@@ -1,0 +1,49 @@
+{
+  "protocol": {
+    "dataset": "VisDrone2019-DET val",
+    "images": 548,
+    "checkpoint": "F:/YOLO-Master-A2-P1/p1-tal-s20260824/weights/last.pt",
+    "checkpoint_role": "primary epoch-120 last.pt",
+    "max_dets": [1, 10, 100, 500],
+    "iou_thresholds": [0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95],
+    "overall_metric_source": "VisDrone2018-DET-toolkit official algorithm via its Python port",
+    "ignore_region_rule": "official VisDrone ignore-region filtering"
+  },
+  "metrics_percent": {
+    "AP": 21.54059410095215,
+    "AP50": 38.77864074707031,
+    "AP75": 20.394845962524414,
+    "AR1": 0.7982412576675415,
+    "AR10": 6.358637809753418,
+    "AR100": 27.88450050354004,
+    "AR500": 37.863162994384766
+  },
+  "AP_classwise_percent": [
+    17.68887710571289,
+    10.602448463439941,
+    4.803922176361084,
+    53.851829528808594,
+    29.110305786132812,
+    18.953590393066406,
+    12.448381423950195,
+    8.14239501953125,
+    34.3134651184082,
+    18.578643798828125
+  ],
+  "class_order": [
+    "pedestrian",
+    "people",
+    "bicycle",
+    "car",
+    "van",
+    "truck",
+    "tricycle",
+    "awning-tricycle",
+    "bus",
+    "motor"
+  ],
+  "notes": [
+    "MATLAB R2024a was unavailable because the local license service returned error 5201; the Python implementation is a direct port of the official toolkit algorithm.",
+    "This is the official-algorithm validation result pending an optional MATLAB cross-check on a licensed host."
+  ]
+}
