@@ -1,6 +1,6 @@
 {
   "task": "A2",
-  "status": "seed-1-complete",
+  "status": "seed-1-primary-pair-complete-tal-warmup-caveat",
   "metric_unit": "absolute percentage points",
   "primary_checkpoint": "epoch-120 last.pt",
   "comparison_metric": "COCO-style APs, small < 32^2 on original validation GT, maxDets=500",
@@ -28,6 +28,10 @@
   "deltas_vs_fixed": {
     "adaptive": {"APs": -0.1536313331314009, "APm": 0.09819954626533796, "APl": 0.3945495603581644, "ARs@500": -0.3447251356887879},
     "tal": {"APs": -0.933321915681517, "APm": -0.7325182345476157, "APl": -0.5644220393374293, "ARs@500": -1.3773179722307048}
+  },
+  "pairing_notes": {
+    "fixed_vs_adaptive": "strictly paired for seed 20260824; both used optimizer=auto resolving to MuSGD(lr=0.01, momentum=0.9) and warmup_bias_lr=0.0",
+    "tal": "not a strict three-way pair: explicit MuSGD matched lr/momentum/weight decay but retained warmup_bias_lr=0.1; rerun with warmup_bias_lr=0.0 or exclude from strict three-way aggregation"
   },
   "acceptance": {
     "rule": "mean adaptive-fixed APs >= 1.0 pp across 3 paired seeds and at least 2/3 positive",

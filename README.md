@@ -135,7 +135,7 @@ adaptive 相比现有 fixed STAL，train/val 的 small 平均正样本分别增�
 
 ## P1 seed 1 三组 120e 结果已完成
 
-fixed STAL、adaptive STAL 和 pure TAL 的 seed `20260824` 均已完成完整 VisDrone train/val、120 epoch。主结果统一使用 epoch-120 `last.pt`；总体 AP/AP50/AP75/AR500 使用 VisDrone DET 官方算法 Python 移植，APs/APm/APl 使用 COCO-style 补充口径。三组统一结果见 [`docs/p1-seed1-comparison.md`](docs/p1-seed1-comparison.md) 和 [`results/p1-seed1-summary.json`](results/p1-seed1-summary.json)。
+fixed STAL、adaptive STAL 和 pure TAL 的 seed `20260824` 均已完成完整 VisDrone train/val、120 epoch。主结果使用 epoch-120 `last.pt`；总体 AP/AP50/AP75/AR500 使用 VisDrone DET 官方算法 Python 移植，APs/APm/APl 使用 COCO-style 补充口径。结果及协议限制见 [`docs/p1-seed1-comparison.md`](docs/p1-seed1-comparison.md) 和 [`results/p1-seed1-summary.json`](results/p1-seed1-summary.json)。
 
 | 模式 | 官方 AP | 官方 AP50 | 官方 AP75 | 官方 AR500 | APs | APm | APl |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
@@ -144,5 +144,7 @@ fixed STAL、adaptive STAL 和 pure TAL 的 seed `20260824` 均已完成完整 V
 | pure TAL | 21.5406 | 38.7786 | 20.3948 | 37.8632 | 12.4978 | 31.2384 | 39.7333 |
 
 adaptive 相对 fixed 的 seed-1 `APs` 变化为 `-0.1536` 个百分点，pure TAL 为 `-0.9333` 个百分点。该 seed 不支持“adaptive 已提升”的结论，也不能单独判定 P1 是否达标；P1 仍需 3 个配对 seed 的平均 `ΔAPs >= 1.0` 且至少 2/3 seed 为正向提升。
+
+协议复核发现 pure TAL seed 1 的 `warmup_bias_lr=0.1`，而 fixed/adaptive 的 `optimizer=auto` 将其设为 `0.0`。因此 fixed-adaptive 主比较仍为同协议配对，但 pure TAL 当前只作初步对照；后续实验已统一显式冻结 `warmup_bias_lr=0.0`。
 
 TAL 结果证据：[`official-det-metrics.json`](results/p1-tal-s20260824/official-det-metrics.json)、[`coco-style-metrics.json`](results/p1-tal-s20260824/coco-style-metrics.json)、[`completion-manifest.json`](results/p1-tal-s20260824/completion-manifest.json)。正式训练 assigner 统计仍需补齐，不能用 `mechanism-r4` 的 1 epoch 子集统计替代。

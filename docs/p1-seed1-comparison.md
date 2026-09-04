@@ -4,7 +4,7 @@
 
 ## 状态
 
-`p1-fixed-s20260824`、`p1-adaptive-s20260824`、`p1-tal-s20260824` 均已完成完整 VisDrone train/val、120 epoch。三组主结果统一使用 epoch-120 `last.pt`；`best.pt` 仅作为补充。
+`p1-fixed-s20260824`、`p1-adaptive-s20260824`、`p1-tal-s20260824` 均已完成完整 VisDrone train/val、120 epoch。三组主结果使用 epoch-120 `last.pt`；`best.pt` 仅作为补充。
 
 总体 AP/AP50/AP75/AR500 使用 VisDrone DET 官方算法的 Python 移植实现；APs/APm/APl 使用本课题采用的 COCO-style 补充口径（small `<32^2`、medium `32^2 <= area < 96^2`、large `>=96^2`，原始验证图像 GT bbox，maxDets=500）。COCO-style 结果不替代官方总体指标。
 
@@ -18,9 +18,12 @@
 
 相对 fixed，adaptive seed 1 的 APs 变化为 **-0.1536 个百分点**；pure TAL 为 **-0.9333 个百分点**。因此 seed 1 不支持“adaptive 已提升”的结论，也不能判定 P1 最终是否达标。
 
+协议复核发现 fixed/adaptive 的 `optimizer=auto` 将实际优化器解析为 `MuSGD(lr=0.01, momentum=0.9)`，并额外将 `warmup_bias_lr` 设为 `0.0`；本次 pure TAL 虽显式使用相同 MuSGD、lr、momentum 和 weight decay，但 `warmup_bias_lr=0.1`。因此 fixed-adaptive 的主比较仍是同协议配对，pure TAL seed 1 只能作为初步对照，不能作为严格三组配对结果。后续运行统一显式冻结 `warmup_epochs=3.0`、`warmup_momentum=0.8`、`warmup_bias_lr=0.0`。
+
 ## 验收边界与后续
 
 - P1 需要 3 个配对 seed 的 adaptive-fixed APs 平均提升至少 1.0 个绝对百分点，且至少 2/3 个 seed 为正向提升；目前只有 seed 1。
+- pure TAL seed 1 需要按冻结后的 warmup 参数重跑，或明确排除在严格三组统计之外。
 - 仍需完成 seed 2、seed 3 的 fixed/adaptive/TAL 三组训练与评测。
 - 正式报告还需补齐训练增强后实际进入 assigner 的正样本统计（均值、P50/P90、零正样本比例，以及候选扩展/冲突消解前后数量）。已有 `mechanism-r4` 是 1 epoch 子集机制证据，不能替代正式长训统计。
 - Mosaic-off 精简交互实验应在默认 Mosaic-on 三组完成后进行，只比较 pure TAL 与最终 adaptive STAL；若交互或稳定性显示必要，再补 fixed Mosaic-off。
