@@ -1,0 +1,29 @@
+{
+  "experiment_id": "p1-fixed-s20260825",
+  "status": "complete",
+  "dataset": "VisDrone2019-DET val",
+  "images": 548,
+  "checkpoint_role": "epoch-120 last.pt (main result)",
+  "protocol": {
+    "imgsz": 800,
+    "max_det": 500,
+    "precision": "FP32",
+    "official_overall_evaluator": "VisDrone2018-DET-toolkit Python port",
+    "supplementary_area_definition": {
+      "small": "area < 32^2",
+      "medium": "32^2 <= area < 96^2",
+      "large": "area >= 96^2",
+      "note": "COCO-style definition adopted by this A2 project; not an official VisDrone area split"
+    }
+  },
+  "artifacts": {
+    "official_metrics": "official-det-metrics.json",
+    "coco_style_metrics": "coco-style-metrics.json",
+    "conversion_manifest": "conversion-manifest.json"
+  },
+  "local_source_paths": {
+    "predictions": "F:\\YOLO-Master-A2-P1\\p1-fixed-val-json-s20260825\\predictions.json",
+    "official_det": "F:\\YOLO-Master-A2-P1\\p1-fixed-official-det-s20260825",
+    "training_run": "F:\\YOLO-Master-A2-P1\\p1-fixed-s20260825"
+  }
+}
