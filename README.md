@@ -148,3 +148,10 @@ adaptive 相对 fixed 的 seed-1 `APs` 变化为 `-0.1536` 个百分点，pure T
 协议复核发现 pure TAL seed 1 的 `warmup_bias_lr=0.1`，而 fixed/adaptive 的 `optimizer=auto` 将其设为 `0.0`。因此 fixed-adaptive 主比较仍为同协议配对，但 pure TAL 当前只作初步对照；后续实验已统一显式冻结 `warmup_bias_lr=0.0`。
 
 TAL 结果证据：[`official-det-metrics.json`](results/p1-tal-s20260824/official-det-metrics.json)、[`coco-style-metrics.json`](results/p1-tal-s20260824/coco-style-metrics.json)、[`completion-manifest.json`](results/p1-tal-s20260824/completion-manifest.json)。正式训练 assigner 统计仍需补齐，不能用 `mechanism-r4` 的 1 epoch 子集统计替代。
+
+## P1 seed 2 进度（2026-09-05）
+
+- fixed STAL seed `20260825` 已完成 120 epoch，并完成官方 DET 与 COCO-style 补充评测：[`results/p1-fixed-s20260825/`](results/p1-fixed-s20260825/)。
+- adaptive STAL seed `20260825` 已启动，使用同一冻结协议；当前训练在本机后台运行。
+- pure TAL seed `20260825` 已排队，将在 adaptive 完成后自动启动，避免 GPU 竞争。
+- 两组 seed 2 均配置了登录后自动恢复和健康 checkpoint 校验；链式脚本见 [`scripts/chain_p1_seed2.py`](scripts/chain_p1_seed2.py)。
