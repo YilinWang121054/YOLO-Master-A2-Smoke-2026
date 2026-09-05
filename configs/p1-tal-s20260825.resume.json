@@ -7,6 +7,7 @@
   "expected_git_commit": "52c2befa50706b9dff13b6e0813b19413d9f532d",
   "expected_epochs": 120,
   "expected_stal_mode": "tal",
+  "allow_bootstrap_checkpoint": true,
   "recovery_log_dir": "F:\\YOLO-Master-A2-P1\\recovery-logs\\p1-tal-s20260825",
   "resume_overrides": {
     "device": "0",

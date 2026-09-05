@@ -97,7 +97,8 @@ def inspect_checkpoint(path: Path, config: dict[str, Any]) -> dict[str, Any]:
         raise TypeError("checkpoint root is not a dictionary")
     epoch = checkpoint.get("epoch")
     train_args = checkpoint.get("train_args") or {}
-    if not isinstance(epoch, int) or not 0 <= epoch < int(config["expected_epochs"]):
+    minimum_epoch = -1 if config.get("allow_bootstrap_checkpoint", False) else 0
+    if not isinstance(epoch, int) or not minimum_epoch <= epoch < int(config["expected_epochs"]):
         raise ValueError(f"invalid checkpoint epoch: {epoch!r}")
     if checkpoint.get("optimizer") is None:
         raise ValueError("optimizer state is missing")
@@ -116,6 +117,7 @@ def inspect_checkpoint(path: Path, config: dict[str, Any]) -> dict[str, Any]:
         "path": str(path),
         "epoch_zero_based": epoch,
         "completed_epochs": epoch + 1,
+        "bootstrap_checkpoint": epoch == -1,
         "optimizer_present": True,
         "scaler_present": True,
         "stal_mode": train_args.get("stal_mode"),
