@@ -19,6 +19,7 @@ Public evidence:
 - [fixed seed 2 artifacts](https://github.com/YilinWang121054/YOLO-Master-A2-Smoke-2026/tree/main/results/p1-fixed-s20260825)
 - [adaptive seed 2 artifacts](https://github.com/YilinWang121054/YOLO-Master-A2-Smoke-2026/tree/main/results/p1-adaptive-s20260825)
 - [pure TAL seed 2 artifacts](https://github.com/YilinWang121054/YOLO-Master-A2-Smoke-2026/tree/main/results/p1-tal-s20260825)
+- [seed 3 launch manifest](https://github.com/YilinWang121054/YOLO-Master-A2-Smoke-2026/blob/main/docs/p1-seed3-launch.md)
 - [raw logs](https://github.com/YilinWang121054/YOLO-Master-A2-Smoke-2026/tree/main/logs)
 
 The older `coco-style-metrics.json` files are retained as `crowd-per-class` approximations for auditability only; they are not used for the formal APs comparison.
