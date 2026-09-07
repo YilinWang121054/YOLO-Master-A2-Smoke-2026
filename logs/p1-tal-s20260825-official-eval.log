@@ -1,0 +1,55 @@
+
+evaluating object category 1/10...
+evaluating object category 2/10...
+evaluating object category 3/10...
+evaluating object category 4/10...
+evaluating object category 5/10...
+evaluating object category 6/10...
+evaluating object category 7/10...
+evaluating object category 8/10...
+evaluating object category 9/10...
+evaluating object category 10/10...
+Evaluation completed. The performance of the detector is presented as follows.
+{
+  "AP": 21.513935089111328,
+  "AP50": 38.695255279541016,
+  "AP75": 20.347904205322266,
+  "AR1": 0.8509888648986816,
+  "AR10": 6.648694038391113,
+  "AR100": 28.10557746887207,
+  "AR500": 37.99892807006836,
+  "AP_classwise": [
+    17.485322952270508,
+    10.373830795288086,
+    4.404904365539551,
+    54.08405303955078,
+    29.577747344970703,
+    19.35532569885254,
+    12.44179916381836,
+    7.809345245361328,
+    34.406883239746094,
+    18.37616729736328
+  ],
+  "dataset_dir": "F:\\datasets\\VisDrone\\VisDrone2019-DET-val",
+  "results_dir": "F:\\YOLO-Master-A2-P1\\p1-tal-s20260825-official-det",
+  "images": 548,
+  "evaluator": "VisDrone2018-DET-toolkit Python port (official algorithm)",
+  "max_dets": [
+    1,
+    10,
+    100,
+    500
+  ],
+  "iou_thresholds": [
+    0.5,
+    0.55,
+    0.6,
+    0.65,
+    0.7,
+    0.75,
+    0.8,
+    0.85,
+    0.9,
+    0.95
+  ]
+}

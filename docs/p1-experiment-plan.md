@@ -71,7 +71,7 @@ Shared settings: full VisDrone train/val, 120 epoch, `imgsz=800`, `batch=4`, `wo
 | Checkpoints | `F:/YOLO-Master-A2-P1/<run>/weights/{best,last}.pt` | PyTorch | Epoch-120 `last.pt` is primary; both files are finite/loadable |
 | Raw process log | async job stdout/stderr paths in the agent manifest | text | Process exits with code 0 |
 | Official metrics | evidence repository `results/p1-*/official-det-metrics.json` | JSON | Official AP/AP50/AP75/AR500 present |
-| COCO-style metrics | evidence repository `results/p1-*/coco-style-metrics.json` | JSON | Supplementary APs/APm/APl/ARs@500 present |
+| COCO-style metrics | evidence repository `results/p1-*/coco-style-official-filter-metrics.json` (legacy `coco-style-metrics.json` retained for audit) | JSON | Supplementary APs/APm/APl/ARs@500 present after official ignore-region filtering |
 | Assignment summary | evidence repository `results/p1-*/assignment-summary.json` | JSON | Per-area mean positives and zero-positive ratio present |
 
 ## Monitoring Configuration

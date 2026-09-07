@@ -30,3 +30,21 @@ repository.
 `official-det-metrics.json` is the authoritative overall result. The
 COCO-style file is supplementary and must not be described as an official
 VisDrone area split.
+
+## Official ignore-region filtered supplementary view
+
+For the formal A2 area analysis, `coco-style-official-filter-metrics.json`
+applies the VisDrone DET toolkit's 50% pixel-coverage ignored-region filter to
+both valid GT boxes and detections before COCO evaluation. It reports:
+
+| Metric | Value (percentage points) |
+| --- | ---: |
+| COCO-style APs | 13.0893 |
+| COCO-style APm | 31.0922 |
+| COCO-style APl | 39.4663 |
+| COCO-style ARs@500 | 28.4870 |
+| COCO-style AP50s (diagnostic) | 27.7252 |
+
+The older `coco-style-metrics.json` is retained as a legacy
+`crowd-per-class` approximation for auditability; it is not used for the
+formal seed comparison.

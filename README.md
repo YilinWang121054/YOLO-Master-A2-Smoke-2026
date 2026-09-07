@@ -135,23 +135,30 @@ adaptive 相比现有 fixed STAL，train/val 的 small 平均正样本分别增�
 
 ## P1 seed 1 三组 120e 结果已完成
 
-fixed STAL、adaptive STAL 和 pure TAL 的 seed `20260824` 均已完成完整 VisDrone train/val、120 epoch。主结果使用 epoch-120 `last.pt`；总体 AP/AP50/AP75/AR500 使用 VisDrone DET 官方算法 Python 移植，APs/APm/APl 使用 COCO-style 补充口径。结果及协议限制见 [`docs/p1-seed1-comparison.md`](docs/p1-seed1-comparison.md) 和 [`results/p1-seed1-summary.json`](results/p1-seed1-summary.json)。
+fixed STAL、adaptive STAL 和 pure TAL 的 seed `20260824` 均已完成完整 VisDrone train/val、120 epoch。主结果使用 epoch-120 `last.pt`；总体 AP/AP50/AP75/AR500 使用 VisDrone DET 官方算法 Python 移植，APs/APm/APl 使用经过官方 ignore-region 过滤的 COCO-style 补充口径。结果及协议限制见 [`docs/p1-seed1-comparison.md`](docs/p1-seed1-comparison.md) 和 [`results/p1-seed1-summary.json`](results/p1-seed1-summary.json)。
 
 | 模式 | 官方 AP | 官方 AP50 | 官方 AP75 | 官方 AR500 | APs | APm | APl |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| fixed STAL | 22.4055 | 40.5716 | 21.4056 | 39.0019 | 13.4311 | 31.9709 | 40.2977 |
-| adaptive STAL | 22.4328 | 40.3226 | 21.4831 | 38.5890 | 13.2775 | 32.0691 | 40.6922 |
-| pure TAL | 21.5406 | 38.7786 | 20.3948 | 37.8632 | 12.4978 | 31.2384 | 39.7333 |
+| fixed STAL | 22.4055 | 40.5716 | 21.4056 | 39.0019 | 13.5427 | 31.9938 | 39.4703 |
+| adaptive STAL | 22.4328 | 40.3226 | 21.4831 | 38.5890 | 13.3790 | 32.0548 | 40.5131 |
+| pure TAL | 21.5406 | 38.7786 | 20.3948 | 37.8632 | 12.6167 | 31.2153 | 39.5915 |
 
-adaptive 相对 fixed 的 seed-1 `APs` 变化为 `-0.1536` 个百分点，pure TAL 为 `-0.9333` 个百分点。该 seed 不支持“adaptive 已提升”的结论，也不能单独判定 P1 是否达标；P1 仍需 3 个配对 seed 的平均 `ΔAPs >= 1.0` 且至少 2/3 seed 为正向提升。
+adaptive 相对 fixed 的 seed-1 正式 `APs` 变化为 `-0.1637` 个百分点，pure TAL 为 `-0.9260` 个百分点。该 seed 不支持“adaptive 已提升”的结论，也不能单独判定 P1 是否达标；P1 仍需 3 个配对 seed 的平均 `ΔAPs >= 1.0` 且至少 2/3 seed 为正向提升。旧的 `coco-style-metrics.json` 仍保留 crowd-per-class 近似值，仅用于审计。
 
 协议复核发现 pure TAL seed 1 的 `warmup_bias_lr=0.1`，而 fixed/adaptive 的 `optimizer=auto` 将其设为 `0.0`。因此 fixed-adaptive 主比较仍为同协议配对，但 pure TAL 当前只作初步对照；后续实验已统一显式冻结 `warmup_bias_lr=0.0`。
 
-TAL 结果证据：[`official-det-metrics.json`](results/p1-tal-s20260824/official-det-metrics.json)、[`coco-style-metrics.json`](results/p1-tal-s20260824/coco-style-metrics.json)、[`completion-manifest.json`](results/p1-tal-s20260824/completion-manifest.json)。正式训练 assigner 统计仍需补齐，不能用 `mechanism-r4` 的 1 epoch 子集统计替代。
+TAL 结果证据：[`official-det-metrics.json`](results/p1-tal-s20260824/official-det-metrics.json)、正式 [`coco-style-official-filter-metrics.json`](results/p1-tal-s20260824/coco-style-official-filter-metrics.json)、[`completion-manifest.json`](results/p1-tal-s20260824/completion-manifest.json)。旧的 [`coco-style-metrics.json`](results/p1-tal-s20260824/coco-style-metrics.json) 仅作为 `crowd-per-class` 审计近似保留。正式训练 assigner 统计仍需补齐，不能用 `mechanism-r4` 的 1 epoch 子集统计替代。
 
-## P1 seed 2 进度（2026-09-05）
+## P1 seed 2 三组 120e 结果已完成
 
-- fixed STAL seed `20260825` 已完成 120 epoch，并完成官方 DET 与 COCO-style 补充评测：[`results/p1-fixed-s20260825/`](results/p1-fixed-s20260825/)。
-- adaptive STAL seed `20260825` 已启动，使用同一冻结协议；当前训练在本机后台运行。
-- pure TAL seed `20260825` 已排队，将在 adaptive 完成后自动启动，避免 GPU 竞争。
-- 两组 seed 2 均配置了登录后自动恢复和健康 checkpoint 校验；链式脚本见 [`scripts/chain_p1_seed2.py`](scripts/chain_p1_seed2.py)。
+fixed STAL、adaptive STAL 和 pure TAL 的 seed `20260825` 均已完成完整 VisDrone train/val、120 epoch；训练曾支持关机后的 checkpoint 恢复，当前无残留训练进程。总体指标使用官方 DET Python 移植，面积补充使用官方 ignore-region 过滤后的 COCO-style 结果。详细比较见 [`docs/p1-seed2-comparison.md`](docs/p1-seed2-comparison.md) 和 [`results/p1-seed2-summary.json`](results/p1-seed2-summary.json)。
+
+| 模式 | 官方 AP | 官方 AP50 | 官方 AP75 | 官方 AR500 | APs | APm | APl |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| fixed STAL | 21.7619 | 39.4406 | 20.7115 | 38.1235 | 13.0893 | 31.0922 | 39.4663 |
+| adaptive STAL | 21.4915 | 38.9398 | 20.1943 | 37.7670 | 12.7558 | 30.4260 | 36.7081 |
+| pure TAL | 21.5139 | 38.6953 | 20.3479 | 37.9989 | 12.7300 | 31.0032 | 42.0973 |
+
+seed 2 的 adaptive-fixed 正式 `ΔAPs = -0.3335` 个百分点。与 seed 1 合并后，两个已完成 seed 的平均 `ΔAPs = -0.2486` 个百分点，且两个 seed 均非正向；这不是最终 P1 判定，因为 seed `20260826` 尚未运行。
+
+每组的原始训练/验证/转换/评测日志和结构化结果均已归档在公开仓库的对应 `results/p1-*-s20260825/` 与 `logs/` 路径下。当前仍需：第三个配对 seed、正式训练期 assigner 正样本统计，以及按需进行 Mosaic-off 精简交互实验。

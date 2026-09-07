@@ -1,0 +1,88 @@
+{
+  "protocol": {
+    "dataset": "VisDrone2019-DET val",
+    "metric_unit": "absolute percentage points",
+    "area_definition": {
+      "status": "COCO-style definition adopted by this A2 project; not an official VisDrone area split",
+      "coordinate_space": "original validation-image GT bbox pixels",
+      "small": "area < 32^2",
+      "medium": "32^2 <= area < 96^2",
+      "large": "area >= 96^2"
+    },
+    "max_dets": 500,
+    "ignore_regions": "official-filter",
+    "ignore_note": "VisDrone official 50% pixel-coverage ignore-region filter applied to GT and detections before COCO evaluation"
+  },
+  "counts": {
+    "images": 548,
+    "valid_gt": 38599,
+    "valid_gt_before_igr_filter": 38759,
+    "ignored_regions": 1378,
+    "valid_gt_removed_by_igr": 160,
+    "coco_annotations": 38599,
+    "predictions": 241642,
+    "predictions_before_filter": 261013,
+    "predictions_removed_by_igr": 19371
+  },
+  "metrics": {
+    "AP": 20.765134207096757,
+    "AP50": 36.260757261187784,
+    "AP75": 20.204863813510666,
+    "AR1": 9.32941847789341,
+    "AR10": 26.622318609403052,
+    "AR100": 37.14997907873441,
+    "AR500": 37.452856968957335,
+    "APs": 12.755832306640905,
+    "APm": 30.426020475881653,
+    "APl": 36.708125598966454,
+    "ARs@500": 27.997195378664465,
+    "ARm@500": 51.01593206531882,
+    "ARl@500": 57.528684446287784,
+    "AP50s": 27.423968017496442
+  },
+  "evaluator": {
+    "iou_thresholds": [
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.8999999999999999,
+      0.95
+    ],
+    "max_dets": [
+      1,
+      10,
+      100,
+      500
+    ],
+    "area_ranges": {
+      "all": [
+        0,
+        10000000000.0
+      ],
+      "small": [
+        0.0,
+        1024.0
+      ],
+      "medium": [
+        1024.0,
+        9216.0
+      ],
+      "large": [
+        9216.0,
+        10000000000.0
+      ]
+    }
+  },
+  "inputs": {
+    "annotations_dir": "F:\\datasets\\VisDrone\\VisDrone2019-DET-val\\annotations",
+    "images_dir": "F:\\datasets\\VisDrone\\VisDrone2019-DET-val\\images",
+    "predictions": "F:\\YOLO-Master-A2-P1\\p1-adaptive-s20260825-val-json\\predictions.json",
+    "evaluation_predictions": "F:\\YOLO-Master-A2-P1\\audit-recompute\\adaptive-s20260825-coco-style-official-filter.predictions.official-filter.local.json",
+    "local_ground_truth_json": "F:\\YOLO-Master-A2-P1\\audit-recompute\\adaptive-s20260825-gt.official-filter.local.json"
+  }
+}

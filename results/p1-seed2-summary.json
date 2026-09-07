@@ -1,0 +1,45 @@
+{
+  "task": "A2",
+  "seed": 20260825,
+  "status": "complete",
+  "metric_unit": "absolute percentage points",
+  "primary_checkpoint": "epoch-120 last.pt",
+  "comparison_metric": "COCO-style APs after official VisDrone ignore-region filtering; small < 32^2 on original validation GT; maxDets=500",
+  "protocol_note": "AP/AP50/AP75/AR500 use the official VisDrone DET algorithm Python port. Formal APs/APm/APl use the COCO evaluator after the VisDrone DET toolkit 50% pixel-coverage ignore-region filter. The legacy crowd-per-class files are retained only for auditability.",
+  "runs": {
+    "fixed": {
+      "experiment_id": "p1-fixed-s20260825",
+      "seed": 20260825,
+      "official": {"AP": 21.761905670166016, "AP50": 39.440635681152344, "AP75": 20.711530685424805, "AR500": 38.12354278564453},
+      "coco_style": {"APs": 13.089290020980759, "APm": 31.092189878235242, "APl": 39.46627289983083, "ARs@500": 28.487009190398183, "AP50s": 27.725228806041113},
+      "legacy_crowd_per_class": {"APs": 12.982447028346503, "APm": 31.087534977447994, "APl": 39.59880997091691, "ARs@500": 28.322715172803107, "AP50s": 27.536264418786892}
+    },
+    "adaptive": {
+      "experiment_id": "p1-adaptive-s20260825",
+      "seed": 20260825,
+      "official": {"AP": 21.49154281616211, "AP50": 38.939781188964844, "AP75": 20.1943359375, "AR500": 37.76699447631836},
+      "coco_style": {"APs": 12.755832306640905, "APm": 30.426020475881653, "APl": 36.708125598966454, "ARs@500": 27.997195378664465, "AP50s": 27.423968017496442},
+      "legacy_crowd_per_class": {"APs": 12.659619227967742, "APm": 30.381543037149484, "APl": 36.78535016829482, "ARs@500": 27.842829970208133, "AP50s": 27.31218084995778}
+    },
+    "tal": {
+      "experiment_id": "p1-tal-s20260825",
+      "seed": 20260825,
+      "official": {"AP": 21.513935089111328, "AP50": 38.695255279541016, "AP75": 20.347904205322266, "AR500": 37.99892807006836},
+      "coco_style": {"APs": 12.729957279471982, "APm": 31.00320872842584, "APl": 42.09732501651854, "ARs@500": 28.30634621366458, "AP50s": 26.715494268144894},
+      "legacy_crowd_per_class": {"APs": 12.624627142282405, "APm": 30.99148421064471, "APl": 42.16649672823331, "ARs@500": 28.122553745923767, "AP50s": 26.56268968070948}
+    }
+  },
+  "deltas_vs_fixed": {
+    "adaptive": {"APs": -0.333457714339854, "APm": -0.666169402353589, "APl": -2.758147300864375, "ARs@500": -0.489813811315831},
+    "tal": {"APs": -0.359332741508777, "APm": -0.088981149809402, "APl": 2.63105211668771, "ARs@500": -0.180662976733604}
+  },
+  "pairing_notes": {
+    "fixed_vs_adaptive": "strictly paired for seed 20260825; all three runs use explicit MuSGD, warmup_bias_lr=0.0, FP32, batch=4, Mosaic on, and the same full dataset protocol",
+    "tal": "pure TAL is included as the required control under the same frozen seed-2 protocol"
+  },
+  "acceptance": {
+    "rule": "mean adaptive-fixed APs >= 1.0 pp across 3 paired seeds and at least 2/3 positive",
+    "status": "not_yet_determined",
+    "reason": "Seeds 20260824 and 20260825 are complete; seed 20260826 remains."
+  }
+}

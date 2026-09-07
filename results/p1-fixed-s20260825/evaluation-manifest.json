@@ -19,7 +19,19 @@
   "artifacts": {
     "official_metrics": "official-det-metrics.json",
     "coco_style_metrics": "coco-style-metrics.json",
+    "coco_style_official_filter_metrics": "coco-style-official-filter-metrics.json",
     "conversion_manifest": "conversion-manifest.json"
+  },
+  "supplementary_protocol": {
+    "ignore_region_rule": "VisDrone toolkit 50% pixel-coverage filter applied to valid GT and detections before COCO evaluation",
+    "formal_metrics": {
+      "APs": 13.089290020980759,
+      "APm": 31.092189878235242,
+      "APl": 39.46627289983083,
+      "ARs@500": 28.487009190398183,
+      "AP50s": 27.725228806041113
+    },
+    "legacy_metrics_note": "coco-style-metrics.json uses crowd-per-class approximation and is retained only for auditability"
   },
   "local_source_paths": {
     "predictions": "F:\\YOLO-Master-A2-P1\\p1-fixed-val-json-s20260825\\predictions.json",

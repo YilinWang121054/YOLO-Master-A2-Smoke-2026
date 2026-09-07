@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "experiment_id": "p1-tal-s20260825",
+  "task": "A2",
+  "status": "complete",
+  "completed_epochs": 120,
+  "checkpoint_role": "epoch-120 last.pt (primary); best.pt supplementary",
+  "code": {
+    "repository": "https://github.com/YilinWang121054/YOLO-Master",
+    "branch": "feat/a2-adaptive-stal",
+    "commit": "52c2befa50706b9dff13b6e0813b19413d9f532d"
+  },
+  "protocol": {
+    "dataset": "VisDrone2019-DET",
+    "train_images": 6471,
+    "val_images": 548,
+    "model": "YOLO-Master v0.1-N",
+    "imgsz": 800,
+    "batch": 4,
+    "workers": 0,
+    "seed": 20260825,
+    "deterministic": true,
+    "pretrained": false,
+    "amp": false,
+    "optimizer": "MuSGD",
+    "lr0": 0.01,
+    "momentum": 0.9,
+    "weight_decay": 0.0005,
+    "warmup_bias_lr": 0.0,
+    "mosaic": true,
+    "close_mosaic": 10,
+    "max_det": 500,
+    "stal_mode": "tal"
+  },
+  "evaluation": {
+    "official_overall": "official-det-metrics.json",
+    "supplementary_legacy": "coco-style-metrics.json",
+    "supplementary_formal": "coco-style-official-filter-metrics.json",
+    "official_overall_metrics": {
+      "AP": 21.513935089111328,
+      "AP50": 38.695255279541016,
+      "AP75": 20.347904205322266,
+      "AR500": 37.99892807006836
+    },
+    "formal_supplementary_metrics": {
+      "APs": 12.729957279471982,
+      "APm": 31.00320872842584,
+      "APl": 42.09732501651854,
+      "ARs@500": 28.30634621366458,
+      "AP50s": 26.715494268144894
+    },
+    "area_definition": "COCO-style small < 32^2, medium 32^2 <= area < 96^2, large >= 96^2; original validation GT bbox pixels; not an official VisDrone split",
+    "ignore_region_rule": "VisDrone toolkit 50% pixel-coverage filter applied to valid GT and detections before COCO evaluation"
+  },
+  "sources": {
+    "training_log": "../../logs/p1-tal-s20260825-training.log",
+    "validation_log": "../../logs/p1-tal-s20260825-val.log",
+    "official_eval_log": "../../logs/p1-tal-s20260825-official-eval.log",
+    "official_filter_eval_log": "../../logs/p1-tal-s20260825-official-filter-coco-eval.log"
+  },
+  "claim_boundary": "Seed 2 is complete, but the three-seed P1 acceptance criterion remains undetermined until seed 20260826 is run."
+}
