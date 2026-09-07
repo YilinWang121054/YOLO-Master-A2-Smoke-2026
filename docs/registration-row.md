@@ -23,7 +23,7 @@ Issue 已发布评论正文备份：[`github-issue-246-update.md`](github-issue-
 - seed 20260824：fixed/adaptive/pure TAL 均已完成 120/120 epoch；正式补充指标使用官方 ignore-region 过滤后的 COCO-style 结果。
 - seed 20260825：fixed/adaptive/pure TAL 均已完成 120/120 epoch；训练中断恢复配置已验证，当前无训练进程。
 - 两个已完成 seed 的 adaptive-fixed 正式 `APs` 变化分别为 `-0.1637` 和 `-0.3335` pp，均值 `-0.2486` pp；这不是最终三 seed 判定。
-- seed 20260826 三组 120 epoch 链已于 `2026-09-08 04:27:14 +08:00` 启动，当前 fixed STAL 运行中，随后串行 adaptive STAL、pure TAL；启动清单见 [`docs/p1-seed3-launch.md`](p1-seed3-launch.md)。
+- seed 20260826 三组 120 epoch 链已于 `2026-09-07 20:27:14 UTC`（本地 `2026-09-08 04:27:14 +08:00`）启动，当前 fixed STAL 运行中，随后串行 adaptive STAL、pure TAL；启动清单见 [`docs/p1-seed3-launch.md`](p1-seed3-launch.md)。
 - 公开结果索引：[`docs/p1-seed1-comparison.md`](p1-seed1-comparison.md)、[`docs/p1-seed2-comparison.md`](p1-seed2-comparison.md)、[`results/p1-seed1-summary.json`](../results/p1-seed1-summary.json)、[`results/p1-seed2-summary.json`](../results/p1-seed2-summary.json)。
 
 ## 仍需老师确认
