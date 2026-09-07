@@ -10,7 +10,7 @@ Overall `AP/AP50/AP75/AR500` below use the VisDrone DET algorithm Python port. A
 | adaptive STAL | 21.4915 | 38.9398 | 20.1943 | 37.7670 | 12.7558 | 30.4260 | 36.7081 |
 | pure TAL | 21.5139 | 38.6953 | 20.3479 | 37.9989 | 12.7300 | 31.0032 | 42.0973 |
 
-For seed `20260825`, adaptive versus fixed is `ΔAPs=-0.3335` percentage points. Combining the formal filtered supplementary results from seeds `20260824` and `20260825` gives mean `ΔAPs=-0.2486` pp; both completed seeds are non-positive. This is not a final P1 acceptance decision because the agreed rule requires three paired seeds, mean `ΔAPs >= +1.0` pp, and at least two positive seeds. Seed `20260826` has not been run.
+For seed `20260825`, adaptive versus fixed is `ΔAPs=-0.3335` percentage points. Combining the formal filtered supplementary results from seeds `20260824` and `20260825` gives mean `ΔAPs=-0.2486` pp; both completed seeds are non-positive. This is not a final P1 acceptance decision because the agreed rule requires three paired seeds, mean `ΔAPs >= +1.0` pp, and at least two positive seeds. The paired seed `20260826` chain was started on `2026-09-08 04:27:14 +08:00` with fixed STAL active first, followed by adaptive STAL and pure TAL; the run is reboot-resumable and remains pending.
 
 Public evidence:
 
