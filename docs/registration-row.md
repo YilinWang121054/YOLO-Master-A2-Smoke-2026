@@ -4,7 +4,7 @@
 
 社区进度 Issue 评论：<https://github.com/Tencent/YOLO-Master/issues/246#issuecomment-5482342694>（smoke/方案）
 
-seed 2/seed 3 进度评论：待 GitHub 发布后补充链接；评论正文备份见 [`github-issue-246-p1-seed2-update.md`](github-issue-246-p1-seed2-update.md)
+seed 2/seed 3 进度评论：<https://github.com/Tencent/YOLO-Master/issues/246#issuecomment-5575508288>；评论正文备份见 [`github-issue-246-p1-seed2-update.md`](github-issue-246-p1-seed2-update.md)
 
 Issue 已发布评论正文备份：[`github-issue-246-update.md`](github-issue-246-update.md)
 
