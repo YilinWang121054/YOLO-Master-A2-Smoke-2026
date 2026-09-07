@@ -1,6 +1,6 @@
 # A2 P1 seed 3 (20260826) launch manifest
 
-Launch timestamp recorded by the local chain state: `2026-09-08 04:27:14 +08:00`.
+Launch timestamp recorded by the local chain state: `2026-09-07 20:27:14 UTC` (`2026-09-08 04:27:14 +08:00` China Standard Time).
 
 ## Status
 
