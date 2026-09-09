@@ -4,8 +4,10 @@ import json
 import sys
 from pathlib import Path
 
+import numpy as np
+
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
-from evaluate_visdrone_coco_style import evaluate
+from evaluate_visdrone_coco_style import _official_filter_rows, evaluate
 
 
 def test_exact_area_thresholds_only_belong_to_next_bin(tmp_path):
@@ -44,3 +46,12 @@ def test_exact_area_thresholds_only_belong_to_next_bin(tmp_path):
     assert abs(metrics["APm"] - 100) < 1e-6
     assert abs(metrics["APl"] - 100) < 1e-6
     assert metadata["max_dets"] == [1, 10, 100, 500]
+
+
+def test_matlab_half_rounding_and_border_pixel_filter():
+    # Ignore region occupies only the last column. A box rounded to x=8
+    # includes column 10; x=7 would miss it. MATLAB rounds 7.5 up to 8.
+    gt = np.array([[10, 1, 1, 9, 0, 0, 0, 0]], dtype=np.int32)
+    det = np.array([[7.5, 1, 2, 2, 0.9, 1], [7.49, 1, 2, 2, 0.8, 1]], dtype=np.float64)
+    _, kept = _official_filter_rows(gt, det, 10, 10)
+    assert kept[:, 4].tolist() == [0.8]

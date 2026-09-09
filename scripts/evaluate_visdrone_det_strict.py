@@ -50,7 +50,7 @@ def _filter_rows(gt: np.ndarray, det: np.ndarray, height: int, width: int):
     for x1, y1, w, h in ignored:
         x1, y1 = int(x1), int(y1)
         x2, y2 = min(x1 + int(w), width), min(y1 + int(h), height)
-        if x2 > x1 and y2 > y1:
+        if x2 >= x1 and y2 >= y1:
             mask[y1 - 1 : y2, x1 - 1 : x2] = 1
 
     def keep(rows):

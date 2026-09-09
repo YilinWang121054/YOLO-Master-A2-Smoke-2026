@@ -81,7 +81,7 @@ def _official_filter_rows(
     img_height: int,
     img_width: int,
 ) -> tuple[np.ndarray, np.ndarray]:
-    """Mirror ``viseval.drop_objects_in_igr`` from the VisDrone toolkit.
+    """Translate ``dropObjectsInIgr.m`` from the original VisDrone toolkit.
 
     The toolkit uses a rasterized ignore mask and rounded integer boxes. We
     intentionally preserve those details instead of replacing them with a
@@ -108,16 +108,22 @@ def _official_filter_rows(
         y1 = int(y1)
         x2 = min(x1 + int(box_width), img_width)
         y2 = min(y1 + int(box_height), img_height)
-        if x2 > x1 and y2 > y1:
+        if x2 >= x1 and y2 >= y1:
             igr_map[y1 - 1 : y2, x1 - 1 : x2] = 1
     integral = np.cumsum(np.cumsum(igr_map, axis=0), axis=1)
 
     def keep_boxes(rows: np.ndarray) -> np.ndarray:
         keep = np.ones(len(rows), dtype=bool)
         for index, row in enumerate(rows):
-            pos = np.round(row[:4]).astype(np.int32).clip(min=1)
-            x = max(1, min(img_width - 1, int(pos[0])))
-            y = max(1, min(img_height - 1, int(pos[1])))
+            # MATLAB round uses half-away-from-zero. Values are clipped to 1
+            # afterwards, so floor(x+0.5) is sufficient for image coordinates.
+            pos = (
+                np.floor(np.asarray(row[:4], dtype=np.float64) + 0.5)
+                .astype(np.int32)
+                .clip(min=1)
+            )
+            x = max(1, min(img_width, int(pos[0])))
+            y = max(1, min(img_height, int(pos[1])))
             width = int(pos[2])
             height = int(pos[3])
             if width <= 0 or height <= 0:
@@ -175,10 +181,10 @@ def _filter_prediction_rows_official(
                 ]
                 for item in source_rows
             ],
-            dtype=np.float32,
+            dtype=np.float64,
         )
         if not len(det_rows):
-            det_rows = np.empty((0, 6), dtype=np.float32)
+            det_rows = np.empty((0, 6), dtype=np.float64)
         _, kept_det = _official_filter_rows(gt_rows, det_rows, height, width)
         # The helper preserves order, so match kept boxes by numeric tuple while
         # consuming duplicates one at a time.
@@ -476,7 +482,9 @@ def main() -> int:
             args.annotations_dir, args.images_dir, ground_truth, args.ignore_regions
         )
     metrics, evaluator = evaluate(ground_truth, evaluation_predictions, image_id_map)
-    prediction_count = len(json.loads(evaluation_predictions.read_text(encoding="utf-8")))
+    prediction_count = len(
+        json.loads(evaluation_predictions.read_text(encoding="utf-8"))
+    )
     ignore_note = {
         "crowd-per-class": "crowd-per-class approximates VisDrone class-agnostic ignored-region suppression",
         "drop": "ignored GT rows are removed; detections are not filtered against ignored regions",
@@ -484,7 +492,7 @@ def main() -> int:
     }[args.ignore_regions]
     result = {
         "protocol": {
-            "revision": "20260909-half-open-area-bins",
+            "revision": "20260910-matlab-ignore-half-open-area-bins",
             "dataset": "VisDrone2019-DET val",
             "metric_unit": "absolute percentage points",
             "area_definition": {

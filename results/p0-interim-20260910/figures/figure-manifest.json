@@ -1,0 +1,27 @@
+{
+  "run": "p0-locked-s20260824-stats120",
+  "completed_epochs": 10,
+  "planned_epochs": 120,
+  "status": "interim",
+  "unit": "GT observations after training augmentation; objects may repeat across epochs",
+  "summary": "arithmetic mean of after-conflict positive counts within each epoch and area bin",
+  "uncertainty": "none; one run, no independent seed error bars",
+  "exclusions": "uncompleted epochs are absent; bins with no GT show a gap rather than a fabricated zero",
+  "source_files_sha256": {
+    "epoch-001.json": "27971aa5a361a6d85d5f679dbf74cbd14e1136d8b1837d996a1dca47c9a77783",
+    "epoch-002.json": "c2e65773ddaf72a64b88b0dda4b02e20efe826eca664f0a9e68c757b2d49e761",
+    "epoch-003.json": "7e6d70f68c151a8eda57f38a0eadb4f0286f17f7d65021e27e6927a2b5eba7b5",
+    "epoch-004.json": "d69c415ec9e5736306a4daf8d7720f77aeff7ed18ce070dfdfb59d87732d73f4",
+    "epoch-005.json": "db267866c40caba8671852ca07b51891e3910733a0658e56cd9f53f966f12cf4",
+    "epoch-006.json": "a78ea65a8dfc31b8874b011b89b0e97f8f62304e1a57aa054f691bcca1d72466",
+    "epoch-007.json": "c169fb6c11d7a7006cfab1c8c6043efdb8b5b8d432054f2103fb5b1db8d4eaf8",
+    "epoch-008.json": "19bab8b95c2f4d1fc41dd8c40e05ca7fde8cba80c63dbdb76549e9db3ebaeb84",
+    "epoch-009.json": "996a858dadca1617ec1021457f821b5b68e60f08ff49ca7684abf616c4449469",
+    "epoch-010.json": "ad5776f7384bbf5c12cc97d07cea6406ee5d80202046ac754496663bc5993488"
+  },
+  "exports": [
+    "positive-count-evolution-topk10_topk210.svg",
+    "positive-count-evolution-topk10_topk210.pdf",
+    "positive-count-evolution-topk10_topk210.png"
+  ]
+}

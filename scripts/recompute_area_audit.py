@@ -16,8 +16,8 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 def main():
-    work = ROOT / ".local/area-audit-20260909"
-    output = ROOT / "results/area-audit-20260909"
+    work = ROOT / ".local/area-audit-20260910"
+    output = ROOT / "results/area-audit-20260910"
     work.mkdir(parents=True, exist_ok=True)
     output.mkdir(parents=True, exist_ok=True)
     annotations = Path("F:/datasets/VisDrone/VisDrone2019-DET-val/annotations")
@@ -41,7 +41,10 @@ def main():
             metrics, metadata = evaluate(gt, pd_path, mapping)
             payload = {
                 "run": name,
-                "revision": "20260909-half-open-area-bins",
+                "revision": "20260910-matlab-ignore-half-open-area-bins",
+                "evaluator_script_sha256": hashlib.sha256(
+                    (ROOT / "scripts/evaluate_visdrone_coco_style.py").read_bytes()
+                ).hexdigest(),
                 "metrics": metrics,
                 "evaluator": metadata,
                 "counts": {**counts, **changes},
@@ -75,7 +78,8 @@ def main():
         "mean_delta": sum(deltas.values()) / 2,
         "positive_seeds": sum(v > 0 for v in deltas.values()),
         "complete_seed_count": 2,
-        "official_DET_unchanged": True,
+        "official_DET_recomputed_here": False,
+        "runtime_parity": "original MATLAB execution pending",
         "primary_three_seed_mean_pending": True,
     }
     (output / "summary.json").write_text(json.dumps(summary, indent=2) + "\n")
