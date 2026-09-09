@@ -7,6 +7,7 @@ import argparse
 import csv
 import json
 import os
+import pickle
 import shutil
 import subprocess
 import sys
@@ -14,6 +15,8 @@ import time
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
+
+from assignment_coverage import missing_assignment_epochs
 
 EVENT_DIR: Path | None = None
 
@@ -51,20 +54,40 @@ def running_processes(experiment_id: str, run_dir: Path) -> list[int]:
 
     needles = {experiment_id.lower(), str(run_dir).lower()}
     found: list[int] = []
-    for process in psutil.process_iter(["pid", "cmdline"]):
+    for process in psutil.process_iter(["pid", "name", "cmdline"]):
         try:
+            if (process.info.get("name") or "").lower() not in {
+                "python.exe",
+                "pythonw.exe",
+                "yolo.exe",
+                "python",
+                "python3",
+            }:
+                continue
             cmdline = [str(item) for item in (process.info.get("cmdline") or [])]
         except (psutil.AccessDenied, psutil.NoSuchProcess):
             continue
         lowered = [item.lower() for item in cmdline]
         joined = " ".join(lowered)
-        is_yolo_train = "train" in lowered and any(Path(item.strip('"')).name.lower() == "yolo.exe" for item in cmdline)
+        is_yolo_train = "train" in lowered and any(
+            Path(item.strip('"')).name.lower() == "yolo.exe" for item in cmdline
+        )
         is_explicit_runner = any(
             runner in item
             for item in lowered
-            for runner in ("run_p1_tal_seed1.py", "run_p1_seed.py")
+            for runner in (
+                "run_p1_tal_seed1.py",
+                "run_p1_seed.py",
+                "run_p0_baseline.py",
+            )
         )
-        if (is_yolo_train or is_explicit_runner) and any(needle in joined for needle in needles):
+        is_p0_runner = (
+            experiment_id == "p0-locked-s20260824-stats120"
+            and "run_p0_baseline.py" in joined
+        )
+        if (is_yolo_train or is_explicit_runner) and (
+            any(needle in joined for needle in needles) or is_p0_runner
+        ):
             found.append(int(process.info["pid"]))
     return sorted(set(found))
 
@@ -97,8 +120,15 @@ def inspect_checkpoint(path: Path, config: dict[str, Any]) -> dict[str, Any]:
         raise TypeError("checkpoint root is not a dictionary")
     epoch = checkpoint.get("epoch")
     train_args = checkpoint.get("train_args") or {}
+    for name, expected in config.get("expected_train_args", {}).items():
+        if train_args.get(name) != expected:
+            raise ValueError(
+                f"checkpoint protocol drift: {name}={train_args.get(name)!r}, expected {expected!r}"
+            )
     minimum_epoch = -1 if config.get("allow_bootstrap_checkpoint", False) else 0
-    if not isinstance(epoch, int) or not minimum_epoch <= epoch < int(config["expected_epochs"]):
+    if not isinstance(epoch, int) or not minimum_epoch <= epoch < int(
+        config["expected_epochs"]
+    ):
         raise ValueError(f"invalid checkpoint epoch: {epoch!r}")
     if checkpoint.get("optimizer") is None:
         raise ValueError("optimizer state is missing")
@@ -112,7 +142,9 @@ def inspect_checkpoint(path: Path, config: dict[str, Any]) -> dict[str, Any]:
         raise ValueError(f"STAL mode mismatch: {train_args.get('stal_mode')!r}")
     data_path = Path(str(train_args.get("data", "")))
     if not data_path.exists():
-        raise FileNotFoundError(f"dataset config recorded by checkpoint is missing: {data_path}")
+        raise FileNotFoundError(
+            f"dataset config recorded by checkpoint is missing: {data_path}"
+        )
     return {
         "path": str(path),
         "epoch_zero_based": epoch,
@@ -125,9 +157,15 @@ def inspect_checkpoint(path: Path, config: dict[str, Any]) -> dict[str, Any]:
     }
 
 
-def select_checkpoint(run_dir: Path, config: dict[str, Any]) -> tuple[dict[str, Any] | None, list[dict[str, str]]]:
+def select_checkpoint(
+    run_dir: Path, config: dict[str, Any]
+) -> tuple[dict[str, Any] | None, list[dict[str, str]]]:
     weights = run_dir / "weights"
-    periodic = sorted(weights.glob("epoch*.pt"), key=lambda item: item.stat().st_mtime_ns, reverse=True)
+    periodic = sorted(
+        weights.glob("epoch*.pt"),
+        key=lambda item: item.stat().st_mtime_ns,
+        reverse=True,
+    )
     candidates = [weights / "last.pt", weights / "last_healthy.pt", *periodic]
     errors: list[dict[str, str]] = []
     seen: set[Path] = set()
@@ -137,12 +175,25 @@ def select_checkpoint(run_dir: Path, config: dict[str, Any]) -> tuple[dict[str, 
         seen.add(candidate)
         try:
             return inspect_checkpoint(candidate, config), errors
-        except (AttributeError, EOFError, ImportError, OSError, RuntimeError, TypeError, ValueError) as error:
-            errors.append({"path": str(candidate), "error": f"{type(error).__name__}: {error}"})
+        except (
+            AttributeError,
+            EOFError,
+            ImportError,
+            OSError,
+            pickle.UnpicklingError,
+            RuntimeError,
+            TypeError,
+            ValueError,
+        ) as error:
+            errors.append(
+                {"path": str(candidate), "error": f"{type(error).__name__}: {error}"}
+            )
     return None, errors
 
 
-def rewind_csv(path: Path, header: list[str], rows: list[dict[str, str]], keep_rows: int) -> Path:
+def rewind_csv(
+    path: Path, header: list[str], rows: list[dict[str, str]], keep_rows: int
+) -> Path:
     timestamp = datetime.now(timezone.utc).astimezone().strftime("%Y%m%d-%H%M%S")
     backup = path.with_name(f"results.pre-resume-{timestamp}.csv")
     shutil.copy2(path, backup)
@@ -158,7 +209,9 @@ def rewind_csv(path: Path, header: list[str], rows: list[dict[str, str]], keep_r
 def write_state(path: Path, payload: dict[str, Any]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     temporary = path.with_suffix(".tmp")
-    temporary.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+    temporary.write_text(
+        json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
     os.replace(temporary, path)
 
 
@@ -179,13 +232,25 @@ def main() -> int:
     expected_epochs = int(config["expected_epochs"])
     header, rows = read_results(results_path)
     if len(rows) >= expected_epochs:
+        if config.get("require_online_assignment"):
+            missing = missing_assignment_epochs(run_dir, expected_epochs)
+            if missing:
+                return emit(
+                    "refused",
+                    reason="online assignment evidence is incomplete",
+                    missing_epochs=missing,
+                )
         return emit("complete", completed_epochs=len(rows), run_dir=str(run_dir))
 
     os.chdir(workspace)
     sys.path.insert(0, str(workspace))
     checkpoint, checkpoint_errors = select_checkpoint(run_dir, config)
     if checkpoint is None:
-        return emit("refused", reason="no valid resumable checkpoint", checkpoint_errors=checkpoint_errors)
+        return emit(
+            "refused",
+            reason="no valid resumable checkpoint",
+            checkpoint_errors=checkpoint_errors,
+        )
 
     active_pids = running_processes(config["experiment_id"], run_dir)
     if active_pids:
@@ -207,6 +272,14 @@ def main() -> int:
         )
 
     checkpoint_epochs = int(checkpoint["completed_epochs"])
+    if config.get("require_online_assignment"):
+        missing = missing_assignment_epochs(run_dir, checkpoint_epochs)
+        if missing:
+            return emit(
+                "refused",
+                reason="checkpoint is ahead of online assignment evidence",
+                missing_epochs=missing,
+            )
     csv_backup = None
     if len(rows) < checkpoint_epochs:
         return emit(
@@ -257,17 +330,36 @@ def main() -> int:
         "resume=True",
         *(f"{key}={value}" for key, value in overrides.items()),
     ]
+    if config.get("resume_runner"):
+        runner = Path(config["resume_runner"]).resolve()
+        if not runner.is_file():
+            return emit(
+                "refused", reason=f"instrumented resume runner is missing: {runner}"
+            )
+        command = [
+            str(Path(config["python_executable"]).resolve()),
+            str(runner),
+            "--resume",
+            checkpoint["path"],
+        ]
     timestamp = datetime.now(timezone.utc).astimezone().strftime("%Y%m%d-%H%M%S")
     log_dir = Path(config["recovery_log_dir"]).resolve()
     log_dir.mkdir(parents=True, exist_ok=True)
     stdout_path = log_dir / f"resume-{timestamp}.stdout.log"
     stderr_path = log_dir / f"resume-{timestamp}.stderr.log"
     environment = os.environ.copy()
-    environment["PYTHONPATH"] = str(workspace) + os.pathsep + environment.get("PYTHONPATH", "")
+    environment["PYTHONPATH"] = (
+        str(workspace) + os.pathsep + environment.get("PYTHONPATH", "")
+    )
     creationflags = 0
     if os.name == "nt":
-        creationflags = subprocess.CREATE_NEW_PROCESS_GROUP | subprocess.DETACHED_PROCESS
-    with stdout_path.open("a", encoding="utf-8") as stdout, stderr_path.open("a", encoding="utf-8") as stderr:
+        creationflags = (
+            subprocess.CREATE_NEW_PROCESS_GROUP | subprocess.DETACHED_PROCESS
+        )
+    with (
+        stdout_path.open("a", encoding="utf-8") as stdout,
+        stderr_path.open("a", encoding="utf-8") as stderr,
+    ):
         process = subprocess.Popen(
             command,
             cwd=workspace,
@@ -290,7 +382,7 @@ def main() -> int:
         **readiness,
     }
     write_state(log_dir / "latest-resume.json", state)
-    return emit("resumed", **state)
+    return emit(**state)
 
 
 if __name__ == "__main__":

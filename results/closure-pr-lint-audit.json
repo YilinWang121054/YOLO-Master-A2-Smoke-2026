@@ -1,0 +1,982 @@
+{
+  "ultralytics/cfg/__init__.py": {
+    "baseline_diagnostics": [
+      {
+        "cell": null,
+        "code": "BLE001",
+        "end_location": {
+          "column": 21,
+          "row": 1222
+        },
+        "filename": "E:\\desktop\\保研+工作\\就业\\实践\\腾讯犀牛鸟\\YOLO-Master-A2-final-review\\ultralytics\\cfg\\__init__.py",
+        "fix": null,
+        "location": {
+          "column": 12,
+          "row": 1222
+        },
+        "message": "Do not catch blind exception: `Exception`",
+        "name": "blind-except",
+        "noqa_row": 1222,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/blind-except"
+      },
+      {
+        "cell": null,
+        "code": "PLW1510",
+        "end_location": {
+          "column": 23,
+          "row": 1291
+        },
+        "filename": "E:\\desktop\\保研+工作\\就业\\实践\\腾讯犀牛鸟\\YOLO-Master-A2-final-review\\ultralytics\\cfg\\__init__.py",
+        "fix": {
+          "applicability": "displayonly",
+          "edits": [
+            {
+              "content": ", check=False",
+              "end_location": {
+                "column": 14,
+                "row": 1299
+              },
+              "location": {
+                "column": 14,
+                "row": 1299
+              }
+            }
+          ],
+          "message": "Add explicit `check=False`"
+        },
+        "location": {
+          "column": 9,
+          "row": 1291
+        },
+        "message": "`subprocess.run` without explicit `check` argument",
+        "name": "subprocess-run-without-check",
+        "noqa_row": 1291,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/subprocess-run-without-check"
+      },
+      {
+        "cell": null,
+        "code": "BLE001",
+        "end_location": {
+          "column": 25,
+          "row": 1459
+        },
+        "filename": "E:\\desktop\\保研+工作\\就业\\实践\\腾讯犀牛鸟\\YOLO-Master-A2-final-review\\ultralytics\\cfg\\__init__.py",
+        "fix": null,
+        "location": {
+          "column": 16,
+          "row": 1459
+        },
+        "message": "Do not catch blind exception: `Exception`",
+        "name": "blind-except",
+        "noqa_row": 1459,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/blind-except"
+      }
+    ],
+    "current_diagnostics": [
+      {
+        "cell": null,
+        "code": "BLE001",
+        "end_location": {
+          "column": 21,
+          "row": 1269
+        },
+        "filename": "E:\\desktop\\保研+工作\\就业\\实践\\腾讯犀牛鸟\\YOLO-Master-A2-final-review\\ultralytics\\cfg\\__init__.py",
+        "fix": null,
+        "location": {
+          "column": 12,
+          "row": 1269
+        },
+        "message": "Do not catch blind exception: `Exception`",
+        "name": "blind-except",
+        "noqa_row": 1269,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/blind-except"
+      },
+      {
+        "cell": null,
+        "code": "PLW1510",
+        "end_location": {
+          "column": 23,
+          "row": 1338
+        },
+        "filename": "E:\\desktop\\保研+工作\\就业\\实践\\腾讯犀牛鸟\\YOLO-Master-A2-final-review\\ultralytics\\cfg\\__init__.py",
+        "fix": {
+          "applicability": "displayonly",
+          "edits": [
+            {
+              "content": ", check=False",
+              "end_location": {
+                "column": 14,
+                "row": 1346
+              },
+              "location": {
+                "column": 14,
+                "row": 1346
+              }
+            }
+          ],
+          "message": "Add explicit `check=False`"
+        },
+        "location": {
+          "column": 9,
+          "row": 1338
+        },
+        "message": "`subprocess.run` without explicit `check` argument",
+        "name": "subprocess-run-without-check",
+        "noqa_row": 1338,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/subprocess-run-without-check"
+      },
+      {
+        "cell": null,
+        "code": "BLE001",
+        "end_location": {
+          "column": 25,
+          "row": 1506
+        },
+        "filename": "E:\\desktop\\保研+工作\\就业\\实践\\腾讯犀牛鸟\\YOLO-Master-A2-final-review\\ultralytics\\cfg\\__init__.py",
+        "fix": null,
+        "location": {
+          "column": 16,
+          "row": 1506
+        },
+        "message": "Do not catch blind exception: `Exception`",
+        "name": "blind-except",
+        "noqa_row": 1506,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/blind-except"
+      }
+    ],
+    "new_diagnostics": []
+  },
+  "ultralytics/utils/loss.py": {
+    "baseline_diagnostics": [
+      {
+        "cell": null,
+        "code": "I001",
+        "end_location": {
+          "column": 2,
+          "row": 28
+        },
+        "filename": "E:\\desktop\\保研+工作\\就业\\实践\\腾讯犀牛鸟\\YOLO-Master-A2-final-review\\ultralytics\\utils\\loss.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "from __future__ import annotations\r\n\r\nimport math\r\nfrom pathlib import Path\r\nfrom typing import Any\r\n\r\nimport torch\r\nimport torch.nn as nn\r\nimport torch.nn.functional as F\r\n\r\n# Backward-compatible imports for callers that still use the historical loss helpers.\r\nfrom ultralytics.nn.mixture_loss import (\r\n    _collect_mixture_aux_loss as _collect_mixture_aux_loss,\r\n)\r\nfrom ultralytics.nn.mixture_loss import (\r\n    _collect_moa_aux_loss as _collect_moa_aux_loss,\r\n)\r\nfrom ultralytics.nn.mixture_loss import (\r\n    _collect_moe_aux_loss as _collect_moe_aux_loss,\r\n)\r\nfrom ultralytics.nn.mixture_loss import (\r\n    _collect_mot_aux_loss as _collect_mot_aux_loss,\r\n)\r\nfrom ultralytics.nn.mixture_loss import (\r\n    _get_mixture_loss_ema as _get_mixture_loss_ema,\r\n)\r\nfrom ultralytics.utils.metrics import CITYSCAPES_WEIGHT, OKS_SIGMA, RLE_WEIGHT\r\nfrom ultralytics.utils.ops import crop_mask, xywh2xyxy, xyxy2xywh\r\nfrom ultralytics.utils.tal import RotatedTaskAlignedAssigner, TaskAlignedAssigner, dist2bbox, dist2rbox, make_anchors\r\nfrom ultralytics.utils.torch_utils import autocast\r\n\r\nfrom .metrics import bbox_iou, probiou\r\nfrom .tal import bbox2dist, rbox2dist\r\n\r\n\r\n",
+              "end_location": {
+                "column": 1,
+                "row": 31
+              },
+              "location": {
+                "column": 1,
+                "row": 3
+              }
+            }
+          ],
+          "message": "Organize imports"
+        },
+        "location": {
+          "column": 1,
+          "row": 3
+        },
+        "message": "Import block is un-sorted or un-formatted",
+        "name": "unsorted-imports",
+        "noqa_row": 3,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/unsorted-imports"
+      },
+      {
+        "cell": null,
+        "code": "PLR0402",
+        "end_location": {
+          "column": 22,
+          "row": 10
+        },
+        "filename": "E:\\desktop\\保研+工作\\就业\\实践\\腾讯犀牛鸟\\YOLO-Master-A2-final-review\\ultralytics\\utils\\loss.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "from torch import nn",
+              "end_location": {
+                "column": 22,
+                "row": 10
+              },
+              "location": {
+                "column": 1,
+                "row": 10
+              }
+            }
+          ],
+          "message": "Replace with `from torch import nn`"
+        },
+        "location": {
+          "column": 8,
+          "row": 10
+        },
+        "message": "Use `from torch import nn` in lieu of alias",
+        "name": "manual-from-import",
+        "noqa_row": 10,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/manual-from-import"
+      },
+      {
+        "cell": null,
+        "code": "PLC0414",
+        "end_location": {
+          "column": 59,
+          "row": 23
+        },
+        "filename": "E:\\desktop\\保研+工作\\就业\\实践\\腾讯犀牛鸟\\YOLO-Master-A2-final-review\\ultralytics\\utils\\loss.py",
+        "fix": {
+          "applicability": "unsafe",
+          "edits": [
+            {
+              "content": "_collect_mixture_aux_loss",
+              "end_location": {
+                "column": 59,
+                "row": 23
+              },
+              "location": {
+                "column": 5,
+                "row": 23
+              }
+            }
+          ],
+          "message": "Remove import alias"
+        },
+        "location": {
+          "column": 5,
+          "row": 23
+        },
+        "message": "Import alias does not rename original package",
+        "name": "useless-import-alias",
+        "noqa_row": 23,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/useless-import-alias"
+      },
+      {
+        "cell": null,
+        "code": "PLC0414",
+        "end_location": {
+          "column": 51,
+          "row": 24
+        },
+        "filename": "E:\\desktop\\保研+工作\\就业\\实践\\腾讯犀牛鸟\\YOLO-Master-A2-final-review\\ultralytics\\utils\\loss.py",
+        "fix": {
+          "applicability": "unsafe",
+          "edits": [
+            {
+              "content": "_collect_moa_aux_loss",
+              "end_location": {
+                "column": 51,
+                "row": 24
+              },
+              "location": {
+                "column": 5,
+                "row": 24
+              }
+            }
+          ],
+          "message": "Remove import alias"
+        },
+        "location": {
+          "column": 5,
+          "row": 24
+        },
+        "message": "Import alias does not rename original package",
+        "name": "useless-import-alias",
+        "noqa_row": 24,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/useless-import-alias"
+      },
+      {
+        "cell": null,
+        "code": "PLC0414",
+        "end_location": {
+          "column": 51,
+          "row": 25
+        },
+        "filename": "E:\\desktop\\保研+工作\\就业\\实践\\腾讯犀牛鸟\\YOLO-Master-A2-final-review\\ultralytics\\utils\\loss.py",
+        "fix": {
+          "applicability": "unsafe",
+          "edits": [
+            {
+              "content": "_collect_moe_aux_loss",
+              "end_location": {
+                "column": 51,
+                "row": 25
+              },
+              "location": {
+                "column": 5,
+                "row": 25
+              }
+            }
+          ],
+          "message": "Remove import alias"
+        },
+        "location": {
+          "column": 5,
+          "row": 25
+        },
+        "message": "Import alias does not rename original package",
+        "name": "useless-import-alias",
+        "noqa_row": 25,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/useless-import-alias"
+      },
+      {
+        "cell": null,
+        "code": "PLC0414",
+        "end_location": {
+          "column": 51,
+          "row": 26
+        },
+        "filename": "E:\\desktop\\保研+工作\\就业\\实践\\腾讯犀牛鸟\\YOLO-Master-A2-final-review\\ultralytics\\utils\\loss.py",
+        "fix": {
+          "applicability": "unsafe",
+          "edits": [
+            {
+              "content": "_collect_mot_aux_loss",
+              "end_location": {
+                "column": 51,
+                "row": 26
+              },
+              "location": {
+                "column": 5,
+                "row": 26
+              }
+            }
+          ],
+          "message": "Remove import alias"
+        },
+        "location": {
+          "column": 5,
+          "row": 26
+        },
+        "message": "Import alias does not rename original package",
+        "name": "useless-import-alias",
+        "noqa_row": 26,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/useless-import-alias"
+      },
+      {
+        "cell": null,
+        "code": "PLC0414",
+        "end_location": {
+          "column": 51,
+          "row": 27
+        },
+        "filename": "E:\\desktop\\保研+工作\\就业\\实践\\腾讯犀牛鸟\\YOLO-Master-A2-final-review\\ultralytics\\utils\\loss.py",
+        "fix": {
+          "applicability": "unsafe",
+          "edits": [
+            {
+              "content": "_get_mixture_loss_ema",
+              "end_location": {
+                "column": 51,
+                "row": 27
+              },
+              "location": {
+                "column": 5,
+                "row": 27
+              }
+            }
+          ],
+          "message": "Remove import alias"
+        },
+        "location": {
+          "column": 5,
+          "row": 27
+        },
+        "message": "Import alias does not rename original package",
+        "name": "useless-import-alias",
+        "noqa_row": 27,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/useless-import-alias"
+      },
+      {
+        "cell": null,
+        "code": "I001",
+        "end_location": {
+          "column": 68,
+          "row": 1456
+        },
+        "filename": "E:\\desktop\\保研+工作\\就业\\实践\\腾讯犀牛鸟\\YOLO-Master-A2-final-review\\ultralytics\\utils\\loss.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "        from ultralytics.utils.loss import E2ELoss, v8DetectionLoss\r\n",
+              "end_location": {
+                "column": 1,
+                "row": 1457
+              },
+              "location": {
+                "column": 1,
+                "row": 1456
+              }
+            }
+          ],
+          "message": "Organize imports"
+        },
+        "location": {
+          "column": 9,
+          "row": 1456
+        },
+        "message": "Import block is un-sorted or un-formatted",
+        "name": "unsorted-imports",
+        "noqa_row": 1456,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/unsorted-imports"
+      },
+      {
+        "cell": null,
+        "code": "RUF034",
+        "end_location": {
+          "column": 70,
+          "row": 1460
+        },
+        "filename": "E:\\desktop\\保研+工作\\就业\\实践\\腾讯犀牛鸟\\YOLO-Master-A2-final-review\\ultralytics\\utils\\loss.py",
+        "fix": null,
+        "location": {
+          "column": 25,
+          "row": 1460
+        },
+        "message": "Useless `if`-`else` condition",
+        "name": "useless-if-else",
+        "noqa_row": 1460,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/useless-if-else"
+      },
+      {
+        "cell": null,
+        "code": "RUF059",
+        "end_location": {
+          "column": 36,
+          "row": 1611
+        },
+        "filename": "E:\\desktop\\保研+工作\\就业\\实践\\腾讯犀牛鸟\\YOLO-Master-A2-final-review\\ultralytics\\utils\\loss.py",
+        "fix": {
+          "applicability": "unsafe",
+          "edits": [
+            {
+              "content": "_seg_items",
+              "end_location": {
+                "column": 36,
+                "row": 1611
+              },
+              "location": {
+                "column": 27,
+                "row": 1611
+              }
+            }
+          ],
+          "message": "Prefix it with an underscore or any other dummy variable pattern"
+        },
+        "location": {
+          "column": 27,
+          "row": 1611
+        },
+        "message": "Unpacked variable `seg_items` is never used",
+        "name": "unused-unpacked-variable",
+        "noqa_row": 1611,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/unused-unpacked-variable"
+      },
+      {
+        "cell": null,
+        "code": "RUF059",
+        "end_location": {
+          "column": 38,
+          "row": 1643
+        },
+        "filename": "E:\\desktop\\保研+工作\\就业\\实践\\腾讯犀牛鸟\\YOLO-Master-A2-final-review\\ultralytics\\utils\\loss.py",
+        "fix": {
+          "applicability": "unsafe",
+          "edits": [
+            {
+              "content": "_pose_items",
+              "end_location": {
+                "column": 38,
+                "row": 1643
+              },
+              "location": {
+                "column": 28,
+                "row": 1643
+              }
+            }
+          ],
+          "message": "Prefix it with an underscore or any other dummy variable pattern"
+        },
+        "location": {
+          "column": 28,
+          "row": 1643
+        },
+        "message": "Unpacked variable `pose_items` is never used",
+        "name": "unused-unpacked-variable",
+        "noqa_row": 1643,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/unused-unpacked-variable"
+      }
+    ],
+    "current_diagnostics": [
+      {
+        "cell": null,
+        "code": "I001",
+        "end_location": {
+          "column": 2,
+          "row": 28
+        },
+        "filename": "E:\\desktop\\保研+工作\\就业\\实践\\腾讯犀牛鸟\\YOLO-Master-A2-final-review\\ultralytics\\utils\\loss.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "from __future__ import annotations\r\n\r\nimport math\r\nfrom pathlib import Path\r\nfrom typing import Any\r\n\r\nimport torch\r\nimport torch.nn as nn\r\nimport torch.nn.functional as F\r\n\r\n# Backward-compatible imports for callers that still use the historical loss helpers.\r\nfrom ultralytics.nn.mixture_loss import (\r\n    _collect_mixture_aux_loss as _collect_mixture_aux_loss,\r\n)\r\nfrom ultralytics.nn.mixture_loss import (\r\n    _collect_moa_aux_loss as _collect_moa_aux_loss,\r\n)\r\nfrom ultralytics.nn.mixture_loss import (\r\n    _collect_moe_aux_loss as _collect_moe_aux_loss,\r\n)\r\nfrom ultralytics.nn.mixture_loss import (\r\n    _collect_mot_aux_loss as _collect_mot_aux_loss,\r\n)\r\nfrom ultralytics.nn.mixture_loss import (\r\n    _get_mixture_loss_ema as _get_mixture_loss_ema,\r\n)\r\nfrom ultralytics.utils.metrics import CITYSCAPES_WEIGHT, OKS_SIGMA, RLE_WEIGHT\r\nfrom ultralytics.utils.ops import crop_mask, xywh2xyxy, xyxy2xywh\r\nfrom ultralytics.utils.tal import RotatedTaskAlignedAssigner, TaskAlignedAssigner, dist2bbox, dist2rbox, make_anchors\r\nfrom ultralytics.utils.torch_utils import autocast\r\n\r\nfrom .metrics import bbox_iou, probiou\r\nfrom .tal import bbox2dist, rbox2dist\r\n\r\n\r\n",
+              "end_location": {
+                "column": 1,
+                "row": 31
+              },
+              "location": {
+                "column": 1,
+                "row": 3
+              }
+            }
+          ],
+          "message": "Organize imports"
+        },
+        "location": {
+          "column": 1,
+          "row": 3
+        },
+        "message": "Import block is un-sorted or un-formatted",
+        "name": "unsorted-imports",
+        "noqa_row": 3,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/unsorted-imports"
+      },
+      {
+        "cell": null,
+        "code": "PLR0402",
+        "end_location": {
+          "column": 22,
+          "row": 10
+        },
+        "filename": "E:\\desktop\\保研+工作\\就业\\实践\\腾讯犀牛鸟\\YOLO-Master-A2-final-review\\ultralytics\\utils\\loss.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "from torch import nn",
+              "end_location": {
+                "column": 22,
+                "row": 10
+              },
+              "location": {
+                "column": 1,
+                "row": 10
+              }
+            }
+          ],
+          "message": "Replace with `from torch import nn`"
+        },
+        "location": {
+          "column": 8,
+          "row": 10
+        },
+        "message": "Use `from torch import nn` in lieu of alias",
+        "name": "manual-from-import",
+        "noqa_row": 10,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/manual-from-import"
+      },
+      {
+        "cell": null,
+        "code": "PLC0414",
+        "end_location": {
+          "column": 59,
+          "row": 23
+        },
+        "filename": "E:\\desktop\\保研+工作\\就业\\实践\\腾讯犀牛鸟\\YOLO-Master-A2-final-review\\ultralytics\\utils\\loss.py",
+        "fix": {
+          "applicability": "unsafe",
+          "edits": [
+            {
+              "content": "_collect_mixture_aux_loss",
+              "end_location": {
+                "column": 59,
+                "row": 23
+              },
+              "location": {
+                "column": 5,
+                "row": 23
+              }
+            }
+          ],
+          "message": "Remove import alias"
+        },
+        "location": {
+          "column": 5,
+          "row": 23
+        },
+        "message": "Import alias does not rename original package",
+        "name": "useless-import-alias",
+        "noqa_row": 23,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/useless-import-alias"
+      },
+      {
+        "cell": null,
+        "code": "PLC0414",
+        "end_location": {
+          "column": 51,
+          "row": 24
+        },
+        "filename": "E:\\desktop\\保研+工作\\就业\\实践\\腾讯犀牛鸟\\YOLO-Master-A2-final-review\\ultralytics\\utils\\loss.py",
+        "fix": {
+          "applicability": "unsafe",
+          "edits": [
+            {
+              "content": "_collect_moa_aux_loss",
+              "end_location": {
+                "column": 51,
+                "row": 24
+              },
+              "location": {
+                "column": 5,
+                "row": 24
+              }
+            }
+          ],
+          "message": "Remove import alias"
+        },
+        "location": {
+          "column": 5,
+          "row": 24
+        },
+        "message": "Import alias does not rename original package",
+        "name": "useless-import-alias",
+        "noqa_row": 24,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/useless-import-alias"
+      },
+      {
+        "cell": null,
+        "code": "PLC0414",
+        "end_location": {
+          "column": 51,
+          "row": 25
+        },
+        "filename": "E:\\desktop\\保研+工作\\就业\\实践\\腾讯犀牛鸟\\YOLO-Master-A2-final-review\\ultralytics\\utils\\loss.py",
+        "fix": {
+          "applicability": "unsafe",
+          "edits": [
+            {
+              "content": "_collect_moe_aux_loss",
+              "end_location": {
+                "column": 51,
+                "row": 25
+              },
+              "location": {
+                "column": 5,
+                "row": 25
+              }
+            }
+          ],
+          "message": "Remove import alias"
+        },
+        "location": {
+          "column": 5,
+          "row": 25
+        },
+        "message": "Import alias does not rename original package",
+        "name": "useless-import-alias",
+        "noqa_row": 25,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/useless-import-alias"
+      },
+      {
+        "cell": null,
+        "code": "PLC0414",
+        "end_location": {
+          "column": 51,
+          "row": 26
+        },
+        "filename": "E:\\desktop\\保研+工作\\就业\\实践\\腾讯犀牛鸟\\YOLO-Master-A2-final-review\\ultralytics\\utils\\loss.py",
+        "fix": {
+          "applicability": "unsafe",
+          "edits": [
+            {
+              "content": "_collect_mot_aux_loss",
+              "end_location": {
+                "column": 51,
+                "row": 26
+              },
+              "location": {
+                "column": 5,
+                "row": 26
+              }
+            }
+          ],
+          "message": "Remove import alias"
+        },
+        "location": {
+          "column": 5,
+          "row": 26
+        },
+        "message": "Import alias does not rename original package",
+        "name": "useless-import-alias",
+        "noqa_row": 26,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/useless-import-alias"
+      },
+      {
+        "cell": null,
+        "code": "PLC0414",
+        "end_location": {
+          "column": 51,
+          "row": 27
+        },
+        "filename": "E:\\desktop\\保研+工作\\就业\\实践\\腾讯犀牛鸟\\YOLO-Master-A2-final-review\\ultralytics\\utils\\loss.py",
+        "fix": {
+          "applicability": "unsafe",
+          "edits": [
+            {
+              "content": "_get_mixture_loss_ema",
+              "end_location": {
+                "column": 51,
+                "row": 27
+              },
+              "location": {
+                "column": 5,
+                "row": 27
+              }
+            }
+          ],
+          "message": "Remove import alias"
+        },
+        "location": {
+          "column": 5,
+          "row": 27
+        },
+        "message": "Import alias does not rename original package",
+        "name": "useless-import-alias",
+        "noqa_row": 27,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/useless-import-alias"
+      },
+      {
+        "cell": null,
+        "code": "I001",
+        "end_location": {
+          "column": 68,
+          "row": 1464
+        },
+        "filename": "E:\\desktop\\保研+工作\\就业\\实践\\腾讯犀牛鸟\\YOLO-Master-A2-final-review\\ultralytics\\utils\\loss.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "        from ultralytics.utils.loss import E2ELoss, v8DetectionLoss\r\n",
+              "end_location": {
+                "column": 1,
+                "row": 1465
+              },
+              "location": {
+                "column": 1,
+                "row": 1464
+              }
+            }
+          ],
+          "message": "Organize imports"
+        },
+        "location": {
+          "column": 9,
+          "row": 1464
+        },
+        "message": "Import block is un-sorted or un-formatted",
+        "name": "unsorted-imports",
+        "noqa_row": 1464,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/unsorted-imports"
+      },
+      {
+        "cell": null,
+        "code": "RUF034",
+        "end_location": {
+          "column": 70,
+          "row": 1468
+        },
+        "filename": "E:\\desktop\\保研+工作\\就业\\实践\\腾讯犀牛鸟\\YOLO-Master-A2-final-review\\ultralytics\\utils\\loss.py",
+        "fix": null,
+        "location": {
+          "column": 25,
+          "row": 1468
+        },
+        "message": "Useless `if`-`else` condition",
+        "name": "useless-if-else",
+        "noqa_row": 1468,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/useless-if-else"
+      },
+      {
+        "cell": null,
+        "code": "RUF059",
+        "end_location": {
+          "column": 36,
+          "row": 1619
+        },
+        "filename": "E:\\desktop\\保研+工作\\就业\\实践\\腾讯犀牛鸟\\YOLO-Master-A2-final-review\\ultralytics\\utils\\loss.py",
+        "fix": {
+          "applicability": "unsafe",
+          "edits": [
+            {
+              "content": "_seg_items",
+              "end_location": {
+                "column": 36,
+                "row": 1619
+              },
+              "location": {
+                "column": 27,
+                "row": 1619
+              }
+            }
+          ],
+          "message": "Prefix it with an underscore or any other dummy variable pattern"
+        },
+        "location": {
+          "column": 27,
+          "row": 1619
+        },
+        "message": "Unpacked variable `seg_items` is never used",
+        "name": "unused-unpacked-variable",
+        "noqa_row": 1619,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/unused-unpacked-variable"
+      },
+      {
+        "cell": null,
+        "code": "RUF059",
+        "end_location": {
+          "column": 38,
+          "row": 1651
+        },
+        "filename": "E:\\desktop\\保研+工作\\就业\\实践\\腾讯犀牛鸟\\YOLO-Master-A2-final-review\\ultralytics\\utils\\loss.py",
+        "fix": {
+          "applicability": "unsafe",
+          "edits": [
+            {
+              "content": "_pose_items",
+              "end_location": {
+                "column": 38,
+                "row": 1651
+              },
+              "location": {
+                "column": 28,
+                "row": 1651
+              }
+            }
+          ],
+          "message": "Prefix it with an underscore or any other dummy variable pattern"
+        },
+        "location": {
+          "column": 28,
+          "row": 1651
+        },
+        "message": "Unpacked variable `pose_items` is never used",
+        "name": "unused-unpacked-variable",
+        "noqa_row": 1651,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/unused-unpacked-variable"
+      }
+    ],
+    "new_diagnostics": []
+  },
+  "ultralytics/utils/tal.py": {
+    "baseline_diagnostics": [
+      {
+        "cell": null,
+        "code": "PLR0402",
+        "end_location": {
+          "column": 22,
+          "row": 6
+        },
+        "filename": "E:\\desktop\\保研+工作\\就业\\实践\\腾讯犀牛鸟\\YOLO-Master-A2-final-review\\ultralytics\\utils\\tal.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "from torch import nn",
+              "end_location": {
+                "column": 22,
+                "row": 6
+              },
+              "location": {
+                "column": 1,
+                "row": 6
+              }
+            }
+          ],
+          "message": "Replace with `from torch import nn`"
+        },
+        "location": {
+          "column": 8,
+          "row": 6
+        },
+        "message": "Use `from torch import nn` in lieu of alias",
+        "name": "manual-from-import",
+        "noqa_row": 6,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/manual-from-import"
+      }
+    ],
+    "current_diagnostics": [
+      {
+        "cell": null,
+        "code": "PLR0402",
+        "end_location": {
+          "column": 22,
+          "row": 6
+        },
+        "filename": "E:\\desktop\\保研+工作\\就业\\实践\\腾讯犀牛鸟\\YOLO-Master-A2-final-review\\ultralytics\\utils\\tal.py",
+        "fix": {
+          "applicability": "safe",
+          "edits": [
+            {
+              "content": "from torch import nn",
+              "end_location": {
+                "column": 22,
+                "row": 6
+              },
+              "location": {
+                "column": 1,
+                "row": 6
+              }
+            }
+          ],
+          "message": "Replace with `from torch import nn`"
+        },
+        "location": {
+          "column": 8,
+          "row": 6
+        },
+        "message": "Use `from torch import nn` in lieu of alias",
+        "name": "manual-from-import",
+        "noqa_row": 6,
+        "severity": "error",
+        "url": "https://docs.astral.sh/ruff/rules/manual-from-import"
+      }
+    ],
+    "new_diagnostics": []
+  },
+  "tests/test_stal_assignment.py": {
+    "baseline_diagnostics": [],
+    "current_diagnostics": [],
+    "new_diagnostics": []
+  }
+}

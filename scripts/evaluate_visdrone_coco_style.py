@@ -32,8 +32,10 @@ NAMES = (
     "motor",
 )
 AREA_RANGES = {
-    "small": [0.0, 32.0**2],
-    "medium": [32.0**2, 96.0**2],
+    # COCO includes both endpoints. Move the upper bound down by one float64
+    # step so boxes at exactly 32^2 and 96^2 belong to only the next bin.
+    "small": [0.0, float(np.nextafter(32.0**2, -np.inf))],
+    "medium": [32.0**2, float(np.nextafter(96.0**2, -np.inf))],
     "large": [96.0**2, 1e10],
 }
 
@@ -482,6 +484,7 @@ def main() -> int:
     }[args.ignore_regions]
     result = {
         "protocol": {
+            "revision": "20260909-half-open-area-bins",
             "dataset": "VisDrone2019-DET val",
             "metric_unit": "absolute percentage points",
             "area_definition": {

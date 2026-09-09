@@ -1,0 +1,72 @@
+{
+  "run": "p1-tal-s20260824",
+  "revision": "20260909-half-open-area-bins",
+  "metrics": {
+    "AP": 21.075941064086447,
+    "AP50": 36.517204583333665,
+    "AP75": 20.6838988306047,
+    "AR1": 9.498744766813003,
+    "AR10": 26.5182819744764,
+    "AR100": 37.46414483977611,
+    "AR500": 37.741002573201435,
+    "APs": 12.604047118624612,
+    "APm": 31.215099852680943,
+    "APl": 39.59150303007863,
+    "ARs@500": 27.793604725714033,
+    "ARm@500": 52.092021804085164,
+    "ARl@500": 57.92458437249375,
+    "AP50s": 26.71638070316536
+  },
+  "evaluator": {
+    "iou_thresholds": [
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.8999999999999999,
+      0.95
+    ],
+    "max_dets": [
+      1,
+      10,
+      100,
+      500
+    ],
+    "area_ranges": {
+      "all": [
+        0,
+        10000000000.0
+      ],
+      "small": [
+        0.0,
+        1023.9999999999999
+      ],
+      "medium": [
+        1024.0,
+        9215.999999999998
+      ],
+      "large": [
+        9216.0,
+        10000000000.0
+      ]
+    }
+  },
+  "counts": {
+    "images": 548,
+    "valid_gt": 38599,
+    "valid_gt_before_igr_filter": 38759,
+    "ignored_regions": 1378,
+    "valid_gt_removed_by_igr": 160,
+    "coco_annotations": 38599,
+    "predictions_before_filter": 255737,
+    "predictions_removed_by_igr": 18258
+  },
+  "previous_metrics_file": "results\\p1-tal-s20260824\\coco-style-official-filter-metrics.json",
+  "input_predictions_sha256": "6149adab4c0715e29f4373c9bb8579db6db40afa8731bc805c9619ddd42a04fe",
+  "ignore_policy": "official-filter",
+  "area_space": "original validation GT pixels"
+}

@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "experiment_id": "p0-locked-s20260824-stats120",
+  "workspace": "E:/desktop/保研+工作/就业/实践/腾讯犀牛鸟/YOLO-Master-baseline",
+  "run_dir": "F:/YOLO-Master-A2-P1/p0-locked-s20260824-stats120",
+  "yolo_executable": "F:/conda-envs/yolo-master/Scripts/yolo.exe",
+  "python_executable": "F:/conda-envs/yolo-master/python.exe",
+  "resume_runner": "E:/desktop/保研+工作/就业/实践/腾讯犀牛鸟/YOLO-Master-A2-Smoke-2026/scripts/run_p0_baseline.py",
+  "expected_git_commit": "acce839c7e895d6b179de7f7093fa879e237cc7b",
+  "expected_epochs": 120,
+  "expected_stal_mode": null,
+  "allow_bootstrap_checkpoint": true,
+  "require_online_assignment": true,
+  "expected_train_args": {"batch": 4, "imgsz": 800, "seed": 20260824, "nbs": 64, "amp": false, "optimizer": "MuSGD", "momentum": 0.9, "lr0": 0.01, "weight_decay": 0.0005, "warmup_bias_lr": 0.0, "pretrained": false, "mosaic": 1.0, "close_mosaic": 10},
+  "recovery_log_dir": "F:/YOLO-Master-A2-P1/recovery-logs/p0-locked-s20260824-stats120",
+  "resume_overrides": {"device": "0", "workers": 0},
+  "csv_rewind_policy": "backup_and_truncate"
+}
