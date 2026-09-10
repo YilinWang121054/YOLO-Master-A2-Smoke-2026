@@ -1,0 +1,8 @@
+# Preserve execution/evidence bytes so SHA256 checks work on every platform.
+# Terminal carriage returns and ANSI sequences are part of the original logs.
+logs/** -text -diff
+results/** -text
+scripts/** -text
+configs/** -text
+env/** -text
+docs/closure-review/** -text

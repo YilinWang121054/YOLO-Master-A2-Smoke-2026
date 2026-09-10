@@ -1,6 +1,6 @@
 {
-  "checked_at": "2026-09-10T17:35:25.773222+00:00",
-  "report_sha256": "29a01918f9f76985e9f297aa93a6a8330827855c55a5379c612873ca801d4e49",
+  "checked_at": "2026-09-10T17:50:55.653287+00:00",
+  "report_sha256": "36981259bf78aac90143a96439400cd28116ef7a24819048ee6ba71a087e9715",
   "comparison_rows": 7,
   "checked_numeric_cells": 79,
   "scope": "Table-to-JSON equality at displayed precision and local link existence; not evaluator runtime parity or acceptance",
