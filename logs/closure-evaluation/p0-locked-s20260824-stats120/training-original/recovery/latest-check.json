@@ -1,0 +1,30 @@
+{
+  "status": "resumed",
+  "observed_at": "2026-09-10T23:06:10.830557+08:00",
+  "schema_version": 1,
+  "resumed_at": "2026-09-10T23:06:10.826557+08:00",
+  "pid": 24368,
+  "command": [
+    "F:\\conda-envs\\yolo-master\\python.exe",
+    "E:\\desktop\\保研+工作\\就业\\实践\\腾讯犀牛鸟\\YOLO-Master-A2-Smoke-2026\\scripts\\run_p0_baseline.py",
+    "--resume",
+    "F:\\YOLO-Master-A2-P1\\p0-locked-s20260824-stats120\\weights\\last.pt"
+  ],
+  "stdout": "F:\\YOLO-Master-A2-P1\\recovery-logs\\p0-locked-s20260824-stats120\\resume-20260910-230610.stdout.log",
+  "stderr": "F:\\YOLO-Master-A2-P1\\recovery-logs\\p0-locked-s20260824-stats120\\resume-20260910-230610.stderr.log",
+  "experiment_id": "p0-locked-s20260824-stats120",
+  "csv_epochs": 119,
+  "checkpoint": {
+    "path": "F:\\YOLO-Master-A2-P1\\p0-locked-s20260824-stats120\\weights\\last.pt",
+    "epoch_zero_based": 118,
+    "completed_epochs": 119,
+    "bootstrap_checkpoint": false,
+    "optimizer_present": true,
+    "scaler_present": true,
+    "stal_mode": null,
+    "data": "E:\\desktop\\保研+工作\\就业\\实践\\腾讯犀牛鸟\\YOLO-Master-A2-Smoke-2026\\configs\\VisDrone-full.yaml"
+  },
+  "checkpoint_errors": [],
+  "git_commit": "acce839c7e895d6b179de7f7093fa879e237cc7b",
+  "csv_backup": null
+}

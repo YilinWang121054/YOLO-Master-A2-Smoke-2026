@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "E:\desktop\保研+工作\就业\实践\腾讯犀牛鸟\YOLO-Master-A2-Smoke-2026\scripts\run_p0_baseline.py", line 160, in <module>
+    main()
+  File "E:\desktop\保研+工作\就业\实践\腾讯犀牛鸟\YOLO-Master-A2-Smoke-2026\scripts\run_p0_baseline.py", line 31, in main
+    commit = subprocess.check_output(
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\conda-envs\yolo-master\Lib\subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\conda-envs\yolo-master\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['git', '-C', 'E:\\desktop\\保研+工作\\就业\\实践\\腾讯犀牛鸟\\YOLO-Master-baseline', 'rev-parse', 'HEAD']' returned non-zero exit status 3221225794.

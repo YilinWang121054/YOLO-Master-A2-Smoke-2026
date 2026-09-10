@@ -1,0 +1,296 @@
+BLE001 Do not catch blind exception: `Exception`
+    --> ultralytics\cfg\__init__.py:1269:12
+     |
+1267 |         LOGGER.info(SETTINGS)  # print the current settings
+1268 |         LOGGER.info(f"💡 Learn more about Ultralytics Settings at {url}")
+1269 |     except Exception as e:
+     |            ^^^^^^^^^
+1270 |         LOGGER.warning(f"settings error: '{e}'. Please see {url} for help.")
+     |
+
+PLW1510 `subprocess.run` without explicit `check` argument
+    --> ultralytics\cfg\__init__.py:1338:9
+     |
+1336 |         checks.check_requirements("streamlit>=1.29.0")
+1337 |         LOGGER.info("💡 Loading Ultralytics live inference app...")
+1338 |         subprocess.run(
+     |         ^^^^^^^^^^^^^^
+1339 |             [  # Run subprocess with Streamlit custom argument
+1340 |                 "streamlit",
+     |
+help: Add explicit `check=False`
+
+BLE001 Do not catch blind exception: `Exception`
+    --> ultralytics\cfg\__init__.py:1506:16
+     |
+1504 |         try:
+1505 |             return ast.literal_eval(v)
+1506 |         except Exception:
+     |                ^^^^^^^^^
+1507 |             name, _, attr = v.rpartition(".")
+1508 |             if (module := sys.modules.get(name)) and attr.isupper():
+     |
+
+I001 [*] Import block is un-sorted or un-formatted
+  --> ultralytics\utils\loss.py:3:1
+   |
+ 1 |   # Ultralytics 🚀 AGPL-3.0 License - https://ultralytics.com/license
+ 2 |
+ 3 | / from __future__ import annotations
+ 4 | |
+ 5 | | import math
+ 6 | | from pathlib import Path
+ 7 | | from typing import Any
+ 8 | |
+ 9 | | import torch
+10 | | import torch.nn as nn
+11 | | import torch.nn.functional as F
+12 | |
+13 | | from ultralytics.utils.metrics import CITYSCAPES_WEIGHT, OKS_SIGMA, RLE_WEIGHT
+14 | | from ultralytics.utils.ops import crop_mask, xywh2xyxy, xyxy2xywh
+15 | | from ultralytics.utils.tal import RotatedTaskAlignedAssigner, TaskAlignedAssigner, dist2bbox, dist2rbox, make_anchors
+16 | | from ultralytics.utils.torch_utils import autocast
+17 | |
+18 | | from .metrics import bbox_iou, probiou
+19 | | from .tal import bbox2dist, rbox2dist
+20 | |
+21 | | # Backward-compatible imports for callers that still use the historical loss helpers.
+22 | | from ultralytics.nn.mixture_loss import (
+23 | |     _collect_mixture_aux_loss as _collect_mixture_aux_loss,
+24 | |     _collect_moa_aux_loss as _collect_moa_aux_loss,
+25 | |     _collect_moe_aux_loss as _collect_moe_aux_loss,
+26 | |     _collect_mot_aux_loss as _collect_mot_aux_loss,
+27 | |     _get_mixture_loss_ema as _get_mixture_loss_ema,
+28 | | )
+   | |_^
+help: Organize imports
+   |
+12 |
+   - from ultralytics.utils.metrics import CITYSCAPES_WEIGHT, OKS_SIGMA, RLE_WEIGHT
+   - from ultralytics.utils.ops import crop_mask, xywh2xyxy, xyxy2xywh
+   - from ultralytics.utils.tal import RotatedTaskAlignedAssigner, TaskAlignedAssigner, dist2bbox, dist2rbox, make_anchors
+   - from ultralytics.utils.torch_utils import autocast
+   -
+   - from .metrics import bbox_iou, probiou
+   - from .tal import bbox2dist, rbox2dist
+   -
+13 | # Backward-compatible imports for callers that still use the historical loss helpers.
+14 | from ultralytics.nn.mixture_loss import (
+15 |     _collect_mixture_aux_loss as _collect_mixture_aux_loss,
+16 + )
+17 + from ultralytics.nn.mixture_loss import (
+18 |     _collect_moa_aux_loss as _collect_moa_aux_loss,
+19 + )
+20 + from ultralytics.nn.mixture_loss import (
+21 |     _collect_moe_aux_loss as _collect_moe_aux_loss,
+22 + )
+23 + from ultralytics.nn.mixture_loss import (
+24 |     _collect_mot_aux_loss as _collect_mot_aux_loss,
+25 + )
+26 + from ultralytics.nn.mixture_loss import (
+27 |     _get_mixture_loss_ema as _get_mixture_loss_ema,
+28 | )
+29 + from ultralytics.utils.metrics import CITYSCAPES_WEIGHT, OKS_SIGMA, RLE_WEIGHT
+30 + from ultralytics.utils.ops import crop_mask, xywh2xyxy, xyxy2xywh
+31 + from ultralytics.utils.tal import RotatedTaskAlignedAssigner, TaskAlignedAssigner, dist2bbox, dist2rbox, make_anchors
+32 + from ultralytics.utils.torch_utils import autocast
+33 +
+34 + from .metrics import bbox_iou, probiou
+35 + from .tal import bbox2dist, rbox2dist
+36 |
+   |
+
+PLR0402 [*] Use `from torch import nn` in lieu of alias
+  --> ultralytics\utils\loss.py:10:8
+   |
+ 9 | import torch
+10 | import torch.nn as nn
+   |        ^^^^^^^^^^^^^^
+11 | import torch.nn.functional as F
+   |
+help: Replace with `from torch import nn`
+   |
+9  | import torch
+   - import torch.nn as nn
+10 + from torch import nn
+11 | import torch.nn.functional as F
+   |
+
+PLC0414 Import alias does not rename original package
+  --> ultralytics\utils\loss.py:23:5
+   |
+21 | # Backward-compatible imports for callers that still use the historical loss helpers.
+22 | from ultralytics.nn.mixture_loss import (
+23 |     _collect_mixture_aux_loss as _collect_mixture_aux_loss,
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+24 |     _collect_moa_aux_loss as _collect_moa_aux_loss,
+25 |     _collect_moe_aux_loss as _collect_moe_aux_loss,
+   |
+help: Remove import alias
+
+PLC0414 Import alias does not rename original package
+  --> ultralytics\utils\loss.py:24:5
+   |
+22 | from ultralytics.nn.mixture_loss import (
+23 |     _collect_mixture_aux_loss as _collect_mixture_aux_loss,
+24 |     _collect_moa_aux_loss as _collect_moa_aux_loss,
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+25 |     _collect_moe_aux_loss as _collect_moe_aux_loss,
+26 |     _collect_mot_aux_loss as _collect_mot_aux_loss,
+   |
+help: Remove import alias
+
+PLC0414 Import alias does not rename original package
+  --> ultralytics\utils\loss.py:25:5
+   |
+23 |     _collect_mixture_aux_loss as _collect_mixture_aux_loss,
+24 |     _collect_moa_aux_loss as _collect_moa_aux_loss,
+25 |     _collect_moe_aux_loss as _collect_moe_aux_loss,
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+26 |     _collect_mot_aux_loss as _collect_mot_aux_loss,
+27 |     _get_mixture_loss_ema as _get_mixture_loss_ema,
+   |
+help: Remove import alias
+
+PLC0414 Import alias does not rename original package
+  --> ultralytics\utils\loss.py:26:5
+   |
+24 |     _collect_moa_aux_loss as _collect_moa_aux_loss,
+25 |     _collect_moe_aux_loss as _collect_moe_aux_loss,
+26 |     _collect_mot_aux_loss as _collect_mot_aux_loss,
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+27 |     _get_mixture_loss_ema as _get_mixture_loss_ema,
+28 | )
+   |
+help: Remove import alias
+
+PLC0414 Import alias does not rename original package
+  --> ultralytics\utils\loss.py:27:5
+   |
+25 |     _collect_moe_aux_loss as _collect_moe_aux_loss,
+26 |     _collect_mot_aux_loss as _collect_mot_aux_loss,
+27 |     _get_mixture_loss_ema as _get_mixture_loss_ema,
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+28 | )
+   |
+help: Remove import alias
+
+I001 [*] Import block is un-sorted or un-formatted
+    --> ultralytics\utils\loss.py:1464:9
+     |
+1463 |         # Detection loss (always present)
+1464 |         from ultralytics.utils.loss import v8DetectionLoss, E2ELoss
+     |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1465 |
+1466 |         end2end = getattr(model, "end2end", False)
+     |
+help: Organize imports
+     |
+1463 |         # Detection loss (always present)
+     -         from ultralytics.utils.loss import v8DetectionLoss, E2ELoss
+1464 +         from ultralytics.utils.loss import E2ELoss, v8DetectionLoss
+1465 |
+     |
+
+RUF034 Useless `if`-`else` condition
+    --> ultralytics\utils\loss.py:1468:25
+     |
+1466 |         end2end = getattr(model, "end2end", False)
+1467 |         det_cls = E2ELoss if end2end else v8DetectionLoss
+1468 |         self.det_loss = det_cls(model) if end2end else det_cls(model)
+     |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+1469 |
+1470 |         # Segmentation loss
+     |
+
+RUF059 Unpacked variable `seg_items` is never used
+    --> ultralytics\utils\loss.py:1619:27
+     |
+1617 |                 "feats": one2many.get("feats", []),
+1618 |             }
+1619 |             seg_loss_val, seg_items = self.seg_loss(seg_preds, batch)
+     |                           ^^^^^^^^^
+1620 |             # v8SegmentationLoss includes detection terms for target assignment. Detection is already accounted for,
+1621 |             # so add only task-specific components and use the E2E assignment schedule for the auxiliary head.
+     |
+help: Prefix it with an underscore or any other dummy variable pattern
+
+RUF059 Unpacked variable `pose_items` is never used
+    --> ultralytics\utils\loss.py:1651:28
+     |
+1649 |                 "feats": one2many.get("feats", []),
+1650 |             }
+1651 |             pose_loss_val, pose_items = self.pose_loss(pose_preds, batch)
+     |                            ^^^^^^^^^^
+1652 |             # v8PoseLoss returns [box, keypoint, keypoint-objectness, cls, DFL]. Add only pose-specific terms and
+1653 |             # supervise the shared keypoint predictions under both E2E assignment policies.
+     |
+help: Prefix it with an underscore or any other dummy variable pattern
+
+PLR0402 [*] Use `from torch import nn` in lieu of alias
+ --> ultralytics\utils\tal.py:6:8
+  |
+5 | import torch
+6 | import torch.nn as nn
+  |        ^^^^^^^^^^^^^^
+7 |
+8 | from . import LOGGER
+  |
+help: Replace with `from torch import nn`
+  |
+5 | import torch
+  - import torch.nn as nn
+6 + from torch import nn
+7 |
+  |
+
+Found 15 errors.
+[*] 4 fixable with the `--fix` option (7 hidden fixes can be enabled with the `--unsafe-fixes` option).
+unformatted: File would be reformatted
+   --> tests\test_stal_assignment.py:37:55
+    |
+36  |         ({"stal_min_candidates": 4, "stal_topk_small": 3}, "greater than or equal"),
+    -         ({"stal_topk_small": 1.5}, "stal_topk_small"),
+    -         ({"stal_small_area": float("nan")}, "finite"),
+    -         ({"stal_medium_area": float("inf")}, "finite"),
+    -         ({"stal_candidate_scale": float("nan")}, "finite"),
+37  +         ({"stal_topk_small": 1.5}, "stal_topk_small"),
+38  +         ({"stal_small_area": float("nan")}, "finite"),
+39  +         ({"stal_medium_area": float("inf")}, "finite"),
+40  +         ({"stal_candidate_scale": float("nan")}, "finite"),
+41  |     ],
+--------------------------------------------------------------------------------
+162 |     assigner = TaskAlignedAssigner(num_classes=3, stal_mode="adaptive")
+    -     mask_pos = torch.tensor(
+    -         [[[1.0, 0.0, 0.0], [0.0, 1.0, 1.0], [0.0, 0.0, 1.0]]]
+    -     )
+163 +     mask_pos = torch.tensor([[[1.0, 0.0, 0.0], [0.0, 1.0, 1.0], [0.0, 0.0, 1.0]]])
+164 |     overlaps = torch.zeros_like(mask_pos)
+    |
+
+unformatted: File would be reformatted
+   --> ultralytics\cfg\__init__.py:7:12
+    |
+6   | import importlib.util
+    - import json
+    - import math
+7   + import json
+8   + import math
+9   | import os
+--------------------------------------------------------------------------------
+780 |     }.items():
+    -         if isinstance(value, bool) or not isinstance(value, FLOAT_OR_INT):
+    -             raise TypeError(f"'{name}={value}' must be an int or float.")
+    -         if not math.isfinite(value):
+    -             raise ValueError(f"'{name}={value}' must be finite.")
+781 +         if isinstance(value, bool) or not isinstance(value, FLOAT_OR_INT):
+782 +             raise TypeError(f"'{name}={value}' must be an int or float.")
+783 +         if not math.isfinite(value):
+784 +             raise ValueError(f"'{name}={value}' must be finite.")
+785 |     if small_area <= 0 or medium_area <= 0 or small_area >= medium_area:
+    |
+
+2 files would be reformatted, 2 files already formatted
++ 'F:\conda-envs\yolo-master\python.exe' -m ruff check tests/test_stal_assignment.py ultralytics/cfg/__init__.py ultralytics/utils/loss.py ultralytics/utils/tal.py
++ 'F:\conda-envs\yolo-master\python.exe' -m ruff format --check tests/test_stal_assignment.py ultralytics/cfg/__init__.py ultralytics/utils/loss.py ultralytics/utils/tal.py
++ 'F:\conda-envs\yolo-master\python.exe' -m codespell_lib tests/test_stal_assignment.py ultralytics/cfg/__init__.py ultralytics/cfg/default.yaml ultralytics/utils/loss.py ultralytics/utils/tal.py

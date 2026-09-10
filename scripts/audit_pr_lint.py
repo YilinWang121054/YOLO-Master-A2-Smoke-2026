@@ -1,5 +1,6 @@
 """Compare current lint diagnostics to the exact source base, without hiding failures."""
 
+import argparse
 import collections
 import json
 import subprocess
@@ -42,6 +43,15 @@ def diagnostics(source, filename):
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--base", default=BASE)
+    parser.add_argument("--output", type=Path, default=ROOT / "results/closure-pr-lint-audit.json")
+    args = parser.parse_args()
+    base = subprocess.check_output(
+        ["git", "-c", f"safe.directory={SOURCE.as_posix()}", "-C", str(SOURCE), "rev-parse", "--verify", f"{args.base}^{{commit}}"],
+        text=True,
+        encoding="utf-8",
+    ).strip()
     report = {}
     for path in FILES:
         before = subprocess.run(
@@ -52,7 +62,7 @@ def main():
                 "-C",
                 str(SOURCE),
                 "show",
-                f"{BASE}:{path}",
+                f"{base}:{path}",
             ],
             capture_output=True,
             text=True,
@@ -72,7 +82,7 @@ def main():
                 {"code": k[0], "message": k[1], "count": n} for k, n in new.items()
             ],
         }
-    out = ROOT / "results/closure-pr-lint-audit.json"
+    out = args.output
     out.write_text(
         json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
     )

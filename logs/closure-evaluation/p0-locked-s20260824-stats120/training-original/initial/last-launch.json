@@ -1,0 +1,11 @@
+{
+  "at": "2026-09-10T00:13:14.024124+08:00",
+  "action": "fresh",
+  "pid": 32412,
+  "command": [
+    "F:\\conda-envs\\yolo-master\\python.exe",
+    "E:\\desktop\\保研+工作\\就业\\实践\\腾讯犀牛鸟\\YOLO-Master-A2-Smoke-2026\\scripts\\run_p0_baseline.py"
+  ],
+  "stdout": "F:\\YOLO-Master-A2-P1\\recovery-logs\\p1-seed3-chain\\p0-locked-s20260824-stats120\\initial.stdout.log",
+  "stderr": "F:\\YOLO-Master-A2-P1\\recovery-logs\\p1-seed3-chain\\p0-locked-s20260824-stats120\\initial.stderr.log"
+}

@@ -1,0 +1,8 @@
+...............................                                          [100%]
+============================== warnings summary ===============================
+tests/test_master_model_configs.py::test_master_config_builds_and_forwards[ultralytics/cfg/models/master/v0_10/det/yolo-master-moa-n.yaml]
+  E:\desktop\保研+工作\就业\实践\腾讯犀牛鸟\YOLO-Master-A2-final-review\ultralytics\nn\tasks.py:2259: UserWarning: C2fMoA(num_heads=6) adjusted to 3 to maintain head_dim ≥ 16 (c//heads ≥ 16).
+    m_ = torch.nn.Sequential(*(m(*args) for _ in range(n))) if n > 1 else m(*args)  # module
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+31 passed, 1 warning in 6.29s

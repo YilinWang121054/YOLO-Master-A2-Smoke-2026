@@ -1,0 +1,590 @@
+unformatted: File would be reformatted
+   --> tests\test_edge_deployment_contract.py:66:70
+    |
+65  |
+    -     auto_ratio, auto_unpadded, auto_pad = edge_utils.letterbox_shape(
+    -         (100, 200), (640, 640), stride=32, auto=True
+    -     )
+66  +     auto_ratio, auto_unpadded, auto_pad = edge_utils.letterbox_shape((100, 200), (640, 640), stride=32, auto=True)
+67  |     assert auto_ratio == pytest.approx(3.2)
+--------------------------------------------------------------------------------
+202 |     cmake_text = (EDGE_DIR / "CMakeLists.txt").read_text(encoding="utf-8")
+    -     is_stub_target = (
+    -         "cpp/edge_benchmark_stub.cpp" in cmake_text
+    -         and "cpp/edge_benchmark.cpp" not in cmake_text
+    -     )
+203 +     is_stub_target = "cpp/edge_benchmark_stub.cpp" in cmake_text and "cpp/edge_benchmark.cpp" not in cmake_text
+204 |     generator = []
+    |
+
+unformatted: File would be reformatted
+   --> tests\test_foundation_cache_training.py:181:36
+    |
+180 |             # First prompt gets high scores on the first two queries; second prompt stays below threshold.
+    -             "scores": torch.tensor(
+    -                 [[[0.9, 0.8, 0.1, 0.0, 0.0]] * len(prompts)]
+    -             ).transpose(1, 2)
+181 +             "scores": torch.tensor([[[0.9, 0.8, 0.1, 0.0, 0.0]] * len(prompts)]).transpose(1, 2)
+182 |             if False
+    |
+
+unformatted: File would be reformatted
+   --> tests\test_foundation_offline.py:119:40
+    |
+118 |     teacher = make_teacher()
+    -     summary = extract_foundation_cache(
+    -         teacher, make_samples(3), tmp_path, prompts=["person", "dog"], batch_size=2
+    -     )
+119 +     summary = extract_foundation_cache(teacher, make_samples(3), tmp_path, prompts=["person", "dog"], batch_size=2)
+120 |     assert summary["written"] == ["img_0", "img_1", "img_2"]
+    |
+
+unformatted: File would be reformatted
+    --> tests\test_issue51_runtime_contract.py:48:51
+     |
+47   |     name = "issue51_collect_environment"
+     -     spec = importlib.util.spec_from_file_location(
+     -         name, EDGE / "scripts" / "collect_environment.py"
+     -     )
+48   +     spec = importlib.util.spec_from_file_location(name, EDGE / "scripts" / "collect_environment.py")
+49   |     assert spec and spec.loader
+--------------------------------------------------------------------------------
+60   |         [
+     -             "--repo-root", str(ROOT),
+     -             "--backend", "onnx",
+     -             "--execution-provider", "cpu",
+     -             "--threads", "4",
+     -             "--warmup", "2",
+     -             "--runs", "3",
+61   +             "--repo-root",
+62   +             str(ROOT),
+63   +             "--backend",
+64   +             "onnx",
+65   +             "--execution-provider",
+66   +             "cpu",
+67   +             "--threads",
+68   +             "4",
+69   +             "--warmup",
+70   +             "2",
+71   +             "--runs",
+72   +             "3",
+73   |         ]
+--------------------------------------------------------------------------------
+106  |     assert "write_benchmark_json" in source
+     -     for field in ("schema_version", "status", "protocol", "execution_provider", "host",
+     -                   "architecture", "compiler", "cpu", "logical_cpus", "build_date",
+     -                   "summary", "timed_images", "timing_csv", "letterbox", "nms_mode",
+     -                   "cw_sigma", "class_count", "timing_ms"):
+107  +     for field in (
+108  +         "schema_version",
+109  +         "status",
+110  +         "protocol",
+111  +         "execution_provider",
+112  +         "host",
+113  +         "architecture",
+114  +         "compiler",
+115  +         "cpu",
+116  +         "logical_cpus",
+117  +         "build_date",
+118  +         "summary",
+119  +         "timed_images",
+120  +         "timing_csv",
+121  +         "letterbox",
+122  +         "nms_mode",
+123  +         "cw_sigma",
+124  +         "class_count",
+125  +         "timing_ms",
+126  +     ):
+127  |         assert f'\\"{field}\\"' in source
+--------------------------------------------------------------------------------
+135  |     source = collector.read_text(encoding="utf-8")
+     -     assert "subprocess" in source and "SCHEMA_VERSION = \"issue51-environment/v1\"" in source
+136  +     assert "subprocess" in source and 'SCHEMA_VERSION = "issue51-environment/v1"' in source
+137  |     assert schema["properties"]["schema_version"]["const"] == "issue51-environment/v1"
+138  |     assert set(schema["required"]) >= {
+     -         "captured_at_utc", "host", "tools", "sdk_roots", "runtime_protocol", "repository"
+139  +         "captured_at_utc",
+140  +         "host",
+141  +         "tools",
+142  +         "sdk_roots",
+143  +         "runtime_protocol",
+144  +         "repository",
+145  |     }
+--------------------------------------------------------------------------------
+168  |     assert np.array_equal(parity.normalize_output(values.T, 14), values)
+     -     assert parity.select_detection_output(
+     -         [np.zeros((1, 2, 2)), values[None]], 14
+     -     ).shape == (1, 14, 5)
+169  +     assert parity.select_detection_output([np.zeros((1, 2, 2)), values[None]], 14).shape == (1, 14, 5)
+170  |
+--------------------------------------------------------------------------------
+192  |     assert mnn_val.nms(np.empty((0, 4)), np.empty((0,)), 0.5) == []
+     -     boxes = np.array(
+     -         [[0, 0, 10, 10], [1, 1, 9, 9], [30, 30, 40, 40]], dtype=np.float32
+     -     )
+193  +     boxes = np.array([[0, 0, 10, 10], [1, 1, 9, 9], [30, 30, 40, 40]], dtype=np.float32)
+194  |     keep = mnn_val.nms(boxes, np.array([0.9, 0.8, 0.7], dtype=np.float32), 0.5)
+--------------------------------------------------------------------------------
+220  |     image_list.write_text(
+     -         '\ufeff# frozen validation order\n"images with spaces/B frame.png"\n'
+     -         "'images with spaces/a frame.jpg'\n",
+221  +         "\ufeff# frozen validation order\n\"images with spaces/B frame.png\"\n'images with spaces/a frame.jpg'\n",
+222  |         encoding="utf-8",
+--------------------------------------------------------------------------------
+288  |     evaluator = load_module("issue51_eval_prediction_class", EDGE / "scripts" / "eval_map.py")
+289  +
+290  |     class TorchStub:
+--------------------------------------------------------------------------------
+447  |         assert "YOLO-Master-EsMoE-N-ONNX-NCNN-MNN-CPP" not in str(path)
+     -     validation = (ROOT / "examples" / "YOLO-Master-Edge-Deployment" / "VALIDATION.md").read_text(
+     -         encoding="utf-8"
+     -     )
+448  +     validation = (ROOT / "examples" / "YOLO-Master-Edge-Deployment" / "VALIDATION.md").read_text(encoding="utf-8")
+449  |     assert "YOLO-Master-EsMoE-N-ONNX-NCNN-MNN-CPP" not in validation
+--------------------------------------------------------------------------------
+470  |     assert "std::filesystem::u8path(path)" in source
+     -     assert "per_model_metadata.replace_extension(\".metadata.yaml\")" in source
+471  +     assert 'per_model_metadata.replace_extension(".metadata.yaml")' in source
+472  |     assert "metadata input_blob and output_blob must differ" in source
+--------------------------------------------------------------------------------
+481  |     main = (EDGE / "cpp" / "src" / "main.cpp").read_text(encoding="utf-8")
+     -     sku_block = main.split('} else if (profile == "sku110k") {', 1)[1].split(
+     -         '} else if (profile != "default")', 1
+     -     )[0]
+482  +     sku_block = main.split('} else if (profile == "sku110k") {', 1)[1].split('} else if (profile != "default")', 1)[0]
+483  |     assert "multilabel_opt->count() == 0" in sku_block
+--------------------------------------------------------------------------------
+546  |     """Absent classes contribute zero instead of being dropped from mAP."""
+     -     standalone = load_module(
+     -         "issue51_standalone_metrics", EDGE / "scripts" / "eval_map_standalone.py"
+     -     )
+547  +     standalone = load_module("issue51_standalone_metrics", EDGE / "scripts" / "eval_map_standalone.py")
+548  |     tp = np.ones((1, 10), dtype=bool)
+     -     ap = standalone.ap_per_class(
+     -         tp, np.array([0.9]), np.array([0]), np.array([0]), num_classes=2
+     -     )
+549  +     ap = standalone.ap_per_class(tp, np.array([0.9]), np.array([0]), np.array([0]), num_classes=2)
+550  |     assert ap.shape == (2, 10)
+--------------------------------------------------------------------------------
+558  | def test_standalone_profile_protocol_defaults_match_runner_profiles():
+     -     standalone = load_module(
+     -         "issue51_standalone_profile_protocol", EDGE / "scripts" / "eval_map_standalone.py"
+     -     )
+559  +     standalone = load_module("issue51_standalone_profile_protocol", EDGE / "scripts" / "eval_map_standalone.py")
+560  |     assert standalone.PROFILE_PROTOCOLS["visdrone"]["imgsz"] == 640
+--------------------------------------------------------------------------------
+568  | def test_ultralytics_evaluator_profile_protocol_defaults(monkeypatch):
+     -     evaluator = load_module(
+     -         "issue51_eval_profile_protocol", EDGE / "scripts" / "eval_map.py"
+     -     )
+     -     monkeypatch.setattr(
+     -         sys, "argv", ["eval_map.py", "--preds", "preds", "--classes", "sku110k", "--smoke"]
+     -     )
+569  +     evaluator = load_module("issue51_eval_profile_protocol", EDGE / "scripts" / "eval_map.py")
+570  +     monkeypatch.setattr(sys, "argv", ["eval_map.py", "--preds", "preds", "--classes", "sku110k", "--smoke"])
+571  |     args = evaluator.parse_args()
+--------------------------------------------------------------------------------
+603  | def test_standalone_visdrone_parser_keeps_valid_classes_and_ignores_reserved_rows(tmp_path):
+     -     standalone = load_module(
+     -         "issue51_standalone_visdrone", EDGE / "scripts" / "eval_map_standalone.py"
+     -     )
+604  +     standalone = load_module("issue51_standalone_visdrone", EDGE / "scripts" / "eval_map_standalone.py")
+605  |     path = tmp_path / "annotations.txt"
+606  |     path.write_text(
+     -         "0,0,10,10,1,1,0,0\n"
+     -         "10,10,10,10,0,2,0,0\n"
+     -         "20,20,10,10,1,11,0,0\n",
+607  +         "0,0,10,10,1,1,0,0\n10,10,10,10,0,2,0,0\n20,20,10,10,1,11,0,0\n",
+608  |         encoding="utf-8",
+--------------------------------------------------------------------------------
+616  |     """Native VisDrone exports may use spaces instead of commas."""
+     -     standalone = load_module(
+     -         "issue51_standalone_visdrone_whitespace", EDGE / "scripts" / "eval_map_standalone.py"
+     -     )
+617  +     standalone = load_module("issue51_standalone_visdrone_whitespace", EDGE / "scripts" / "eval_map_standalone.py")
+618  |     path = tmp_path / "annotations.txt"
+--------------------------------------------------------------------------------
+646  |     output = tmp_path / "single-label.json"
+     -     assert manifest_module.main(
+     -         ["create", "--template", "--single-label", "--output", str(output)]
+     -     ) == 0
+647  +     assert manifest_module.main(["create", "--template", "--single-label", "--output", str(output)]) == 0
+648  |     payload = json.loads(output.read_text(encoding="utf-8"))
+649  |     assert payload["protocol"]["multi_label"] is False
+650  |
+651  |     output_default = tmp_path / "multi-label.json"
+     -     assert manifest_module.main(
+     -         ["create", "--template", "--multi-label", "--output", str(output_default)]
+     -     ) == 0
+652  +     assert manifest_module.main(["create", "--template", "--multi-label", "--output", str(output_default)]) == 0
+653  |     default_payload = json.loads(output_default.read_text(encoding="utf-8"))
+--------------------------------------------------------------------------------
+657  | def test_evidence_manifest_acceptance_requires_auditable_digests_and_format_keys():
+     -     manifest_module = load_module(
+     -         "issue51_evidence_manifest_audit", EDGE / "scripts" / "evidence_manifest.py"
+     -     )
+658  +     manifest_module = load_module("issue51_evidence_manifest_audit", EDGE / "scripts" / "evidence_manifest.py")
+659  |     record = lambda path, digest: {"path": path, "bytes": 1, "sha256": digest}
+--------------------------------------------------------------------------------
+672  |         "dataset": {
+     -             "image_count": len(images), "images": images,
+673  +             "image_count": len(images),
+674  +             "images": images,
+675  |             "image_list_sha256": manifest_module._list_digest(images),
+676  |         },
+     -         "protocol": {"imgsz": 640, "conf": 0.001, "iou": 0.7, "max_det": 300,
+     -                      "multi_label": True, "letterbox": True,
+     -                      "small_conf": -1.0, "small_area": 1024.0,
+     -                      "routing_semantics": "dense_fallback"},
+677  +         "protocol": {
+678  +             "imgsz": 640,
+679  +             "conf": 0.001,
+680  +             "iou": 0.7,
+681  +             "max_det": 300,
+682  +             "multi_label": True,
+683  +             "letterbox": True,
+684  +             "small_conf": -1.0,
+685  +             "small_area": 1024.0,
+686  +             "routing_semantics": "dense_fallback",
+687  +         },
+688  |         "training": {
+     -             "base_model": "esmoe-n.yaml", "dataset_version": "VisDrone2019-DET",
+     -             "epochs": 120, "seed": 0, "command": "yolo train ...",
+689  +             "base_model": "esmoe-n.yaml",
+690  +             "dataset_version": "VisDrone2019-DET",
+691  +             "epochs": 120,
+692  +             "seed": 0,
+693  +             "command": "yolo train ...",
+694  |         },
+695  |         "artifacts": {
+     -             "checkpoint": record("best.pt", "c" * 64), "models": models,
+     -             "reports": {"metrics": {
+     -                 "files": report_files, "sha256": manifest_module._list_digest(report_files),
+     -             }},
+696  +             "checkpoint": record("best.pt", "c" * 64),
+697  +             "models": models,
+698  +             "reports": {
+699  +                 "metrics": {
+700  +                     "files": report_files,
+701  +                     "sha256": manifest_module._list_digest(report_files),
+702  +                 }
+703  +             },
+704  |             "labels": {"count": len(images), "files": images},
+705  |             "predictions": {"count": len(images), "files": images},
+706  |         },
+707  |         "calibration": {
+     -             "enabled": True, "image_count": len(calibration), "images": calibration,
+708  +             "enabled": True,
+709  +             "image_count": len(calibration),
+710  +             "images": calibration,
+711  |             "image_list_sha256": manifest_module._list_digest(calibration),
+712  |             "disjoint_from_validation": True,
+713  |         },
+714  |         "environment": {
+     -             "python": "3.10.12", "platform": "Ubuntu-22.04", "machine": "x86_64",
+715  +             "python": "3.10.12",
+716  +             "platform": "Ubuntu-22.04",
+717  +             "machine": "x86_64",
+718  |             "git_commit": "a" * 40,
+--------------------------------------------------------------------------------
+723  |     training = payload.pop("training")
+     -     assert any("training provenance" in error
+     -                for error in manifest_module.validate_manifest(payload, acceptance=True))
+724  +     assert any("training provenance" in error for error in manifest_module.validate_manifest(payload, acceptance=True))
+725  |     payload["training"] = training
+--------------------------------------------------------------------------------
+732  |     payload["calibration"]["disjoint_from_validation"] = None
+     -     assert any("disjoint_from_validation=true" in error
+     -                for error in manifest_module.validate_manifest(payload, acceptance=True))
+733  +     assert any(
+734  +         "disjoint_from_validation=true" in error
+735  +         for error in manifest_module.validate_manifest(payload, acceptance=True)
+736  +     )
+737  |     assert manifest_module._model_format("onnx_fp16") == "onnx"
+--------------------------------------------------------------------------------
+742  |     """The standalone JSON Schema must enforce the Python validator's core floors."""
+743  +
+744  |     def reject_duplicate_keys(pairs):
+--------------------------------------------------------------------------------
+778  | def test_evidence_manifest_records_and_validates_small_object_protocol(tmp_path):
+     -     manifest_module = load_module(
+     -         "issue51_evidence_manifest_small_protocol", EDGE / "scripts" / "evidence_manifest.py"
+     -     )
+779  +     manifest_module = load_module("issue51_evidence_manifest_small_protocol", EDGE / "scripts" / "evidence_manifest.py")
+780  |     output = tmp_path / "small-protocol-template.json"
+     -     assert manifest_module.main([
+     -         "create", "--template", "--small-conf", "0.05", "--small-area", "1024",
+     -         "--output", str(output),
+     -     ]) == 0
+781  +     assert (
+782  +         manifest_module.main(
+783  +             [
+784  +                 "create",
+785  +                 "--template",
+786  +                 "--small-conf",
+787  +                 "0.05",
+788  +                 "--small-area",
+789  +                 "1024",
+790  +                 "--output",
+791  +                 str(output),
+792  +             ]
+793  +         )
+794  +         == 0
+795  +     )
+796  |     payload = json.loads(output.read_text(encoding="utf-8"))
+--------------------------------------------------------------------------------
+815  |     images = [record("{:04d}.jpg".format(i), "{:064x}".format(i)) for i in range(500)]
+     -     calibration = [
+     -         record("cal-{:04d}.jpg".format(i), "{:064x}".format(1000 + i))
+     -         for i in range(300)
+     -     ]
+816  +     calibration = [record("cal-{:04d}.jpg".format(i), "{:064x}".format(1000 + i)) for i in range(300)]
+817  |     model_onnx = [{"path": "model.onnx", "bytes": 1, "sha256": "d" * 64}]
+--------------------------------------------------------------------------------
+879  | def test_evidence_manifest_requires_explicit_routing_semantics_for_acceptance():
+     -     manifest_module = load_module(
+     -         "issue51_evidence_manifest_routing", EDGE / "scripts" / "evidence_manifest.py"
+     -     )
+880  +     manifest_module = load_module("issue51_evidence_manifest_routing", EDGE / "scripts" / "evidence_manifest.py")
+881  |     # Use a minimal payload that already satisfies all other acceptance floors;
+--------------------------------------------------------------------------------
+890  |         "status": "acceptance-candidate",
+     -         "dataset": {"image_count": 500, "images": images,
+     -                     "image_list_sha256": manifest_module._list_digest(images)},
+     -         "protocol": {"imgsz": 640, "conf": 0.001, "iou": 0.7, "max_det": 300,
+     -                      "multi_label": True, "letterbox": True,
+     -                      "small_conf": -1.0, "small_area": 1024.0},
+     -         "training": {"base_model": "esmoe", "dataset_version": "v1", "epochs": 1,
+     -                       "seed": 0, "command": "train"},
+891  +         "dataset": {"image_count": 500, "images": images, "image_list_sha256": manifest_module._list_digest(images)},
+892  +         "protocol": {
+893  +             "imgsz": 640,
+894  +             "conf": 0.001,
+895  +             "iou": 0.7,
+896  +             "max_det": 300,
+897  +             "multi_label": True,
+898  +             "letterbox": True,
+899  +             "small_conf": -1.0,
+900  +             "small_area": 1024.0,
+901  +         },
+902  +         "training": {"base_model": "esmoe", "dataset_version": "v1", "epochs": 1, "seed": 0, "command": "train"},
+903  |         "artifacts": {
+--------------------------------------------------------------------------------
+912  |         },
+     -         "calibration": {"enabled": False, "image_count": 0, "images": [],
+     -                         "image_list_sha256": None, "disjoint_from_validation": None},
+     -         "environment": {"python": "3.10", "platform": "linux", "machine": "x86_64",
+     -                          "git_commit": "a" * 40},
+913  +         "calibration": {
+914  +             "enabled": False,
+915  +             "image_count": 0,
+916  +             "images": [],
+917  +             "image_list_sha256": None,
+918  +             "disjoint_from_validation": None,
+919  +         },
+920  +         "environment": {"python": "3.10", "platform": "linux", "machine": "x86_64", "git_commit": "a" * 40},
+921  |         "run": {"command": "run"},
+--------------------------------------------------------------------------------
+925  |     payload["protocol"]["routing_semantics"] = "dense_fallback"
+     -     assert not any("routing_semantics" in error for error in manifest_module.validate_manifest(
+     -         payload, acceptance=True
+     -     ))
+926  +     assert not any(
+927  +         "routing_semantics" in error for error in manifest_module.validate_manifest(payload, acceptance=True)
+928  +     )
+929  |
+--------------------------------------------------------------------------------
+940  |     records = manifest_module._image_records(paths, base)
+     -     assert any("duplicate image stems" in error for error in manifest_module.validate_manifest(
+     -         {"schema_version": manifest_module.SCHEMA_VERSION, "dataset": {"image_count": 2, "images": records}},
+     -         acceptance=False,
+     -     ))
+941  +     assert any(
+942  +         "duplicate image stems" in error
+943  +         for error in manifest_module.validate_manifest(
+944  +             {"schema_version": manifest_module.SCHEMA_VERSION, "dataset": {"image_count": 2, "images": records}},
+945  +             acceptance=False,
+946  +         )
+947  +     )
+948  |
+--------------------------------------------------------------------------------
+983  |     output = tmp_path / "manifest.json"
+     -     assert manifest_module.main([
+     -         "create", "--template", "--output", str(output),
+     -     ]) == 0
+984  +     assert (
+985  +         manifest_module.main(
+986  +             [
+987  +                 "create",
+988  +                 "--template",
+989  +                 "--output",
+990  +                 str(output),
+991  +             ]
+992  +         )
+993  +         == 0
+994  +     )
+995  |     payload = json.loads(output.read_text(encoding="utf-8"))
+--------------------------------------------------------------------------------
+1002 |     report.write_text("changed\n", encoding="utf-8")
+     -     assert any("SHA256 mismatch" in error for error in manifest_module._verify_records(
+     -         records, report_root, "report.map"
+     -     ))
+1003 +     assert any(
+1004 +         "SHA256 mismatch" in error for error in manifest_module._verify_records(records, report_root, "report.map")
+1005 +     )
+1006 |
+--------------------------------------------------------------------------------
+1021 |     output = tmp_path / "manifest.json"
+     -     assert manifest_module.main([
+     -         "create", "--images", str(list_file), "--image-root", str(tmp_path),
+     -         "--report", "timing=" + str(report), "--output", str(output),
+     -     ]) == 0
+1022 +     assert (
+1023 +         manifest_module.main(
+1024 +             [
+1025 +                 "create",
+1026 +                 "--images",
+1027 +                 str(list_file),
+1028 +                 "--image-root",
+1029 +                 str(tmp_path),
+1030 +                 "--report",
+1031 +                 "timing=" + str(report),
+1032 +                 "--output",
+1033 +                 str(output),
+1034 +             ]
+1035 +         )
+1036 +         == 0
+1037 +     )
+1038 |     payload = json.loads(output.read_text(encoding="utf-8"))
+--------------------------------------------------------------------------------
+1049 |     list_file = tmp_path / "ordered.list"
+     -     list_file.write_text("\ufeff# generated on Windows\n\"images with spaces/frame 01.jpg\"\n", encoding="utf-8")
+1050 +     list_file.write_text('\ufeff# generated on Windows\n"images with spaces/frame 01.jpg"\n', encoding="utf-8")
+1051 |
+--------------------------------------------------------------------------------
+1061 |
+     -     standalone = load_module(
+     -         "issue51_standalone_list_syntax", EDGE / "scripts" / "eval_map_standalone.py"
+     -     )
+1062 +     standalone = load_module("issue51_standalone_list_syntax", EDGE / "scripts" / "eval_map_standalone.py")
+1063 |     standalone_base, standalone_paths = standalone._resolve_images(list_file)
+--------------------------------------------------------------------------------
+1100 |         "protocol": {
+     -             "imgsz": 640, "conf": 0.001, "iou": 0.70, "max_det": 300,
+     -             "multi_label": True, "letterbox": True, "color": "RGB", "layout": "NCHW",
+1101 +             "imgsz": 640,
+1102 +             "conf": 0.001,
+1103 +             "iou": 0.70,
+1104 +             "max_det": 300,
+1105 +             "multi_label": True,
+1106 +             "letterbox": True,
+1107 +             "color": "RGB",
+1108 +             "layout": "NCHW",
+1109 |         },
+--------------------------------------------------------------------------------
+1124 |         "protocol": {
+     -             "imgsz": 640, "conf": 0.001, "iou": 0.70, "max_det": 300,
+     -             "multi_label": True, "letterbox": True, "color": "RGB", "layout": "NCHW",
+1125 +             "imgsz": 640,
+1126 +             "conf": 0.001,
+1127 +             "iou": 0.70,
+1128 +             "max_det": 300,
+1129 +             "multi_label": True,
+1130 +             "letterbox": True,
+1131 +             "color": "RGB",
+1132 +             "layout": "NCHW",
+1133 |             "routing_semantics": "dense_fallback",
+--------------------------------------------------------------------------------
+1152 |
+     -     standalone = load_module(
+     -         "issue51_standalone_content_hash", EDGE / "scripts" / "eval_map_standalone.py"
+     -     )
+1153 +     standalone = load_module("issue51_standalone_content_hash", EDGE / "scripts" / "eval_map_standalone.py")
+1154 |     assert standalone._image_content_manifest([str(image)], str(root)) == second
+--------------------------------------------------------------------------------
+1158 |     """Evidence verification must never follow an absolute or parent path."""
+     -     manifest = load_module(
+     -         "issue51_manifest_path_safety", EDGE / "scripts" / "evidence_manifest.py"
+     -     )
+1159 +     manifest = load_module("issue51_manifest_path_safety", EDGE / "scripts" / "evidence_manifest.py")
+1160 |     record = {"path": "../outside.bin", "bytes": 1, "sha256": "0" * 64}
+--------------------------------------------------------------------------------
+1304 |     candidate.mkdir()
+     -     (reference / "a.txt").write_text(
+     -         "0 0.9 0 0 10 10\n0 0.8 20 20 30 30\n", encoding="utf-8"
+     -     )
+     -     (candidate / "a.txt").write_text(
+     -         "0 0.9 0 0 9 10\n0 0.8 20 20 30 30\n", encoding="utf-8"
+     -     )
+1305 +     (reference / "a.txt").write_text("0 0.9 0 0 10 10\n0 0.8 20 20 30 30\n", encoding="utf-8")
+1306 +     (candidate / "a.txt").write_text("0 0.9 0 0 9 10\n0 0.8 20 20 30 30\n", encoding="utf-8")
+1307 |     report = diff.compare_directories(reference, candidate, iou_threshold=0.1)
+     |
+
+unformatted: File would be reformatted
+  --> tests\test_tal_conflict_resolution.py:11:29
+   |
+10 |     assigner = TaskAlignedAssigner(num_classes=3)
+   -     mask_pos = torch.tensor(
+   -         [[[1.0, 0.0, 0.0], [0.0, 1.0, 1.0], [0.0, 0.0, 1.0]]]
+   -     )
+11 +     mask_pos = torch.tensor([[[1.0, 0.0, 0.0], [0.0, 1.0, 1.0], [0.0, 0.0, 1.0]]])
+12 |     overlaps = torch.zeros_like(mask_pos)
+   |
+
+unformatted: File would be reformatted
+   --> ultralytics\nn\foundation\teachers\sam3.py:285:34
+    |
+284 |             )
+    -         if mask is not None and (not isinstance(mask, torch.Tensor) or tuple(mask.shape) != (len(prompts), features.shape[0])):
+285 +         if mask is not None and (
+286 +             not isinstance(mask, torch.Tensor) or tuple(mask.shape) != (len(prompts), features.shape[0])
+287 +         ):
+288 |             raise ValueError(f"SAM3 text mask must have shape [N,seq], got {getattr(mask, 'shape', None)}.")
+--------------------------------------------------------------------------------
+354 |         if transformer is None or not callable(scoring):
+    -             raise AttributeError("SAM3 model must expose transformer.encoder/decoder and dot_prod_scoring for detect().")
+355 +             raise AttributeError(
+356 +                 "SAM3 model must expose transformer.encoder/decoder and dot_prod_scoring for detect()."
+357 +             )
+358 |         batch = pixel_values.shape[0]
+    |
+
+unformatted: File would be reformatted
+    --> ultralytics\nn\foundation_distill_model.py:177:47
+     |
+176  |         configured_threshold = _get(config, "foundation_response_score_threshold", default_threshold)
+     -         self.response_score_threshold = float(default_threshold if configured_threshold is None else configured_threshold)
+177  +         self.response_score_threshold = float(
+178  +             default_threshold if configured_threshold is None else configured_threshold
+179  +         )
+180  |         if not 0.0 <= self.response_score_threshold <= 1.0:
+--------------------------------------------------------------------------------
+284  |         cache_dir = self.cache_dir
+     -         sample = next(
+     -             (path for path in sorted(cache_dir.rglob("*.pt")) if path.name != "text_prototypes.pt"), None
+     -         )
+285  +         sample = next((path for path in sorted(cache_dir.rglob("*.pt")) if path.name != "text_prototypes.pt"), None)
+286  |         if sample is None:
+--------------------------------------------------------------------------------
+312  |                     return load_foundation_batch(
+     -                         cache_dir, keys, device=batch["img"].device, with_response=self._response_enabled,
+313  +                         cache_dir,
+314  +                         keys,
+315  +                         device=batch["img"].device,
+316  +                         with_response=self._response_enabled,
+317  |                         response_only=not self._dense_needed,
+--------------------------------------------------------------------------------
+1247 |                 teacher_feature = torch.zeros(
+     -                     student_feature0.shape[0], 1, 1, 1,
+     -                     device=student_feature0.device, dtype=student_feature0.dtype,
+1248 +                     student_feature0.shape[0],
+1249 +                     1,
+1250 +                     1,
+1251 +                     1,
+1252 +                     device=student_feature0.device,
+1253 +                     dtype=student_feature0.dtype,
+1254 |                 )
+     |
+
+7 files would be reformatted, 666 files already formatted

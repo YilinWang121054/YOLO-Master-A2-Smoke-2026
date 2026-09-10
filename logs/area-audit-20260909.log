@@ -1,0 +1,7 @@
+{"run": "p1-fixed-s20260824", "APs": 13.528012508454292, "old_APs": 13.54269957916269}
+{"run": "p1-adaptive-s20260824", "APs": 13.365506682799527, "old_APs": 13.37902880045562}
+{"run": "p1-tal-s20260824", "APs": 12.604047118624612, "old_APs": 12.61671746711413}
+{"run": "p1-fixed-s20260825", "APs": 13.076568921428198, "old_APs": 13.089290020980759}
+{"run": "p1-adaptive-s20260825", "APs": 12.736086115803658, "old_APs": 12.755832306640905}
+{"run": "p1-tal-s20260825", "APs": 12.71673827598481, "old_APs": 12.729957279471982}
+{"adaptive_minus_fixed_APs": {"20260824": -0.16250582565476535, "20260825": -0.34048280562453925}, "mean_delta": -0.2514943156396523, "positive_seeds": 0, "complete_seed_count": 2, "official_DET_unchanged": true, "primary_three_seed_mean_pending": true}

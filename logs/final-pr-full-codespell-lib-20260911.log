@@ -1,0 +1,329 @@
+.\agent\assets\open-world-taxonomy\v3det_13204_classes.json:5526: teh ==> the
+.\agent\assets\open-world-taxonomy\v3det_13204_classes.json:5666: discus ==> discuss
+.\agent\assets\open-world-taxonomy\v3det_13204_classes.json:8154: varius ==> various
+.\agent\assets\open-world-taxonomy\v3det_13204_classes.json:12050: sate ==> state
+.\agent\assets\open-world-taxonomy\v3det_13204_classes.json:15042: mane ==> main, many, maine
+.\agent\assets\open-world-taxonomy\v3det_13204_classes.json:17286: americanus ==> americans
+.\agent\assets\open-world-taxonomy\v3det_13204_classes.json:17314: americanus ==> americans
+.\agent\assets\open-world-taxonomy\v3det_13204_classes.json:23866: artic ==> arctic
+.\agent\assets\open-world-taxonomy\v3det_13204_classes.json:24262: anser ==> answer
+.\agent\assets\open-world-taxonomy\v3det_13204_classes.json:24390: varius ==> various
+.\agent\assets\open-world-taxonomy\v3det_13204_classes.json:24470: americanus ==> americans
+.\agent\assets\open-world-taxonomy\v3det_13204_classes.json:24794: heros ==> heroes
+.\agent\assets\open-world-taxonomy\v3det_13204_classes.json:25398: heros ==> heroes
+.\agent\assets\open-world-taxonomy\v3det_13204_classes.json:27766: americanus ==> americans
+.\agent\assets\open-world-taxonomy\v3det_13204_classes.json:28722: afer ==> after
+.\agent\assets\open-world-taxonomy\v3det_13204_classes.json:29262: anser ==> answer
+.\agent\assets\open-world-taxonomy\v3det_13204_classes.json:29662: otho ==> otoh
+.\agent\assets\open-world-taxonomy\v3det_13204_classes.json:30530: anser ==> answer
+.\agent\assets\open-world-taxonomy\v3det_13204_classes.json:31638: anser ==> answer
+.\agent\assets\open-world-taxonomy\v3det_13204_classes.json:31846: anser ==> answer
+.\agent\assets\open-world-taxonomy\v3det_13204_classes.json:33426: heros ==> heroes
+.\agent\assets\open-world-taxonomy\v3det_13204_classes.json:34178: discus ==> discuss
+.\agent\assets\open-world-taxonomy\v3det_13204_classes.json:34410: americanus ==> americans
+.\agent\assets\open-world-taxonomy\v3det_13204_classes.json:37406: americanus ==> americans
+.\agent\assets\open-world-taxonomy\v3det_13204_classes.json:37578: anser ==> answer
+.\agent\assets\open-world-taxonomy\v3det_13204_classes.json:38366: varius ==> various
+.\agent\assets\open-world-taxonomy\v3det_13204_classes.json:38490: tages ==> tags, stages
+.\agent\assets\open-world-taxonomy\v3det_13204_classes.json:38746: americanus ==> americans
+.\agent\assets\open-world-taxonomy\v3det_13204_classes.json:39350: proxys ==> proxies
+.\agent\assets\open-world-taxonomy\v3det_13204_classes.json:39382: americanus ==> americans
+.\agent\assets\open-world-taxonomy\v3det_13204_classes.json:39822: unio ==> union
+.\agent\assets\open-world-taxonomy\v3det_13204_classes.json:42202: parma ==> param
+.\agent\assets\open-world-taxonomy\v3det_13204_classes.json:43198: vermillion ==> vermilion
+.\agent\assets\open-world-taxonomy\v3det_13204_classes.json:46730: afer ==> after
+.\agent\assets\open-world-taxonomy\v3det_13204_classes.json:48650: americanus ==> americans
+.\agent\assets\open-world-taxonomy\v3det_13204_classes.json:49138: takin ==> taking, taken, akin
+.\agent\assets\open-world-taxonomy\v3det_13204_classes.json:49262: hart ==> heart, harm
+.\agent\assets\open-world-taxonomy\v3det_13204_classes.json:50538: vermillion ==> vermilion
+.\agent\assets\open-world-taxonomy\v3det_13204_classes.txt:1380: teh ==> the
+.\agent\assets\open-world-taxonomy\v3det_13204_classes.txt:1415: discus ==> discuss
+.\agent\assets\open-world-taxonomy\v3det_13204_classes.txt:2037: varius ==> various
+.\agent\assets\open-world-taxonomy\v3det_13204_classes.txt:3011: sate ==> state
+.\agent\assets\open-world-taxonomy\v3det_13204_classes.txt:3759: mane ==> main, many, maine
+.\agent\assets\open-world-taxonomy\v3det_13204_classes.txt:4320: americanus ==> americans
+.\agent\assets\open-world-taxonomy\v3det_13204_classes.txt:4327: americanus ==> americans
+.\agent\assets\open-world-taxonomy\v3det_13204_classes.txt:5965: artic ==> arctic
+.\agent\assets\open-world-taxonomy\v3det_13204_classes.txt:6064: anser ==> answer
+.\agent\assets\open-world-taxonomy\v3det_13204_classes.txt:6096: varius ==> various
+.\agent\assets\open-world-taxonomy\v3det_13204_classes.txt:6116: americanus ==> americans
+.\agent\assets\open-world-taxonomy\v3det_13204_classes.txt:6197: heros ==> heroes
+.\agent\assets\open-world-taxonomy\v3det_13204_classes.txt:6348: heros ==> heroes
+.\agent\assets\open-world-taxonomy\v3det_13204_classes.txt:6940: americanus ==> americans
+.\agent\assets\open-world-taxonomy\v3det_13204_classes.txt:7179: afer ==> after
+.\agent\assets\open-world-taxonomy\v3det_13204_classes.txt:7314: anser ==> answer
+.\agent\assets\open-world-taxonomy\v3det_13204_classes.txt:7414: otho ==> otoh
+.\agent\assets\open-world-taxonomy\v3det_13204_classes.txt:7631: anser ==> answer
+.\agent\assets\open-world-taxonomy\v3det_13204_classes.txt:7908: anser ==> answer
+.\agent\assets\open-world-taxonomy\v3det_13204_classes.txt:7960: anser ==> answer
+.\agent\assets\open-world-taxonomy\v3det_13204_classes.txt:8355: heros ==> heroes
+.\agent\assets\open-world-taxonomy\v3det_13204_classes.txt:8543: discus ==> discuss
+.\agent\assets\open-world-taxonomy\v3det_13204_classes.txt:8601: americanus ==> americans
+.\agent\assets\open-world-taxonomy\v3det_13204_classes.txt:9350: americanus ==> americans
+.\agent\assets\open-world-taxonomy\v3det_13204_classes.txt:9393: anser ==> answer
+.\agent\assets\open-world-taxonomy\v3det_13204_classes.txt:9590: varius ==> various
+.\agent\assets\open-world-taxonomy\v3det_13204_classes.txt:9621: tages ==> tags, stages
+.\agent\assets\open-world-taxonomy\v3det_13204_classes.txt:9685: americanus ==> americans
+.\agent\assets\open-world-taxonomy\v3det_13204_classes.txt:9836: proxys ==> proxies
+.\agent\assets\open-world-taxonomy\v3det_13204_classes.txt:9844: americanus ==> americans
+.\agent\assets\open-world-taxonomy\v3det_13204_classes.txt:9954: unio ==> union
+.\agent\assets\open-world-taxonomy\v3det_13204_classes.txt:10549: parma ==> param
+.\agent\assets\open-world-taxonomy\v3det_13204_classes.txt:10798: vermillion ==> vermilion
+.\agent\assets\open-world-taxonomy\v3det_13204_classes.txt:11681: afer ==> after
+.\agent\assets\open-world-taxonomy\v3det_13204_classes.txt:12161: americanus ==> americans
+.\agent\assets\open-world-taxonomy\v3det_13204_classes.txt:12283: takin ==> taking, taken, akin
+.\agent\assets\open-world-taxonomy\v3det_13204_classes.txt:12314: hart ==> heart, harm
+.\agent\assets\open-world-taxonomy\v3det_13204_classes.txt:12633: vermillion ==> vermilion
+.\examples\molora\compare_lora_molora.py:111: te ==> the, be, we, to
+.\examples\molora\compare_lora_molora.py:117: te ==> the, be, we, to
+.\examples\molora\compare_lora_molora.py:124: te ==> the, be, we, to
+.\examples\molora\compare_lora_molora.py:137: te ==> the, be, we, to
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\TECHNICAL_REPORT.md:29: disjointness ==> disjointedness
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\TECHNICAL_REPORT.md:325: disjointness ==> disjointedness
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\coreml_export\export_coreml.py:59: ahd ==> had, and
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\coreml_export\export_coreml.py:60: ahd ==> had, and
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\coreml_export\export_coreml.py:60: ahd ==> had, and
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\coreml_export\export_coreml.py:61: ahd ==> had, and
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\coreml_export\export_coreml.py:61: ahd ==> had, and
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\cpp\third_party\CLI11.hpp:1613: AtLeast ==> at least
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\cpp\third_party\CLI11.hpp:1617: AtMost ==> at most, almost, utmost
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\cpp\third_party\CLI11.hpp:6381: inout ==> input, in out
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\cpp\third_party\CLI11.hpp:6382: inout ==> input, in out
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\cpp\third_party\CLI11.hpp:6886: AtLeast ==> at least
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\cpp\third_party\CLI11.hpp:6894: AtMost ==> at most, almost, utmost
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\cpp\third_party\CLI11.hpp:10106: AtMost ==> at most, almost, utmost
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\cpp\third_party\stb_image.h:2158: intead ==> instead
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\cpp\third_party\stb_image.h:2173: intead ==> instead
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\cpp\third_party\stb_image.h:2185: intead ==> instead
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\cpp\third_party\stb_image.h:4654: Paeth ==> Path
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\cpp\third_party\stb_image.h:4964: exitting ==> exiting
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\cpp\third_party\stb_image.h:5655: acount ==> account
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\cpp\third_party\stb_image.h:5675: acount ==> account
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\cpp\third_party\stb_image.h:5676: acount ==> account
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\cpp\third_party\stb_image.h:5698: acount ==> account
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\cpp\third_party\stb_image.h:5904: precessing ==> processing
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\cpp\third_party\stb_image.h:6835: previou ==> previous
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\cpp\third_party\stb_image.h:7868: accomidate ==> accommodate
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\cpp\third_party\stb_image_write.h:1091: paeth ==> path
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\gui\third_party\imgui\imgui.cpp:459: overlayed ==> overlaid
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\gui\third_party\imgui\imgui.cpp:649: stil ==> still
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\gui\third_party\imgui\imgui.cpp:858: explicily ==> explicitly
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\gui\third_party\imgui\imgui.cpp:1718: matterns ==> patterns, matters
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\gui\third_party\imgui\imgui.cpp:3560: especally ==> especially
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\gui\third_party\imgui\imgui.cpp:5409: analoguous ==> analogous
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\gui\third_party\imgui\imgui.cpp:5601: namspace ==> namespace
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\gui\third_party\imgui\imgui.cpp:6082: childs ==> children, child's
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\gui\third_party\imgui\imgui.cpp:6082: childs ==> children, child's
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\gui\third_party\imgui\imgui.cpp:6464: axises ==> axes
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\gui\third_party\imgui\imgui.cpp:6554: childs ==> children, child's
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\gui\third_party\imgui\imgui.cpp:7472: childs ==> children, child's
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\gui\third_party\imgui\imgui.cpp:7946: authorative ==> authoritative
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\gui\third_party\imgui\imgui.cpp:9835: axises ==> axes
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\gui\third_party\imgui\imgui.cpp:9848: axises ==> axes
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\gui\third_party\imgui\imgui.cpp:11447: positionning ==> positioning
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\gui\third_party\imgui\imgui.h:695: analoguous ==> analogous
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\gui\third_party\imgui\imgui.h:1020: instucts ==> instructs
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\gui\third_party\imgui\imgui_demo.cpp:271: Childs ==> Children, Child's
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\gui\third_party\imgui\imgui_demo.cpp:305: Childs ==> Children, Child's
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\gui\third_party\imgui\imgui_demo.cpp:307: Childs ==> Children, Child's
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\gui\third_party\imgui\imgui_demo.cpp:346: accross ==> across
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\gui\third_party\imgui\imgui_demo.cpp:2947: Retunr ==> Return, Retune
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\gui\third_party\imgui\imgui_demo.cpp:3538: Childs ==> Children, Child's
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\gui\third_party\imgui\imgui_demo.cpp:3549: Childs ==> Children, Child's
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\gui\third_party\imgui\imgui_demo.cpp:3578: Childs ==> Children, Child's
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\gui\third_party\imgui\imgui_demo.cpp:3615: Childs ==> Children, Child's
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\gui\third_party\imgui\imgui_demo.cpp:3623: Childs ==> Children, Child's
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\gui\third_party\imgui\imgui_demo.cpp:3633: childs ==> children, child's
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\gui\third_party\imgui\imgui_demo.cpp:3634: Childs ==> Children, Child's
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\gui\third_party\imgui\imgui_demo.cpp:3635: Childs ==> Children, Child's
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\gui\third_party\imgui\imgui_demo.cpp:3640: Childs ==> Children, Child's
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\gui\third_party\imgui\imgui_demo.cpp:3641: Childs ==> Children, Child's
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\gui\third_party\imgui\imgui_demo.cpp:3660: Childs ==> Children, Child's
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\gui\third_party\imgui\imgui_demo.cpp:5136: differenciate ==> differentiate
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\gui\third_party\imgui\imgui_demo.cpp:7487: Commmented ==> Commented
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\gui\third_party\imgui\imgui_demo.cpp:7514: Commmented ==> Commented
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\gui\third_party\imgui\imgui_demo.cpp:8128: tesselation ==> tessellation
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\gui\third_party\imgui\imgui_demo.cpp:8915: Childs ==> Children, Child's
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\gui\third_party\imgui\imgui_demo.cpp:8992: Childs ==> Children, Child's
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\gui\third_party\imgui\imgui_demo.cpp:9003: Childs ==> Children, Child's
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\gui\third_party\imgui\imgui_demo.cpp:10071: outputing ==> outputting
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\gui\third_party\imgui\imgui_draw.cpp:839: vertexes ==> vertices
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\gui\third_party\imgui\imgui_draw.cpp:866: vertexes ==> vertices
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\gui\third_party\imgui\imgui_draw.cpp:3343: Punctuations ==> Punctuation, Punctuation's
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\gui\third_party\imgui\imgui_draw.cpp:3421: Punctuations ==> Punctuation, Punctuation's
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\gui\third_party\imgui\imgui_draw.cpp:3511: Punctuations ==> Punctuation, Punctuation's
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\gui\third_party\imgui\imgui_draw.cpp:3543: Punctuations ==> Punctuation, Punctuation's
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\gui\third_party\imgui\imgui_draw.cpp:3864: punctuations ==> punctuation, punctuation's
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\gui\third_party\imgui\imgui_draw.cpp:3864: punctuations ==> punctuation, punctuation's
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\gui\third_party\imgui\imgui_draw.cpp:4595: te ==> the, be, we, to
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\gui\third_party\imgui\imgui_draw.cpp:4617: TE ==> THE, BE, WE, TO
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\gui\third_party\imgui\imgui_draw.cpp:4638: Te ==> The, Be, We, To
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\gui\third_party\imgui\imgui_internal.h:3088: Childs ==> Children, Child's
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\gui\third_party\imgui\imgui_tables.cpp:1377: axises ==> axes
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\gui\third_party\imgui\imgui_widgets.cpp:490: overlayed ==> overlaid
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\gui\third_party\imgui\imgui_widgets.cpp:3854: inactivate ==> deactivate
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\gui\third_party\imgui\imgui_widgets.cpp:4584: combinaison ==> combination
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\gui\third_party\imgui\imgui_widgets.cpp:7600: begining ==> beginning
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\gui\third_party\imgui\imstb_rectpack.h:318: visted ==> visited, listed, vested
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\gui\third_party\imgui\imstb_textedit.h:618: canoncialize ==> canonicalize
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\ios\App\BenchView.swift:1024: te ==> the, be, we, to
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\ios\App\BenchView.swift:1033: te ==> the, be, we, to
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\mac\Sources\YOLOMasterKit\Pipeline.swift:68: inout ==> input, in out
+.\examples\YOLO-Master-Cross-Platform-Edge-Deployment\scripts\quantize_int8.py:135: disjointness ==> disjointedness
+.\examples\YOLO-Master-EsMoE-VisDrone-Edge\scripts\recalibrate_bn.py:60: recal ==> recall
+.\examples\YOLO-Master-EsMoE-VisDrone-Edge\scripts\recalibrate_bn.py:74: recal ==> recall
+.\examples\YOLO-Master-EsMoE-VisDrone-Edge\scripts\recalibrate_bn.py:93: recal ==> recall
+.\examples\YOLO-Master-EsMoE-VisDrone-Edge\scripts\recalibrate_bn.py:102: recal ==> recall
+.\examples\YOLO-Master-EsMoE-VisDrone-Edge\scripts\recalibrate_bn.py:109: recal ==> recall
+.\scripts\reproduce\README.md:91: offical ==> official
+.\scripts\reproduce\README.md:162: accross ==> across
+.\scripts\reproduce\README.md:236: rounting ==> routing, rounding
+.\scripts\reproduce\README.md:244: machanism ==> mechanism
+.\ultralytics\nn\modules\moa\heads.py:348: numer ==> number
+.\ultralytics\nn\modules\moa\heads.py:352: numer ==> number
+.\ultralytics\utils\lora\training.py:592: fro ==> for, from
+.\ultralytics\utils\lora\training.py:601: fro ==> for, from
+.\ultralytics\utils\lora\training.py:748: fro ==> for, from
+.\ultralytics\utils\lora\training.py:755: fro ==> for, from
+.\wiki\repowiki\en\content\API-Reference\Core-API\Data-Processing-API\Data-Processing-API.md:229: BuildDS ==> builds
+.\wiki\repowiki\en\content\API-Reference\Core-API\Data-Processing-API\Data-Processing-API.md:230: BuildDS ==> builds
+.\wiki\repowiki\en\content\API-Reference\Data-Processing-API\Data-Loader-API.md:185: BuildDS ==> builds
+.\wiki\repowiki\en\content\API-Reference\Data-Processing-API\Data-Loader-API.md:186: BuildDS ==> builds
+.\wiki\repowiki\en\content\API-Reference\Data-Processing-API\Data-Validation-API.md:273: Strat ==> Start, Strata
+.\wiki\repowiki\en\content\API-Reference\Data-Processing-API\Data-Validation-API.md:276: Strat ==> Start, Strata
+.\wiki\repowiki\en\content\Data-Processing-System\Data-Augmentation\颜色空间增强.md:141: ApplyS ==> applies
+.\wiki\repowiki\en\content\Data-Processing-System\Data-Augmentation\颜色空间增强.md:144: ApplyS ==> applies
+.\wiki\repowiki\en\content\Developer-Guide\New-Feature-Development-Guide\集成测试与验证.md:164: Abl ==> Able
+.\wiki\repowiki\en\content\Developer-Guide\New-Feature-Development-Guide\集成测试与验证.md:172: Abl ==> Able
+.\wiki\repowiki\en\content\Developer-Guide\New-Feature-Development-Guide\集成测试与验证.md:323: Abl ==> Able
+.\wiki\repowiki\en\content\Developer-Guide\New-Feature-Development-Guide\集成测试与验证.md:330: Abl ==> Able
+.\wiki\repowiki\en\content\Examples-and-Tutorials\Basic-Tutorials\Instance-Segmentation-Tutorial\Instance-Segmentation-Tutorial.md:361: OT ==> TO, OF, OR, NOT, IT
+.\wiki\repowiki\en\content\Examples-and-Tutorials\Basic-Tutorials\Instance-Segmentation-Tutorial\Instance-Segmentation-Tutorial.md:373: OT ==> TO, OF, OR, NOT, IT
+.\wiki\repowiki\en\content\Examples-and-Tutorials\Basic-Tutorials\Instance-Segmentation-Tutorial\实例分割教程.md:361: OT ==> TO, OF, OR, NOT, IT
+.\wiki\repowiki\en\content\Examples-and-Tutorials\Basic-Tutorials\Instance-Segmentation-Tutorial\实例分割教程.md:373: OT ==> TO, OF, OR, NOT, IT
+.\wiki\repowiki\en\content\Inference-System\Performance-Optimization-and-Resource-Management\内存优化与缓存.md:53: utilites ==> utilities
+.\wiki\repowiki\en\content\Mixture-of-Experts-System\混合损失函数.md:79: TE ==> THE, BE, WE, TO
+.\wiki\repowiki\en\content\Mixture-of-Experts-System\混合损失函数.md:103: TE ==> THE, BE, WE, TO
+.\wiki\repowiki\en\content\Model-Export-and-Deployment\Cloud-Service-Deployment\云平台部署.md:74: AKS ==> ASK
+.\wiki\repowiki\en\content\Model-Export-and-Deployment\Cloud-Service-Deployment\云平台部署.md:80: AKS ==> ASK
+.\wiki\repowiki\en\content\Model-Export-and-Deployment\Cloud-Service-Deployment\云平台部署.md:93: AKS ==> ASK
+.\wiki\repowiki\en\content\Model-Export-and-Deployment\Cloud-Service-Deployment\云平台部署.md:99: AKS ==> ASK
+.\wiki\repowiki\en\content\Model-Export-and-Deployment\Cloud-Service-Deployment\云平台部署.md:99: AKS ==> ASK
+.\wiki\repowiki\en\content\Model-Export-and-Deployment\Cloud-Service-Deployment\云平台部署.md:111: AKS ==> ASK
+.\wiki\repowiki\en\content\Model-Export-and-Deployment\Cloud-Service-Deployment\云平台部署.md:115: AKS ==> ASK
+.\wiki\repowiki\en\content\Model-Export-and-Deployment\Cloud-Service-Deployment\云平台部署.md:138: AKS ==> ASK
+.\wiki\repowiki\en\content\Model-Export-and-Deployment\Cloud-Service-Deployment\云平台部署.md:254: AKS ==> ASK
+.\wiki\repowiki\en\content\Model-Export-and-Deployment\Cloud-Service-Deployment\云平台部署.md:269: AKS ==> ASK
+.\wiki\repowiki\en\content\Model-Export-and-Deployment\Cloud-Service-Deployment\云平台部署.md:312: AKS ==> ASK
+.\wiki\repowiki\en\content\Model-Export-and-Deployment\Cloud-Service-Deployment\云平台部署.md:360: AKS ==> ASK
+.\wiki\repowiki\en\content\Model-Export-and-Deployment\Edge-Device-Deployment\Performance-Optimization-and-Benchmarking.md:61: UE ==> USE, DUE
+.\wiki\repowiki\en\content\Model-Export-and-Deployment\Edge-Device-Deployment\Performance-Optimization-and-Benchmarking.md:68: UE ==> USE, DUE
+.\wiki\repowiki\en\content\Model-System\YOLO-Series-Models\YOLOv9-Model.md:291: ons ==> owns
+.\wiki\repowiki\en\content\Project-Overview\Core-Features\Mixture-of-Experts-System\Mixture-of-Experts-System.md:131: ABL ==> ABLE
+.\wiki\repowiki\en\content\Training-System\Training-System.md:187: BuildDS ==> builds
+.\wiki\repowiki\en\content\Training-System\Training-System.md:188: BuildDS ==> builds
+.\wiki\repowiki\zh\content\API参考文档\数据处理API\数据加载器API.md:185: BuildDS ==> builds
+.\wiki\repowiki\zh\content\API参考文档\数据处理API\数据加载器API.md:186: BuildDS ==> builds
+.\wiki\repowiki\zh\content\API参考文档\数据处理API\数据验证API.md:273: Strat ==> Start, Strata
+.\wiki\repowiki\zh\content\API参考文档\数据处理API\数据验证API.md:276: Strat ==> Start, Strata
+.\wiki\repowiki\zh\content\API参考文档\核心API\数据处理API\数据处理API.md:229: BuildDS ==> builds
+.\wiki\repowiki\zh\content\API参考文档\核心API\数据处理API\数据处理API.md:230: BuildDS ==> builds
+.\wiki\repowiki\zh\content\多专家混合系统\混合损失函数.md:79: TE ==> THE, BE, WE, TO
+.\wiki\repowiki\zh\content\多专家混合系统\混合损失函数.md:103: TE ==> THE, BE, WE, TO
+.\wiki\repowiki\zh\content\开发者指南\新特性开发指南\集成测试与验证.md:164: Abl ==> Able
+.\wiki\repowiki\zh\content\开发者指南\新特性开发指南\集成测试与验证.md:172: Abl ==> Able
+.\wiki\repowiki\zh\content\开发者指南\新特性开发指南\集成测试与验证.md:323: Abl ==> Able
+.\wiki\repowiki\zh\content\开发者指南\新特性开发指南\集成测试与验证.md:330: Abl ==> Able
+.\wiki\repowiki\zh\content\推理系统\性能优化与资源管理\内存优化与缓存.md:53: utilites ==> utilities
+.\wiki\repowiki\zh\content\数据处理系统\数据增强\颜色空间增强.md:141: ApplyS ==> applies
+.\wiki\repowiki\zh\content\数据处理系统\数据增强\颜色空间增强.md:144: ApplyS ==> applies
+.\wiki\repowiki\zh\content\模型导出与部署\云服务部署\云平台部署.md:74: AKS ==> ASK
+.\wiki\repowiki\zh\content\模型导出与部署\云服务部署\云平台部署.md:80: AKS ==> ASK
+.\wiki\repowiki\zh\content\模型导出与部署\云服务部署\云平台部署.md:93: AKS ==> ASK
+.\wiki\repowiki\zh\content\模型导出与部署\云服务部署\云平台部署.md:99: AKS ==> ASK
+.\wiki\repowiki\zh\content\模型导出与部署\云服务部署\云平台部署.md:99: AKS ==> ASK
+.\wiki\repowiki\zh\content\模型导出与部署\云服务部署\云平台部署.md:111: AKS ==> ASK
+.\wiki\repowiki\zh\content\模型导出与部署\云服务部署\云平台部署.md:115: AKS ==> ASK
+.\wiki\repowiki\zh\content\模型导出与部署\云服务部署\云平台部署.md:138: AKS ==> ASK
+.\wiki\repowiki\zh\content\模型导出与部署\云服务部署\云平台部署.md:254: AKS ==> ASK
+.\wiki\repowiki\zh\content\模型导出与部署\云服务部署\云平台部署.md:269: AKS ==> ASK
+.\wiki\repowiki\zh\content\模型导出与部署\云服务部署\云平台部署.md:312: AKS ==> ASK
+.\wiki\repowiki\zh\content\模型导出与部署\云服务部署\云平台部署.md:360: AKS ==> ASK
+.\wiki\repowiki\zh\content\模型导出与部署\边缘设备部署\性能优化与基准测试.md:61: UE ==> USE, DUE
+.\wiki\repowiki\zh\content\模型导出与部署\边缘设备部署\性能优化与基准测试.md:68: UE ==> USE, DUE
+.\wiki\repowiki\zh\content\示例和教程\基础教程\实例分割教程\实例分割教程.md:361: OT ==> TO, OF, OR, NOT, IT
+.\wiki\repowiki\zh\content\示例和教程\基础教程\实例分割教程\实例分割教程.md:373: OT ==> TO, OF, OR, NOT, IT
+.\wiki\repowiki\zh\content\训练系统\训练系统.md:187: BuildDS ==> builds
+.\wiki\repowiki\zh\content\训练系统\训练系统.md:188: BuildDS ==> builds
+.\wiki\repowiki\zh\content\项目概述\核心特性\多专家混合系统\多专家混合系统.md:131: ABL ==> ABLE
+.\wiki-content\en\API-Reference\Core-API\Data-Processing-API\Data-Processing-API.md:229: BuildDS ==> builds
+.\wiki-content\en\API-Reference\Core-API\Data-Processing-API\Data-Processing-API.md:230: BuildDS ==> builds
+.\wiki-content\en\API-Reference\Data-Processing-API\Data-Loader-API.md:185: BuildDS ==> builds
+.\wiki-content\en\API-Reference\Data-Processing-API\Data-Loader-API.md:186: BuildDS ==> builds
+.\wiki-content\en\API-Reference\Data-Processing-API\Data-Validation-API.md:273: Strat ==> Start, Strata
+.\wiki-content\en\API-Reference\Data-Processing-API\Data-Validation-API.md:276: Strat ==> Start, Strata
+.\wiki-content\en\Data-Processing-System\Data-Augmentation\颜色空间增强.md:141: ApplyS ==> applies
+.\wiki-content\en\Data-Processing-System\Data-Augmentation\颜色空间增强.md:144: ApplyS ==> applies
+.\wiki-content\en\Developer-Guide\New-Feature-Development-Guide\集成测试与验证.md:164: Abl ==> Able
+.\wiki-content\en\Developer-Guide\New-Feature-Development-Guide\集成测试与验证.md:172: Abl ==> Able
+.\wiki-content\en\Developer-Guide\New-Feature-Development-Guide\集成测试与验证.md:323: Abl ==> Able
+.\wiki-content\en\Developer-Guide\New-Feature-Development-Guide\集成测试与验证.md:330: Abl ==> Able
+.\wiki-content\en\Examples-and-Tutorials\Basic-Tutorials\Instance-Segmentation-Tutorial\Instance-Segmentation-Tutorial.md:361: OT ==> TO, OF, OR, NOT, IT
+.\wiki-content\en\Examples-and-Tutorials\Basic-Tutorials\Instance-Segmentation-Tutorial\Instance-Segmentation-Tutorial.md:373: OT ==> TO, OF, OR, NOT, IT
+.\wiki-content\en\Examples-and-Tutorials\Basic-Tutorials\Instance-Segmentation-Tutorial\实例分割教程.md:361: OT ==> TO, OF, OR, NOT, IT
+.\wiki-content\en\Examples-and-Tutorials\Basic-Tutorials\Instance-Segmentation-Tutorial\实例分割教程.md:373: OT ==> TO, OF, OR, NOT, IT
+.\wiki-content\en\Inference-System\Performance-Optimization-and-Resource-Management\内存优化与缓存.md:53: utilites ==> utilities
+.\wiki-content\en\Mixture-of-Experts-System\混合损失函数.md:79: TE ==> THE, BE, WE, TO
+.\wiki-content\en\Mixture-of-Experts-System\混合损失函数.md:103: TE ==> THE, BE, WE, TO
+.\wiki-content\en\Model-Export-and-Deployment\Cloud-Service-Deployment\云平台部署.md:74: AKS ==> ASK
+.\wiki-content\en\Model-Export-and-Deployment\Cloud-Service-Deployment\云平台部署.md:80: AKS ==> ASK
+.\wiki-content\en\Model-Export-and-Deployment\Cloud-Service-Deployment\云平台部署.md:93: AKS ==> ASK
+.\wiki-content\en\Model-Export-and-Deployment\Cloud-Service-Deployment\云平台部署.md:99: AKS ==> ASK
+.\wiki-content\en\Model-Export-and-Deployment\Cloud-Service-Deployment\云平台部署.md:99: AKS ==> ASK
+.\wiki-content\en\Model-Export-and-Deployment\Cloud-Service-Deployment\云平台部署.md:111: AKS ==> ASK
+.\wiki-content\en\Model-Export-and-Deployment\Cloud-Service-Deployment\云平台部署.md:115: AKS ==> ASK
+.\wiki-content\en\Model-Export-and-Deployment\Cloud-Service-Deployment\云平台部署.md:138: AKS ==> ASK
+.\wiki-content\en\Model-Export-and-Deployment\Cloud-Service-Deployment\云平台部署.md:254: AKS ==> ASK
+.\wiki-content\en\Model-Export-and-Deployment\Cloud-Service-Deployment\云平台部署.md:269: AKS ==> ASK
+.\wiki-content\en\Model-Export-and-Deployment\Cloud-Service-Deployment\云平台部署.md:312: AKS ==> ASK
+.\wiki-content\en\Model-Export-and-Deployment\Cloud-Service-Deployment\云平台部署.md:360: AKS ==> ASK
+.\wiki-content\en\Model-Export-and-Deployment\Edge-Device-Deployment\Performance-Optimization-and-Benchmarking.md:61: UE ==> USE, DUE
+.\wiki-content\en\Model-Export-and-Deployment\Edge-Device-Deployment\Performance-Optimization-and-Benchmarking.md:68: UE ==> USE, DUE
+.\wiki-content\en\Model-System\YOLO-Series-Models\YOLOv9-Model.md:291: ons ==> owns
+.\wiki-content\en\Project-Overview\Core-Features\Mixture-of-Experts-System\Mixture-of-Experts-System.md:131: ABL ==> ABLE
+.\wiki-content\en\Training-System\Training-System.md:187: BuildDS ==> builds
+.\wiki-content\en\Training-System\Training-System.md:188: BuildDS ==> builds
+.\wiki-content\zh\API参考文档\数据处理API\数据加载器API.md:185: BuildDS ==> builds
+.\wiki-content\zh\API参考文档\数据处理API\数据加载器API.md:186: BuildDS ==> builds
+.\wiki-content\zh\API参考文档\数据处理API\数据验证API.md:273: Strat ==> Start, Strata
+.\wiki-content\zh\API参考文档\数据处理API\数据验证API.md:276: Strat ==> Start, Strata
+.\wiki-content\zh\API参考文档\核心API\数据处理API\数据处理API.md:229: BuildDS ==> builds
+.\wiki-content\zh\API参考文档\核心API\数据处理API\数据处理API.md:230: BuildDS ==> builds
+.\wiki-content\zh\多专家混合系统\混合损失函数.md:79: TE ==> THE, BE, WE, TO
+.\wiki-content\zh\多专家混合系统\混合损失函数.md:103: TE ==> THE, BE, WE, TO
+.\wiki-content\zh\开发者指南\新特性开发指南\集成测试与验证.md:164: Abl ==> Able
+.\wiki-content\zh\开发者指南\新特性开发指南\集成测试与验证.md:172: Abl ==> Able
+.\wiki-content\zh\开发者指南\新特性开发指南\集成测试与验证.md:323: Abl ==> Able
+.\wiki-content\zh\开发者指南\新特性开发指南\集成测试与验证.md:330: Abl ==> Able
+.\wiki-content\zh\推理系统\性能优化与资源管理\内存优化与缓存.md:53: utilites ==> utilities
+.\wiki-content\zh\数据处理系统\数据增强\颜色空间增强.md:141: ApplyS ==> applies
+.\wiki-content\zh\数据处理系统\数据增强\颜色空间增强.md:144: ApplyS ==> applies
+.\wiki-content\zh\模型导出与部署\云服务部署\云平台部署.md:74: AKS ==> ASK
+.\wiki-content\zh\模型导出与部署\云服务部署\云平台部署.md:80: AKS ==> ASK
+.\wiki-content\zh\模型导出与部署\云服务部署\云平台部署.md:93: AKS ==> ASK
+.\wiki-content\zh\模型导出与部署\云服务部署\云平台部署.md:99: AKS ==> ASK
+.\wiki-content\zh\模型导出与部署\云服务部署\云平台部署.md:99: AKS ==> ASK
+.\wiki-content\zh\模型导出与部署\云服务部署\云平台部署.md:111: AKS ==> ASK
+.\wiki-content\zh\模型导出与部署\云服务部署\云平台部署.md:115: AKS ==> ASK
+.\wiki-content\zh\模型导出与部署\云服务部署\云平台部署.md:138: AKS ==> ASK
+.\wiki-content\zh\模型导出与部署\云服务部署\云平台部署.md:254: AKS ==> ASK
+.\wiki-content\zh\模型导出与部署\云服务部署\云平台部署.md:269: AKS ==> ASK
+.\wiki-content\zh\模型导出与部署\云服务部署\云平台部署.md:312: AKS ==> ASK
+.\wiki-content\zh\模型导出与部署\云服务部署\云平台部署.md:360: AKS ==> ASK
+.\wiki-content\zh\模型导出与部署\边缘设备部署\性能优化与基准测试.md:61: UE ==> USE, DUE
+.\wiki-content\zh\模型导出与部署\边缘设备部署\性能优化与基准测试.md:68: UE ==> USE, DUE
+.\wiki-content\zh\示例和教程\基础教程\实例分割教程\实例分割教程.md:361: OT ==> TO, OF, OR, NOT, IT
+.\wiki-content\zh\示例和教程\基础教程\实例分割教程\实例分割教程.md:373: OT ==> TO, OF, OR, NOT, IT
+.\wiki-content\zh\训练系统\训练系统.md:187: BuildDS ==> builds
+.\wiki-content\zh\训练系统\训练系统.md:188: BuildDS ==> builds
+.\wiki-content\zh\项目概述\核心特性\多专家混合系统\多专家混合系统.md:131: ABL ==> ABLE

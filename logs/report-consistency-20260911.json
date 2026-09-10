@@ -1,0 +1,12 @@
+[
+  {
+    "code": "NUMERIC_PRECISION_VARIANT",
+    "message": "numeric value 1 appears at multiple precisions: 0 decimal place(s)=5, 1 decimal place(s)=1",
+    "evidence": [
+      "docs\\closure-review\\研究报告.md:19: 1",
+      "docs\\closure-review\\研究报告.md:31: 1",
+      "docs\\closure-review\\研究报告.md:43: 1",
+      "docs\\closure-review\\研究报告.md:63: +1.0"
+    ]
+  }
+]

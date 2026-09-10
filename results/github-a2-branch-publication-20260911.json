@@ -1,0 +1,19 @@
+{
+  "observed_at": "2026-09-10T17:27:43.660655+00:00",
+  "repository": "YilinWang121054/YOLO-Master",
+  "branch": "review/a2-stal-final",
+  "remote_commit": "2efc4d91d7363d65b6f38e7d47c585231bb98158",
+  "tested_local_commit": "6f558609882d9cc39379f88c912c9c3c5ec515d6",
+  "upstream_base": "7bfbfd374a6b44720f98366e088f3a962e16321d",
+  "tree": "f1ae8461c9108b89d41fee6df4fd95023ab031c1",
+  "full_tree_matches_tested_checkout": true,
+  "changed_files": [
+    "tests/test_stal_assignment.py",
+    "ultralytics/cfg/__init__.py",
+    "ultralytics/cfg/default.yaml",
+    "ultralytics/utils/loss.py",
+    "ultralytics/utils/tal.py"
+  ],
+  "url": "https://github.com/YilinWang121054/YOLO-Master/tree/review/a2-stal-final",
+  "method": "Git Data API; consolidated commit; no force update"
+}
