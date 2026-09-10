@@ -18,7 +18,7 @@ $Trigger.Delay = "PT1M"
 # A three-mode 120-epoch chain can exceed 72 hours on a 6 GB GPU. Keep the
 # logon recovery supervisor alive for a full week so a reboot does not turn
 # into an automatic timeout before the final mode starts.
-$Settings = New-ScheduledTaskSettingsSet -StartWhenAvailable -MultipleInstances IgnoreNew -ExecutionTimeLimit (New-TimeSpan -Days 7)
+$Settings = New-ScheduledTaskSettingsSet -StartWhenAvailable -MultipleInstances IgnoreNew -ExecutionTimeLimit (New-TimeSpan -Days 7) -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries
 
 Register-ScheduledTask -TaskName $TaskName -Action $Action -Trigger $Trigger -Principal $Principal -Settings $Settings -Force | Out-Null
 Get-ScheduledTask -TaskName $TaskName | Select-Object TaskName, State

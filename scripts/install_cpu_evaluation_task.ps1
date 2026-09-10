@@ -7,6 +7,6 @@ $Action = New-ScheduledTaskAction -Execute $PythonExe -Argument ('"{0}"' -f $Cha
 $Principal = New-ScheduledTaskPrincipal -UserId $User -LogonType Interactive -RunLevel Limited
 $Trigger = New-ScheduledTaskTrigger -AtLogOn -User $User
 $Trigger.Delay = "PT2M"
-$Settings = New-ScheduledTaskSettingsSet -StartWhenAvailable -MultipleInstances IgnoreNew -ExecutionTimeLimit (New-TimeSpan -Days 7)
+$Settings = New-ScheduledTaskSettingsSet -StartWhenAvailable -MultipleInstances IgnoreNew -ExecutionTimeLimit (New-TimeSpan -Days 7) -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries
 Register-ScheduledTask -TaskName $TaskName -Action $Action -Trigger $Trigger -Principal $Principal -Settings $Settings -Force | Out-Null
 Get-ScheduledTask -TaskName $TaskName | Select-Object TaskName,State
