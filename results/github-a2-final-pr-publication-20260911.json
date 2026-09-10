@@ -1,0 +1,20 @@
+{
+  "observed_at": "2026-09-10T17:53:54.004193+00:00",
+  "url": "https://github.com/Tencent/YOLO-Master/pull/274",
+  "number": 274,
+  "title": "[犀牛鸟-A2]：Add configurable scale-aware TAL assignment for small objects",
+  "state": "open",
+  "draft": false,
+  "created_at": "2026-09-10T17:53:54Z",
+  "author": "YilinWang121054",
+  "head_commit": "2efc4d91d7363d65b6f38e7d47c585231bb98158",
+  "tree": "f1ae8461c9108b89d41fee6df4fd95023ab031c1",
+  "tested_local_commit": "6f558609882d9cc39379f88c912c9c3c5ec515d6",
+  "evidence_commit": "ce408692c0ce86c08f3803b2c4ceacedb6e941b6",
+  "report_url": "https://github.com/YilinWang121054/YOLO-Master-A2-Smoke-2026/blob/ce408692c0ce86c08f3803b2c4ceacedb6e941b6/docs/closure-review/%E7%A0%94%E7%A9%B6%E6%8A%A5%E5%91%8A.md",
+  "report_sha256": "36981259bf78aac90143a96439400cd28116ef7a24819048ee6ba71a087e9715",
+  "body_sha256": "cd6a666786c9fef7f51cd970d1c64c2b88a287af8258f31bb2d5dd8879c2bf18",
+  "public_report_bytes_verified": true,
+  "pr_fields_read_back_verified": true,
+  "authorization": "User authorized publication first, followed by their review; no merge requested or performed"
+}

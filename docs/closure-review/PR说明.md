@@ -4,7 +4,9 @@
 
 提交时间：按用户9月10日转达的要求，PR提交和已有PR标题修改须在9月12日前完成，内部目标为北京时间9月11日内。用户随后授权核对完成后先提交GitHub，再由用户审核并更新，不再设置发布前确认门槛。不能把本地草稿或已合并的修复PR当作最终课题PR已提交。
 
-目标：`Tencent/YOLO-Master` 的 `main`。本地审阅分支为 `review/a2-stal-final`，已合并上游7bfbfd3，测试提交6f55860；公开功能提交2efc4d9的完整Git tree与之相同，训练仍使用原冻结分支。此文件为正文准备稿，是否已创建PR以公开链接和发布清单为准。以下四节的证据链接在实际创建时绑定到已发布提交。
+已发布：[PR #274](https://github.com/Tencent/YOLO-Master/pull/274)，北京时间2026-09-11 01:53，当前open、非draft、尚未合并。发布清单为 `results/github-a2-final-pr-publication-20260911.json`。
+
+目标：`Tencent/YOLO-Master` 的 `main`。本地审阅分支为 `review/a2-stal-final`，已合并上游7bfbfd3，测试提交6f55860；公开功能提交2efc4d9的完整Git tree与之相同，训练仍使用原冻结分支。以下保留正文模板，发布脚本已将其中证据占位句替换为ce40869固定版本链接并回读验证，在线PR为实际提交正文。
 
 ## Summary
 
