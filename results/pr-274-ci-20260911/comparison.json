@@ -1,0 +1,73 @@
+{
+  "observed_at": "2026-09-10T18:26:34.639972+00:00",
+  "pr": "https://github.com/Tencent/YOLO-Master/pull/274",
+  "base": "7bfbfd374a6b44720f98366e088f3a962e16321d",
+  "pr_head": "2efc4d91d7363d65b6f38e7d47c585231bb98158",
+  "local_tested_commit": "6f558609882d9cc39379f88c912c9c3c5ec515d6",
+  "records": {
+    "base-windows": {
+      "job_id": 102860234472,
+      "head_sha": "7bfbfd374a6b44720f98366e088f3a962e16321d",
+      "url": "https://github.com/Tencent/YOLO-Master/actions/runs/34473984717/job/102860234472",
+      "failures": {
+        "tests/test_foundation_config.py::test_enabled_without_teacher_is_rejected": "AssertionError: Regex pattern did not match.",
+        "tests/test_foundation_offline.py::test_extract_validates_keys_and_samples": "Failed: DID NOT RAISE ValueError",
+        "tests/test_foundation_cache_training.py::test_response_kd_builds_pseudo_batch_from_cached_responses": "IndexError: index 1 is out of bounds for dimension 0 with size 1"
+      },
+      "summary": "3 failed, 1947 passed, 81 skipped, 4116 warnings in 1336.25s (0:22:16) ====",
+      "log_sha256": "f7f02fa835b2526b97cd763f68c1cf2d897dc3eabf17e4da8454cf7679eb21d5",
+      "log_bytes": 166242
+    },
+    "pr-windows": {
+      "job_id": 102984847852,
+      "head_sha": "2efc4d91d7363d65b6f38e7d47c585231bb98158",
+      "url": "https://github.com/Tencent/YOLO-Master/actions/runs/34511014246/job/102984847852",
+      "failures": {
+        "tests/test_foundation_config.py::test_enabled_without_teacher_is_rejected": "AssertionError: Regex pattern did not match.",
+        "tests/test_foundation_offline.py::test_extract_validates_keys_and_samples": "Failed: DID NOT RAISE ValueError",
+        "tests/test_foundation_cache_training.py::test_response_kd_builds_pseudo_batch_from_cached_responses": "IndexError: index 1 is out of bounds for dimension 0 with size 1"
+      },
+      "summary": "3 failed, 1965 passed, 81 skipped, 4116 warnings in 1184.50s (0:19:44) ====",
+      "log_sha256": "8537fc39eef6ab1a4c575978086ea3261eb6d446c44d8ee1b8cc8754fc7b357f",
+      "log_bytes": 167560
+    },
+    "base-ubuntu": {
+      "job_id": 102860234422,
+      "head_sha": "7bfbfd374a6b44720f98366e088f3a962e16321d",
+      "url": "https://github.com/Tencent/YOLO-Master/actions/runs/34473984717/job/102860234422",
+      "failures": {
+        "tests/test_foundation_config.py::test_enabled_without_teacher_is_rejected": "AssertionError: Regex pattern did not match.",
+        "tests/test_foundation_cache_training.py::test_response_kd_builds_pseudo_batch_from_cached_responses": "IndexError: index 1 is out of bounds for dimension 0 with size 1"
+      },
+      "summary": "2 failed, 1950 passed, 79 skipped, 4129 warnings in 1264.78s (0:21:04) ====",
+      "log_sha256": "06000d56ed7e34fa372d82fee22dbdaba5d836b5eafbf0a8a79aa12fd6088c67",
+      "log_bytes": 161400
+    },
+    "pr-ubuntu": {
+      "job_id": 102984847730,
+      "head_sha": "2efc4d91d7363d65b6f38e7d47c585231bb98158",
+      "url": "https://github.com/Tencent/YOLO-Master/actions/runs/34511014246/job/102984847730",
+      "failures": {
+        "tests/test_foundation_config.py::test_enabled_without_teacher_is_rejected": "AssertionError: Regex pattern did not match.",
+        "tests/test_foundation_cache_training.py::test_response_kd_builds_pseudo_batch_from_cached_responses": "IndexError: index 1 is out of bounds for dimension 0 with size 1"
+      },
+      "summary": "2 failed, 1968 passed, 79 skipped, 4130 warnings in 1175.32s (0:19:35) ====",
+      "log_sha256": "872a57a4c30f7ec704e4e5cadcc717528ec12566656883ab277034d9dc99a18c",
+      "log_bytes": 163452
+    }
+  },
+  "same_failure_sets_and_messages": true,
+  "byte_identical_files": [
+    "ultralytics/nn/foundation/offline.py",
+    "ultralytics/nn/foundation_distill_model.py",
+    "tests/test_foundation_config.py",
+    "tests/test_foundation_offline.py",
+    "tests/test_foundation_cache_training.py"
+  ],
+  "ast_identical_functions": [
+    "ultralytics/utils/tal.py:make_anchors",
+    "ultralytics/cfg/__init__.py:validate_foundation_config"
+  ],
+  "local_reproduction": "Both Windows Python 3.11 CPU checkouts reproduce the config-regex and stride errors. The offline-key test reaches a denied E:\\abs mkdir in both; this differs from hosted Windows DID NOT RAISE. The sandbox was not elevated for this test and no root-directory write was authorized.",
+  "scope": "These Windows/Ubuntu failures were already present at the exact base; not a claim that all CI is green."
+}

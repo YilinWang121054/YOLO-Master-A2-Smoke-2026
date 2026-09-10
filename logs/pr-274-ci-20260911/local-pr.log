@@ -1,0 +1,48 @@
+FFF                                                                      [100%]
+================================== FAILURES ===================================
+__________________ test_enabled_without_teacher_is_rejected ___________________
+tests\test_foundation_config.py:74: in test_enabled_without_teacher_is_rejected
+    with pytest.raises(ValueError, match="requires 'foundation_teacher'"):
+E   AssertionError: Regex pattern did not match.
+E     Expected regex: "requires 'foundation_teacher'"
+E     Actual message: "'foundation_enabled=True' with 'foundation_teacher=none' requires 'foundation_cache_dir' pointing to a valid offline feature cache directory."
+___________________ test_extract_validates_keys_and_samples ___________________
+tests\test_foundation_offline.py:164: in test_extract_validates_keys_and_samples
+    extract_foundation_cache(teacher, [("/abs/key", torch.rand(3, 8, 8))], tmp_path)
+ultralytics\nn\foundation\offline.py:326: in extract_foundation_cache
+    flush(pending)
+ultralytics\nn\foundation\offline.py:302: in flush
+    save_foundation_features(
+ultralytics\nn\foundation\offline.py:61: in save_foundation_features
+    path.parent.mkdir(parents=True, exist_ok=True)
+F:\conda-envs\yolo-master\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   PermissionError: [WinError 5] 拒绝访问。: 'E:\\abs'
+_________ test_response_kd_builds_pseudo_batch_from_cached_responses __________
+tests\test_foundation_cache_training.py:217: in test_response_kd_builds_pseudo_batch_from_cached_responses
+    total, items = wrapper(batch)
+                   ^^^^^^^^^^^^^^
+F:\conda-envs\yolo-master\Lib\site-packages\torch\nn\modules\module.py:1736: in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+F:\conda-envs\yolo-master\Lib\site-packages\torch\nn\modules\module.py:1747: in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ultralytics\nn\foundation_distill_model.py:1208: in forward
+    return self.loss(x, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ultralytics\nn\foundation_distill_model.py:1299: in loss
+    self._response_kd(batch, preds, teacher_response) if self._response_enabled else (kd * 0.0, {})
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ultralytics\nn\foundation_distill_model.py:1026: in _response_kd
+    anchor_points, stride_tensor = make_anchors(pred_feats, self.student_model.stride, 0.5)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ultralytics\utils\tal.py:485: in make_anchors
+    stride = strides[i]
+             ^^^^^^^^^^
+E   IndexError: index 1 is out of bounds for dimension 0 with size 1
+=========================== short test summary info ===========================
+FAILED tests/test_foundation_config.py::test_enabled_without_teacher_is_rejected
+FAILED tests/test_foundation_offline.py::test_extract_validates_keys_and_samples
+FAILED tests/test_foundation_cache_training.py::test_response_kd_builds_pseudo_batch_from_cached_responses
+3 failed in 1.86s

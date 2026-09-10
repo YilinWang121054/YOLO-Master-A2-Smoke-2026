@@ -1,0 +1,1563 @@
+﻿2026-09-10T17:54:03.8039508Z Current runner version: '2.337.0'
+2026-09-10T17:54:03.8074470Z ##[group]Runner Image Provisioner
+2026-09-10T17:54:03.8075587Z Hosted Compute Agent
+2026-09-10T17:54:03.8076316Z Version: 20260819.586
+2026-09-10T17:54:03.8077098Z Commit: 3cc4a88dfa507ef76119ad1bb3eccc6378bb2b76
+2026-09-10T17:54:03.8078119Z Build Date: 2026-08-18T23:20:18Z
+2026-09-10T17:54:03.8078970Z Worker ID: {897aa8e6-a418-4865-a3a1-896a0140f7fb}
+2026-09-10T17:54:03.8079878Z Azure Region: centralus
+2026-09-10T17:54:03.8080625Z ##[endgroup]
+2026-09-10T17:54:03.8082386Z ##[group]Operating System
+2026-09-10T17:54:03.8083210Z Microsoft Windows Server 2025
+2026-09-10T17:54:03.8083988Z 10.0.26100
+2026-09-10T17:54:03.8084599Z Datacenter
+2026-09-10T17:54:03.8085269Z ##[endgroup]
+2026-09-10T17:54:03.8085959Z ##[group]Runner Image
+2026-09-10T17:54:03.8086775Z Image: windows-2025-vs2026
+2026-09-10T17:54:03.8087534Z Version: 20260824.214.3
+2026-09-10T17:54:03.8089611Z Included Software: https://github.com/actions/runner-images/blob/win25-vs2026/20260824.214/images/windows/Windows2025-VS2026-Readme.md
+2026-09-10T17:54:03.8092427Z Image Release: https://github.com/actions/runner-images/releases/tag/win25-vs2026%2F20260824.214
+2026-09-10T17:54:03.8093710Z ##[endgroup]
+2026-09-10T17:54:03.8095121Z ##[group]GITHUB_TOKEN Permissions
+2026-09-10T17:54:03.8097583Z Contents: read
+2026-09-10T17:54:03.8098287Z Metadata: read
+2026-09-10T17:54:03.8099076Z ##[endgroup]
+2026-09-10T17:54:03.8101769Z Secret source: None
+2026-09-10T17:54:03.8102815Z Cache mode: write
+2026-09-10T17:54:03.8103695Z Prepare workflow directory
+2026-09-10T17:54:03.8526447Z Prepare all required actions
+2026-09-10T17:54:03.8593571Z Getting action download info
+2026-09-10T17:54:04.1603126Z Download action repository 'actions/checkout@v7' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+2026-09-10T17:54:04.2782781Z Download action repository 'actions/setup-python@v6' (SHA:ece7cb06caefa5fff74198d8649806c4678c61a1)
+2026-09-10T17:54:04.3886796Z Download action repository 'ultralytics/actions@main' (SHA:b035ed18dec357c8c646da6dcede832ab76b476c)
+2026-09-10T17:54:04.7668457Z Download action repository 'actions/cache@v6' (SHA:55cc8345863c7cc4c66a329aec7e433d2d1c52a9)
+2026-09-10T17:54:04.9067758Z Download action repository 'codecov/codecov-action@fb8b3582c8e4def4969c97caa2f19720cb33a72f' (SHA:fb8b3582c8e4def4969c97caa2f19720cb33a72f)
+2026-09-10T17:54:05.3016477Z Getting action download info
+2026-09-10T17:54:05.4225059Z Download action repository 'astral-sh/setup-uv@v10.0.0' (SHA:ae62891fec2bb8e7d6c99fc78c9fec3a63790f8d)
+2026-09-10T17:54:06.0889284Z Getting action download info
+2026-09-10T17:54:06.2001834Z Download action repository 'actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd' (SHA:ed597411d8f924073f98dfc5c65a23a2325f34cd)
+2026-09-10T17:54:06.6266952Z Complete job name: Tests (windows-latest, 3.13, latest)
+2026-09-10T17:54:06.8895554Z ##[group]Run actions/checkout@v7
+2026-09-10T17:54:06.8897726Z with:
+2026-09-10T17:54:06.8898509Z   repository: Tencent/YOLO-Master
+2026-09-10T17:54:06.8903557Z   token: ***
+2026-09-10T17:54:06.8904221Z   ssh-strict: true
+2026-09-10T17:54:06.8904866Z   ssh-user: git
+2026-09-10T17:54:06.8905517Z   persist-credentials: true
+2026-09-10T17:54:06.8906236Z   clean: true
+2026-09-10T17:54:06.8906910Z   sparse-checkout-cone-mode: true
+2026-09-10T17:54:06.8907863Z   fetch-depth: 1
+2026-09-10T17:54:06.8908513Z   fetch-tags: false
+2026-09-10T17:54:06.8909150Z   show-progress: true
+2026-09-10T17:54:06.8909803Z   lfs: false
+2026-09-10T17:54:06.8910408Z   submodules: false
+2026-09-10T17:54:06.8911412Z   set-safe-directory: true
+2026-09-10T17:54:06.8912163Z   allow-unsafe-pr-checkout: false
+2026-09-10T17:54:06.8913278Z env:
+2026-09-10T17:54:06.8914972Z   PYTHONFAULTHANDLER: 1
+2026-09-10T17:54:06.8915760Z ##[endgroup]
+2026-09-10T17:54:07.0394756Z Syncing repository: Tencent/YOLO-Master
+2026-09-10T17:54:07.0397618Z ##[group]Getting Git version info
+2026-09-10T17:54:07.0398936Z Working directory is 'D:\a\YOLO-Master\YOLO-Master'
+2026-09-10T17:54:07.1659101Z [command]"C:\Program Files\Git\bin\git.exe" version
+2026-09-10T17:54:07.7001920Z git version 2.55.0.windows.5
+2026-09-10T17:54:07.7054135Z ##[endgroup]
+2026-09-10T17:54:07.7070977Z Temporarily overriding HOME='D:\a\_temp\b376c870-b6dd-48bf-8379-ee7dd8a96f96' before making global git config changes
+2026-09-10T17:54:07.7072417Z Adding repository directory to the temporary git global config as a safe directory
+2026-09-10T17:54:07.7082872Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\YOLO-Master\YOLO-Master
+2026-09-10T17:54:07.8075545Z Deleting the contents of 'D:\a\YOLO-Master\YOLO-Master'
+2026-09-10T17:54:07.8080956Z ##[group]Determining repository object format
+2026-09-10T17:54:07.8082673Z ##[endgroup]
+2026-09-10T17:54:07.8083761Z ##[group]Initializing the repository
+2026-09-10T17:54:07.8091229Z [command]"C:\Program Files\Git\bin\git.exe" init D:\a\YOLO-Master\YOLO-Master
+2026-09-10T17:54:07.8923212Z Initialized empty Git repository in D:/a/YOLO-Master/YOLO-Master/.git/
+2026-09-10T17:54:07.8984057Z [command]"C:\Program Files\Git\bin\git.exe" remote add origin https://github.com/Tencent/YOLO-Master
+2026-09-10T17:54:08.2578287Z ##[endgroup]
+2026-09-10T17:54:08.2579122Z ##[group]Disabling automatic garbage collection
+2026-09-10T17:54:08.2588356Z [command]"C:\Program Files\Git\bin\git.exe" config --local gc.auto 0
+2026-09-10T17:54:08.2954299Z ##[endgroup]
+2026-09-10T17:54:08.2955340Z ##[group]Setting up auth
+2026-09-10T17:54:08.2956022Z Removing SSH command configuration
+2026-09-10T17:54:08.2966955Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2026-09-10T17:54:08.3321409Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2026-09-10T17:54:10.6107674Z Removing HTTP extra header
+2026-09-10T17:54:10.6119870Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-09-10T17:54:10.6450899Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+2026-09-10T17:54:11.1625379Z Removing includeIf entries pointing to credentials config files
+2026-09-10T17:54:11.1636596Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-09-10T17:54:11.1914321Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2026-09-10T17:54:11.7036499Z [command]"C:\Program Files\Git\bin\git.exe" config --file D:\a\_temp\git-credentials-55061193-2f30-43c9-978a-cd82683b3272.config http.https://github.com/.extraheader "AUTHORIZATION: basic ***"
+2026-09-10T17:54:11.7339875Z [command]"C:\Program Files\Git\bin\git.exe" config --local includeIf.gitdir:D:/a/YOLO-Master/YOLO-Master/.git.path D:\a\_temp\git-credentials-55061193-2f30-43c9-978a-cd82683b3272.config
+2026-09-10T17:54:11.7640303Z [command]"C:\Program Files\Git\bin\git.exe" config --local includeIf.gitdir:D:/a/YOLO-Master/YOLO-Master/.git/worktrees/*.path D:\a\_temp\git-credentials-55061193-2f30-43c9-978a-cd82683b3272.config
+2026-09-10T17:54:11.8401741Z [command]"C:\Program Files\Git\bin\git.exe" config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-55061193-2f30-43c9-978a-cd82683b3272.config
+2026-09-10T17:54:11.8703452Z [command]"C:\Program Files\Git\bin\git.exe" config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-55061193-2f30-43c9-978a-cd82683b3272.config
+2026-09-10T17:54:11.8982193Z ##[endgroup]
+2026-09-10T17:54:11.8982719Z ##[group]Fetching the repository
+2026-09-10T17:54:11.8993876Z [command]"C:\Program Files\Git\bin\git.exe" -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +235d6db0032e2892a5896d545bf7823e686b987d:refs/remotes/pull/274/merge
+2026-09-10T17:54:14.7388909Z From https://github.com/Tencent/YOLO-Master
+2026-09-10T17:54:14.7389835Z  * [new ref]         235d6db0032e2892a5896d545bf7823e686b987d -> pull/274/merge
+2026-09-10T17:54:14.7441465Z ##[endgroup]
+2026-09-10T17:54:14.7442635Z ##[group]Determining the checkout info
+2026-09-10T17:54:14.7443448Z ##[endgroup]
+2026-09-10T17:54:14.7456314Z [command]"C:\Program Files\Git\bin\git.exe" sparse-checkout disable
+2026-09-10T17:54:14.7924473Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset-all extensions.worktreeConfig
+2026-09-10T17:54:14.8206215Z ##[group]Checking out the ref
+2026-09-10T17:54:14.8215708Z [command]"C:\Program Files\Git\bin\git.exe" checkout --progress --force refs/remotes/pull/274/merge
+2026-09-10T17:54:15.8658795Z Updating files:  71% (2656/3708)
+2026-09-10T17:54:15.8748541Z Updating files:  72% (2670/3708)
+2026-09-10T17:54:15.8854302Z Updating files:  73% (2707/3708)
+2026-09-10T17:54:15.8972302Z Updating files:  74% (2744/3708)
+2026-09-10T17:54:15.9083367Z Updating files:  75% (2781/3708)
+2026-09-10T17:54:15.9192877Z Updating files:  76% (2819/3708)
+2026-09-10T17:54:15.9287595Z Updating files:  77% (2856/3708)
+2026-09-10T17:54:15.9386294Z Updating files:  78% (2893/3708)
+2026-09-10T17:54:15.9484031Z Updating files:  79% (2930/3708)
+2026-09-10T17:54:15.9586436Z Updating files:  80% (2967/3708)
+2026-09-10T17:54:15.9694600Z Updating files:  81% (3004/3708)
+2026-09-10T17:54:15.9802033Z Updating files:  82% (3041/3708)
+2026-09-10T17:54:15.9880808Z Updating files:  83% (3078/3708)
+2026-09-10T17:54:15.9991744Z Updating files:  84% (3115/3708)
+2026-09-10T17:54:16.0112793Z Updating files:  85% (3152/3708)
+2026-09-10T17:54:16.0206803Z Updating files:  86% (3189/3708)
+2026-09-10T17:54:16.0322020Z Updating files:  87% (3226/3708)
+2026-09-10T17:54:16.0425129Z Updating files:  88% (3264/3708)
+2026-09-10T17:54:16.0541818Z Updating files:  89% (3301/3708)
+2026-09-10T17:54:16.0645628Z Updating files:  90% (3338/3708)
+2026-09-10T17:54:16.0737843Z Updating files:  91% (3375/3708)
+2026-09-10T17:54:16.0841339Z Updating files:  92% (3412/3708)
+2026-09-10T17:54:16.0940116Z Updating files:  93% (3449/3708)
+2026-09-10T17:54:16.1026496Z Updating files:  94% (3486/3708)
+2026-09-10T17:54:16.1111864Z Updating files:  95% (3523/3708)
+2026-09-10T17:54:16.1211626Z Updating files:  96% (3560/3708)
+2026-09-10T17:54:16.1314532Z Updating files:  97% (3597/3708)
+2026-09-10T17:54:16.1409438Z Updating files:  98% (3634/3708)
+2026-09-10T17:54:16.1515716Z Updating files:  99% (3671/3708)
+2026-09-10T17:54:16.1516420Z Updating files: 100% (3708/3708)
+2026-09-10T17:54:16.1517074Z Updating files: 100% (3708/3708), done.
+2026-09-10T17:54:16.1659249Z Note: switching to 'refs/remotes/pull/274/merge'.
+2026-09-10T17:54:16.1659655Z 
+2026-09-10T17:54:16.1659974Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-09-10T17:54:16.1660745Z changes and commit them, and you can discard any commits you make in this
+2026-09-10T17:54:16.1661708Z state without impacting any branches by switching back to a branch.
+2026-09-10T17:54:16.1662025Z 
+2026-09-10T17:54:16.1662274Z If you want to create a new branch to retain commits you create, you may
+2026-09-10T17:54:16.1662816Z do so (now or later) by using -c with the switch command. Example:
+2026-09-10T17:54:16.1663091Z 
+2026-09-10T17:54:16.1663257Z   git switch -c <new-branch-name>
+2026-09-10T17:54:16.1663481Z 
+2026-09-10T17:54:16.1663615Z Or undo this operation with:
+2026-09-10T17:54:16.1663836Z 
+2026-09-10T17:54:16.1663986Z   git switch -
+2026-09-10T17:54:16.1664122Z 
+2026-09-10T17:54:16.1664391Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-09-10T17:54:16.1664674Z 
+2026-09-10T17:54:16.1665009Z HEAD is now at 235d6db Merge 2efc4d91d7363d65b6f38e7d47c585231bb98158 into 7bfbfd374a6b44720f98366e088f3a962e16321d
+2026-09-10T17:54:16.2262877Z ##[endgroup]
+2026-09-10T17:54:16.2645209Z [command]"C:\Program Files\Git\bin\git.exe" log -1 --format=%H
+2026-09-10T17:54:16.2914038Z 235d6db0032e2892a5896d545bf7823e686b987d
+2026-09-10T17:54:16.3390185Z ##[group]Run actions/setup-python@v6
+2026-09-10T17:54:16.3390648Z with:
+2026-09-10T17:54:16.3390932Z   python-version: 3.13
+2026-09-10T17:54:16.3391246Z   check-latest: false
+2026-09-10T17:54:16.3393422Z   token: ***
+2026-09-10T17:54:16.3393718Z   update-environment: true
+2026-09-10T17:54:16.3394052Z   allow-prereleases: false
+2026-09-10T17:54:16.3394353Z   freethreaded: false
+2026-09-10T17:54:16.3394631Z env:
+2026-09-10T17:54:16.3394896Z   PYTHONFAULTHANDLER: 1
+2026-09-10T17:54:16.3395175Z ##[endgroup]
+2026-09-10T17:54:16.5000872Z ##[group]Installed versions
+2026-09-10T17:54:16.5179817Z Successfully set up CPython (3.13.15)
+2026-09-10T17:54:16.5180524Z ##[endgroup]
+2026-09-10T17:54:16.5518636Z ##[group]Run ultralytics/actions/setup-uv@main
+2026-09-10T17:54:16.5519203Z with:
+2026-09-10T17:54:16.5519522Z   python-version: 3.13
+2026-09-10T17:54:16.5519828Z   activate-environment: true
+2026-09-10T17:54:16.5520130Z   enable-cache: false
+2026-09-10T17:54:16.5520468Z   cache-dependency-glob: **/uv.lock
+2026-09-10T17:54:16.5520805Z   ignore-empty-workdir: false
+2026-09-10T17:54:16.5521099Z env:
+2026-09-10T17:54:16.5521380Z   PYTHONFAULTHANDLER: 1
+2026-09-10T17:54:16.5521756Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.13.15\x64
+2026-09-10T17:54:16.5522331Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.13.15\x64/lib/pkgconfig
+2026-09-10T17:54:16.5522826Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.15\x64
+2026-09-10T17:54:16.5523280Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.15\x64
+2026-09-10T17:54:16.5523749Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.15\x64
+2026-09-10T17:54:16.5524253Z ##[endgroup]
+2026-09-10T17:54:16.5587327Z ##[start-action display=Install latest uv;id=__ultralytics_actions.latest]
+2026-09-10T17:54:16.5790498Z ##[group]Run astral-sh/setup-uv@v10.0.0
+2026-09-10T17:54:16.5790851Z with:
+2026-09-10T17:54:16.5791102Z   version: latest
+2026-09-10T17:54:16.5791411Z   python-version: 3.13
+2026-09-10T17:54:16.5791690Z   activate-environment: true
+2026-09-10T17:54:16.5791972Z   enable-cache: false
+2026-09-10T17:54:16.5792266Z   cache-dependency-glob: **/uv.lock
+2026-09-10T17:54:16.5792571Z   ignore-empty-workdir: false
+2026-09-10T17:54:16.5792870Z   ignore-nothing-to-cache: true
+2026-09-10T17:54:16.5793157Z   no-project: false
+2026-09-10T17:54:16.5793428Z   working-directory: D:\a\YOLO-Master\YOLO-Master
+2026-09-10T17:54:16.5795515Z   github-token: ***
+2026-09-10T17:54:16.5795784Z   restore-cache: true
+2026-09-10T17:54:16.5796042Z   save-cache: true
+2026-09-10T17:54:16.5796298Z   prune-cache: false
+2026-09-10T17:54:16.5796544Z   cache-python: false
+2026-09-10T17:54:16.5796855Z   download-from-astral-mirror: true
+2026-09-10T17:54:16.5797175Z   add-problem-matchers: true
+2026-09-10T17:54:16.5797503Z   quiet: false
+2026-09-10T17:54:16.5797754Z   resolution-strategy: highest
+2026-09-10T17:54:16.5798013Z env:
+2026-09-10T17:54:16.5798276Z   PYTHONFAULTHANDLER: 1
+2026-09-10T17:54:16.5798612Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.13.15\x64
+2026-09-10T17:54:16.5799059Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.13.15\x64/lib/pkgconfig
+2026-09-10T17:54:16.5799516Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.15\x64
+2026-09-10T17:54:16.5799929Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.15\x64
+2026-09-10T17:54:16.5800385Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.15\x64
+2026-09-10T17:54:16.5800725Z ##[endgroup]
+2026-09-10T17:54:16.7754976Z Fetching manifest data from https://raw.githubusercontent.com/astral-sh/versions/main/v1/uv.ndjson ...
+2026-09-10T17:54:16.8758642Z Downloading uv from "https://releases.astral.sh/github/uv/releases/download/0.12.12/uv-x86_64-pc-windows-msvc.zip" ...
+2026-09-10T17:54:17.6030034Z [command]C:\Windows\system32\tar.exe x -C D:\a\_temp\32a8e82c-3d52-416f-ad08-0f00a2c0200c -f D:\a\_temp\3858de68-24c7-4d86-a16c-5609fb7f3471
+2026-09-10T17:54:17.8109359Z Set UV_TOOL_BIN_DIR to D:\a\_temp\uv-tool-bin-dir
+2026-09-10T17:54:17.8112242Z Added D:\a\_temp\uv-tool-bin-dir to the path
+2026-09-10T17:54:17.8120005Z Added C:\hostedtoolcache\windows\uv\0.12.12\x86_64 to the path
+2026-09-10T17:54:17.8121922Z Set UV_TOOL_DIR to D:\a\_temp\uv-tool-dir
+2026-09-10T17:54:17.8123942Z Set UV_PYTHON_INSTALL_DIR to D:\a\_temp\uv-python-dir
+2026-09-10T17:54:17.8126686Z Added D:\a\_temp\uv-python-dir to the path
+2026-09-10T17:54:17.8129787Z Set UV_PYTHON to 3.13
+2026-09-10T17:54:17.8131633Z Creating and activating python venv at D:\a\YOLO-Master\YOLO-Master\.venv...
+2026-09-10T17:54:17.8721829Z [command]C:\hostedtoolcache\windows\uv\0.12.12\x86_64\uv.exe venv D:\a\YOLO-Master\YOLO-Master\.venv --directory D:\a\YOLO-Master\YOLO-Master --clear
+2026-09-10T17:54:19.5231578Z Using CPython 3.13.15 interpreter at: C:\hostedtoolcache\windows\Python\3.13.15\x64\python3.exe
+2026-09-10T17:54:19.5232496Z Creating virtual environment at: .venv
+2026-09-10T17:54:19.5438073Z Activate with: .venv\Scripts\activate
+2026-09-10T17:54:19.5519698Z Successfully installed uv version 0.12.12
+2026-09-10T17:54:19.6727351Z ##[end-action id=__ultralytics_actions.latest;outcome=success;conclusion=success;duration_ms=3114]
+2026-09-10T17:54:19.6732149Z ##[start-action display=Install latest known uv;id=__ultralytics_actions.__astral-sh_setup-uv]
+2026-09-10T17:54:19.6739354Z ##[end-action id=__ultralytics_actions.__astral-sh_setup-uv;outcome=skipped;conclusion=skipped;duration_ms=0]
+2026-09-10T17:54:19.6944790Z ##[group]Run slow=""
+2026-09-10T17:54:19.6945381Z [36;1mslow=""[0m
+2026-09-10T17:54:19.6945747Z [36;1mtorch=""[0m
+2026-09-10T17:54:19.6946133Z [36;1mif [ "latest" != "latest" ]; then[0m
+2026-09-10T17:54:19.6946707Z [36;1m    torch="torch==latest torchvision=="[0m
+2026-09-10T17:54:19.6947172Z [36;1mfi[0m
+2026-09-10T17:54:19.6947628Z [36;1muv pip install -e ".[export-base,solutions]" \[0m
+2026-09-10T17:54:19.6948407Z [36;1m  $torch aiohttp pytest-cov pytest-xdist "git+https://github.com/ultralytics/CLIP.git" \[0m
+2026-09-10T17:54:19.6949428Z [36;1m  --torch-backend cpu[0m
+2026-09-10T17:54:19.6974236Z shell: C:\Program Files\Git\bin\bash.EXE --noprofile --norc -e -o pipefail {0}
+2026-09-10T17:54:19.6974742Z env:
+2026-09-10T17:54:19.6975011Z   PYTHONFAULTHANDLER: 1
+2026-09-10T17:54:19.6975380Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.13.15\x64
+2026-09-10T17:54:19.6975981Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.13.15\x64/lib/pkgconfig
+2026-09-10T17:54:19.6976468Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.15\x64
+2026-09-10T17:54:19.6976908Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.15\x64
+2026-09-10T17:54:19.6977412Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.15\x64
+2026-09-10T17:54:19.6978047Z   UV_TOOL_BIN_DIR: D:\a\_temp\uv-tool-bin-dir
+2026-09-10T17:54:19.6978382Z   UV_TOOL_DIR: D:\a\_temp\uv-tool-dir
+2026-09-10T17:54:19.6978700Z   UV_PYTHON_INSTALL_DIR: D:\a\_temp\uv-python-dir
+2026-09-10T17:54:19.6979074Z   UV_PYTHON: 3.13
+2026-09-10T17:54:19.6979338Z   VIRTUAL_ENV: D:\a\YOLO-Master\YOLO-Master\.venv
+2026-09-10T17:54:19.6979670Z ##[endgroup]
+2026-09-10T17:54:27.1970137Z Resolved 119 packages in 6.85s
+2026-09-10T17:54:27.2179881Z    Building ultralytics @ file:///D:/a/YOLO-Master/YOLO-Master
+2026-09-10T17:54:27.5739561Z    Updating https://github.com/ultralytics/CLIP.git (HEAD)
+2026-09-10T17:54:27.9265382Z Downloading pygments (1.2MiB)
+2026-09-10T17:54:27.9439706Z Downloading sympy (6.0MiB)
+2026-09-10T17:54:27.9655120Z Downloading scipy (34.9MiB)
+2026-09-10T17:54:27.9750432Z Downloading torch (118.3MiB)
+2026-09-10T17:54:27.9772452Z Downloading torchvision (1.3MiB)
+2026-09-10T17:54:27.9912803Z Downloading shapely (1.6MiB)
+2026-09-10T17:54:27.9956348Z Downloading matplotlib (8.9MiB)
+2026-09-10T17:54:28.0076499Z Downloading fonttools (2.4MiB)
+2026-09-10T17:54:28.0427104Z Downloading onnxruntime (13.6MiB)
+2026-09-10T17:54:28.0571964Z Downloading opencv-python (42.0MiB)
+2026-09-10T17:54:28.0645869Z Downloading pillow (6.9MiB)
+2026-09-10T17:54:28.0777884Z Downloading pandas (10.5MiB)
+2026-09-10T17:54:28.1104952Z Downloading nncf (1.4MiB)
+2026-09-10T17:54:28.1759151Z Downloading openvino (72.3MiB)
+2026-09-10T17:54:28.1864176Z Downloading pyarrow (26.6MiB)
+2026-09-10T17:54:28.1926987Z Downloading scikit-learn (7.8MiB)
+2026-09-10T17:54:28.2060957Z Downloading numpy (12.0MiB)
+2026-09-10T17:54:28.2161918Z Downloading pydeck (10.9MiB)
+2026-09-10T17:54:28.2714821Z Downloading pymoo (1.8MiB)
+2026-09-10T17:54:28.3179238Z Downloading networkx (1.6MiB)
+2026-09-10T17:54:28.3450239Z Downloading onnx (16.4MiB)
+2026-09-10T17:54:28.3861406Z Downloading lap (1.4MiB)
+2026-09-10T17:54:28.4019902Z Downloading polars-runtime-32 (48.9MiB)
+2026-09-10T17:54:28.4130820Z Downloading streamlit (10.0MiB)
+2026-09-10T17:54:33.2590569Z       Built ultralytics @ file:///D:/a/YOLO-Master/YOLO-Master
+2026-09-10T17:54:37.1780853Z  Downloaded torchvision
+2026-09-10T17:54:37.5692313Z  Downloaded pygments
+2026-09-10T17:54:38.8707216Z  Downloaded lap
+2026-09-10T17:54:38.9630601Z  Downloaded shapely
+2026-09-10T17:54:39.8892197Z  Downloaded fonttools
+2026-09-10T17:54:39.8949134Z  Downloaded pymoo
+2026-09-10T17:54:41.6978106Z  Downloaded networkx
+2026-09-10T17:54:42.4114209Z  Downloaded nncf
+2026-09-10T17:54:42.7533695Z     Updated https://github.com/ultralytics/CLIP.git (a13192f8cb767260d7dfd98c843b0716593169e7)
+2026-09-10T17:54:42.9648935Z    Building clip @ git+https://github.com/ultralytics/CLIP.git@a13192f8cb767260d7dfd98c843b0716593169e7
+2026-09-10T17:54:48.3714028Z  Downloaded pillow
+2026-09-10T17:54:49.7184029Z  Downloaded sympy
+2026-09-10T17:54:49.7265061Z  Downloaded scikit-learn
+2026-09-10T17:54:49.8822438Z  Downloaded matplotlib
+2026-09-10T17:54:49.9097551Z  Downloaded streamlit
+2026-09-10T17:54:49.9276344Z  Downloaded pydeck
+2026-09-10T17:54:50.8617022Z  Downloaded numpy
+2026-09-10T17:54:50.8949453Z  Downloaded pandas
+2026-09-10T17:54:52.7485677Z  Downloaded onnxruntime
+2026-09-10T17:54:53.1343110Z       Built clip @ git+https://github.com/ultralytics/CLIP.git@a13192f8cb767260d7dfd98c843b0716593169e7
+2026-09-10T17:54:53.7365479Z  Downloaded pyarrow
+2026-09-10T17:54:53.9118724Z  Downloaded scipy
+2026-09-10T17:54:53.9172340Z  Downloaded opencv-python
+2026-09-10T17:54:54.0102993Z  Downloaded polars-runtime-32
+2026-09-10T17:54:54.6140763Z  Downloaded openvino
+2026-09-10T17:54:58.6360945Z  Downloaded onnx
+2026-09-10T17:55:02.2341472Z  Downloaded torch
+2026-09-10T17:55:02.2355017Z Prepared 118 packages in 35.03s
+2026-09-10T17:55:02.2384073Z warning: Failed to hardlink files; falling back to full copy. This may lead to degraded performance.
+2026-09-10T17:55:02.2388052Z          If the cache and target directories are on different filesystems, hardlinking may not be supported.
+2026-09-10T17:55:02.2398618Z          If this is intentional, set `export UV_LINK_MODE=copy` or use `--link-mode=copy` to suppress this warning.
+2026-09-10T17:55:22.3985337Z Installed 119 packages in 20.16s
+2026-09-10T17:55:22.3987526Z  + about-time==4.2.1
+2026-09-10T17:55:22.3988776Z  + aiohappyeyeballs==2.7.1
+2026-09-10T17:55:22.3989794Z  + aiohttp==3.14.3
+2026-09-10T17:55:22.3990880Z  + aiosignal==1.4.0
+2026-09-10T17:55:22.3991887Z  + alive-progress==3.3.0
+2026-09-10T17:55:22.3992927Z  + altair==6.2.2
+2026-09-10T17:55:22.3994096Z  + anyio==4.15.1
+2026-09-10T17:55:22.3994734Z  + attrs==26.1.0
+2026-09-10T17:55:22.3996251Z  + autograd==1.9.1
+2026-09-10T17:55:22.3996934Z  + blinker==1.9.0
+2026-09-10T17:55:22.3998281Z  + certifi==2026.7.22
+2026-09-10T17:55:22.3999058Z  + cffi==2.1.1
+2026-09-10T17:55:22.4000815Z  + charset-normalizer==3.5.1
+2026-09-10T17:55:22.4001697Z  + click==8.5.0
+2026-09-10T17:55:22.4003590Z  + clip==1.0 (from git+https://github.com/ultralytics/CLIP.git@a13192f8cb767260d7dfd98c843b0716593169e7)
+2026-09-10T17:55:22.4004955Z  + cloudpickle==3.1.2
+2026-09-10T17:55:22.4005564Z  + cma==4.4.4
+2026-09-10T17:55:22.4006840Z  + colorama==0.4.6
+2026-09-10T17:55:22.4008129Z  + contourpy==1.3.3
+2026-09-10T17:55:22.4008719Z  + coverage==7.16.0
+2026-09-10T17:55:22.4009853Z  + cycler==0.12.1
+2026-09-10T17:55:22.4010647Z  + deprecated==1.3.1
+2026-09-10T17:55:22.4012030Z  + execnet==2.1.2
+2026-09-10T17:55:22.4012918Z  + filelock==3.32.6
+2026-09-10T17:55:22.4013836Z  + flask==3.1.3
+2026-09-10T17:55:22.4014946Z  + flatbuffers==25.12.19
+2026-09-10T17:55:22.4015834Z  + fonttools==4.65.0
+2026-09-10T17:55:22.4016748Z  + frozenlist==1.8.0
+2026-09-10T17:55:22.4017587Z  + fsspec==2026.7.0
+2026-09-10T17:55:22.4019260Z  + ftfy==6.3.1
+2026-09-10T17:55:22.4019807Z  + graphemeu==0.7.2
+2026-09-10T17:55:22.4021005Z  + h11==0.16.0
+2026-09-10T17:55:22.4022066Z  + httptools==0.8.0
+2026-09-10T17:55:22.4022628Z  + idna==3.19
+2026-09-10T17:55:22.4023169Z  + iniconfig==2.3.0
+2026-09-10T17:55:22.4024346Z  + itsdangerous==2.2.0
+2026-09-10T17:55:22.4025407Z  + jinja2==3.1.6
+2026-09-10T17:55:22.4025896Z  + joblib==1.6.0
+2026-09-10T17:55:22.4027252Z  + jsonschema==4.26.0
+2026-09-10T17:55:22.4027993Z  + jsonschema-specifications==2025.9.1
+2026-09-10T17:55:22.4029082Z  + kiwisolver==1.5.1
+2026-09-10T17:55:22.4029546Z  + lap==0.5.13
+2026-09-10T17:55:22.4030820Z  + markdown-it-py==4.2.0
+2026-09-10T17:55:22.4031520Z  + markupsafe==3.0.3
+2026-09-10T17:55:22.4032681Z  + matplotlib==3.11.1
+2026-09-10T17:55:22.4033766Z  + mdurl==0.1.2
+2026-09-10T17:55:22.4034181Z  + ml-dtypes==0.6.0
+2026-09-10T17:55:22.4035364Z  + moocore==0.3.2
+2026-09-10T17:55:22.4035970Z  + mpmath==1.3.0
+2026-09-10T17:55:22.4038974Z  + multidict==6.8.0
+2026-09-10T17:55:22.4039352Z  + narwhals==2.26.0
+2026-09-10T17:55:22.4039646Z  + natsort==8.4.0
+2026-09-10T17:55:22.4040107Z  + networkx==3.4.2
+2026-09-10T17:55:22.4041554Z  + ninja==1.13.2
+2026-09-10T17:55:22.4042214Z  + nncf==2.19.0
+2026-09-10T17:55:22.4043220Z  + numpy==2.2.6
+2026-09-10T17:55:22.4044285Z  + nvidia-ml-py==13.610.43
+2026-09-10T17:55:22.4044844Z  + onnx==1.22.0
+2026-09-10T17:55:22.4046156Z  + onnxruntime==1.30.0
+2026-09-10T17:55:22.4047036Z  + onnxslim==0.1.96
+2026-09-10T17:55:22.4048215Z  + opencv-python==5.0.0.93
+2026-09-10T17:55:22.4048731Z  + openvino==2026.3.1
+2026-09-10T17:55:22.4050268Z  + openvino-telemetry==2025.2.0
+2026-09-10T17:55:22.4050781Z  + packaging==26.3
+2026-09-10T17:55:22.4052455Z  + pandas==2.3.3
+2026-09-10T17:55:22.4053317Z  + pillow==12.3.0
+2026-09-10T17:55:22.4053921Z  + platformdirs==4.11.8
+2026-09-10T17:55:22.4055504Z  + pluggy==1.6.0
+2026-09-10T17:55:22.4056002Z  + polars==1.44.2
+2026-09-10T17:55:22.4057427Z  + polars-runtime-32==1.44.2
+2026-09-10T17:55:22.4057887Z  + propcache==0.5.2
+2026-09-10T17:55:22.4059140Z  + protobuf==7.36.1
+2026-09-10T17:55:22.4060014Z  + psutil==7.2.2
+2026-09-10T17:55:22.4061141Z  + pyarrow==25.0.1
+2026-09-10T17:55:22.4062191Z  + pycparser==3.0
+2026-09-10T17:55:22.4063144Z  + pydeck==0.9.3
+2026-09-10T17:55:22.4064012Z  + pydot==3.0.4
+2026-09-10T17:55:22.4064906Z  + pygments==2.21.0
+2026-09-10T17:55:22.4065873Z  + pymoo==0.6.2
+2026-09-10T17:55:22.4066287Z  + pyparsing==3.3.2
+2026-09-10T17:55:22.4067708Z  + pytest==9.1.1
+2026-09-10T17:55:22.4068713Z  + pytest-cov==7.1.0
+2026-09-10T17:55:22.4069293Z  + pytest-xdist==3.8.0
+2026-09-10T17:55:22.4070660Z  + python-dateutil==2.9.0.post0
+2026-09-10T17:55:22.4071511Z  + python-multipart==0.0.32
+2026-09-10T17:55:22.4072067Z  + pytz==2026.3.post1
+2026-09-10T17:55:22.4073414Z  + pyyaml==6.0.3
+2026-09-10T17:55:22.4074387Z  + referencing==0.37.0
+2026-09-10T17:55:22.4075008Z  + regex==2026.9.10
+2026-09-10T17:55:22.4076308Z  + requests==2.34.2
+2026-09-10T17:55:22.4077561Z  + rich==15.0.0
+2026-09-10T17:55:22.4078593Z  + rpds-py==2026.6.3
+2026-09-10T17:55:22.4079174Z  + safetensors==0.8.0
+2026-09-10T17:55:22.4080661Z  + scikit-learn==1.9.0
+2026-09-10T17:55:22.4081854Z  + scipy==1.18.1
+2026-09-10T17:55:22.4082916Z  + setuptools==84.0.0
+2026-09-10T17:55:22.4083697Z  + shapely==2.1.2
+2026-09-10T17:55:22.4084844Z  + six==1.17.0
+2026-09-10T17:55:22.4085446Z  + starlette==1.6.0
+2026-09-10T17:55:22.4086860Z  + streamlit==1.63.0
+2026-09-10T17:55:22.4087909Z  + sympy==1.14.0
+2026-09-10T17:55:22.4088590Z  + tabulate==0.10.0
+2026-09-10T17:55:22.4089749Z  + threadpoolctl==3.6.0
+2026-09-10T17:55:22.4090916Z  + toml==0.10.2
+2026-09-10T17:55:22.4092021Z  + torch==2.14.0+cpu
+2026-09-10T17:55:22.4093379Z  + torchvision==0.29.0+cpu
+2026-09-10T17:55:22.4094303Z  + tqdm==4.70.0
+2026-09-10T17:55:22.4095335Z  + typing-extensions==4.16.0
+2026-09-10T17:55:22.4095850Z  + tzdata==2026.3
+2026-09-10T17:55:22.4097878Z  + ultralytics==8.4.101 (from file:///D:/a/YOLO-Master/YOLO-Master)
+2026-09-10T17:55:22.4098417Z  + ultralytics-thop==2.1.6
+2026-09-10T17:55:22.4100095Z  + urllib3==2.7.0
+2026-09-10T17:55:22.4101132Z  + uvicorn==0.52.4
+2026-09-10T17:55:22.4102137Z  + watchdog==6.0.0
+2026-09-10T17:55:22.4102699Z  + wcwidth==0.8.3
+2026-09-10T17:55:22.4104331Z  + websockets==16.1.1
+2026-09-10T17:55:22.4104943Z  + werkzeug==3.1.8
+2026-09-10T17:55:22.4106173Z  + wrapt==2.4.0
+2026-09-10T17:55:22.4107529Z  + yarl==1.24.5
+2026-09-10T17:55:22.5837769Z ##[group]Run yolo checks
+2026-09-10T17:55:22.5838218Z [36;1myolo checks[0m
+2026-09-10T17:55:22.5838485Z [36;1muv pip list[0m
+2026-09-10T17:55:22.6961036Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2026-09-10T17:55:22.6961468Z env:
+2026-09-10T17:55:22.6961736Z   PYTHONFAULTHANDLER: 1
+2026-09-10T17:55:22.6962168Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.13.15\x64
+2026-09-10T17:55:22.6962690Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.13.15\x64/lib/pkgconfig
+2026-09-10T17:55:22.6963185Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.15\x64
+2026-09-10T17:55:22.6963662Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.15\x64
+2026-09-10T17:55:22.6964117Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.15\x64
+2026-09-10T17:55:22.6964521Z   UV_TOOL_BIN_DIR: D:\a\_temp\uv-tool-bin-dir
+2026-09-10T17:55:22.6964879Z   UV_TOOL_DIR: D:\a\_temp\uv-tool-dir
+2026-09-10T17:55:22.6965365Z   UV_PYTHON_INSTALL_DIR: D:\a\_temp\uv-python-dir
+2026-09-10T17:55:22.6965716Z   UV_PYTHON: 3.13
+2026-09-10T17:55:22.6966028Z   VIRTUAL_ENV: D:\a\YOLO-Master\YOLO-Master\.venv
+2026-09-10T17:55:22.6966346Z ##[endgroup]
+2026-09-10T17:55:31.7647808Z Creating new Ultralytics Settings v0.0.6 file  
+2026-09-10T17:55:31.7648510Z View Ultralytics Settings with 'yolo settings' or at 'C:\Users\runneradmin\AppData\Roaming\Ultralytics\settings.json'
+2026-09-10T17:55:31.8695227Z Update Settings with 'yolo settings key=value', i.e. 'yolo settings runs_dir=path/to/dir'. For help see https://docs.ultralytics.com/quickstart/#ultralytics-settings.
+2026-09-10T17:55:31.8696272Z Ultralytics 8.4.101  Python-3.13.15 torch-2.14.0+cpu CPU (INTEL XEON PLATINUM 8573C)
+2026-09-10T17:55:31.8696800Z Setup complete  (4 CPUs, 16.0 GB RAM, 2.0/220.0 GB disk)
+2026-09-10T17:55:31.8942837Z 
+2026-09-10T17:55:31.8943557Z OS                     Windows-2025Server-10.0.26100-SP0
+2026-09-10T17:55:31.8944175Z Environment            Windows
+2026-09-10T17:55:31.8944606Z Python                 3.13.15
+2026-09-10T17:55:31.8945016Z Install                git
+2026-09-10T17:55:31.8945471Z Path                   D:\a\YOLO-Master\YOLO-Master\ultralytics
+2026-09-10T17:55:31.8945987Z RAM                    15.99 GB
+2026-09-10T17:55:31.8946405Z Disk                   2.0/220.0 GB
+2026-09-10T17:55:31.8946728Z CPU                    INTEL XEON PLATINUM 8573C
+2026-09-10T17:55:31.8947101Z CPU count              4
+2026-09-10T17:55:31.8947364Z GPU                    None
+2026-09-10T17:55:31.8947661Z GPU count              None
+2026-09-10T17:55:31.8947935Z CUDA                   None
+2026-09-10T17:55:31.8948074Z 
+2026-09-10T17:55:31.9033592Z filelock                3.32.6>=3.16.1
+2026-09-10T17:55:31.9060269Z numpy                   2.2.6>=1.23.0
+2026-09-10T17:55:31.9099794Z matplotlib              3.11.1>=3.3.0
+2026-09-10T17:55:31.9108261Z opencv-python           5.0.0.93!=4.13.0.90,>=4.6.0
+2026-09-10T17:55:31.9114782Z pillow                  12.3.0>=7.1.2
+2026-09-10T17:55:31.9119941Z pyyaml                  6.0.3>=5.3.1
+2026-09-10T17:55:31.9125691Z requests                2.34.2>=2.23.0
+2026-09-10T17:55:31.9136942Z torch                   2.14.0+cpu>=1.8.0
+2026-09-10T17:55:31.9148426Z torch                   2.14.0+cpu!=2.4.0,>=1.8.0; sys_platform == "win32"
+2026-09-10T17:55:31.9153690Z torchvision             0.29.0+cpu>=0.9.0
+2026-09-10T17:55:31.9162470Z psutil                  7.2.2>=5.8.0
+2026-09-10T17:55:31.9170030Z polars                  1.44.2>=0.20.0
+2026-09-10T17:55:31.9175596Z nvidia-ml-py            13.610.43>=12.0.0
+2026-09-10T17:55:31.9181580Z ultralytics-thop        2.1.6>=2.0.18
+2026-09-10T17:55:31.9182519Z 
+2026-09-10T17:55:31.9182649Z RUNNER_OS: Windows
+2026-09-10T17:55:31.9183180Z GITHUB_EVENT_NAME: pull_request
+2026-09-10T17:55:31.9183803Z GITHUB_WORKFLOW: CI
+2026-09-10T17:55:31.9184247Z GITHUB_ACTOR: YilinWang121054
+2026-09-10T17:55:31.9184557Z GITHUB_REPOSITORY: Tencent/YOLO-Master
+2026-09-10T17:55:31.9186795Z GITHUB_REPOSITORY_OWNER: Tencent
+2026-09-10T17:55:33.2411037Z Package                   Version      Editable project location
+2026-09-10T17:55:33.2411588Z ------------------------- ------------ ----------------------------
+2026-09-10T17:55:33.2412801Z about-time                4.2.1
+2026-09-10T17:55:33.2413296Z aiohappyeyeballs          2.7.1
+2026-09-10T17:55:33.2413942Z aiohttp                   3.14.3
+2026-09-10T17:55:33.2414486Z aiosignal                 1.4.0
+2026-09-10T17:55:33.2414981Z alive-progress            3.3.0
+2026-09-10T17:55:33.2415460Z altair                    6.2.2
+2026-09-10T17:55:33.2415911Z anyio                     4.15.1
+2026-09-10T17:55:33.2416335Z attrs                     26.1.0
+2026-09-10T17:55:33.2416796Z autograd                  1.9.1
+2026-09-10T17:55:33.2417281Z blinker                   1.9.0
+2026-09-10T17:55:33.2417781Z certifi                   2026.7.22
+2026-09-10T17:55:33.2418252Z cffi                      2.1.1
+2026-09-10T17:55:33.2418806Z charset-normalizer        3.5.1
+2026-09-10T17:55:33.2419329Z click                     8.5.0
+2026-09-10T17:55:33.2419773Z clip                      1.0
+2026-09-10T17:55:33.2420230Z cloudpickle               3.1.2
+2026-09-10T17:55:33.2420668Z cma                       4.4.4
+2026-09-10T17:55:33.2421219Z colorama                  0.4.6
+2026-09-10T17:55:33.2421803Z contourpy                 1.3.3
+2026-09-10T17:55:33.2422245Z coverage                  7.16.0
+2026-09-10T17:55:33.2422778Z cycler                    0.12.1
+2026-09-10T17:55:33.2423377Z deprecated                1.3.1
+2026-09-10T17:55:33.2423796Z execnet                   2.1.2
+2026-09-10T17:55:33.2424260Z filelock                  3.32.6
+2026-09-10T17:55:33.2424730Z flask                     3.1.3
+2026-09-10T17:55:33.2425188Z flatbuffers               25.12.19
+2026-09-10T17:55:33.2425505Z fonttools                 4.65.0
+2026-09-10T17:55:33.2425787Z frozenlist                1.8.0
+2026-09-10T17:55:33.2426102Z fsspec                    2026.7.0
+2026-09-10T17:55:33.2426408Z ftfy                      6.3.1
+2026-09-10T17:55:33.2426844Z graphemeu                 0.7.2
+2026-09-10T17:55:33.2427232Z h11                       0.16.0
+2026-09-10T17:55:33.2427663Z httptools                 0.8.0
+2026-09-10T17:55:33.2428080Z idna                      3.19
+2026-09-10T17:55:33.2428438Z iniconfig                 2.3.0
+2026-09-10T17:55:33.2429155Z itsdangerous              2.2.0
+2026-09-10T17:55:33.2429556Z jinja2                    3.1.6
+2026-09-10T17:55:33.2429851Z joblib                    1.6.0
+2026-09-10T17:55:33.2430153Z jsonschema                4.26.0
+2026-09-10T17:55:33.2430515Z jsonschema-specifications 2025.9.1
+2026-09-10T17:55:33.2430825Z kiwisolver                1.5.1
+2026-09-10T17:55:33.2431141Z lap                       0.5.13
+2026-09-10T17:55:33.2431448Z markdown-it-py            4.2.0
+2026-09-10T17:55:33.2432816Z markupsafe                3.0.3
+2026-09-10T17:55:33.2433118Z matplotlib                3.11.1
+2026-09-10T17:55:33.2433673Z mdurl                     0.1.2
+2026-09-10T17:55:33.2434743Z ml-dtypes                 0.6.0
+2026-09-10T17:55:33.2435178Z moocore                   0.3.2
+2026-09-10T17:55:33.2435783Z mpmath                    1.3.0
+2026-09-10T17:55:33.2436207Z multidict                 6.8.0
+2026-09-10T17:55:33.2436633Z narwhals                  2.26.0
+2026-09-10T17:55:33.2437086Z natsort                   8.4.0
+2026-09-10T17:55:33.2437514Z networkx                  3.4.2
+2026-09-10T17:55:33.2437933Z ninja                     1.13.2
+2026-09-10T17:55:33.2438361Z nncf                      2.19.0
+2026-09-10T17:55:33.2438801Z numpy                     2.2.6
+2026-09-10T17:55:33.2439235Z nvidia-ml-py              13.610.43
+2026-09-10T17:55:33.2439678Z onnx                      1.22.0
+2026-09-10T17:55:33.2440118Z onnxruntime               1.30.0
+2026-09-10T17:55:33.2440614Z onnxslim                  0.1.96
+2026-09-10T17:55:33.2441034Z opencv-python             5.0.0.93
+2026-09-10T17:55:33.2441492Z openvino                  2026.3.1
+2026-09-10T17:55:33.2442970Z openvino-telemetry        2025.2.0
+2026-09-10T17:55:33.2443430Z packaging                 26.3
+2026-09-10T17:55:33.2443896Z pandas                    2.3.3
+2026-09-10T17:55:33.2444289Z pillow                    12.3.0
+2026-09-10T17:55:33.2444718Z platformdirs              4.11.8
+2026-09-10T17:55:33.2445082Z pluggy                    1.6.0
+2026-09-10T17:55:33.2445357Z polars                    1.44.2
+2026-09-10T17:55:33.2445683Z polars-runtime-32         1.44.2
+2026-09-10T17:55:33.2445989Z propcache                 0.5.2
+2026-09-10T17:55:33.2446277Z protobuf                  7.36.1
+2026-09-10T17:55:33.2446581Z psutil                    7.2.2
+2026-09-10T17:55:33.2446867Z pyarrow                   25.0.1
+2026-09-10T17:55:33.2447247Z pycparser                 3.0
+2026-09-10T17:55:33.2447544Z pydeck                    0.9.3
+2026-09-10T17:55:33.2447832Z pydot                     3.0.4
+2026-09-10T17:55:33.2448135Z pygments                  2.21.0
+2026-09-10T17:55:33.2448438Z pymoo                     0.6.2
+2026-09-10T17:55:33.2448732Z pyparsing                 3.3.2
+2026-09-10T17:55:33.2449029Z pytest                    9.1.1
+2026-09-10T17:55:33.2449305Z pytest-cov                7.1.0
+2026-09-10T17:55:33.2449756Z pytest-xdist              3.8.0
+2026-09-10T17:55:33.2450186Z python-dateutil           2.9.0.post0
+2026-09-10T17:55:33.2450608Z python-multipart          0.0.32
+2026-09-10T17:55:33.2451016Z pytz                      2026.3.post1
+2026-09-10T17:55:33.2451485Z pyyaml                    6.0.3
+2026-09-10T17:55:33.2451804Z referencing               0.37.0
+2026-09-10T17:55:33.2452111Z regex                     2026.9.10
+2026-09-10T17:55:33.2452407Z requests                  2.34.2
+2026-09-10T17:55:33.2452724Z rich                      15.0.0
+2026-09-10T17:55:33.2453024Z rpds-py                   2026.6.3
+2026-09-10T17:55:33.2453357Z safetensors               0.8.0
+2026-09-10T17:55:33.2453798Z scikit-learn              1.9.0
+2026-09-10T17:55:33.2454410Z scipy                     1.18.1
+2026-09-10T17:55:33.2454731Z setuptools                84.0.0
+2026-09-10T17:55:33.2455025Z shapely                   2.1.2
+2026-09-10T17:55:33.2455317Z six                       1.17.0
+2026-09-10T17:55:33.2455606Z starlette                 1.6.0
+2026-09-10T17:55:33.2455877Z streamlit                 1.63.0
+2026-09-10T17:55:33.2456184Z sympy                     1.14.0
+2026-09-10T17:55:33.2456469Z tabulate                  0.10.0
+2026-09-10T17:55:33.2456814Z threadpoolctl             3.6.0
+2026-09-10T17:55:33.2457102Z toml                      0.10.2
+2026-09-10T17:55:33.2457386Z torch                     2.14.0+cpu
+2026-09-10T17:55:33.2457725Z torchvision               0.29.0+cpu
+2026-09-10T17:55:33.2458032Z tqdm                      4.70.0
+2026-09-10T17:55:33.2458321Z typing-extensions         4.16.0
+2026-09-10T17:55:33.2458862Z tzdata                    2026.3
+2026-09-10T17:55:33.2459230Z ultralytics               8.4.101      D:\a\YOLO-Master\YOLO-Master
+2026-09-10T17:55:33.2459646Z ultralytics-thop          2.1.6
+2026-09-10T17:55:33.2459992Z urllib3                   2.7.0
+2026-09-10T17:55:33.2460266Z uvicorn                   0.52.4
+2026-09-10T17:55:33.2460576Z watchdog                  6.0.0
+2026-09-10T17:55:33.2460870Z wcwidth                   0.8.3
+2026-09-10T17:55:33.2461167Z websockets                16.1.1
+2026-09-10T17:55:33.2461458Z werkzeug                  3.1.8
+2026-09-10T17:55:33.2461726Z wrapt                     2.4.0
+2026-09-10T17:55:33.2462032Z yarl                      1.24.5
+2026-09-10T17:55:33.3721194Z ##[group]Run yolo settings weights_dir="${GITHUB_WORKSPACE}/.ultralytics_cache/weights" datasets_dir="${GITHUB_WORKSPACE}/.ultralytics_cache/datasets"
+2026-09-10T17:55:33.3722227Z [36;1myolo settings weights_dir="${GITHUB_WORKSPACE}/.ultralytics_cache/weights" datasets_dir="${GITHUB_WORKSPACE}/.ultralytics_cache/datasets"[0m
+2026-09-10T17:55:33.3735900Z shell: C:\Program Files\Git\bin\bash.EXE --noprofile --norc -e -o pipefail {0}
+2026-09-10T17:55:33.3736315Z env:
+2026-09-10T17:55:33.3736590Z   PYTHONFAULTHANDLER: 1
+2026-09-10T17:55:33.3736936Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.13.15\x64
+2026-09-10T17:55:33.3737378Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.13.15\x64/lib/pkgconfig
+2026-09-10T17:55:33.3737845Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.15\x64
+2026-09-10T17:55:33.3738365Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.15\x64
+2026-09-10T17:55:33.3738891Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.15\x64
+2026-09-10T17:55:33.3739270Z   UV_TOOL_BIN_DIR: D:\a\_temp\uv-tool-bin-dir
+2026-09-10T17:55:33.3739602Z   UV_TOOL_DIR: D:\a\_temp\uv-tool-dir
+2026-09-10T17:55:33.3739924Z   UV_PYTHON_INSTALL_DIR: D:\a\_temp\uv-python-dir
+2026-09-10T17:55:33.3740323Z   UV_PYTHON: 3.13
+2026-09-10T17:55:33.3740699Z   VIRTUAL_ENV: D:\a\YOLO-Master\YOLO-Master\.venv
+2026-09-10T17:55:33.3741033Z ##[endgroup]
+2026-09-10T17:55:34.9751904Z  Updated 'weights_dir=D:\a\YOLO-Master\YOLO-Master/.ultralytics_cache/weights'
+2026-09-10T17:55:34.9752644Z  Updated 'datasets_dir=D:\a\YOLO-Master\YOLO-Master/.ultralytics_cache/datasets'
+2026-09-10T17:55:34.9753234Z JSONDict("C:\Users\runneradmin\AppData\Roaming\Ultralytics\settings.json"):
+2026-09-10T17:55:34.9753696Z {
+2026-09-10T17:55:34.9753951Z   "settings_version": "0.0.6",
+2026-09-10T17:55:34.9754400Z   "datasets_dir": "D:\\a\\YOLO-Master\\YOLO-Master/.ultralytics_cache/datasets",
+2026-09-10T17:55:34.9754935Z   "weights_dir": "D:\\a\\YOLO-Master\\YOLO-Master/.ultralytics_cache/weights",
+2026-09-10T17:55:34.9755489Z   "runs_dir": "D:\\a\\YOLO-Master\\YOLO-Master\\runs",
+2026-09-10T17:55:34.9756024Z   "uuid": "a20b9dd77a09f31e941d86b478f932dd9699ed08a49192ab66e71020a7591e82",
+2026-09-10T17:55:34.9756482Z   "sync": true,
+2026-09-10T17:55:34.9756820Z   "api_key": "",
+2026-09-10T17:55:34.9757145Z   "openai_api_key": "",
+2026-09-10T17:55:34.9757417Z   "clearml": true,
+2026-09-10T17:55:34.9757693Z   "comet": true,
+2026-09-10T17:55:34.9757949Z   "dvc": true,
+2026-09-10T17:55:34.9758209Z   "hub": true,
+2026-09-10T17:55:34.9758532Z   "mlflow": true,
+2026-09-10T17:55:34.9758788Z   "neptune": true,
+2026-09-10T17:55:34.9759070Z   "raytune": true,
+2026-09-10T17:55:34.9759342Z   "tensorboard": false,
+2026-09-10T17:55:34.9759623Z   "wandb": false,
+2026-09-10T17:55:34.9759887Z   "vscode_msg": true,
+2026-09-10T17:55:34.9760152Z   "openvino_msg": true
+2026-09-10T17:55:34.9760444Z }
+2026-09-10T17:55:34.9760911Z  Learn more about Ultralytics Settings at https://docs.ultralytics.com/quickstart/#ultralytics-settings
+2026-09-10T17:55:35.4242415Z ##[group]Run actions/cache@v6
+2026-09-10T17:55:35.4242833Z with:
+2026-09-10T17:55:35.4243169Z   path: D:\a\YOLO-Master\YOLO-Master/.ultralytics_cache
+2026-09-10T17:55:35.4243804Z   key: ultralytics-test-assets-Windows-43b4cecbdfc3b4f655e4c1b4cd720797b67efaeaa9f75a1d33c084572a08fcb5
+2026-09-10T17:55:35.4244624Z   restore-keys: ultralytics-test-assets-Windows-
+
+2026-09-10T17:55:35.4245020Z   enableCrossOsArchive: false
+2026-09-10T17:55:35.4245378Z   fail-on-cache-miss: false
+2026-09-10T17:55:35.4245672Z   lookup-only: false
+2026-09-10T17:55:35.4245964Z   save-always: false
+2026-09-10T17:55:35.4246229Z env:
+2026-09-10T17:55:35.4246502Z   PYTHONFAULTHANDLER: 1
+2026-09-10T17:55:35.4246859Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.13.15\x64
+2026-09-10T17:55:35.4247325Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.13.15\x64/lib/pkgconfig
+2026-09-10T17:55:35.4247822Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.15\x64
+2026-09-10T17:55:35.4248359Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.15\x64
+2026-09-10T17:55:35.4248822Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.15\x64
+2026-09-10T17:55:35.4249276Z   UV_TOOL_BIN_DIR: D:\a\_temp\uv-tool-bin-dir
+2026-09-10T17:55:35.4249635Z   UV_TOOL_DIR: D:\a\_temp\uv-tool-dir
+2026-09-10T17:55:35.4249983Z   UV_PYTHON_INSTALL_DIR: D:\a\_temp\uv-python-dir
+2026-09-10T17:55:35.4250303Z   UV_PYTHON: 3.13
+2026-09-10T17:55:35.4250618Z   VIRTUAL_ENV: D:\a\YOLO-Master\YOLO-Master\.venv
+2026-09-10T17:55:35.4250951Z ##[endgroup]
+2026-09-10T17:55:35.8704965Z Cache hit for restore-key: ultralytics-test-assets-Windows-2a452c21a85cb7ccb5c4e6411a716a28a64d8ce93cd4b1cd9f2dafd25bfb3693
+2026-09-10T17:55:37.4427223Z Received 134217728 of 1357007170 (9.9%), 90.8 MBs/sec
+2026-09-10T17:55:38.4974647Z Received 268435456 of 1357007170 (19.8%), 103.9 MBs/sec
+2026-09-10T17:55:39.7061180Z Received 402653184 of 1357007170 (29.7%), 104.5 MBs/sec
+2026-09-10T17:55:40.8000555Z Received 536870912 of 1357007170 (39.6%), 107.4 MBs/sec
+2026-09-10T17:55:42.0267283Z Received 671088640 of 1357007170 (49.5%), 106.8 MBs/sec
+2026-09-10T17:55:43.2083450Z Received 805306368 of 1357007170 (59.3%), 107.0 MBs/sec
+2026-09-10T17:55:44.4801789Z Received 939524096 of 1357007170 (69.2%), 106.1 MBs/sec
+2026-09-10T17:55:45.7747907Z Received 1073741824 of 1357007170 (79.1%), 105.1 MBs/sec
+2026-09-10T17:55:47.0808871Z Received 1207959552 of 1357007170 (89.0%), 104.3 MBs/sec
+2026-09-10T17:55:48.4203277Z Received 1342177280 of 1357007170 (98.9%), 103.3 MBs/sec
+2026-09-10T17:55:48.9001188Z Received 1357007170 of 1357007170 (100.0%), 100.6 MBs/sec
+2026-09-10T17:55:48.9006630Z Cache Size: ~1294 MB (1357007170 B)
+2026-09-10T17:55:48.9071349Z [command]"C:\Program Files\Git\usr\bin\tar.exe" -xf D:/a/_temp/262620fc-d768-4140-9be1-68ec9ae3e6be/cache.tzst -P -C D:/a/YOLO-Master/YOLO-Master --force-local --use-compress-program "zstd -d"
+2026-09-10T17:55:51.4355411Z Cache restored successfully
+2026-09-10T17:55:51.5876940Z Cache restored from key: ultralytics-test-assets-Windows-2a452c21a85cb7ccb5c4e6411a716a28a64d8ce93cd4b1cd9f2dafd25bfb3693
+2026-09-10T17:55:51.6250681Z ##[group]Run python tests/cache_test_assets.py
+2026-09-10T17:55:51.6251191Z [36;1mpython tests/cache_test_assets.py[0m
+2026-09-10T17:55:51.6264330Z shell: C:\Program Files\Git\bin\bash.EXE --noprofile --norc -e -o pipefail {0}
+2026-09-10T17:55:51.6264763Z env:
+2026-09-10T17:55:51.6265015Z   PYTHONFAULTHANDLER: 1
+2026-09-10T17:55:51.6265375Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.13.15\x64
+2026-09-10T17:55:51.6265903Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.13.15\x64/lib/pkgconfig
+2026-09-10T17:55:51.6266434Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.15\x64
+2026-09-10T17:55:51.6266891Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.15\x64
+2026-09-10T17:55:51.6267402Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.15\x64
+2026-09-10T17:55:51.6267797Z   UV_TOOL_BIN_DIR: D:\a\_temp\uv-tool-bin-dir
+2026-09-10T17:55:51.6268119Z   UV_TOOL_DIR: D:\a\_temp\uv-tool-dir
+2026-09-10T17:55:51.6268567Z   UV_PYTHON_INSTALL_DIR: D:\a\_temp\uv-python-dir
+2026-09-10T17:55:51.6268899Z   UV_PYTHON: 3.13
+2026-09-10T17:55:51.6269261Z   VIRTUAL_ENV: D:\a\YOLO-Master\YOLO-Master\.venv
+2026-09-10T17:55:51.6269771Z ##[endgroup]
+2026-09-10T17:55:54.7316168Z [cache] Downloading model weights ...
+2026-09-10T17:55:54.7380659Z [cache] Weights done.
+2026-09-10T17:55:54.7381113Z [cache] Downloading datasets ...
+2026-09-10T17:56:00.4951993Z Downloading https://ultralytics.com/assets/Arial.ttf to 'C:\Users\runneradmin\AppData\Roaming\Ultralytics\Arial.ttf': 100% ━━━━━━━━━━━━ 755.1KB 6.8MB/s 0.1s
+2026-09-10T17:56:00.5062665Z [34m[1mtrain:[0m D:\a\YOLO-Master\YOLO-Master\.ultralytics_cache\datasets\imagenet10\train... found 12 images in 10 classes  
+2026-09-10T17:56:00.5070393Z [34m[1mval:[0m D:\a\YOLO-Master\YOLO-Master\.ultralytics_cache\datasets\imagenet10\val... found 12 images in 10 classes  
+2026-09-10T17:56:00.5071042Z [34m[1mtest:[0m None...
+2026-09-10T17:56:00.5483987Z [34m[1mtrain:[0m D:\a\YOLO-Master\YOLO-Master\.ultralytics_cache\datasets\imagenet100\train... found 102 images in 100 classes  
+2026-09-10T17:56:00.5532808Z [34m[1mval:[0m D:\a\YOLO-Master\YOLO-Master\.ultralytics_cache\datasets\imagenet100\val... found 102 images in 100 classes  
+2026-09-10T17:56:00.5533918Z [34m[1mtest:[0m None...
+2026-09-10T17:56:00.6045577Z [cache] Datasets done.
+2026-09-10T17:56:00.6046092Z [cache] Downloading solution assets ...
+2026-09-10T17:56:00.6048426Z [cache] Solution assets done.
+2026-09-10T17:56:00.6048921Z [cache] Downloading CLIP text encoder ...
+2026-09-10T17:56:06.6710479Z D:\a\YOLO-Master\YOLO-Master\.venv\Lib\site-packages\torch\jit\_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+2026-09-10T17:56:06.6711308Z   warnings.warn(
+2026-09-10T17:56:08.6892687Z [cache] CLIP text encoder done.
+2026-09-10T17:56:08.6893278Z [cache] All test assets are ready.
+2026-09-10T17:56:09.5158044Z ##[group]Run if [[ "latest" != "latest" ]]; then
+2026-09-10T17:56:09.5158526Z [36;1mif [[ "latest" != "latest" ]]; then[0m
+2026-09-10T17:56:09.5159160Z [36;1m  # Keep the minimum-Torch shard focused on contracts that intentionally support the legacy API. Running[0m
+2026-09-10T17:56:09.5159899Z [36;1m  # the full current upstream suite under Torch 1.8 produces unrelated failures and xdist worker crashes.[0m
+2026-09-10T17:56:09.5160528Z [36;1m  pytest --cov=ultralytics/ --cov-report=xml --export-env base \[0m
+2026-09-10T17:56:09.5161080Z [36;1m    tests/test_autograd_allreduce.py \[0m
+2026-09-10T17:56:09.5161572Z [36;1m    tests/test_checkpoint_compat.py \[0m
+2026-09-10T17:56:09.5161965Z [36;1m    tests/test_ddp_error_propagation_e2e.py \[0m
+2026-09-10T17:56:09.5162350Z [36;1m    tests/test_ddp_root_cause_reporting.py \[0m
+2026-09-10T17:56:09.5162770Z [36;1m    tests/test_mixture_config_registry.py \[0m
+2026-09-10T17:56:09.5163457Z [36;1m    tests/test_mixture_fixes.py \[0m
+2026-09-10T17:56:09.5163850Z [36;1m    tests/test_mixture_model_registry.py \[0m
+2026-09-10T17:56:09.5164203Z [36;1m    tests/test_moa_mot_ssot.py \[0m
+2026-09-10T17:56:09.5164614Z [36;1m    tests/test_moe_amp_index_add.py \[0m
+2026-09-10T17:56:09.5164993Z [36;1m    tests/test_moe_ddp_fixes.py \[0m
+2026-09-10T17:56:09.5165323Z [36;1m    tests/test_moe_ssot.py \[0m
+2026-09-10T17:56:09.5165703Z [36;1m    tests/test_torch_legacy_compat.py \[0m
+2026-09-10T17:56:09.5166109Z [36;1m    tests/test_upstream_integrity.py \[0m
+2026-09-10T17:56:09.5166465Z [36;1m    tests/test_windows_torchrun.py[0m
+2026-09-10T17:56:09.5166853Z [36;1melif [[ "windows-latest" == "ubuntu-24.04-arm" ]]; then[0m
+2026-09-10T17:56:09.5167386Z [36;1m  # GitHub-hosted ARM runners have disconnected under xdist auto-parallelism.[0m
+2026-09-10T17:56:09.5167947Z [36;1m  pytest --cov=ultralytics/ --cov-report=xml tests/ --export-env base[0m
+2026-09-10T17:56:09.5168356Z [36;1melse[0m
+2026-09-10T17:56:09.5168790Z [36;1m  pytest -n auto --dist=loadfile --cov=ultralytics/ --cov-report=xml tests/ --export-env base[0m
+2026-09-10T17:56:09.5169295Z [36;1mfi[0m
+2026-09-10T17:56:09.5182417Z shell: C:\Program Files\Git\bin\bash.EXE --noprofile --norc -e -o pipefail {0}
+2026-09-10T17:56:09.5183045Z env:
+2026-09-10T17:56:09.5183356Z   PYTHONFAULTHANDLER: 1
+2026-09-10T17:56:09.5184015Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.13.15\x64
+2026-09-10T17:56:09.5184527Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.13.15\x64/lib/pkgconfig
+2026-09-10T17:56:09.5185067Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.15\x64
+2026-09-10T17:56:09.5185518Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.15\x64
+2026-09-10T17:56:09.5185949Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.13.15\x64
+2026-09-10T17:56:09.5186365Z   UV_TOOL_BIN_DIR: D:\a\_temp\uv-tool-bin-dir
+2026-09-10T17:56:09.5186740Z   UV_TOOL_DIR: D:\a\_temp\uv-tool-dir
+2026-09-10T17:56:09.5187127Z   UV_PYTHON_INSTALL_DIR: D:\a\_temp\uv-python-dir
+2026-09-10T17:56:09.5187463Z   UV_PYTHON: 3.13
+2026-09-10T17:56:09.5187757Z   VIRTUAL_ENV: D:\a\YOLO-Master\YOLO-Master\.venv
+2026-09-10T17:56:09.5188159Z   YOLO_AUTOINSTALL: false
+2026-09-10T17:56:09.5188440Z ##[endgroup]
+2026-09-10T17:56:26.5928688Z [1m============================= test session starts =============================[0m
+2026-09-10T17:56:26.5930427Z platform win32 -- Python 3.13.15, pytest-9.1.1, pluggy-1.6.0
+2026-09-10T17:56:26.5934721Z rootdir: D:\a\YOLO-Master\YOLO-Master
+2026-09-10T17:56:26.5935337Z configfile: pyproject.toml
+2026-09-10T17:56:26.5935879Z plugins: anyio-4.15.1, cov-7.1.0, xdist-3.8.0
+2026-09-10T17:56:26.5936481Z created: 2/2 workers
+2026-09-10T17:56:26.5936891Z 2 workers [2049 items]
+2026-09-10T17:56:26.5937130Z 
+2026-09-10T17:56:27.4028436Z [32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m [  3%]
+2026-09-10T17:56:32.2307091Z [0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[33m [  7%]
+2026-09-10T17:56:42.3957830Z [0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[33ms[0m[32m.[0m[33ms[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[33m [ 10%]
+2026-09-10T17:56:43.7107757Z [0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[33m [ 14%]
+2026-09-10T17:56:44.4461560Z [0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[33m [ 17%]
+2026-09-10T17:56:47.6678467Z [0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[33m [ 21%]
+2026-09-10T17:56:49.1581156Z [0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[33m [ 24%]
+2026-09-10T17:57:57.7844818Z [0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[33m [ 28%]
+2026-09-10T17:58:17.3147222Z [0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[33ms[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[33ms[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[33m [ 31%]
+2026-09-10T18:05:51.2109210Z [0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[33m [ 35%]
+2026-09-10T18:09:30.9182926Z [0m[32m.[0m[33ms[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[33ms[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[33ms[0m[32m.[0m[32m.[0m[32m.[0m[33m [ 38%]
+2026-09-10T18:09:39.3090451Z [0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[33ms[0m[33ms[0m[33ms[0m[33ms[0m[33ms[0m[33ms[0m[33ms[0m[33ms[0m[33ms[0m[33ms[0m[33ms[0m[33ms[0m[33ms[0m[33ms[0m[33ms[0m[33ms[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[33m [ 42%]
+2026-09-10T18:12:38.1440335Z [0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[33ms[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[33m [ 45%]
+2026-09-10T18:12:38.9399582Z [0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[33ms[0m[33ms[0m[33ms[0m[33ms[0m[33ms[0m[33ms[0m[33ms[0m[33ms[0m[33ms[0m[33ms[0m[33ms[0m[33ms[0m[33ms[0m[33ms[0m[33ms[0m[33ms[0m[33ms[0m[33ms[0m[33ms[0m[33ms[0m[33ms[0m[33ms[0m[33ms[0m[33ms[0m[33ms[0m[33ms[0m[33ms[0m[33ms[0m[33ms[0m[33ms[0m[33ms[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[33m [ 49%]
+2026-09-10T18:12:39.5008326Z [0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[31mF[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[31m [ 52%]
+2026-09-10T18:12:49.5867186Z [0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[31m [ 56%]
+2026-09-10T18:12:56.2199310Z [0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[31m [ 59%]
+2026-09-10T18:13:17.2269227Z [0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[31mF[0m[32m.[0m[32m.[0m[32m.[0m[31m [ 63%]
+2026-09-10T18:13:24.1669135Z [0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[31m [ 66%]
+2026-09-10T18:13:28.9432128Z [0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[31mF[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[31m [ 70%]
+2026-09-10T18:13:46.9241957Z [0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[33ms[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[31m [ 73%]
+2026-09-10T18:14:16.0795141Z [0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[31m [ 77%]
+2026-09-10T18:14:28.3843533Z [0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[33ms[0m[33ms[0m[33ms[0m[33ms[0m[33ms[0m[33ms[0m[33ms[0m[33ms[0m[33ms[0m[33ms[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[33ms[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[31m [ 80%]
+2026-09-10T18:14:32.5933281Z [0m[32m.[0m[32m.[0m[32m.[0m[33ms[0m[33ms[0m[33ms[0m[33ms[0m[33ms[0m[33ms[0m[33ms[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[31m [ 84%]
+2026-09-10T18:14:38.7450972Z [0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[31m [ 87%]
+2026-09-10T18:14:44.2411123Z [0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[33ms[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[31m [ 91%]
+2026-09-10T18:14:48.3717706Z [0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[33ms[0m[33ms[0m[33ms[0m[33ms[0m[33ms[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[31m [ 94%]
+2026-09-10T18:15:03.9438261Z [0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[31m [ 98%]
+2026-09-10T18:15:58.9055599Z [0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[33ms[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[31m                                        [100%][0m
+2026-09-10T18:15:58.9056906Z ================================== FAILURES ===================================
+2026-09-10T18:15:58.9057448Z [31m[1m__________________ test_enabled_without_teacher_is_rejected ___________________[0m
+2026-09-10T18:15:58.9058032Z [gw0] win32 -- Python 3.13.15 D:\a\YOLO-Master\YOLO-Master\.venv\Scripts\python.exe
+2026-09-10T18:15:58.9058422Z 
+2026-09-10T18:15:58.9058883Z     [0m[94mdef[39;49;00m[90m [39;49;00m[92mtest_enabled_without_teacher_is_rejected[39;49;00m():[90m[39;49;00m
+2026-09-10T18:15:58.9060090Z >       [94mwith[39;49;00m pytest.raises([96mValueError[39;49;00m, match=[33m"[39;49;00m[33mrequires [39;49;00m[33m'[39;49;00m[33mfoundation_teacher[39;49;00m[33m'[39;49;00m[33m"[39;49;00m):[90m[39;49;00m
+2026-09-10T18:15:58.9060778Z              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[90m[39;49;00m
+2026-09-10T18:15:58.9061219Z [1m[31mE       AssertionError: Regex pattern did not match.[0m
+2026-09-10T18:15:58.9061663Z [1m[31mE         Expected regex: "requires 'foundation_teacher'"[0m
+2026-09-10T18:15:58.9062789Z [1m[31mE         Actual message: "'foundation_enabled=True' with 'foundation_teacher=none' requires 'foundation_cache_dir' pointing to a valid offline feature cache directory."[0m
+2026-09-10T18:15:58.9063287Z 
+2026-09-10T18:15:58.9063503Z [1m[31mtests\test_foundation_config.py[0m:74: AssertionError
+2026-09-10T18:15:58.9063980Z [31m[1m___________________ test_extract_validates_keys_and_samples ___________________[0m
+2026-09-10T18:15:58.9064451Z [gw0] win32 -- Python 3.13.15 D:\a\YOLO-Master\YOLO-Master\.venv\Scripts\python.exe
+2026-09-10T18:15:58.9064731Z 
+2026-09-10T18:15:58.9065096Z tmp_path = WindowsPath('C:/Users/runneradmin/AppData/Local/Temp/pytest-of-runneradmin/pytest-0/popen-gw0/test_extract_validates_keys_an0')
+2026-09-10T18:15:58.9065551Z 
+2026-09-10T18:15:58.9065907Z     [0m[94mdef[39;49;00m[90m [39;49;00m[92mtest_extract_validates_keys_and_samples[39;49;00m(tmp_path):[90m[39;49;00m
+2026-09-10T18:15:58.9066422Z         teacher = make_teacher()[90m[39;49;00m
+2026-09-10T18:15:58.9066994Z >       [94mwith[39;49;00m pytest.raises([96mValueError[39;49;00m, match=[33m"[39;49;00m[33mrelative[39;49;00m[33m"[39;49;00m):[90m[39;49;00m
+2026-09-10T18:15:58.9067581Z              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[90m[39;49;00m
+2026-09-10T18:15:58.9067994Z [1m[31mE       Failed: DID NOT RAISE ValueError[0m
+2026-09-10T18:15:58.9068198Z 
+2026-09-10T18:15:58.9068362Z [1m[31mtests\test_foundation_offline.py[0m:163: Failed
+2026-09-10T18:15:58.9068826Z [31m[1m_________ test_response_kd_builds_pseudo_batch_from_cached_responses __________[0m
+2026-09-10T18:15:58.9069295Z [gw0] win32 -- Python 3.13.15 D:\a\YOLO-Master\YOLO-Master\.venv\Scripts\python.exe
+2026-09-10T18:15:58.9069710Z 
+2026-09-10T18:15:58.9070067Z tmp_path = WindowsPath('C:/Users/runneradmin/AppData/Local/Temp/pytest-of-runneradmin/pytest-0/popen-gw0/test_response_kd_builds_pseudo0')
+2026-09-10T18:15:58.9070517Z 
+2026-09-10T18:15:58.9070983Z     [0m[94mdef[39;49;00m[90m [39;49;00m[92mtest_response_kd_builds_pseudo_batch_from_cached_responses[39;49;00m(tmp_path):[90m[39;49;00m
+2026-09-10T18:15:58.9071576Z         cache = make_cache_with_response(tmp_path)[90m[39;49;00m
+2026-09-10T18:15:58.9071965Z         student = RecordingStudent()[90m[39;49;00m
+2026-09-10T18:15:58.9072340Z         wrapper = FoundationDistillationModel([90m[39;49;00m
+2026-09-10T18:15:58.9072683Z             student,[90m[39;49;00m
+2026-09-10T18:15:58.9072985Z             [94mNone[39;49;00m,[90m[39;49;00m
+2026-09-10T18:15:58.9073285Z             config([90m[39;49;00m
+2026-09-10T18:15:58.9074133Z                 foundation_cache_dir=[96mstr[39;49;00m(cache),[90m[39;49;00m
+2026-09-10T18:15:58.9074605Z                 foundation_response_distill=[94mTrue[39;49;00m,[90m[39;49;00m
+2026-09-10T18:15:58.9075045Z                 foundation_response_loss_weight=[94m0.5[39;49;00m,[90m[39;49;00m
+2026-09-10T18:15:58.9075524Z                 foundation_response_score_threshold=[94m0.5[39;49;00m,[90m[39;49;00m
+2026-09-10T18:15:58.9075930Z             ),[90m[39;49;00m
+2026-09-10T18:15:58.9076194Z         )[90m[39;49;00m
+2026-09-10T18:15:58.9076493Z         wrapper.train()[90m[39;49;00m
+2026-09-10T18:15:58.9077472Z         batch = {[33m"[39;49;00m[33mimg[39;49;00m[33m"[39;49;00m: torch.rand([94m2[39;49;00m, [94m3[39;49;00m, [94m64[39;49;00m, [94m64[39;49;00m), [33m"[39;49;00m[33mim_file[39;49;00m[33m"[39;49;00m: [[33m"[39;49;00m[33m/x/a.jpg[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33m/x/b.jpg[39;49;00m[33m"[39;49;00m]}[90m[39;49;00m
+2026-09-10T18:15:58.9078345Z >       total, items = wrapper(batch)[90m[39;49;00m
+2026-09-10T18:15:58.9078646Z                        ^^^^^^^^^^^^^^[90m[39;49;00m
+2026-09-10T18:15:58.9078834Z 
+2026-09-10T18:15:58.9079008Z [1m[31mtests\test_foundation_cache_training.py[0m:217: 
+2026-09-10T18:15:58.9079369Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+2026-09-10T18:15:58.9080034Z [1m[31m.venv\Lib\site-packages\torch\nn\modules\module.py[0m:1783: in _wrapped_call_impl
+2026-09-10T18:15:58.9080647Z     [0m[94mreturn[39;49;00m [96mself[39;49;00m._call_impl(*args, **kwargs)[90m[39;49;00m
+2026-09-10T18:15:58.9081084Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[90m[39;49;00m
+2026-09-10T18:15:58.9081543Z [1m[31m.venv\Lib\site-packages\torch\nn\modules\module.py[0m:1794: in _call_impl
+2026-09-10T18:15:58.9082025Z     [0m[94mreturn[39;49;00m forward_call(*args, **kwargs)[90m[39;49;00m
+2026-09-10T18:15:58.9082461Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[90m[39;49;00m
+2026-09-10T18:15:58.9082865Z [1m[31multralytics\nn\foundation_distill_model.py[0m:1208: in forward
+2026-09-10T18:15:58.9083583Z     [0m[94mreturn[39;49;00m [96mself[39;49;00m.loss(x, *args, **kwargs)[90m[39;49;00m
+2026-09-10T18:15:58.9084189Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[90m[39;49;00m
+2026-09-10T18:15:58.9084770Z [1m[31multralytics\nn\foundation_distill_model.py[0m:1299: in loss
+2026-09-10T18:15:58.9085740Z     [0m[96mself[39;49;00m._response_kd(batch, preds, teacher_response) [94mif[39;49;00m [96mself[39;49;00m._response_enabled [94melse[39;49;00m (kd * [94m0.0[39;49;00m, {})[90m[39;49;00m
+2026-09-10T18:15:58.9086405Z     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[90m[39;49;00m
+2026-09-10T18:15:58.9086859Z [1m[31multralytics\nn\foundation_distill_model.py[0m:1026: in _response_kd
+2026-09-10T18:15:58.9087529Z     [0manchor_points, stride_tensor = make_anchors(pred_feats, [96mself[39;49;00m.student_model.stride, [94m0.5[39;49;00m)[90m[39;49;00m
+2026-09-10T18:15:58.9088499Z                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[90m[39;49;00m
+2026-09-10T18:15:58.9088935Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+2026-09-10T18:15:58.9089161Z 
+2026-09-10T18:15:58.9089483Z feats = [tensor([[[[-0.4236, -0.3921, -0.2540,  ..., -0.3141, -0.3070, -0.3106],
+2026-09-10T18:15:58.9089869Z           [-0.3417, -0.4360, -0.3783,  ..., -..., -0.2714],
+2026-09-10T18:15:58.9090284Z           [-0.2573, -0.2659, -0.2758,  ..., -0.2797, -0.2628, -0.2530]]]], grad_fn=<ConvolutionBackward0>)]
+2026-09-10T18:15:58.9090745Z strides = tensor([32]), grid_cell_offset = 0.5
+2026-09-10T18:15:58.9090932Z 
+2026-09-10T18:15:58.9091547Z     [0m[94mdef[39;49;00m[90m [39;49;00m[92mmake_anchors[39;49;00m(feats, strides, grid_cell_offset=[94m0.5[39;49;00m):[90m[39;49;00m
+2026-09-10T18:15:58.9092417Z     [90m    [39;49;00m[33m"""Generate anchors from features."""[39;49;00m[90m[39;49;00m
+2026-09-10T18:15:58.9092910Z         anchor_points, stride_tensor = [], [][90m[39;49;00m
+2026-09-10T18:15:58.9093748Z         [94massert[39;49;00m feats [95mis[39;49;00m [95mnot[39;49;00m [94mNone[39;49;00m[90m[39;49;00m
+2026-09-10T18:15:58.9094616Z         dtype, device = feats[[94m0[39;49;00m].dtype, feats[[94m0[39;49;00m].device[90m[39;49;00m
+2026-09-10T18:15:58.9095708Z         [94mfor[39;49;00m i [95min[39;49;00m [96mrange[39;49;00m([96mlen[39;49;00m(feats)):  [90m# use len(feats) to avoid TracerWarning from iterating over strides tensor[39;49;00m[90m[39;49;00m
+2026-09-10T18:15:58.9096406Z >           stride = strides[i][90m[39;49;00m
+2026-09-10T18:15:58.9096848Z                      ^^^^^^^^^^[90m[39;49;00m
+2026-09-10T18:15:58.9097517Z [1m[31mE           IndexError: index 1 is out of bounds for dimension 0 with size 1[0m
+2026-09-10T18:15:58.9097977Z 
+2026-09-10T18:15:58.9098146Z [1m[31multralytics\utils\tal.py[0m:485: IndexError
+2026-09-10T18:15:58.9098605Z [33m============================== warnings summary ===============================[0m
+2026-09-10T18:15:58.9099392Z tests/test_multitask.py::TestMultiTaskHeadForward::test_onnx_export_roundtrip_matches_detection_segment_pose_schema
+2026-09-10T18:15:58.9101449Z   D:\a\YOLO-Master\YOLO-Master\tests\test_multitask.py:744: DeprecationWarning: You are using the legacy TorchScript-based ONNX export. Starting in PyTorch 2.9, the new torch.export-based ONNX exporter has become the default. Learn more about the new export logic: https://docs.pytorch.org/docs/stable/onnx_export.html. For exporting control flow: https://pytorch.org/tutorials/beginner/onnx/export_control_flow_model_to_onnx_tutorial.html
+2026-09-10T18:15:58.9102958Z     torch.onnx.export(
+2026-09-10T18:15:58.9103102Z 
+2026-09-10T18:15:58.9103260Z tests/test_multitask.py: 1 warning
+2026-09-10T18:15:58.9103566Z tests/test_exports.py: 3 warnings
+2026-09-10T18:15:58.9103933Z tests/test_python.py: 7 warnings
+2026-09-10T18:15:58.9104238Z tests/test_mixture_export.py: 15 warnings
+2026-09-10T18:15:58.9104547Z tests/test_p2_fixes.py: 3 warnings
+2026-09-10T18:15:58.9104876Z tests/test_export_roundtrip.py: 6 warnings
+2026-09-10T18:15:58.9105235Z tests/test_onnx_export_fix.py: 7 warnings
+2026-09-10T18:15:58.9105580Z tests/test_moe_export_governance.py: 1 warning
+2026-09-10T18:15:58.9106299Z   D:\a\YOLO-Master\YOLO-Master\.venv\Lib\site-packages\torch\onnx\_internal\torchscript_exporter\utils.py:218: DeprecationWarning: The feature will be removed. Please remove usage of this function
+2026-09-10T18:15:58.9107000Z     setup_onnx_logging(verbose) as log_ctx,
+2026-09-10T18:15:58.9107215Z 
+2026-09-10T18:15:58.9107351Z tests/test_multitask.py: 1 warning
+2026-09-10T18:15:58.9107634Z tests/test_exports.py: 4 warnings
+2026-09-10T18:15:58.9107919Z tests/test_engine.py: 1 warning
+2026-09-10T18:15:58.9108197Z tests/test_python.py: 6 warnings
+2026-09-10T18:15:58.9110003Z   D:\a\YOLO-Master\YOLO-Master\ultralytics\nn\modules\head.py:189: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+2026-09-10T18:15:58.9111217Z     if self.dynamic or self.shape != shape:
+2026-09-10T18:15:58.9111428Z 
+2026-09-10T18:15:58.9111740Z tests/test_multitask.py::TestMultiTaskHeadForward::test_onnx_export_roundtrip_matches_detection_segment_pose_schema
+2026-09-10T18:15:58.9113134Z   D:\a\YOLO-Master\YOLO-Master\.venv\Lib\site-packages\torch\onnx\_internal\torchscript_exporter\symbolic_opset11.py:955: UserWarning: Exporting aten::index operator of advanced indexing in opset 17 is achieved by combination of multiple ONNX operators, including Reshape, Transpose, Concat, and Gather. If indices include negative values, the exported graph will produce incorrect results.
+2026-09-10T18:15:58.9114621Z     return opset9.index(g, self, index)
+2026-09-10T18:15:58.9114834Z 
+2026-09-10T18:15:58.9115054Z tests/test_moe.py::test_adaptive_balance_controller_gshard_scale_and_nonneg
+2026-09-10T18:15:58.9115722Z   D:\a\YOLO-Master\YOLO-Master\tests\test_moe.py:494: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+2026-09-10T18:15:58.9116610Z   Consider using tensor.detach() first. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\torch\csrc\autograd\generated\python_variable_methods.cpp:821.)
+2026-09-10T18:15:58.9117312Z     aux_early = float(ctrl({"expert_usage": bal}, torch.tensor(0)))
+2026-09-10T18:15:58.9117531Z 
+2026-09-10T18:15:58.9117699Z tests/test_moa.py::test_moa_modules_forward_backward
+2026-09-10T18:15:58.9118463Z   D:\\a\\YOLO-Master\\YOLO-Master\\tests\\test_moa.py:40: UserWarning: C2fMoA(num_heads=6) adjusted to 3 to maintain head_dim \u2265 16 (c//heads \u2265 16).\n    (C2fMoA(64, 64, n=2, num_heads=6), torch.randn(2, 64, 8, 8), (2, 64, 8, 8)),
+2026-09-10T18:15:58.9119093Z 
+2026-09-10T18:15:58.9119310Z tests/test_moa.py::test_c2fmoa_aux_loss_not_double_counted_for_nested_blocks
+2026-09-10T18:15:58.9120061Z   D:\\a\\YOLO-Master\\YOLO-Master\\tests\\test_moa.py:135: UserWarning: C2fMoA(num_heads=6) adjusted to 3 to maintain head_dim \u2265 16 (c//heads \u2265 16).\n    module = C2fMoA(32, 32, n=3, num_heads=6).train()
+2026-09-10T18:15:58.9120743Z 
+2026-09-10T18:15:58.9120920Z tests/test_moa.py::test_c2fmoa_aux_loss_does_not_double_count_nested_blocks
+2026-09-10T18:15:58.9121696Z   D:\\a\\YOLO-Master\\YOLO-Master\\tests\\test_moa.py:191: UserWarning: C2fMoA(num_heads=6) adjusted to 3 to maintain head_dim \u2265 16 (c//heads \u2265 16).\n    module = C2fMoA(32, 32, n=3, num_heads=6).train()
+2026-09-10T18:15:58.9122220Z 
+2026-09-10T18:15:58.9122415Z tests/test_moa.py::test_c2fmoa_small_channels_keep_valid_head_count
+2026-09-10T18:15:58.9123157Z   D:\\a\\YOLO-Master\\YOLO-Master\\tests\\test_moa.py:207: UserWarning: C2fMoA(num_heads=6) adjusted to 3 to maintain head_dim \u2265 16 (c//heads \u2265 16).\n    module = C2fMoA(8, 8, n=1, num_heads=6, e=0.5).train()
+2026-09-10T18:15:58.9123739Z 
+2026-09-10T18:15:58.9123932Z tests/test_moa.py::test_c2fmoa_rounds_head_count_to_expert_groups
+2026-09-10T18:15:58.9124794Z   D:\\a\\YOLO-Master\\YOLO-Master\\tests\\test_moa.py:213: UserWarning: C2fMoA(num_heads=4) adjusted to 6 to be divisible by NUM_GROUPS=3. To avoid silent adjustment, set num_heads \u2261 0 (mod 3) directly.\n    module = C2fMoA(256, 256, n=1, num_heads=4, e=0.5).train()
+2026-09-10T18:15:58.9125526Z 
+2026-09-10T18:15:58.9125652Z tests/test_moa.py::test_moa_temperature_anneal
+2026-09-10T18:15:58.9126339Z   D:\\a\\YOLO-Master\\YOLO-Master\\tests\\test_moa.py:244: UserWarning: C2fMoA(num_heads=6) adjusted to 3 to maintain head_dim \u2265 16 (c//heads \u2265 16).\n    module = C2fMoA(64, 64, n=1, num_heads=6)
+2026-09-10T18:15:58.9126847Z 
+2026-09-10T18:15:58.9127062Z tests/test_moa.py::test_moa_default_temperature_anneal_matches_shared_schedule
+2026-09-10T18:15:58.9127889Z   D:\\a\\YOLO-Master\\YOLO-Master\\tests\\test_moa.py:252: UserWarning: C2fMoA(num_heads=6) adjusted to 3 to maintain head_dim \u2265 16 (c//heads \u2265 16).\n    module = C2fMoA(64, 64, n=1, num_heads=6)
+2026-09-10T18:15:58.9128439Z 
+2026-09-10T18:15:58.9128595Z tests/test_moa.py::test_moa_model_configs_parse
+2026-09-10T18:15:58.9128923Z tests/test_python.py::test_all_model_yamls
+2026-09-10T18:15:58.9129247Z tests/test_mot.py::test_mot_model_configs_parse
+2026-09-10T18:15:58.9129612Z tests/test_mot.py::test_mot_model_configs_include_mixed_variants
+2026-09-10T18:15:58.9130296Z tests/test_mot_export_masked_configs.py::test_mot_master_config_enables_export_masked[ultralytics/cfg/models/master/v0_8/det/yolo-master-moa-mot-n.yaml]
+2026-09-10T18:15:58.9131166Z tests/test_mot_export_masked_configs.py::test_mot_master_config_enables_export_masked[ultralytics/cfg/models/master/v0_10/det/yolo-master-moa-mot-n.yaml]
+2026-09-10T18:15:58.9132025Z tests/test_master_model_configs.py::test_master_config_builds_and_forwards[ultralytics/cfg/models/master/v0_10/det/yolo-master-moa-n.yaml]
+2026-09-10T18:15:58.9132807Z tests/test_mixture_config_resolution.py::test_yaml_only_cli_only_and_resume_like_resolution_are_deterministic
+2026-09-10T18:15:58.9133382Z tests/test_mixture_model_registry.py::test_moa_and_mot_configs_build_and_run
+2026-09-10T18:15:58.9134598Z   D:\\a\\YOLO-Master\\YOLO-Master\\ultralytics\\nn\\tasks.py:2259: UserWarning: C2fMoA(num_heads=6) adjusted to 3 to maintain head_dim \u2265 16 (c//heads \u2265 16).\n    m_ = torch.nn.Sequential(*(m(*args) for _ in range(n))) if n > 1 else m(*args)  # module
+2026-09-10T18:15:58.9135278Z 
+2026-09-10T18:15:58.9135455Z tests/test_moa.py::test_c2fmoa_covered_modules_mechanism
+2026-09-10T18:15:58.9136145Z   D:\\a\\YOLO-Master\\YOLO-Master\\tests\\test_moa.py:514: UserWarning: C2fMoA(num_heads=6) adjusted to 3 to maintain head_dim \u2265 16 (c//heads \u2265 16).\n    module = C2fMoA(64, 64, n=n_blocks, num_heads=6).train()
+2026-09-10T18:15:58.9136723Z 
+2026-09-10T18:15:58.9136884Z tests/test_moa.py::test_c2fmoa_single_block_aux_loss_equals_block_loss
+2026-09-10T18:15:58.9137618Z   D:\\a\\YOLO-Master\\YOLO-Master\\tests\\test_moa.py:532: UserWarning: C2fMoA(num_heads=6) adjusted to 3 to maintain head_dim \u2265 16 (c//heads \u2265 16).\n    module = C2fMoA(64, 64, n=1, num_heads=6).train()
+2026-09-10T18:15:58.9138224Z 
+2026-09-10T18:15:58.9138385Z tests/test_moa.py::test_c2fmoa_eval_mode_zero_aux_loss
+2026-09-10T18:15:58.9139053Z   D:\\a\\YOLO-Master\\YOLO-Master\\tests\\test_moa.py:539: UserWarning: C2fMoA(num_heads=6) adjusted to 3 to maintain head_dim \u2265 16 (c//heads \u2265 16).\n    module = C2fMoA(64, 64, n=2, num_heads=6).eval()
+2026-09-10T18:15:58.9139584Z 
+2026-09-10T18:15:58.9139748Z tests/test_moa.py::test_c2fmoa_routed_module_protocol
+2026-09-10T18:15:58.9140402Z   D:\\a\\YOLO-Master\\YOLO-Master\\tests\\test_moa.py:807: UserWarning: C2fMoA(num_heads=6) adjusted to 3 to maintain head_dim \u2265 16 (c//heads \u2265 16).\n    module = C2fMoA(64, 64, n=2, num_heads=6)
+2026-09-10T18:15:58.9140937Z 
+2026-09-10T18:15:58.9141078Z tests/test_moa.py::test_c2fmoa_multiple_expansion_ratios
+2026-09-10T18:15:58.9141792Z   D:\\a\\YOLO-Master\\YOLO-Master\\tests\\test_moa.py:856: UserWarning: C2fMoA(num_heads=6) adjusted to 3 to maintain head_dim \u2265 16 (c//heads \u2265 16).\n    module = C2fMoA(c, c, n=1, num_heads=6, e=e_val).train()
+2026-09-10T18:15:58.9142332Z 
+2026-09-10T18:15:58.9142518Z tests/test_moa.py::test_c2fmoa_inference_mode_no_aux_loss_grad
+2026-09-10T18:15:58.9143225Z   D:\\a\\YOLO-Master\\YOLO-Master\\tests\\test_moa.py:876: UserWarning: C2fMoA(num_heads=6) adjusted to 3 to maintain head_dim \u2265 16 (c//heads \u2265 16).\n    module = C2fMoA(64, 64, n=2, num_heads=6).eval()
+2026-09-10T18:15:58.9143775Z 
+2026-09-10T18:15:58.9143966Z tests/test_moa.py::test_anneal_moa_temperature_respects_min_temp
+2026-09-10T18:15:58.9144659Z   D:\\a\\YOLO-Master\\YOLO-Master\\tests\\test_moa.py:888: UserWarning: C2fMoA(num_heads=6) adjusted to 3 to maintain head_dim \u2265 16 (c//heads \u2265 16).\n    module = C2fMoA(64, 64, n=2, num_heads=6)
+2026-09-10T18:15:58.9145195Z 
+2026-09-10T18:15:58.9145546Z tests/test_routed_module_protocol.py::TestRoutedModuleProtocol::test_is_routed_module[_make_c2fmoa-C2fMoA-3-3]
+2026-09-10T18:15:58.9147402Z tests/test_routed_module_protocol.py::TestRoutedModuleProtocol::test_num_experts[_make_c2fmoa-C2fMoA-3]
+2026-09-10T18:15:58.9148268Z tests/test_routed_module_protocol.py::TestRoutedModuleProtocol::test_top_k[_make_c2fmoa-C2fMoA-3]
+2026-09-10T18:15:58.9149103Z tests/test_routed_module_protocol.py::TestRoutedModuleProtocol::test_aux_loss_is_tensor[_make_c2fmoa-C2fMoA]
+2026-09-10T18:15:58.9150073Z tests/test_routed_module_protocol.py::TestRoutedModuleProtocol::test_routing_snapshot_populated[_make_c2fmoa-C2fMoA]
+2026-09-10T18:15:58.9151318Z   D:\\a\\YOLO-Master\\YOLO-Master\\tests\\test_routed_module_protocol.py:46: UserWarning: C2fMoA(num_heads=6) adjusted to 3 to maintain head_dim \u2265 16 (c//heads \u2265 16).\n    return C2fMoA(64, 64, n=1, num_heads=6)
+2026-09-10T18:15:58.9152222Z 
+2026-09-10T18:15:58.9152603Z tests/test_routed_module_protocol.py::TestProtocolUtils::test_collect_routed_children_nested
+2026-09-10T18:15:58.9154153Z   D:\\a\\YOLO-Master\\YOLO-Master\\tests\\test_routed_module_protocol.py:228: UserWarning: C2fMoA(num_heads=6) adjusted to 3 to maintain head_dim \u2265 16 (c//heads \u2265 16).\n    inner = C2fMoA(64, 64, n=2, num_heads=6)
+2026-09-10T18:15:58.9155071Z 
+2026-09-10T18:15:58.9155287Z tests/test_python.py: 3584 warnings
+2026-09-10T18:15:58.9156944Z   D:\a\YOLO-Master\YOLO-Master\.venv\Lib\site-packages\matplotlib\cbook.py:713: DeprecationWarning: __array__ implementation doesn't accept a copy keyword, so passing copy=False failed. __array__ must implement 'dtype' and 'copy' keyword arguments. To learn more, see the migration guide https://numpy.org/devdocs/numpy_2_0_migration_guide.html#adapting-to-changes-in-the-copy-keyword
+2026-09-10T18:15:58.9158678Z     x = np.array(x, subok=True, copy=copy)
+2026-09-10T18:15:58.9158866Z 
+2026-09-10T18:15:58.9159019Z tests/test_solutions.py: 3 warnings
+2026-09-10T18:15:58.9159339Z tests/test_python.py: 10 warnings
+2026-09-10T18:15:58.9159640Z tests/test_cli.py: 1 warning
+2026-09-10T18:15:58.9159956Z tests/test_exports.py: 2 warnings
+2026-09-10T18:15:58.9160249Z tests/test_engine.py: 1 warning
+2026-09-10T18:15:58.9161120Z   D:\a\YOLO-Master\YOLO-Master\.venv\Lib\site-packages\torch\jit\_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+2026-09-10T18:15:58.9161742Z     warnings.warn(
+2026-09-10T18:15:58.9161914Z 
+2026-09-10T18:15:58.9162056Z tests/test_exports.py: 4 warnings
+2026-09-10T18:15:58.9162350Z tests/test_engine.py: 1 warning
+2026-09-10T18:15:58.9162643Z tests/test_mixture_export.py: 4 warnings
+2026-09-10T18:15:58.9162956Z tests/test_p2_fixes.py: 2 warnings
+2026-09-10T18:15:58.9163294Z tests/test_export_roundtrip.py: 6 warnings
+2026-09-10T18:15:58.9163631Z tests/test_mot_export_masked_configs.py: 1 warning
+2026-09-10T18:15:58.9163967Z tests/test_moe_tracing_guard.py: 2 warnings
+2026-09-10T18:15:58.9165026Z   D:\a\YOLO-Master\YOLO-Master\.venv\Lib\site-packages\torch\jit\_trace.py:1006: FutureWarning: `torch.jit.trace` is deprecated. Please switch to `torch.compile` or `torch.export`.
+2026-09-10T18:15:58.9165707Z     warnings.warn(
+2026-09-10T18:15:58.9165838Z 
+2026-09-10T18:15:58.9165971Z tests/test_exports.py: 4 warnings
+2026-09-10T18:15:58.9166258Z tests/test_engine.py: 1 warning
+2026-09-10T18:15:58.9166578Z tests/test_mixture_export.py: 4 warnings
+2026-09-10T18:15:58.9166877Z tests/test_p2_fixes.py: 2 warnings
+2026-09-10T18:15:58.9167177Z tests/test_export_roundtrip.py: 6 warnings
+2026-09-10T18:15:58.9167506Z tests/test_mot_export_masked_configs.py: 1 warning
+2026-09-10T18:15:58.9167873Z tests/test_moe_tracing_guard.py: 2 warnings
+2026-09-10T18:15:58.9168546Z   D:\a\YOLO-Master\YOLO-Master\.venv\Lib\site-packages\torch\jit\_trace.py:1145: FutureWarning: `torch.jit.trace_method` is deprecated. Please switch to `torch.compile` or `torch.export`.
+2026-09-10T18:15:58.9169204Z     warnings.warn(
+2026-09-10T18:15:58.9169489Z 
+2026-09-10T18:15:58.9169591Z tests/test_exports.py: 3 warnings
+2026-09-10T18:15:58.9169916Z tests/test_python.py: 7 warnings
+2026-09-10T18:15:58.9170218Z tests/test_moe_export_governance.py: 1 warning
+2026-09-10T18:15:58.9171639Z   D:\a\YOLO-Master\YOLO-Master\ultralytics\utils\export\engine.py:80: DeprecationWarning: You are using the legacy TorchScript-based ONNX export. Starting in PyTorch 2.9, the new torch.export-based ONNX exporter has become the default. Learn more about the new export logic: https://docs.pytorch.org/docs/stable/onnx_export.html. For exporting control flow: https://pytorch.org/tutorials/beginner/onnx/export_control_flow_model_to_onnx_tutorial.html
+2026-09-10T18:15:58.9173047Z     torch.onnx.export(
+2026-09-10T18:15:58.9173182Z 
+2026-09-10T18:15:58.9173376Z tests/test_exports.py::test_export_onnx[True]
+2026-09-10T18:15:58.9173694Z tests/test_python.py::test_multichannel
+2026-09-10T18:15:58.9174056Z tests/test_python.py::test_grayscale[detect-model1-coco8.yaml]
+2026-09-10T18:15:58.9174619Z tests/test_python.py::test_grayscale[multitask-yolo26-master-mt-n.yaml-coco-multitask.yaml]
+2026-09-10T18:15:58.9175135Z tests/test_python.py::test_grayscale[obb-model3-dota8.yaml]
+2026-09-10T18:15:58.9175555Z tests/test_python.py::test_grayscale[pose-model4-coco8-pose.yaml]
+2026-09-10T18:15:58.9176005Z tests/test_python.py::test_grayscale[segment-model5-coco8-seg.yaml]
+2026-09-10T18:15:58.9177314Z   D:\a\YOLO-Master\YOLO-Master\.venv\Lib\site-packages\torch\onnx\_internal\torchscript_exporter\symbolic_opset11.py:955: UserWarning: Exporting aten::index operator of advanced indexing in opset 20 is achieved by combination of multiple ONNX operators, including Reshape, Transpose, Concat, and Gather. If indices include negative values, the exported graph will produce incorrect results.
+2026-09-10T18:15:58.9178460Z     return opset9.index(g, self, index)
+2026-09-10T18:15:58.9178663Z 
+2026-09-10T18:15:58.9178875Z tests/test_mot.py::test_trainer_detects_and_anneals_moa_mot_temperatures
+2026-09-10T18:15:58.9179734Z   D:\\a\\YOLO-Master\\YOLO-Master\\tests\\test_mot.py:125: UserWarning: C2fMoA(num_heads=4) adjusted to 6 to be divisible by NUM_GROUPS=3. To avoid silent adjustment, set num_heads \u2261 0 (mod 3) directly.\n    moa = C2fMoA(64, 64, n=1, num_heads=4)
+2026-09-10T18:15:58.9180519Z 
+2026-09-10T18:15:58.9180679Z tests/test_mot.py::test_trainer_detects_and_anneals_moa_mot_temperatures
+2026-09-10T18:15:58.9181486Z   D:\\a\\YOLO-Master\\YOLO-Master\\tests\\test_mot.py:125: UserWarning: C2fMoA(num_heads=6) adjusted to 3 to maintain head_dim \u2265 16 (c//heads \u2265 16).\n    moa = C2fMoA(64, 64, n=1, num_heads=4)
+2026-09-10T18:15:58.9182000Z 
+2026-09-10T18:15:58.9182143Z tests/test_python.py: 1 warning
+2026-09-10T18:15:58.9182443Z tests/test_mixture_export.py: 13 warnings
+2026-09-10T18:15:58.9182783Z tests/test_p2_fixes.py: 5 warnings
+2026-09-10T18:15:58.9183081Z tests/test_export_roundtrip.py: 10 warnings
+2026-09-10T18:15:58.9183415Z tests/test_mot_export_masked_configs.py: 1 warning
+2026-09-10T18:15:58.9183739Z tests/test_onnx_export_fix.py: 6 warnings
+2026-09-10T18:15:58.9184077Z tests/test_moe_tracing_guard.py: 2 warnings
+2026-09-10T18:15:58.9185402Z   D:\a\YOLO-Master\YOLO-Master\.venv\Lib\site-packages\torch\nn\functional.py:2859: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+2026-09-10T18:15:58.9186437Z     if size_prods == 1:
+2026-09-10T18:15:58.9186600Z 
+2026-09-10T18:15:58.9186734Z tests/test_python.py: 1 warning
+2026-09-10T18:15:58.9187020Z tests/test_mixture_export.py: 8 warnings
+2026-09-10T18:15:58.9187314Z tests/test_p2_fixes.py: 2 warnings
+2026-09-10T18:15:58.9187603Z tests/test_export_roundtrip.py: 6 warnings
+2026-09-10T18:15:58.9187926Z tests/test_mot_export_masked_configs.py: 1 warning
+2026-09-10T18:15:58.9189074Z   D:\a\YOLO-Master\YOLO-Master\.venv\Lib\site-packages\torch\_tensor.py:1062: TracerWarning: Converting a tensor to a Python integer might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+2026-09-10T18:15:58.9190090Z     split_size = int(split_size)
+2026-09-10T18:15:58.9190271Z 
+2026-09-10T18:15:58.9190366Z tests/test_python.py: 1 warning
+2026-09-10T18:15:58.9190682Z tests/test_mixture_export.py: 8 warnings
+2026-09-10T18:15:58.9190975Z tests/test_p2_fixes.py: 2 warnings
+2026-09-10T18:15:58.9191259Z tests/test_export_roundtrip.py: 6 warnings
+2026-09-10T18:15:58.9191566Z tests/test_mot_export_masked_configs.py: 1 warning
+2026-09-10T18:15:58.9192606Z   D:\a\YOLO-Master\YOLO-Master\ultralytics\nn\modules\mot\experts.py:234: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+2026-09-10T18:15:58.9193619Z     if pad_h > 0 or pad_w > 0:
+2026-09-10T18:15:58.9193787Z 
+2026-09-10T18:15:58.9193887Z tests/test_python.py: 1 warning
+2026-09-10T18:15:58.9194205Z tests/test_mixture_export.py: 8 warnings
+2026-09-10T18:15:58.9194492Z tests/test_p2_fixes.py: 2 warnings
+2026-09-10T18:15:58.9194782Z tests/test_export_roundtrip.py: 6 warnings
+2026-09-10T18:15:58.9195095Z tests/test_mot_export_masked_configs.py: 1 warning
+2026-09-10T18:15:58.9196154Z   D:\a\YOLO-Master\YOLO-Master\ultralytics\nn\modules\mot\experts.py:408: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+2026-09-10T18:15:58.9197144Z     if N != H * W:
+2026-09-10T18:15:58.9197308Z 
+2026-09-10T18:15:58.9197409Z tests/test_python.py: 1 warning
+2026-09-10T18:15:58.9197723Z tests/test_mixture_export.py: 8 warnings
+2026-09-10T18:15:58.9198010Z tests/test_p2_fixes.py: 2 warnings
+2026-09-10T18:15:58.9198298Z tests/test_export_roundtrip.py: 6 warnings
+2026-09-10T18:15:58.9198692Z tests/test_mot_export_masked_configs.py: 1 warning
+2026-09-10T18:15:58.9199721Z   D:\a\YOLO-Master\YOLO-Master\ultralytics\nn\modules\mot\experts.py:429: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+2026-09-10T18:15:58.9200752Z     row = (idx // W).float() / max(H - 1, 1) * 2 - 1
+2026-09-10T18:15:58.9200976Z 
+2026-09-10T18:15:58.9201072Z tests/test_python.py: 1 warning
+2026-09-10T18:15:58.9201387Z tests/test_mixture_export.py: 8 warnings
+2026-09-10T18:15:58.9201674Z tests/test_p2_fixes.py: 2 warnings
+2026-09-10T18:15:58.9201949Z tests/test_export_roundtrip.py: 6 warnings
+2026-09-10T18:15:58.9202262Z tests/test_mot_export_masked_configs.py: 1 warning
+2026-09-10T18:15:58.9203316Z   D:\a\YOLO-Master\YOLO-Master\ultralytics\nn\modules\mot\experts.py:430: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+2026-09-10T18:15:58.9204607Z     col = (idx % W).float() / max(W - 1, 1) * 2 - 1
+2026-09-10T18:15:58.9204856Z 
+2026-09-10T18:15:58.9205124Z tests/test_python.py::test_grayscale[multitask-yolo26-master-mt-n.yaml-coco-multitask.yaml]
+2026-09-10T18:15:58.9205690Z tests/test_mixture_export.py::TestMoTOnnxExport::test_c2fmot_onnx_export
+2026-09-10T18:15:58.9206188Z tests/test_mot_export_masked_configs.py::test_config_built_c2f_mot_trace_matches_sparse_eager
+2026-09-10T18:15:58.9207397Z   D:\a\YOLO-Master\YOLO-Master\ultralytics\nn\modules\routing_protocol.py:215: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+2026-09-10T18:15:58.9208442Z     if value.numel() != 1:
+2026-09-10T18:15:58.9208586Z 
+2026-09-10T18:15:58.9208865Z tests/test_python.py::test_grayscale[multitask-yolo26-master-mt-n.yaml-coco-multitask.yaml]
+2026-09-10T18:15:58.9209374Z tests/test_mixture_export.py::TestMoTOnnxExport::test_c2fmot_onnx_export
+2026-09-10T18:15:58.9209872Z tests/test_mot_export_masked_configs.py::test_config_built_c2f_mot_trace_matches_sparse_eager
+2026-09-10T18:15:58.9211028Z   D:\a\YOLO-Master\YOLO-Master\ultralytics\nn\modules\mot\wrappers.py:142: TracerWarning: Converting a tensor to a Python float might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+2026-09-10T18:15:58.9212037Z     "aux_loss": float(aux_total.detach()),
+2026-09-10T18:15:58.9212236Z 
+2026-09-10T18:15:58.9212472Z tests/test_python.py::test_grayscale[multitask-yolo26-master-mt-n.yaml-coco-multitask.yaml]
+2026-09-10T18:15:58.9213671Z   D:\a\YOLO-Master\YOLO-Master\ultralytics\nn\modules\multitask\router.py:217: TracerWarning: Converting a tensor to a Python integer might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+2026-09-10T18:15:58.9214692Z     "max_task": int(mean_usage.argmax()),
+2026-09-10T18:15:58.9214891Z 
+2026-09-10T18:15:58.9215168Z tests/test_python.py::test_grayscale[multitask-yolo26-master-mt-n.yaml-coco-multitask.yaml]
+2026-09-10T18:15:58.9216298Z   D:\a\YOLO-Master\YOLO-Master\ultralytics\nn\modules\multitask\router.py:218: TracerWarning: Converting a tensor to a Python float might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+2026-09-10T18:15:58.9217528Z     "entropy": float(-(affinity.float() * (affinity.float() + 1e-8).log()).sum(dim=1).mean()),
+2026-09-10T18:15:58.9217845Z 
+2026-09-10T18:15:58.9218115Z tests/test_python.py::test_grayscale[multitask-yolo26-master-mt-n.yaml-coco-multitask.yaml]
+2026-09-10T18:15:58.9219258Z   D:\a\YOLO-Master\YOLO-Master\ultralytics\nn\modules\multitask\head.py:263: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+2026-09-10T18:15:58.9220308Z     if index is None or index >= task_feats.shape[1]:
+2026-09-10T18:15:58.9220539Z 
+2026-09-10T18:15:58.9220791Z tests/test_moe_aware_peft.py::TestBuildMoEAwareLayer::test_factory_with_frequency_ranks
+2026-09-10T18:15:58.9221614Z   D:\a\YOLO-Master\YOLO-Master\tests\test_moe_aware_peft.py:308: RuntimeWarning: MoE-aware frequency allocation is using synthetic expert usage; provide usage_history for production or disable the fallback.
+2026-09-10T18:15:58.9222328Z     layer = build_moe_aware_layer(base, cfg)
+2026-09-10T18:15:58.9222599Z 
+2026-09-10T18:15:58.9222740Z tests/test_mixture_export.py: 13 warnings
+2026-09-10T18:15:58.9224182Z   D:\a\YOLO-Master\YOLO-Master\tests\test_mixture_export.py:33: DeprecationWarning: You are using the legacy TorchScript-based ONNX export. Starting in PyTorch 2.9, the new torch.export-based ONNX exporter has become the default. Learn more about the new export logic: https://docs.pytorch.org/docs/stable/onnx_export.html. For exporting control flow: https://pytorch.org/tutorials/beginner/onnx/export_control_flow_model_to_onnx_tutorial.html
+2026-09-10T18:15:58.9225768Z     torch.onnx.export(
+2026-09-10T18:15:58.9225940Z 
+2026-09-10T18:15:58.9226080Z tests/test_mixture_export.py: 5 warnings
+2026-09-10T18:15:58.9226380Z tests/test_p2_fixes.py: 3 warnings
+2026-09-10T18:15:58.9226683Z tests/test_export_roundtrip.py: 2 warnings
+2026-09-10T18:15:58.9227688Z   D:\a\YOLO-Master\YOLO-Master\ultralytics\nn\modules\moa\heads.py:92: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+2026-09-10T18:15:58.9228720Z     if n_tokens != height * width:
+2026-09-10T18:15:58.9228874Z 
+2026-09-10T18:15:58.9229015Z tests/test_mixture_export.py: 5 warnings
+2026-09-10T18:15:58.9229305Z tests/test_p2_fixes.py: 3 warnings
+2026-09-10T18:15:58.9229637Z tests/test_export_roundtrip.py: 2 warnings
+2026-09-10T18:15:58.9230611Z   D:\a\YOLO-Master\YOLO-Master\ultralytics\nn\modules\moa\heads.py:94: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+2026-09-10T18:15:58.9231633Z     win = max(1, min(int(window_size), height, width))
+2026-09-10T18:15:58.9231859Z 
+2026-09-10T18:15:58.9232002Z tests/test_mixture_export.py: 5 warnings
+2026-09-10T18:15:58.9232291Z tests/test_p2_fixes.py: 3 warnings
+2026-09-10T18:15:58.9232580Z tests/test_export_roundtrip.py: 2 warnings
+2026-09-10T18:15:58.9233574Z   D:\a\YOLO-Master\YOLO-Master\ultralytics\nn\modules\moa\heads.py:103: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+2026-09-10T18:15:58.9234564Z     if pad_h or pad_w:
+2026-09-10T18:15:58.9234692Z 
+2026-09-10T18:15:58.9234828Z tests/test_mixture_export.py: 5 warnings
+2026-09-10T18:15:58.9235203Z tests/test_p2_fixes.py: 3 warnings
+2026-09-10T18:15:58.9235723Z tests/test_export_roundtrip.py: 2 warnings
+2026-09-10T18:15:58.9236767Z   D:\a\YOLO-Master\YOLO-Master\ultralytics\nn\modules\moa\heads.py:58: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+2026-09-10T18:15:58.9237774Z     if win < 1 or height % win or width % win:
+2026-09-10T18:15:58.9237983Z 
+2026-09-10T18:15:58.9238118Z tests/test_mixture_export.py: 5 warnings
+2026-09-10T18:15:58.9238411Z tests/test_p2_fixes.py: 3 warnings
+2026-09-10T18:15:58.9238697Z tests/test_export_roundtrip.py: 2 warnings
+2026-09-10T18:15:58.9239683Z   D:\a\YOLO-Master\YOLO-Master\ultralytics\nn\modules\moa\heads.py:74: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+2026-09-10T18:15:58.9240728Z     if win < 1 or height % win or width % win:
+2026-09-10T18:15:58.9240900Z 
+2026-09-10T18:15:58.9241126Z tests/test_mixture_export.py::TestMoAOnnxExport::test_moablock_onnx_export
+2026-09-10T18:15:58.9241582Z tests/test_mixture_export.py::TestMoAOnnxExport::test_c2fmoa_onnx_export
+2026-09-10T18:15:58.9242100Z tests/test_mixture_export.py::TestMoAOnnxExport::test_moablock_onnx_output_consistency
+2026-09-10T18:15:58.9242590Z tests/test_mixture_export.py::TestTorchScriptExport::test_moablock_trace
+2026-09-10T18:15:58.9242985Z tests/test_p2_fixes.py::test_moa_onnx_export
+2026-09-10T18:15:58.9243319Z tests/test_p2_fixes.py::test_c2fmoa_onnx_export
+2026-09-10T18:15:58.9243793Z tests/test_p2_fixes.py::test_moa_torchscript_trace
+2026-09-10T18:15:58.9244223Z tests/test_export_roundtrip.py::test_mixture_torchscript_roundtrip[module0-sample0]
+2026-09-10T18:15:58.9244954Z tests/test_export_roundtrip.py::test_mixture_onnx_roundtrip[module0-sample0]
+2026-09-10T18:15:58.9246085Z   D:\a\YOLO-Master\YOLO-Master\ultralytics\nn\modules\moa\heads.py:214: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+2026-09-10T18:15:58.9247137Z     if min(H, W) <= 1:
+2026-09-10T18:15:58.9247266Z 
+2026-09-10T18:15:58.9247691Z tests/test_mixture_export.py::TestMoAOnnxExport::test_moablock_onnx_export
+2026-09-10T18:15:58.9248299Z tests/test_mixture_export.py::TestMoAOnnxExport::test_c2fmoa_onnx_export
+2026-09-10T18:15:58.9249057Z tests/test_mixture_export.py::TestMoAOnnxExport::test_moablock_onnx_output_consistency
+2026-09-10T18:15:58.9249797Z tests/test_mixture_export.py::TestTorchScriptExport::test_moablock_trace
+2026-09-10T18:15:58.9250391Z tests/test_p2_fixes.py::test_moa_onnx_export
+2026-09-10T18:15:58.9250865Z tests/test_p2_fixes.py::test_c2fmoa_onnx_export
+2026-09-10T18:15:58.9251401Z tests/test_p2_fixes.py::test_moa_torchscript_trace
+2026-09-10T18:15:58.9252034Z tests/test_export_roundtrip.py::test_mixture_torchscript_roundtrip[module0-sample0]
+2026-09-10T18:15:58.9252762Z tests/test_export_roundtrip.py::test_mixture_onnx_roundtrip[module0-sample0]
+2026-09-10T18:15:58.9254584Z   D:\a\YOLO-Master\YOLO-Master\ultralytics\nn\modules\moa\heads.py:221: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+2026-09-10T18:15:58.9256181Z     while (max(1, H // stride) * max(1, W // stride)) > self.max_kv_tokens:
+2026-09-10T18:15:58.9256541Z 
+2026-09-10T18:15:58.9256831Z tests/test_mixture_export.py::TestMoAOnnxExport::test_moablock_onnx_export
+2026-09-10T18:15:58.9257556Z tests/test_mixture_export.py::TestMoAOnnxExport::test_c2fmoa_onnx_export
+2026-09-10T18:15:58.9258516Z tests/test_mixture_export.py::TestMoAOnnxExport::test_moablock_onnx_output_consistency
+2026-09-10T18:15:58.9259244Z tests/test_mixture_export.py::TestTorchScriptExport::test_moablock_trace
+2026-09-10T18:15:58.9259831Z tests/test_p2_fixes.py::test_moa_onnx_export
+2026-09-10T18:15:58.9260335Z tests/test_p2_fixes.py::test_c2fmoa_onnx_export
+2026-09-10T18:15:58.9260836Z tests/test_p2_fixes.py::test_moa_torchscript_trace
+2026-09-10T18:15:58.9261467Z tests/test_export_roundtrip.py::test_mixture_torchscript_roundtrip[module0-sample0]
+2026-09-10T18:15:58.9262218Z tests/test_export_roundtrip.py::test_mixture_onnx_roundtrip[module0-sample0]
+2026-09-10T18:15:58.9263994Z   D:\a\YOLO-Master\YOLO-Master\ultralytics\nn\modules\moa\heads.py:223: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+2026-09-10T18:15:58.9265964Z     target_h = max(1, H // stride)
+2026-09-10T18:15:58.9266225Z 
+2026-09-10T18:15:58.9266481Z tests/test_mixture_export.py::TestMoAOnnxExport::test_moablock_onnx_export
+2026-09-10T18:15:58.9267009Z tests/test_mixture_export.py::TestMoAOnnxExport::test_c2fmoa_onnx_export
+2026-09-10T18:15:58.9267493Z tests/test_mixture_export.py::TestMoAOnnxExport::test_moablock_onnx_output_consistency
+2026-09-10T18:15:58.9267974Z tests/test_mixture_export.py::TestTorchScriptExport::test_moablock_trace
+2026-09-10T18:15:58.9268392Z tests/test_p2_fixes.py::test_moa_onnx_export
+2026-09-10T18:15:58.9268696Z tests/test_p2_fixes.py::test_c2fmoa_onnx_export
+2026-09-10T18:15:58.9269786Z tests/test_p2_fixes.py::test_moa_torchscript_trace
+2026-09-10T18:15:58.9270198Z tests/test_export_roundtrip.py::test_mixture_torchscript_roundtrip[module0-sample0]
+2026-09-10T18:15:58.9270700Z tests/test_export_roundtrip.py::test_mixture_onnx_roundtrip[module0-sample0]
+2026-09-10T18:15:58.9271799Z   D:\a\YOLO-Master\YOLO-Master\ultralytics\nn\modules\moa\heads.py:224: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+2026-09-10T18:15:58.9272788Z     target_w = max(1, W // stride)
+2026-09-10T18:15:58.9272964Z 
+2026-09-10T18:15:58.9273173Z tests/test_mixture_export.py::TestMoAOnnxExport::test_moablock_onnx_export
+2026-09-10T18:15:58.9273607Z tests/test_mixture_export.py::TestMoAOnnxExport::test_c2fmoa_onnx_export
+2026-09-10T18:15:58.9274063Z tests/test_mixture_export.py::TestMoAOnnxExport::test_moablock_onnx_output_consistency
+2026-09-10T18:15:58.9274577Z tests/test_mixture_export.py::TestTorchScriptExport::test_moablock_trace
+2026-09-10T18:15:58.9274939Z tests/test_p2_fixes.py::test_moa_onnx_export
+2026-09-10T18:15:58.9275255Z tests/test_p2_fixes.py::test_c2fmoa_onnx_export
+2026-09-10T18:15:58.9275580Z tests/test_p2_fixes.py::test_moa_torchscript_trace
+2026-09-10T18:15:58.9275996Z tests/test_export_roundtrip.py::test_mixture_torchscript_roundtrip[module0-sample0]
+2026-09-10T18:15:58.9276454Z tests/test_export_roundtrip.py::test_mixture_onnx_roundtrip[module0-sample0]
+2026-09-10T18:15:58.9277490Z   D:\a\YOLO-Master\YOLO-Master\ultralytics\nn\modules\moa\heads.py:231: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+2026-09-10T18:15:58.9278485Z     if H2 * W2 == 0:
+2026-09-10T18:15:58.9278605Z 
+2026-09-10T18:15:58.9278807Z tests/test_mixture_export.py::TestMoAOnnxExport::test_moablock_onnx_export
+2026-09-10T18:15:58.9279224Z tests/test_mixture_export.py::TestMoAOnnxExport::test_c2fmoa_onnx_export
+2026-09-10T18:15:58.9279766Z tests/test_mixture_export.py::TestMoAOnnxExport::test_moablock_onnx_output_consistency
+2026-09-10T18:15:58.9280258Z tests/test_mixture_export.py::TestTorchScriptExport::test_moablock_trace
+2026-09-10T18:15:58.9280627Z tests/test_p2_fixes.py::test_moa_onnx_export
+2026-09-10T18:15:58.9280933Z tests/test_p2_fixes.py::test_c2fmoa_onnx_export
+2026-09-10T18:15:58.9281245Z tests/test_p2_fixes.py::test_moa_torchscript_trace
+2026-09-10T18:15:58.9281662Z tests/test_export_roundtrip.py::test_mixture_torchscript_roundtrip[module0-sample0]
+2026-09-10T18:15:58.9282115Z tests/test_export_roundtrip.py::test_mixture_onnx_roundtrip[module0-sample0]
+2026-09-10T18:15:58.9283177Z   D:\a\YOLO-Master\YOLO-Master\ultralytics\nn\modules\moa\heads.py:368: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+2026-09-10T18:15:58.9284217Z     if N <= self._LINEAR_ATTN_THRESHOLD:
+2026-09-10T18:15:58.9284372Z 
+2026-09-10T18:15:58.9284573Z tests/test_mixture_export.py::TestMoAOnnxExport::test_moablock_onnx_export
+2026-09-10T18:15:58.9285349Z tests/test_mixture_export.py::TestMoAOnnxExport::test_c2fmoa_onnx_export
+2026-09-10T18:15:58.9285881Z tests/test_mixture_export.py::TestMoAOnnxExport::test_moablock_onnx_output_consistency
+2026-09-10T18:15:58.9286386Z tests/test_mixture_export.py::TestTorchScriptExport::test_moablock_trace
+2026-09-10T18:15:58.9286745Z tests/test_p2_fixes.py::test_moa_onnx_export
+2026-09-10T18:15:58.9287044Z tests/test_p2_fixes.py::test_c2fmoa_onnx_export
+2026-09-10T18:15:58.9287390Z tests/test_p2_fixes.py::test_moa_torchscript_trace
+2026-09-10T18:15:58.9288153Z tests/test_export_roundtrip.py::test_mixture_torchscript_roundtrip[module0-sample0]
+2026-09-10T18:15:58.9288625Z tests/test_export_roundtrip.py::test_mixture_onnx_roundtrip[module0-sample0]
+2026-09-10T18:15:58.9289695Z   D:\a\YOLO-Master\YOLO-Master\ultralytics\nn\modules\moa\heads.py:372: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+2026-09-10T18:15:58.9290707Z     if N > blend_start:
+2026-09-10T18:15:58.9290838Z 
+2026-09-10T18:15:58.9291037Z tests/test_mixture_export.py::TestMoAOnnxExport::test_c2fmoa_onnx_export
+2026-09-10T18:15:58.9291779Z   D:\\a\\YOLO-Master\\YOLO-Master\\tests\\test_mixture_export.py:97: UserWarning: C2fMoA(num_heads=6) adjusted to 3 to maintain head_dim \u2265 16 (c//heads \u2265 16).\n    m = C2fMoA(64, 64, n=1, num_heads=6)
+2026-09-10T18:15:58.9292354Z 
+2026-09-10T18:15:58.9292582Z tests/test_mixture_export.py::TestMoAOnnxExport::test_neck_moa_fusion_onnx_export
+2026-09-10T18:15:58.9294047Z   D:\a\YOLO-Master\YOLO-Master\tests\test_mixture_export.py:108: DeprecationWarning: You are using the legacy TorchScript-based ONNX export. Starting in PyTorch 2.9, the new torch.export-based ONNX exporter has become the default. Learn more about the new export logic: https://docs.pytorch.org/docs/stable/onnx_export.html. For exporting control flow: https://pytorch.org/tutorials/beginner/onnx/export_control_flow_model_to_onnx_tutorial.html
+2026-09-10T18:15:58.9295378Z     torch.onnx.export(
+2026-09-10T18:15:58.9295509Z 
+2026-09-10T18:15:58.9295725Z tests/test_mixture_export.py::TestMoAOnnxExport::test_neck_moa_fusion_onnx_export
+2026-09-10T18:15:58.9296826Z   D:\a\YOLO-Master\YOLO-Master\ultralytics\nn\modules\moa\wrappers.py:375: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+2026-09-10T18:15:58.9297856Z     if lo.shape[2:] == (height, width):
+2026-09-10T18:15:58.9298015Z 
+2026-09-10T18:15:58.9298336Z tests/test_mixture_export.py::TestMoAOnnxExport::test_neck_moa_fusion_onnx_export
+2026-09-10T18:15:58.9299426Z   D:\a\YOLO-Master\YOLO-Master\ultralytics\nn\modules\moa\wrappers.py:311: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+2026-09-10T18:15:58.9300473Z     if self_out.shape[1] != cross_out.shape[1]:
+2026-09-10T18:15:58.9300647Z 
+2026-09-10T18:15:58.9300861Z tests/test_mixture_export.py::TestMoAOnnxExport::test_neck_moa_fusion_onnx_export
+2026-09-10T18:15:58.9301941Z   D:\a\YOLO-Master\YOLO-Master\ultralytics\nn\modules\moa\wrappers.py:353: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+2026-09-10T18:15:58.9302954Z     if self_out.shape[1] != cross_out.shape[1]:
+2026-09-10T18:15:58.9303124Z 
+2026-09-10T18:15:58.9303343Z tests/test_mixture_export.py::TestMoLoRAOnnxExport::test_molora_conv_onnx_export
+2026-09-10T18:15:58.9303829Z tests/test_mixture_export.py::TestMoLoRAOnnxExport::test_molora_linear_onnx_export
+2026-09-10T18:15:58.9304296Z tests/test_mixture_export.py::TestMoLoRAOnnxExport::test_molora_single_expert_onnx
+2026-09-10T18:15:58.9304783Z tests/test_mixture_export.py::TestTorchScriptExport::test_molora_trace
+2026-09-10T18:15:58.9305548Z tests/test_mixture_export.py::TestExpertPreservation::test_molora_all_experts_in_graph
+2026-09-10T18:15:58.9306481Z tests/test_export_roundtrip.py::test_mixture_torchscript_roundtrip[module4-sample4]
+2026-09-10T18:15:58.9306991Z tests/test_export_roundtrip.py::test_mixture_onnx_roundtrip[module4-sample4]
+2026-09-10T18:15:58.9307528Z tests/test_moe_export_governance.py::test_routing_preserved_onnx_uses_project_wrapper_and_matches_eager
+2026-09-10T18:15:58.9308705Z   D:\a\YOLO-Master\YOLO-Master\ultralytics\nn\peft\molora\layer.py:636: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+2026-09-10T18:15:58.9309686Z     K == self.num_experts
+2026-09-10T18:15:58.9309845Z 
+2026-09-10T18:15:58.9310067Z tests/test_mixture_export.py::TestMoLoRAOnnxExport::test_molora_linear_onnx_export
+2026-09-10T18:15:58.9311486Z   D:\a\YOLO-Master\YOLO-Master\tests\test_mixture_export.py:219: DeprecationWarning: You are using the legacy TorchScript-based ONNX export. Starting in PyTorch 2.9, the new torch.export-based ONNX exporter has become the default. Learn more about the new export logic: https://docs.pytorch.org/docs/stable/onnx_export.html. For exporting control flow: https://pytorch.org/tutorials/beginner/onnx/export_control_flow_model_to_onnx_tutorial.html
+2026-09-10T18:15:58.9312789Z     torch.onnx.export(
+2026-09-10T18:15:58.9312939Z 
+2026-09-10T18:15:58.9313087Z tests/test_lovo_e2e.py::TestLOVOE2ECLI::test_cli_fit
+2026-09-10T18:15:58.9313729Z   D:\a\YOLO-Master\YOLO-Master\.venv\Lib\site-packages\_pytest\threadexception.py:58: PytestUnhandledThreadExceptionWarning: Exception in thread Thread-348 (_readerthread)
+2026-09-10T18:15:58.9314329Z   
+2026-09-10T18:15:58.9314550Z   Traceback (most recent call last):
+2026-09-10T18:15:58.9320979Z     File "C:\hostedtoolcache\windows\Python\3.13.15\x64\Lib\threading.py", line 1044, in _bootstrap_inner
+2026-09-10T18:15:58.9321684Z       self.run()
+2026-09-10T18:15:58.9321968Z       ~~~~~~~~^^
+2026-09-10T18:15:58.9322429Z     File "C:\hostedtoolcache\windows\Python\3.13.15\x64\Lib\threading.py", line 995, in run
+2026-09-10T18:15:58.9322834Z       self._target(*self._args, **self._kwargs)
+2026-09-10T18:15:58.9323594Z       ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-09-10T18:15:58.9324273Z     File "C:\hostedtoolcache\windows\Python\3.13.15\x64\Lib\subprocess.py", line 1615, in _readerthread
+2026-09-10T18:15:58.9324700Z       buffer.append(fh.read())
+2026-09-10T18:15:58.9324963Z                     ~~~~~~~^^
+2026-09-10T18:15:58.9325356Z     File "C:\hostedtoolcache\windows\Python\3.13.15\x64\Lib\encodings\cp1252.py", line 23, in decode
+2026-09-10T18:15:58.9325865Z       return codecs.charmap_decode(input,self.errors,decoding_table)[0]
+2026-09-10T18:15:58.9326239Z              ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-09-10T18:15:58.9326690Z   UnicodeDecodeError: 'charmap' codec can't decode byte 0x81 in position 39: character maps to <undefined>
+2026-09-10T18:15:58.9327141Z   
+2026-09-10T18:15:58.9327425Z   Enable tracemalloc to get traceback where the object was allocated.
+2026-09-10T18:15:58.9327914Z   See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+2026-09-10T18:15:58.9328434Z     warnings.warn(pytest.PytestUnhandledThreadExceptionWarning(msg))
+2026-09-10T18:15:58.9328711Z 
+2026-09-10T18:15:58.9328892Z tests/test_p2_fixes.py::test_moa_defaults_to_sequential_heads
+2026-09-10T18:15:58.9329676Z   D:\\a\\YOLO-Master\\YOLO-Master\\tests\\test_p2_fixes.py:61: UserWarning: C2fMoA(num_heads=6) adjusted to 3 to maintain head_dim \u2265 16 (c//heads \u2265 16).\n    assert C2fMoA(48, 48, n=1, num_heads=6).m[0].sequential_heads is True
+2026-09-10T18:15:58.9330319Z 
+2026-09-10T18:15:58.9330437Z tests/test_p2_fixes.py::test_moa_onnx_export
+2026-09-10T18:15:58.9332347Z   D:\a\YOLO-Master\YOLO-Master\tests\test_p2_fixes.py:89: DeprecationWarning: You are using the legacy TorchScript-based ONNX export. Starting in PyTorch 2.9, the new torch.export-based ONNX exporter has become the default. Learn more about the new export logic: https://docs.pytorch.org/docs/stable/onnx_export.html. For exporting control flow: https://pytorch.org/tutorials/beginner/onnx/export_control_flow_model_to_onnx_tutorial.html
+2026-09-10T18:15:58.9333616Z     torch.onnx.export(
+2026-09-10T18:15:58.9333780Z 
+2026-09-10T18:15:58.9333899Z tests/test_p2_fixes.py::test_c2fmoa_onnx_export
+2026-09-10T18:15:58.9334604Z   D:\\a\\YOLO-Master\\YOLO-Master\\tests\\test_p2_fixes.py:107: UserWarning: C2fMoA(num_heads=6) adjusted to 3 to maintain head_dim \u2265 16 (c//heads \u2265 16).\n    module = C2fMoA(32, 32, n=1, num_heads=6).eval()
+2026-09-10T18:15:58.9335154Z 
+2026-09-10T18:15:58.9335304Z tests/test_p2_fixes.py::test_c2fmoa_onnx_export
+2026-09-10T18:15:58.9336608Z   D:\a\YOLO-Master\YOLO-Master\tests\test_p2_fixes.py:111: DeprecationWarning: You are using the legacy TorchScript-based ONNX export. Starting in PyTorch 2.9, the new torch.export-based ONNX exporter has become the default. Learn more about the new export logic: https://docs.pytorch.org/docs/stable/onnx_export.html. For exporting control flow: https://pytorch.org/tutorials/beginner/onnx/export_control_flow_model_to_onnx_tutorial.html
+2026-09-10T18:15:58.9337909Z     torch.onnx.export(
+2026-09-10T18:15:58.9338071Z 
+2026-09-10T18:15:58.9338183Z tests/test_p2_fixes.py::test_mot_onnx_export
+2026-09-10T18:15:58.9339503Z   D:\a\YOLO-Master\YOLO-Master\tests\test_p2_fixes.py:131: DeprecationWarning: You are using the legacy TorchScript-based ONNX export. Starting in PyTorch 2.9, the new torch.export-based ONNX exporter has become the default. Learn more about the new export logic: https://docs.pytorch.org/docs/stable/onnx_export.html. For exporting control flow: https://pytorch.org/tutorials/beginner/onnx/export_control_flow_model_to_onnx_tutorial.html
+2026-09-10T18:15:58.9340793Z     torch.onnx.export(
+2026-09-10T18:15:58.9340943Z 
+2026-09-10T18:15:58.9341067Z tests/test_p2_fixes.py::test_mot_torchscript_trace
+2026-09-10T18:15:58.9341789Z   D:\a\YOLO-Master\YOLO-Master\.venv\Lib\site-packages\torch\jit\_trace.py:1244: TracerWarning: Output nr 1. of the traced function does not match the corresponding output of the Python function. Detailed error:
+2026-09-10T18:15:58.9342991Z   Tensor-likes are not close!
+2026-09-10T18:15:58.9343580Z   
+2026-09-10T18:15:58.9343814Z   Mismatched elements: 1976 / 2048 (96.5%)
+2026-09-10T18:15:58.9344265Z   Greatest absolute difference: 0.0020027756690979004 at index (0, 19, 3, 5) (up to 1e-05 allowed)
+2026-09-10T18:15:58.9344794Z   Greatest relative difference: 2.2903766769865843 at index (0, 7, 5, 4) (up to 1e-05 allowed)
+2026-09-10T18:15:58.9345177Z     _check_trace(
+2026-09-10T18:15:58.9345318Z 
+2026-09-10T18:15:58.9345523Z tests/test_export_roundtrip.py::test_mixture_torchscript_roundtrip[module0-sample0]
+2026-09-10T18:15:58.9346026Z tests/test_export_roundtrip.py::test_mixture_torchscript_roundtrip[module1-sample1]
+2026-09-10T18:15:58.9346493Z tests/test_export_roundtrip.py::test_mixture_torchscript_roundtrip[module2-sample2]
+2026-09-10T18:15:58.9346963Z tests/test_export_roundtrip.py::test_mixture_torchscript_roundtrip[module3-sample3]
+2026-09-10T18:15:58.9347431Z tests/test_export_roundtrip.py::test_mixture_torchscript_roundtrip[module4-sample4]
+2026-09-10T18:15:58.9347914Z tests/test_export_roundtrip.py::test_mot_export_masked_matches_sparse_eager
+2026-09-10T18:15:58.9348583Z   D:\a\YOLO-Master\YOLO-Master\.venv\Lib\site-packages\torch\jit\_serialization.py:89: FutureWarning: `torch.jit.save` is deprecated. Please switch to `torch.export`.
+2026-09-10T18:15:58.9349152Z     warnings.warn(
+2026-09-10T18:15:58.9349294Z 
+2026-09-10T18:15:58.9349504Z tests/test_export_roundtrip.py::test_mixture_torchscript_roundtrip[module1-sample1]
+2026-09-10T18:15:58.9349965Z tests/test_export_roundtrip.py::test_mixture_onnx_roundtrip[module1-sample1]
+2026-09-10T18:15:58.9350343Z tests/test_onnx_export_fix.py::test_optimized_moe
+2026-09-10T18:15:58.9351016Z tests/test_onnx_export_fix.py::test_optimized_moe_improved
+2026-09-10T18:15:58.9351393Z tests/test_onnx_export_fix.py::test_output_consistency
+2026-09-10T18:15:58.9351838Z tests/test_moe_tracing_guard.py::test_torchscript_trace_matches_eager_for_other_routes[OptimizedMOE]
+2026-09-10T18:15:58.9352428Z tests/test_moe_tracing_guard.py::test_torchscript_trace_matches_eager_for_other_routes[OptimizedMOEImproved]
+2026-09-10T18:15:58.9353657Z   D:\a\YOLO-Master\YOLO-Master\ultralytics\nn\modules\moe\routers.py:45: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+2026-09-10T18:15:58.9354698Z     if expected_channels > 0 and x.shape[1] != expected_channels:
+2026-09-10T18:15:58.9354941Z 
+2026-09-10T18:15:58.9355130Z tests/test_export_roundtrip.py::test_mixture_torchscript_roundtrip[module1-sample1]
+2026-09-10T18:15:58.9355622Z tests/test_export_roundtrip.py::test_mixture_onnx_roundtrip[module1-sample1]
+2026-09-10T18:15:58.9356003Z tests/test_onnx_export_fix.py::test_optimized_moe
+2026-09-10T18:15:58.9356341Z tests/test_onnx_export_fix.py::test_optimized_moe_improved
+2026-09-10T18:15:58.9356697Z tests/test_onnx_export_fix.py::test_output_consistency
+2026-09-10T18:15:58.9357162Z tests/test_moe_tracing_guard.py::test_torchscript_trace_matches_eager_for_other_routes[OptimizedMOE]
+2026-09-10T18:15:58.9357740Z tests/test_moe_tracing_guard.py::test_torchscript_trace_matches_eager_for_other_routes[OptimizedMOEImproved]
+2026-09-10T18:15:58.9358887Z   D:\a\YOLO-Master\YOLO-Master\ultralytics\nn\modules\moe\routers.py:51: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+2026-09-10T18:15:58.9359912Z     if torch.isnan(x).any() or torch.isinf(x).any():
+2026-09-10T18:15:58.9360093Z 
+2026-09-10T18:15:58.9360306Z tests/test_export_roundtrip.py::test_mixture_torchscript_roundtrip[module1-sample1]
+2026-09-10T18:15:58.9360765Z tests/test_export_roundtrip.py::test_mixture_onnx_roundtrip[module1-sample1]
+2026-09-10T18:15:58.9361222Z tests/test_onnx_export_fix.py::test_optimized_moe
+2026-09-10T18:15:58.9361592Z tests/test_onnx_export_fix.py::test_optimized_moe_improved
+2026-09-10T18:15:58.9361919Z tests/test_onnx_export_fix.py::test_output_consistency
+2026-09-10T18:15:58.9362318Z tests/test_moe_tracing_guard.py::test_torchscript_trace_matches_eager_for_other_routes[OptimizedMOE]
+2026-09-10T18:15:58.9362914Z tests/test_moe_tracing_guard.py::test_torchscript_trace_matches_eager_for_other_routes[OptimizedMOEImproved]
+2026-09-10T18:15:58.9364475Z   D:\a\YOLO-Master\YOLO-Master\ultralytics\nn\modules\moe\routers.py:289: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+2026-09-10T18:15:58.9365468Z     if H > self.pool_scale and W > self.pool_scale:
+2026-09-10T18:15:58.9365653Z 
+2026-09-10T18:15:58.9365849Z tests/test_export_roundtrip.py::test_mixture_torchscript_roundtrip[module1-sample1]
+2026-09-10T18:15:58.9366272Z tests/test_export_roundtrip.py::test_mixture_onnx_roundtrip[module1-sample1]
+2026-09-10T18:15:58.9366615Z tests/test_onnx_export_fix.py::test_optimized_moe
+2026-09-10T18:15:58.9366929Z tests/test_onnx_export_fix.py::test_optimized_moe_improved
+2026-09-10T18:15:58.9367277Z tests/test_onnx_export_fix.py::test_output_consistency
+2026-09-10T18:15:58.9367810Z tests/test_moe_tracing_guard.py::test_torchscript_trace_matches_eager_for_other_routes[OptimizedMOE]
+2026-09-10T18:15:58.9368471Z tests/test_moe_tracing_guard.py::test_torchscript_trace_matches_eager_for_other_routes[OptimizedMOEImproved]
+2026-09-10T18:15:58.9369745Z   D:\a\YOLO-Master\YOLO-Master\ultralytics\nn\modules\moe\routers.py:295: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+2026-09-10T18:15:58.9370821Z     if not torch.isfinite(out).all():
+2026-09-10T18:15:58.9370992Z 
+2026-09-10T18:15:58.9371190Z tests/test_export_roundtrip.py::test_mixture_torchscript_roundtrip[module1-sample1]
+2026-09-10T18:15:58.9371651Z tests/test_export_roundtrip.py::test_mixture_onnx_roundtrip[module1-sample1]
+2026-09-10T18:15:58.9372041Z tests/test_onnx_export_fix.py::test_optimized_moe
+2026-09-10T18:15:58.9372412Z tests/test_onnx_export_fix.py::test_optimized_moe_improved
+2026-09-10T18:15:58.9372781Z tests/test_onnx_export_fix.py::test_output_consistency
+2026-09-10T18:15:58.9373280Z tests/test_moe_tracing_guard.py::test_torchscript_trace_matches_eager_for_other_routes[OptimizedMOE]
+2026-09-10T18:15:58.9373908Z tests/test_moe_tracing_guard.py::test_torchscript_trace_matches_eager_for_other_routes[OptimizedMOEImproved]
+2026-09-10T18:15:58.9375155Z   D:\a\YOLO-Master\YOLO-Master\ultralytics\nn\modules\moe\routers.py:301: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+2026-09-10T18:15:58.9376214Z     if not torch.isfinite(global_logits).all():
+2026-09-10T18:15:58.9376426Z 
+2026-09-10T18:15:58.9376671Z tests/test_export_roundtrip.py::test_mixture_torchscript_roundtrip[module1-sample1]
+2026-09-10T18:15:58.9377160Z tests/test_export_roundtrip.py::test_mixture_onnx_roundtrip[module1-sample1]
+2026-09-10T18:15:58.9377561Z tests/test_onnx_export_fix.py::test_optimized_moe
+2026-09-10T18:15:58.9377940Z tests/test_onnx_export_fix.py::test_optimized_moe_improved
+2026-09-10T18:15:58.9378310Z tests/test_onnx_export_fix.py::test_output_consistency
+2026-09-10T18:15:58.9378775Z tests/test_moe_tracing_guard.py::test_torchscript_trace_matches_eager_for_other_routes[OptimizedMOE]
+2026-09-10T18:15:58.9379470Z tests/test_moe_tracing_guard.py::test_torchscript_trace_matches_eager_for_other_routes[OptimizedMOEImproved]
+2026-09-10T18:15:58.9380737Z   D:\a\YOLO-Master\YOLO-Master\ultralytics\nn\modules\moe\routers.py:197: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+2026-09-10T18:15:58.9381845Z     if torch.isnan(logits).any() or torch.isinf(logits).any():
+2026-09-10T18:15:58.9382090Z 
+2026-09-10T18:15:58.9382300Z tests/test_export_roundtrip.py::test_mixture_torchscript_roundtrip[module3-sample3]
+2026-09-10T18:15:58.9383209Z   D:\a\YOLO-Master\YOLO-Master\.venv\Lib\site-packages\torch\jit\_trace.py:1244: TracerWarning: Output nr 1. of the traced function does not match the corresponding output of the Python function. Detailed error:
+2026-09-10T18:15:58.9384287Z   Tensor-likes are not close!
+2026-09-10T18:15:58.9384549Z   
+2026-09-10T18:15:58.9384808Z   Mismatched elements: 1997 / 2048 (97.5%)
+2026-09-10T18:15:58.9385241Z   Greatest absolute difference: 0.0031014680862426758 at index (0, 13, 5, 0) (up to 1e-05 allowed)
+2026-09-10T18:15:58.9385809Z   Greatest relative difference: 0.6671652954375468 at index (0, 6, 7, 1) (up to 1e-05 allowed)
+2026-09-10T18:15:58.9386219Z     _check_trace(
+2026-09-10T18:15:58.9386366Z 
+2026-09-10T18:15:58.9386593Z tests/test_export_roundtrip.py::test_mixture_onnx_roundtrip[module0-sample0]
+2026-09-10T18:15:58.9387076Z tests/test_export_roundtrip.py::test_mixture_onnx_roundtrip[module1-sample1]
+2026-09-10T18:15:58.9387548Z tests/test_export_roundtrip.py::test_mixture_onnx_roundtrip[module2-sample2]
+2026-09-10T18:15:58.9388102Z tests/test_export_roundtrip.py::test_mixture_onnx_roundtrip[module3-sample3]
+2026-09-10T18:15:58.9388593Z tests/test_export_roundtrip.py::test_mixture_onnx_roundtrip[module4-sample4]
+2026-09-10T18:15:58.9389068Z tests/test_export_roundtrip.py::test_mot_export_masked_matches_sparse_eager
+2026-09-10T18:15:58.9390644Z   D:\a\YOLO-Master\YOLO-Master\ultralytics\utils\export_validation.py:88: DeprecationWarning: You are using the legacy TorchScript-based ONNX export. Starting in PyTorch 2.9, the new torch.export-based ONNX exporter has become the default. Learn more about the new export logic: https://docs.pytorch.org/docs/stable/onnx_export.html. For exporting control flow: https://pytorch.org/tutorials/beginner/onnx/export_control_flow_model_to_onnx_tutorial.html
+2026-09-10T18:15:58.9392115Z     torch.onnx.export(
+2026-09-10T18:15:58.9392252Z 
+2026-09-10T18:15:58.9392513Z tests/test_mot_export_masked_configs.py::test_config_built_c2f_mot_trace_matches_sparse_eager
+2026-09-10T18:15:58.9393708Z   D:\a\YOLO-Master\YOLO-Master\ultralytics\nn\modules\mot\experts.py:30: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+2026-09-10T18:15:58.9394794Z     if s == 0:
+2026-09-10T18:15:58.9394910Z 
+2026-09-10T18:15:58.9395258Z tests/test_foundation_distill_model.py::test_training_adds_foundation_loss_and_only_student_projector_receive_gradients
+2026-09-10T18:15:58.9396110Z   D:\a\YOLO-Master\YOLO-Master\tests\test_foundation_distill_model.py:145: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+2026-09-10T18:15:58.9397138Z   Consider using tensor.detach() first. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\torch\csrc\autograd\generated\python_variable_methods.cpp:821.)
+2026-09-10T18:15:58.9397899Z     assert wrapper.last_foundation_loss.item() == pytest.approx(float(total[-1]), rel=1e-5)
+2026-09-10T18:15:58.9398221Z 
+2026-09-10T18:15:58.9398465Z tests/test_routing_aux_contract.py::test_wrapper_record_covers_children_without_double_counting
+2026-09-10T18:15:58.9399461Z   D:\\a\\YOLO-Master\\YOLO-Master\\tests\\test_routing_aux_contract.py:54: UserWarning: C2fMoA(num_heads=6) adjusted to 3 to maintain head_dim \u2265 16 (c//heads \u2265 16).\n    module = C2fMoA(32, 32, n=2, num_heads=6).train()
+2026-09-10T18:15:58.9400086Z 
+2026-09-10T18:15:58.9400240Z tests/test_onnx_export_fix.py::test_optimized_moe
+2026-09-10T18:15:58.9400597Z tests/test_onnx_export_fix.py::test_optimized_moe_improved
+2026-09-10T18:15:58.9401020Z tests/test_onnx_export_fix.py::test_batched_expert_computation
+2026-09-10T18:15:58.9401418Z tests/test_onnx_export_fix.py::test_shared_inverted_expert_group
+2026-09-10T18:15:58.9401771Z tests/test_onnx_export_fix.py::test_es_moe
+2026-09-10T18:15:58.9402126Z tests/test_onnx_export_fix.py::test_fused_expert_group_already_safe
+2026-09-10T18:15:58.9403934Z   D:\a\YOLO-Master\YOLO-Master\tests\test_onnx_export_fix.py:52: DeprecationWarning: You are using the legacy TorchScript-based ONNX export. Starting in PyTorch 2.9, the new torch.export-based ONNX exporter has become the default. Learn more about the new export logic: https://docs.pytorch.org/docs/stable/onnx_export.html. For exporting control flow: https://pytorch.org/tutorials/beginner/onnx/export_control_flow_model_to_onnx_tutorial.html
+2026-09-10T18:15:58.9405363Z     torch.onnx.export(
+2026-09-10T18:15:58.9405522Z 
+2026-09-10T18:15:58.9405674Z tests/test_onnx_export_fix.py::test_optimized_moe_improved
+2026-09-10T18:15:58.9406222Z tests/test_moe_tracing_guard.py::test_torchscript_trace_matches_eager_for_other_routes[OptimizedMOEImproved]
+2026-09-10T18:15:58.9407567Z   D:\a\YOLO-Master\YOLO-Master\ultralytics\nn\modules\moe\modules.py:1112: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+2026-09-10T18:15:58.9408654Z     if not torch.isfinite(shared_out).all():
+2026-09-10T18:15:58.9408865Z 
+2026-09-10T18:15:58.9409035Z tests/test_onnx_export_fix.py::test_optimized_moe_improved
+2026-09-10T18:15:58.9409561Z tests/test_moe_tracing_guard.py::test_torchscript_trace_matches_eager_for_other_routes[OptimizedMOEImproved]
+2026-09-10T18:15:58.9410782Z   D:\a\YOLO-Master\YOLO-Master\ultralytics\nn\modules\moe\modules.py:1171: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+2026-09-10T18:15:58.9411834Z     if not torch.isfinite(expert_output).all():
+2026-09-10T18:15:58.9412008Z 
+2026-09-10T18:15:58.9412160Z tests/test_onnx_export_fix.py::test_optimized_moe_improved
+2026-09-10T18:15:58.9412629Z tests/test_moe_tracing_guard.py::test_torchscript_trace_matches_eager_for_other_routes[OptimizedMOEImproved]
+2026-09-10T18:15:58.9413867Z   D:\a\YOLO-Master\YOLO-Master\ultralytics\nn\modules\moe\modules.py:1175: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+2026-09-10T18:15:58.9415027Z     if not torch.isfinite(final_output).all():
+2026-09-10T18:15:58.9415248Z 
+2026-09-10T18:15:58.9415398Z tests/test_onnx_export_fix.py::test_optimized_moe_improved
+2026-09-10T18:15:58.9415951Z tests/test_moe_tracing_guard.py::test_torchscript_trace_matches_eager_for_other_routes[OptimizedMOEImproved]
+2026-09-10T18:15:58.9417217Z   D:\a\YOLO-Master\YOLO-Master\ultralytics\nn\modules\moe\modules.py:1178: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+2026-09-10T18:15:58.9418415Z     if not torch.isfinite(final_output).all():
+2026-09-10T18:15:58.9418637Z 
+2026-09-10T18:15:58.9418817Z tests/test_onnx_export_fix.py::test_optimized_moe_improved
+2026-09-10T18:15:58.9419331Z tests/test_moe_tracing_guard.py::test_torchscript_trace_matches_eager_for_other_routes[OptimizedMOEImproved]
+2026-09-10T18:15:58.9420583Z   D:\a\YOLO-Master\YOLO-Master\ultralytics\nn\modules\moe\modules.py:1185: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+2026-09-10T18:15:58.9421699Z     if not torch.isfinite(final_output).all():
+2026-09-10T18:15:58.9421882Z 
+2026-09-10T18:15:58.9422085Z tests/test_onnx_export_fix.py::test_shared_inverted_expert_group
+2026-09-10T18:15:58.9423178Z   D:\a\YOLO-Master\YOLO-Master\ultralytics\nn\modules\moe\gated.py:464: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+2026-09-10T18:15:58.9424584Z     if torch.isnan(raw) or torch.isinf(raw):
+2026-09-10T18:15:58.9424770Z 
+2026-09-10T18:15:58.9424971Z tests/test_onnx_export_fix.py::test_shared_inverted_expert_group
+2026-09-10T18:15:58.9426187Z   D:\a\YOLO-Master\YOLO-Master\ultralytics\nn\modules\moe\gated.py:130: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+2026-09-10T18:15:58.9427422Z     std = route_input.std(dim=[2, 3], unbiased=False) if H * W > 1 else torch.zeros_like(mean)
+2026-09-10T18:15:58.9427723Z 
+2026-09-10T18:15:58.9427916Z tests/test_onnx_export_fix.py::test_shared_inverted_expert_group
+2026-09-10T18:15:58.9429061Z   D:\a\YOLO-Master\YOLO-Master\ultralytics\nn\modules\moe\gated.py:135: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+2026-09-10T18:15:59.7499897Z     if H > self.pool_scale and W > self.pool_scale:
+2026-09-10T18:15:59.7500270Z 
+2026-09-10T18:15:59.7500528Z tests/test_onnx_export_fix.py::test_shared_inverted_expert_group
+2026-09-10T18:15:59.7502018Z   D:\a\YOLO-Master\YOLO-Master\ultralytics\nn\modules\moe\gated.py:479: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+2026-09-10T18:15:59.7503099Z     if top_k <= 1:
+2026-09-10T18:15:59.7503239Z 
+2026-09-10T18:15:59.7503452Z tests/test_onnx_export_fix.py::test_shared_inverted_expert_group
+2026-09-10T18:15:59.7504540Z   D:\a\YOLO-Master\YOLO-Master\ultralytics\nn\modules\moe\experts.py:237: TracerWarning: Converting a tensor to a Python integer might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+2026-09-10T18:15:59.7505641Z     top_k = min(int(top_k), routing_indices.numel() // max(B, 1))
+2026-09-10T18:15:59.7505882Z 
+2026-09-10T18:15:59.7506036Z tests/test_onnx_export_fix.py::test_shared_inverted_expert_group
+2026-09-10T18:15:59.7507120Z   D:\a\YOLO-Master\YOLO-Master\ultralytics\nn\modules\moe\experts.py:237: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+2026-09-10T18:15:59.7508458Z     top_k = min(int(top_k), routing_indices.numel() // max(B, 1))
+2026-09-10T18:15:59.7508695Z 
+2026-09-10T18:15:59.7508861Z tests/test_onnx_export_fix.py::test_fused_expert_group_already_safe
+2026-09-10T18:15:59.7510096Z   D:\a\YOLO-Master\YOLO-Master\ultralytics\nn\modules\moe\gated.py:969: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+2026-09-10T18:15:59.7511417Z     std = route_input.std(dim=[2, 3], unbiased=False) if H * W > 1 else torch.zeros_like(mean)
+2026-09-10T18:15:59.7511727Z 
+2026-09-10T18:15:59.7511864Z tests/test_onnx_export_fix.py::test_output_consistency
+2026-09-10T18:15:59.7513302Z   D:\a\YOLO-Master\YOLO-Master\tests\test_onnx_export_fix.py:162: DeprecationWarning: You are using the legacy TorchScript-based ONNX export. Starting in PyTorch 2.9, the new torch.export-based ONNX exporter has become the default. Learn more about the new export logic: https://docs.pytorch.org/docs/stable/onnx_export.html. For exporting control flow: https://pytorch.org/tutorials/beginner/onnx/export_control_flow_model_to_onnx_tutorial.html
+2026-09-10T18:15:59.7514680Z     torch.onnx.export(
+2026-09-10T18:15:59.7514843Z 
+2026-09-10T18:15:59.7515141Z tests/test_mixture_config_resolution.py::test_yaml_explicit_values_override_cli_and_are_inherited_by_children
+2026-09-10T18:15:59.7516246Z   D:\\a\\YOLO-Master\\YOLO-Master\\tests\\test_mixture_config_resolution.py:41: UserWarning: C2fMoA(num_heads=6) adjusted to 3 to maintain head_dim \u2265 16 (c//heads \u2265 16).\n    model = C2fMoA(64, 64, n=1, num_heads=6, temperature=1.0, local_window_size=7)
+2026-09-10T18:15:59.7516926Z 
+2026-09-10T18:15:59.7517112Z -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+2026-09-10T18:15:59.7517542Z =============================== tests coverage ================================
+2026-09-10T18:15:59.7517941Z ______________ coverage: platform win32, python 3.13.15-final-0 _______________
+2026-09-10T18:15:59.7518179Z 
+2026-09-10T18:15:59.7518320Z Coverage XML written to file coverage.xml
+2026-09-10T18:15:59.7518636Z ============================ slowest 30 durations =============================
+2026-09-10T18:15:59.7519021Z 205.86s call     tests/test_python.py::test_all_model_yamls
+2026-09-10T18:15:59.7519329Z 150.01s call     tests/test_python.py::test_yoloe
+2026-09-10T18:15:59.7519842Z 47.32s call     tests/test_mixture_compile.py::test_mixture_modules_compile_through_existing_entrypoint[module0-sample0]
+2026-09-10T18:15:59.7520363Z 44.67s call     tests/test_cli.py::test_rtdetr
+2026-09-10T18:15:59.7520717Z 40.10s call     tests/test_python.py::test_yolo_world
+2026-09-10T18:15:59.7521199Z 32.04s call     tests/test_python.py::test_grayscale[multitask-yolo26-master-mt-n.yaml-coco-multitask.yaml]
+2026-09-10T18:15:59.7521685Z 31.96s call     tests/test_cli.py::test_fastsam
+2026-09-10T18:15:59.7522001Z 31.39s call     tests/test_python.py::test_train_multi
+2026-09-10T18:15:59.7522425Z 26.57s call     tests/test_python.py::test_grayscale[segment-model5-coco8-seg.yaml]
+2026-09-10T18:15:59.7523191Z 25.69s call     tests/test_engine.py::test_task[SegmentationTrainer-SegmentationValidator-SegmentationPredictor-coco8-seg.yaml-yolo26n-seg.yaml-weights1]
+2026-09-10T18:15:59.7523976Z 23.14s call     tests/test_cli.py::test_distill[segment-coco8-seg.yaml-yolo26n-seg.yaml-teacher1]
+2026-09-10T18:15:59.7524608Z 23.13s call     tests/test_engine.py::test_resume_incomplete[multitask-yolo26-master-mt-n.yaml-coco-multitask.yaml]
+2026-09-10T18:15:59.7525161Z 22.12s call     tests/test_cli.py::test_train[segment-model5-coco8-seg.yaml]
+2026-09-10T18:15:59.7525593Z 22.05s call     tests/test_python.py::test_track_stream[yolo26-master-mt-n.yaml]
+2026-09-10T18:15:59.7526043Z 21.29s call     tests/test_python.py::test_grayscale[pose-model4-coco8-pose.yaml]
+2026-09-10T18:15:59.7526607Z 21.28s call     tests/test_python.py::test_multichannel
+2026-09-10T18:15:59.7527177Z 21.22s call     tests/test_cli.py::test_distill[pose-coco8-pose.yaml-yolo26n-pose.yaml-teacher2]
+2026-09-10T18:15:59.7527726Z 20.67s call     tests/test_python.py::test_track_stream[yolo26n-seg.pt]
+2026-09-10T18:15:59.7528690Z 20.55s call     tests/test_engine.py::test_task[PoseTrainer-PoseValidator-PosePredictor-coco8-pose.yaml-yolo26n-pose.yaml-None]
+2026-09-10T18:15:59.7529298Z 20.26s call     tests/test_cli.py::test_export[yolo26-master-mt-n.yaml]
+2026-09-10T18:15:59.7529716Z 19.97s call     tests/test_python.py::test_grayscale[detect-model1-coco8.yaml]
+2026-09-10T18:15:59.7530221Z 19.93s call     tests/test_moe_usage_audit.py::test_yaml_referenced_classes_are_never_archive_candidates
+2026-09-10T18:15:59.7530820Z 19.89s call     tests/test_cli.py::test_train[multitask-yolo26-master-mt-n.yaml-coco-multitask.yaml]
+2026-09-10T18:15:59.7531534Z 19.75s call     tests/test_engine.py::test_task[DetectionTrainer-DetectionValidator-DetectionPredictor-coco8.yaml-yolo26n.yaml-weights0]
+2026-09-10T18:15:59.7532195Z 19.64s call     tests/test_cli.py::test_distill[detect-coco8.yaml-yolo26n.yaml-teacher0]
+2026-09-10T18:15:59.7532726Z 19.63s call     tests/test_moe_usage_audit.py::test_moe_usage_audit_classifies_every_canonical_class
+2026-09-10T18:15:59.7533142Z 19.55s call     tests/test_python.py::test_yolov10
+2026-09-10T18:15:59.7533489Z 19.19s call     tests/test_python.py::test_train_pretrained[False]
+2026-09-10T18:15:59.7533872Z 18.66s call     tests/test_python.py::test_track_stream[yolo26n-pose.pt]
+2026-09-10T18:15:59.7534276Z 18.44s call     tests/test_cli.py::test_solutions[isegment]
+2026-09-10T18:15:59.7535068Z [36m[1m=========================== short test summary info ===========================[0m
+2026-09-10T18:15:59.7536720Z [31mFAILED[0m tests/test_foundation_config.py::[1mtest_enabled_without_teacher_is_rejected[0m - AssertionError: Regex pattern did not match.
+2026-09-10T18:15:59.7537295Z   Expected regex: "requires 'foundation_teacher'"
+2026-09-10T18:15:59.7537932Z   Actual message: "'foundation_enabled=True' with 'foundation_teacher=none' requires 'foundation_cache_dir' pointing to a valid offline feature cache directory."
+2026-09-10T18:15:59.7538858Z [31mFAILED[0m tests/test_foundation_offline.py::[1mtest_extract_validates_keys_and_samples[0m - Failed: DID NOT RAISE ValueError
+2026-09-10T18:15:59.7539833Z [31mFAILED[0m tests/test_foundation_cache_training.py::[1mtest_response_kd_builds_pseudo_batch_from_cached_responses[0m - IndexError: index 1 is out of bounds for dimension 0 with size 1
+2026-09-10T18:15:59.7540763Z [31m=== [31m[1m3 failed[0m, [32m1965 passed[0m, [33m81 skipped[0m, [33m4116 warnings[0m[31m in 1184.50s (0:19:44)[0m[31m ====[0m
+2026-09-10T18:16:00.5425748Z ##[error]Process completed with exit code 1.
+2026-09-10T18:16:00.5737726Z Post job cleanup.
+2026-09-10T18:16:00.5742615Z ##[start-action display=Install latest uv;id=__c10b9eff-a53b-4c5f-8a2a-f828a856e6b0.latest]
+2026-09-10T18:16:00.5744935Z ##[end-action id=__c10b9eff-a53b-4c5f-8a2a-f828a856e6b0.latest;outcome=skipped;conclusion=skipped;duration_ms=0]
+2026-09-10T18:16:00.5915471Z Post job cleanup.
+2026-09-10T18:16:01.6962948Z [command]"C:\Program Files\Git\bin\git.exe" version
+2026-09-10T18:16:01.7302795Z git version 2.55.0.windows.5
+2026-09-10T18:16:01.7392516Z Temporarily overriding HOME='D:\a\_temp\32f531a3-2f66-4035-9499-dc94920d3999' before making global git config changes
+2026-09-10T18:16:01.7393531Z Adding repository directory to the temporary git global config as a safe directory
+2026-09-10T18:16:01.7406240Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\YOLO-Master\YOLO-Master
+2026-09-10T18:16:01.7676232Z Removing SSH command configuration
+2026-09-10T18:16:01.7687247Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2026-09-10T18:16:01.7983912Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2026-09-10T18:16:02.5013317Z Removing HTTP extra header
+2026-09-10T18:16:02.5023465Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-09-10T18:16:02.5309147Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+2026-09-10T18:16:03.0426058Z Removing includeIf entries pointing to credentials config files
+2026-09-10T18:16:03.0438021Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-09-10T18:16:03.0670649Z includeif.gitdir:D:/a/YOLO-Master/YOLO-Master/.git.path
+2026-09-10T18:16:03.0671281Z includeif.gitdir:D:/a/YOLO-Master/YOLO-Master/.git/worktrees/*.path
+2026-09-10T18:16:03.0671730Z includeif.gitdir:/github/workspace/.git.path
+2026-09-10T18:16:03.0672115Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-09-10T18:16:03.0710207Z [command]"C:\Program Files\Git\bin\git.exe" config --local --get-all includeif.gitdir:D:/a/YOLO-Master/YOLO-Master/.git.path
+2026-09-10T18:16:03.0942604Z D:\a\_temp\git-credentials-55061193-2f30-43c9-978a-cd82683b3272.config
+2026-09-10T18:16:03.0984075Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset includeif.gitdir:D:/a/YOLO-Master/YOLO-Master/.git.path D\:\\a\\_temp\\git\-credentials\-55061193\-2f30\-43c9\-978a\-cd82683b3272\.config
+2026-09-10T18:16:03.1251510Z [command]"C:\Program Files\Git\bin\git.exe" config --local --get-all includeif.gitdir:D:/a/YOLO-Master/YOLO-Master/.git/worktrees/*.path
+2026-09-10T18:16:03.1480181Z D:\a\_temp\git-credentials-55061193-2f30-43c9-978a-cd82683b3272.config
+2026-09-10T18:16:03.1519494Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset includeif.gitdir:D:/a/YOLO-Master/YOLO-Master/.git/worktrees/*.path D\:\\a\\_temp\\git\-credentials\-55061193\-2f30\-43c9\-978a\-cd82683b3272\.config
+2026-09-10T18:16:03.1784880Z [command]"C:\Program Files\Git\bin\git.exe" config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-09-10T18:16:03.2011701Z /github/runner_temp/git-credentials-55061193-2f30-43c9-978a-cd82683b3272.config
+2026-09-10T18:16:03.2051641Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-55061193\-2f30\-43c9\-978a\-cd82683b3272\.config
+2026-09-10T18:16:03.2316940Z [command]"C:\Program Files\Git\bin\git.exe" config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-09-10T18:16:03.2538231Z /github/runner_temp/git-credentials-55061193-2f30-43c9-978a-cd82683b3272.config
+2026-09-10T18:16:03.2769951Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-55061193\-2f30\-43c9\-978a\-cd82683b3272\.config
+2026-09-10T18:16:03.3025747Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2026-09-10T18:16:03.7850284Z Removing credentials config 'D:\a\_temp\git-credentials-55061193-2f30-43c9-978a-cd82683b3272.config'
+2026-09-10T18:16:03.8127552Z Cleaning up orphan processes

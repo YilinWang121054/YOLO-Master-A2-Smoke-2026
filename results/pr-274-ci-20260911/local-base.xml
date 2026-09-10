@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="3" skipped="0" tests="3" time="2.439" timestamp="2026-09-11T02:23:33.053536+08:00" hostname="wangyilin"><testcase classname="tests.test_foundation_config" name="test_enabled_without_teacher_is_rejected" time="0.003"><failure message="AssertionError: Regex pattern did not match.&#10;  Expected regex: &quot;requires 'foundation_teacher'&quot;&#10;  Actual message: &quot;'foundation_enabled=True' with 'foundation_teacher=none' requires 'foundation_cache_dir' pointing to a valid offline feature cache directory.&quot;">tests\test_foundation_config.py:74: in test_enabled_without_teacher_is_rejected
+    with pytest.raises(ValueError, match="requires 'foundation_teacher'"):
+E   AssertionError: Regex pattern did not match.
+E     Expected regex: "requires 'foundation_teacher'"
+E     Actual message: "'foundation_enabled=True' with 'foundation_teacher=none' requires 'foundation_cache_dir' pointing to a valid offline feature cache directory."</failure></testcase><testcase classname="tests.test_foundation_offline" name="test_extract_validates_keys_and_samples" time="0.032"><failure message="PermissionError: [WinError 5] 拒绝访问。: 'E:\\abs'">tests\test_foundation_offline.py:164: in test_extract_validates_keys_and_samples
+    extract_foundation_cache(teacher, [("/abs/key", torch.rand(3, 8, 8))], tmp_path)
+ultralytics\nn\foundation\offline.py:326: in extract_foundation_cache
+    flush(pending)
+ultralytics\nn\foundation\offline.py:302: in flush
+    save_foundation_features(
+ultralytics\nn\foundation\offline.py:61: in save_foundation_features
+    path.parent.mkdir(parents=True, exist_ok=True)
+F:\conda-envs\yolo-master\Lib\pathlib.py:1116: in mkdir
+    os.mkdir(self, mode)
+E   PermissionError: [WinError 5] 拒绝访问。: 'E:\\abs'</failure></testcase><testcase classname="tests.test_foundation_cache_training" name="test_response_kd_builds_pseudo_batch_from_cached_responses" time="0.176"><failure message="IndexError: index 1 is out of bounds for dimension 0 with size 1">tests\test_foundation_cache_training.py:217: in test_response_kd_builds_pseudo_batch_from_cached_responses
+    total, items = wrapper(batch)
+                   ^^^^^^^^^^^^^^
+F:\conda-envs\yolo-master\Lib\site-packages\torch\nn\modules\module.py:1736: in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+F:\conda-envs\yolo-master\Lib\site-packages\torch\nn\modules\module.py:1747: in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ultralytics\nn\foundation_distill_model.py:1208: in forward
+    return self.loss(x, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ultralytics\nn\foundation_distill_model.py:1299: in loss
+    self._response_kd(batch, preds, teacher_response) if self._response_enabled else (kd * 0.0, {})
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ultralytics\nn\foundation_distill_model.py:1026: in _response_kd
+    anchor_points, stride_tensor = make_anchors(pred_feats, self.student_model.stride, 0.5)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ultralytics\utils\tal.py:405: in make_anchors
+    stride = strides[i]
+             ^^^^^^^^^^
+E   IndexError: index 1 is out of bounds for dimension 0 with size 1</failure></testcase></testsuite></testsuites>

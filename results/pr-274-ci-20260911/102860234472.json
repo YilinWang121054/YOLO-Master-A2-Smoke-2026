@@ -1,0 +1,183 @@
+{
+  "observed_at": "2026-09-10T18:24:31.837356+00:00",
+  "job": {
+    "id": 102860234472,
+    "run_id": 34473984717,
+    "workflow_name": "CI",
+    "head_branch": "main",
+    "run_url": "https://api.github.com/repos/Tencent/YOLO-Master/actions/runs/34473984717",
+    "run_attempt": 1,
+    "node_id": "CR_kwDOQu_8Bc8AAAAX8vKe6A",
+    "head_sha": "7bfbfd374a6b44720f98366e088f3a962e16321d",
+    "url": "https://api.github.com/repos/Tencent/YOLO-Master/actions/jobs/102860234472",
+    "html_url": "https://github.com/Tencent/YOLO-Master/actions/runs/34473984717/job/102860234472",
+    "status": "completed",
+    "conclusion": "failure",
+    "created_at": "2026-09-10T11:56:53Z",
+    "started_at": "2026-09-10T11:56:56Z",
+    "completed_at": "2026-09-10T12:20:59Z",
+    "name": "Tests (windows-latest, 3.13, latest)",
+    "steps": [
+      {
+        "name": "Set up job",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 1,
+        "started_at": "2026-09-10T11:56:57Z",
+        "completed_at": "2026-09-10T11:56:59Z"
+      },
+      {
+        "name": "Run actions/checkout@v7",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 2,
+        "started_at": "2026-09-10T11:56:59Z",
+        "completed_at": "2026-09-10T11:57:07Z"
+      },
+      {
+        "name": "Run actions/setup-python@v6",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 3,
+        "started_at": "2026-09-10T11:57:07Z",
+        "completed_at": "2026-09-10T11:57:07Z"
+      },
+      {
+        "name": "Run ultralytics/actions/setup-uv@main",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 4,
+        "started_at": "2026-09-10T11:57:07Z",
+        "completed_at": "2026-09-10T11:57:09Z"
+      },
+      {
+        "name": "Install requirements",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 5,
+        "started_at": "2026-09-10T11:57:09Z",
+        "completed_at": "2026-09-10T11:57:53Z"
+      },
+      {
+        "name": "Check environment",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 6,
+        "started_at": "2026-09-10T11:57:53Z",
+        "completed_at": "2026-09-10T11:58:02Z"
+      },
+      {
+        "name": "Configure Ultralytics cache paths",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 7,
+        "started_at": "2026-09-10T11:58:02Z",
+        "completed_at": "2026-09-10T11:58:04Z"
+      },
+      {
+        "name": "Cache test assets",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 8,
+        "started_at": "2026-09-10T11:58:04Z",
+        "completed_at": "2026-09-10T11:58:15Z"
+      },
+      {
+        "name": "Pre-cache test assets",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 9,
+        "started_at": "2026-09-10T11:58:15Z",
+        "completed_at": "2026-09-10T11:58:31Z"
+      },
+      {
+        "name": "Pytest tests",
+        "status": "completed",
+        "conclusion": "failure",
+        "number": 10,
+        "started_at": "2026-09-10T11:58:31Z",
+        "completed_at": "2026-09-10T12:20:55Z"
+      },
+      {
+        "name": "Upload Coverage Reports to CodeCov",
+        "status": "completed",
+        "conclusion": "skipped",
+        "number": 11,
+        "started_at": "2026-09-10T12:20:55Z",
+        "completed_at": "2026-09-10T12:20:55Z"
+      },
+      {
+        "name": "Prune uv Cache",
+        "status": "completed",
+        "conclusion": "skipped",
+        "number": 12,
+        "started_at": "2026-09-10T12:20:55Z",
+        "completed_at": "2026-09-10T12:20:55Z"
+      },
+      {
+        "name": "Post Cache test assets",
+        "status": "completed",
+        "conclusion": "skipped",
+        "number": 21,
+        "started_at": "2026-09-10T12:20:55Z",
+        "completed_at": "2026-09-10T12:20:55Z"
+      },
+      {
+        "name": "Post Run ultralytics/actions/setup-uv@main",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 22,
+        "started_at": "2026-09-10T12:20:55Z",
+        "completed_at": "2026-09-10T12:20:55Z"
+      },
+      {
+        "name": "Post Run actions/setup-python@v6",
+        "status": "completed",
+        "conclusion": "skipped",
+        "number": 23,
+        "started_at": "2026-09-10T12:20:55Z",
+        "completed_at": "2026-09-10T12:20:55Z"
+      },
+      {
+        "name": "Post Run actions/checkout@v7",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 24,
+        "started_at": "2026-09-10T12:20:55Z",
+        "completed_at": "2026-09-10T12:20:57Z"
+      },
+      {
+        "name": "Complete job",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 25,
+        "started_at": "2026-09-10T12:20:57Z",
+        "completed_at": "2026-09-10T12:20:57Z"
+      }
+    ],
+    "check_run_url": "https://api.github.com/repos/Tencent/YOLO-Master/check-runs/102860234472",
+    "labels": [
+      "windows-latest"
+    ],
+    "runner_id": 1000763162,
+    "runner_name": "GitHub Actions 1000763162",
+    "runner_group_id": 0,
+    "runner_group_name": "GitHub Actions"
+  },
+  "annotations": [
+    {
+      "path": ".github",
+      "blob_href": "https://github.com/Tencent/YOLO-Master/blob/7bfbfd374a6b44720f98366e088f3a962e16321d/.github",
+      "start_line": 799,
+      "start_column": null,
+      "end_line": 799,
+      "end_column": null,
+      "annotation_level": "failure",
+      "title": "",
+      "message": "Process completed with exit code 1.",
+      "raw_details": ""
+    }
+  ],
+  "log_sha256": "f7f02fa835b2526b97cd763f68c1cf2d897dc3eabf17e4da8454cf7679eb21d5",
+  "log_bytes": 166242
+}
