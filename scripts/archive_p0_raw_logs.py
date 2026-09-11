@@ -21,10 +21,29 @@ def sha256(path):
         return hashlib.file_digest(handle, "sha256").hexdigest()
 
 
-def main():
+def original_sources(project, name):
+    """Inspect all required sources before copying; record absent recovery honestly."""
+    sources = []
+    for label, source in (
+        ("initial", project / "recovery-logs/p1-seed3-chain" / name),
+        ("recovery", project / "recovery-logs" / name),
+    ):
+        if label == "recovery" and name != NAME and not source.exists():
+            sources.append((label, source, []))
+            continue
+        if not source.is_dir():
+            raise ValueError(f"Required original log directory missing: {source}")
+        files = sorted(source.glob("*.log")) + sorted(source.glob("*.json"))
+        if not any(p.suffix == ".log" for p in files):
+            raise ValueError(f"No original logs in {source}")
+        sources.append((label, source, files))
+    return sources
+
+
+def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--run", default=NAME, choices=(NAME, "p1-fixed-s20260826", "p1-adaptive-s20260826", "p1-tal-s20260826"))
-    name = parser.parse_args().run
+    name = parser.parse_args(argv).run
     run = PROJECT / name
     with (run / "results.csv").open(encoding="utf-8-sig", newline="") as handle:
         rows = list(csv.DictReader(handle))
@@ -35,13 +54,19 @@ def main():
         raise ValueError("Online assignment evidence is incomplete")
     target = ROOT / "logs/closure-evaluation" / name / "training-original"
     records = []
-    for label, source in (
-        ("initial", PROJECT / "recovery-logs/p1-seed3-chain" / name),
-        ("recovery", PROJECT / "recovery-logs" / name),
-    ):
-        files = sorted(source.glob("*.log")) + sorted(source.glob("*.json"))
-        if not files or not any(p.suffix == ".log" for p in files):
-            raise ValueError(f"No original logs in {source}")
+    source_directories = []
+    for label, source, files in original_sources(PROJECT, name):
+        source_directories.append({
+            "label": label,
+            "source": str(source),
+            "status": "present" if files else "directory_absent",
+            "note": (
+                "All observed .log/.json files are archived below"
+                if files else
+                "No recovery directory observed; no recovery logs supplied. "
+                "This does not independently prove that no restart occurred."
+            ),
+        })
         for original in files:
             before = original.stat()
             digest = sha256(original)
@@ -69,6 +94,7 @@ def main():
         "status": "local_archive_not_a_publication_or_acceptance_certificate",
         "completed_epochs": 120,
         "missing_online_assignment_epochs": missing,
+        "source_directories": source_directories,
         "records": records,
     }
     path = ROOT / "results/closure-evaluation" / name / "training-log-manifest.json"
