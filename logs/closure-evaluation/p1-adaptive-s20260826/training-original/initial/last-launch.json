@@ -1,0 +1,17 @@
+{
+  "at": "2026-09-09T03:13:40.683807+08:00",
+  "action": "fresh",
+  "pid": 33292,
+  "command": [
+    "F:\\conda-envs\\yolo-master\\python.exe",
+    "E:\\desktop\\保研+工作\\就业\\实践\\腾讯犀牛鸟\\YOLO-Master-A2-Smoke-2026\\scripts\\run_p1_seed.py",
+    "--mode",
+    "adaptive",
+    "--seed",
+    "20260826",
+    "--name",
+    "p1-adaptive-s20260826"
+  ],
+  "stdout": "F:\\YOLO-Master-A2-P1\\recovery-logs\\p1-seed3-chain\\p1-adaptive-s20260826\\initial.stdout.log",
+  "stderr": "F:\\YOLO-Master-A2-P1\\recovery-logs\\p1-seed3-chain\\p1-adaptive-s20260826\\initial.stderr.log"
+}

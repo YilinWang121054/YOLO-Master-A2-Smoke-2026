@@ -1,5 +1,6 @@
 """Check the report's metric tables against immutable local result files."""
 
+import argparse
 import hashlib
 import json
 import re
@@ -20,6 +21,9 @@ def values(det, area):
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--output", type=Path, default=ROOT / "results/report-table-verification-20260911.json")
+    args = parser.parse_args()
     text = REPORT.read_text(encoding="utf-8")
     checked = []
     for line in text.splitlines():
@@ -41,6 +45,7 @@ def main():
             checked.append(run)
     expected = {f"p1-{mode}-s{seed}" for seed in (20260824, 20260825) for mode in ("fixed", "adaptive", "tal")}
     expected.add("p1-fixed-s20260826")
+    expected.add("p1-adaptive-s20260826")
     if set(checked) != expected or len(checked) != len(expected):
         raise ValueError("Report comparison table omits or duplicates a completed run")
     p0 = ROOT / "results/closure-evaluation/p0-locked-s20260824-stats120"
@@ -60,11 +65,11 @@ def main():
     result = {
         "checked_at": datetime.now(timezone.utc).isoformat(),
         "report_sha256": hashlib.sha256(REPORT.read_bytes()).hexdigest(),
-        "comparison_rows": len(checked), "checked_numeric_cells": 79,
+        "comparison_rows": len(checked), "checked_numeric_cells": len(checked) * 8 + 8 + 15,
         "scope": "Table-to-JSON equality at displayed precision and local link existence; not evaluator runtime parity or acceptance",
         "status": "pass", "checked_runs": checked,
     }
-    (ROOT / "results/report-table-verification-20260911.json").write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
+    args.output.write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(result), flush=True)
 
 

@@ -1,0 +1,70 @@
+{
+  "revision": "20260910-matlab-ignore-half-open-area-bins",
+  "metrics": {
+    "AP": 21.24141323558635,
+    "AP50": 36.91110012145422,
+    "AP75": 20.758967835855493,
+    "AR1": 9.563191671278544,
+    "AR10": 26.42723803407272,
+    "AR100": 37.106693928093684,
+    "AR500": 37.44345519052149,
+    "APs": 13.038433880840536,
+    "APm": 30.995686426117626,
+    "APl": 40.1542422676151,
+    "ARs@500": 27.922055163142605,
+    "ARm@500": 51.37306488855561,
+    "ARl@500": 58.75693326830533,
+    "AP50s": 27.468321366673905
+  },
+  "evaluator": {
+    "iou_thresholds": [
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.8999999999999999,
+      0.95
+    ],
+    "max_dets": [
+      1,
+      10,
+      100,
+      500
+    ],
+    "area_ranges": {
+      "all": [
+        0,
+        10000000000.0
+      ],
+      "small": [
+        0.0,
+        1023.9999999999999
+      ],
+      "medium": [
+        1024.0,
+        9215.999999999998
+      ],
+      "large": [
+        9216.0,
+        10000000000.0
+      ]
+    }
+  },
+  "counts": {
+    "images": 548,
+    "valid_gt": 38599,
+    "valid_gt_before_igr_filter": 38759,
+    "ignored_regions": 1378,
+    "valid_gt_removed_by_igr": 160,
+    "coco_annotations": 38599,
+    "predictions_before_filter": 259571,
+    "predictions_removed_by_igr": 19277
+  },
+  "area_definition": "original validation GT: <1024; [1024,9216); >=9216",
+  "ignore_rule": "MATLAB dropObjectsInIgr source translation",
+  "runtime_parity": "original MATLAB run pending"
+}

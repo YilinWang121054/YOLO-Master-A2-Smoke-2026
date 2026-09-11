@@ -1,5 +1,6 @@
-"""Archive completed P0 training logs byte-for-byte, including failed resumptions."""
+"""Archive completed P0/seed3 training logs byte-for-byte, including failures."""
 
+import argparse
 import csv
 import hashlib
 import json
@@ -21,18 +22,22 @@ def sha256(path):
 
 
 def main():
-    run = PROJECT / NAME
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--run", default=NAME, choices=(NAME, "p1-fixed-s20260826", "p1-adaptive-s20260826", "p1-tal-s20260826"))
+    name = parser.parse_args().run
+    run = PROJECT / name
     with (run / "results.csv").open(encoding="utf-8-sig", newline="") as handle:
         rows = list(csv.DictReader(handle))
     if [int(row["epoch"]) for row in rows] != list(range(1, 121)):
-        raise ValueError("Require exactly 120 completed, sequential P0 epochs")
-    if missing_assignment_epochs(run, 120):
+        raise ValueError("Require exactly 120 completed, sequential epochs")
+    missing = missing_assignment_epochs(run, 120)
+    if name == NAME and missing:
         raise ValueError("Online assignment evidence is incomplete")
-    target = ROOT / "logs/closure-evaluation" / NAME / "training-original"
+    target = ROOT / "logs/closure-evaluation" / name / "training-original"
     records = []
     for label, source in (
-        ("initial", PROJECT / "recovery-logs/p1-seed3-chain" / NAME),
-        ("recovery", PROJECT / "recovery-logs" / NAME),
+        ("initial", PROJECT / "recovery-logs/p1-seed3-chain" / name),
+        ("recovery", PROJECT / "recovery-logs" / name),
     ):
         files = sorted(source.glob("*.log")) + sorted(source.glob("*.json"))
         if not files or not any(p.suffix == ".log" for p in files):
@@ -58,14 +63,15 @@ def main():
                 "sha256": digest,
             })
     manifest = {
-        "run": NAME,
+        "run": name,
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "scope": "Original stdout/stderr plus recovery metadata; failures retained; no log trimming or re-encoding",
         "status": "local_archive_not_a_publication_or_acceptance_certificate",
         "completed_epochs": 120,
+        "missing_online_assignment_epochs": missing,
         "records": records,
     }
-    path = ROOT / "results/closure-evaluation" / NAME / "training-log-manifest.json"
+    path = ROOT / "results/closure-evaluation" / name / "training-log-manifest.json"
     temporary = path.with_suffix(".tmp")
     temporary.write_text(json.dumps(manifest, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     temporary.replace(path)

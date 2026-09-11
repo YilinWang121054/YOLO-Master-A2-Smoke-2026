@@ -1,0 +1,13 @@
+{
+  "at": "2026-09-10T23:21:22.507542+08:00",
+  "action": "resume",
+  "command": [
+    "F:\\conda-envs\\yolo-master\\python.exe",
+    "E:\\desktop\\保研+工作\\就业\\实践\\腾讯犀牛鸟\\YOLO-Master-A2-Smoke-2026\\scripts\\resume_p1_training.py",
+    "--config",
+    "E:\\desktop\\保研+工作\\就业\\实践\\腾讯犀牛鸟\\YOLO-Master-A2-Smoke-2026\\configs\\p1-adaptive-s20260826.resume.json"
+  ],
+  "returncode": 0,
+  "stdout": "{\n  \"status\": \"resumed\",\n  \"observed_at\": \"2026-09-10T23:21:22.112575+08:00\",\n  \"schema_version\": 1,\n  \"resumed_at\": \"2026-09-10T23:21:22.110575+08:00\",\n  \"pid\": 35964,\n  \"command\": [\n    \"F:\\\\conda-envs\\\\yolo-master\\\\Scripts\\\\yolo.exe\",\n    \"train\",\n    \"model=F:\\\\YOLO-Master-A2-P1\\\\p1-adaptive-s20260826\\\\weights\\\\last.pt\",\n    \"resume=True\",\n    \"device=0\",\n    \"workers=0\"\n  ],\n  \"stdout\": \"F:\\\\YOLO-Master-A2-P1\\\\recovery-logs\\\\p1-adaptive-s20260826\\\\resume-20260910-232121.stdout.log\",\n  \"stderr\": \"F:\\\\YOLO-Master-A2-P1\\\\recovery-logs\\\\p1-adaptive-s20260826\\\\resume-20260910-232121.stderr.log\",\n  \"experiment_id\": \"p1-adaptive-s20260826\",\n  \"csv_epochs\": 54,\n  \"checkpoint\": {\n    \"path\": \"F:\\\\YOLO-Master-A2-P1\\\\p1-adaptive-s20260826\\\\weights\\\\last.pt\",\n    \"epoch_zero_based\": 53,\n    \"completed_epochs\": 54,\n    \"bootstrap_checkpoint\": false,\n    \"optimizer_present\": true,\n    \"scaler_present\": true,\n    \"stal_mode\": \"adaptive\",\n    \"data\": \"E:\\\\desktop\\\\保研+工作\\\\就业\\\\实践\\\\腾讯犀牛鸟\\\\YOLO-Master-A2-Smoke-2026\\\\configs\\\\VisDrone-full.yaml\"\n  },\n  \"checkpoint_errors\": [],\n  \"git_commit\": \"52c2befa50706b9dff13b6e0813b19413d9f532d\",\n  \"csv_backup\": null\n}\n",
+  "stderr": ""
+}

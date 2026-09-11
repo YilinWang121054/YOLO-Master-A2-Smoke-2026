@@ -1,5 +1,6 @@
-"""Package P0 predictions for independent DET/area evaluation, without images or GT."""
+"""Package completed P0/seed3 predictions, without original images or GT."""
 
+import argparse
 import gzip
 import hashlib
 import json
@@ -19,17 +20,22 @@ def sha(path):
 
 
 def main():
-    evaluation = json.loads((OUT / "evaluation-manifest.json").read_text(encoding="utf-8"))
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--run", default=NAME, choices=(NAME, "p1-fixed-s20260826", "p1-adaptive-s20260826", "p1-tal-s20260826"))
+    name = parser.parse_args().run
+    work = WORK.parent / name
+    out = OUT.parent / name
+    evaluation = json.loads((out / "evaluation-manifest.json").read_text(encoding="utf-8"))
     if evaluation["completed_epochs"] != 120 or evaluation["images"] != 548:
-        raise ValueError("P0 evaluation must be complete")
-    files = sorted((WORK / "det").glob("*.txt"))
+        raise ValueError("Evaluation must be complete")
+    files = sorted((work / "det").glob("*.txt"))
     names = {p.name for p in Path("F:/datasets/VisDrone/VisDrone2019-DET-val/annotations").glob("*.txt")}
     if len(files) != 548 or {p.name for p in files} != names:
         raise ValueError("DET filenames do not exactly cover the 548 validation images")
-    predictions = WORK / "val/predictions.json"
+    predictions = work / "val/predictions.json"
     if sha(predictions) != evaluation["predictions_sha256"]:
         raise ValueError("Raw prediction hash differs from the evaluated input")
-    zipped = OUT / "predictions-det-548.zip"
+    zipped = out / "predictions-det-548.zip"
     hashes = {p.name: sha(p) for p in files}
     if not zipped.exists():
         with zipfile.ZipFile(zipped, "x", compression=zipfile.ZIP_DEFLATED, compresslevel=6) as archive:
@@ -42,7 +48,7 @@ def main():
             raise ValueError("DET zip membership/CRC verification failed")
         if any(hashlib.sha256(archive.read(name)).hexdigest() != digest for name, digest in hashes.items()):
             raise ValueError("DET zip bytes differ from the evaluated input")
-    compressed = OUT / "predictions.json.gz"
+    compressed = out / "predictions.json.gz"
     if not compressed.exists():
         with predictions.open("rb") as source, compressed.open("xb") as destination:
             with gzip.GzipFile(filename="", mode="wb", fileobj=destination, mtime=0) as archive:
@@ -51,14 +57,14 @@ def main():
         if hashlib.file_digest(archive, "sha256").hexdigest() != evaluation["predictions_sha256"]:
             raise ValueError("Prediction gzip round-trip verification failed")
     manifest = {
-        "run": NAME, "scope": "Predictions only; original images and GT are not included",
+        "run": name, "scope": "Predictions only; original images and GT are not included",
         "images": 548, "det_files_sha256": hashes,
         "det_zip_sha256": sha(zipped), "det_zip_bytes": zipped.stat().st_size,
         "predictions_gzip_sha256": sha(compressed), "predictions_gzip_bytes": compressed.stat().st_size,
         "predictions_uncompressed_sha256": evaluation["predictions_sha256"],
         "runtime_parity": "original MATLAB execution still pending",
     }
-    (OUT / "prediction-archive-manifest.json").write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
+    (out / "prediction-archive-manifest.json").write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
     print(json.dumps({k: v for k, v in manifest.items() if k != "det_files_sha256"}))
 
 
