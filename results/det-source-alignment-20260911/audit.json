@@ -1,0 +1,211 @@
+{
+  "generated_at": "2026-09-11T05:24:01.530869+00:00",
+  "route": "teacher-approved source-level comparison route (a); submitted evidence, not acceptance",
+  "matlab_executed": false,
+  "matlab_vs_python_numeric_difference": null,
+  "python_rerun_verdict": "REPRODUCIBLE: deterministic metrics exactly equal",
+  "matlab_acceptance_threshold_pp": {
+    "floating_difference_below": 0.01,
+    "explain_difference_above": 0.05
+  },
+  "source_commit": "005445782213e20cb91bc50a597db3dd949e749a",
+  "source_files": {
+    "evalDET.m": {
+      "git_blob": "7e0a58f8ee2419b6ad83e4c634be570a7470360a",
+      "git_content_sha256": "10e88f1a8b45002bf5ca3e27cdc7fc870c59aef83ba806d74b60738cfecb2d61",
+      "local_sha256": "10e88f1a8b45002bf5ca3e27cdc7fc870c59aef83ba806d74b60738cfecb2d61",
+      "lines": 33,
+      "url": "https://github.com/VisDrone/VisDrone2018-DET-toolkit/blob/005445782213e20cb91bc50a597db3dd949e749a/evalDET.m"
+    },
+    "utils/calcAccuracy.m": {
+      "git_blob": "6d29c57734e832a16e27871ccff0aa83707d4988",
+      "git_content_sha256": "285508f54903acd75eeda346c11c8e53267e72facd648f2e22bce121d4f55d7f",
+      "local_sha256": "285508f54903acd75eeda346c11c8e53267e72facd648f2e22bce121d4f55d7f",
+      "lines": 58,
+      "url": "https://github.com/VisDrone/VisDrone2018-DET-toolkit/blob/005445782213e20cb91bc50a597db3dd949e749a/utils/calcAccuracy.m"
+    },
+    "utils/compOas.m": {
+      "git_blob": "cfe4293c5e79caefba099b15bbcde13d66f9c82e",
+      "git_content_sha256": "3e5c2d473c07bf2ddbe0d902284af98ef7104c609e867b2ed59083d31f3ed2af",
+      "local_sha256": "3e5c2d473c07bf2ddbe0d902284af98ef7104c609e867b2ed59083d31f3ed2af",
+      "lines": 47,
+      "url": "https://github.com/VisDrone/VisDrone2018-DET-toolkit/blob/005445782213e20cb91bc50a597db3dd949e749a/utils/compOas.m"
+    },
+    "utils/createIntImg.m": {
+      "git_blob": "cf45b3b84b0123f5d386132701dd82a5defe752d",
+      "git_content_sha256": "7ce3de4fc105be4f088cae5d1fcfc8f4383f3d7ffd4a551bf1afe711eff09f72",
+      "local_sha256": "7ce3de4fc105be4f088cae5d1fcfc8f4383f3d7ffd4a551bf1afe711eff09f72",
+      "lines": 16,
+      "url": "https://github.com/VisDrone/VisDrone2018-DET-toolkit/blob/005445782213e20cb91bc50a597db3dd949e749a/utils/createIntImg.m"
+    },
+    "utils/displayImage.m": {
+      "git_blob": "f9b16b67e0c470116349b2b6040a60f7120ef00d",
+      "git_content_sha256": "dd5c24c2b824f1a9c884eff4f61bc9bfeef635cd6a46d3dab0071c48a67667b2",
+      "local_sha256": "dd5c24c2b824f1a9c884eff4f61bc9bfeef635cd6a46d3dab0071c48a67667b2",
+      "lines": 36,
+      "url": "https://github.com/VisDrone/VisDrone2018-DET-toolkit/blob/005445782213e20cb91bc50a597db3dd949e749a/utils/displayImage.m"
+    },
+    "utils/dropObjectsInIgr.m": {
+      "git_blob": "2bd0886c1ef8446bb8ca6d2f107285896a133280",
+      "git_content_sha256": "30dee2713d76a537f5c98ec5d0804e17cfd3993d83d8a80a70b90ef9461fa4de",
+      "local_sha256": "30dee2713d76a537f5c98ec5d0804e17cfd3993d83d8a80a70b90ef9461fa4de",
+      "lines": 54,
+      "url": "https://github.com/VisDrone/VisDrone2018-DET-toolkit/blob/005445782213e20cb91bc50a597db3dd949e749a/utils/dropObjectsInIgr.m"
+    },
+    "utils/evalRes.m": {
+      "git_blob": "d24ca6afa4c075ac053f8ef5a0187eea00119216",
+      "git_content_sha256": "610f0d078f1af8d7987e360e6e88665c0290587191d5542b469a9792402f539b",
+      "local_sha256": "610f0d078f1af8d7987e360e6e88665c0290587191d5542b469a9792402f539b",
+      "lines": 108,
+      "url": "https://github.com/VisDrone/VisDrone2018-DET-toolkit/blob/005445782213e20cb91bc50a597db3dd949e749a/utils/evalRes.m"
+    },
+    "utils/findImageList.m": {
+      "git_blob": "6add0a7723a7d17d48591e2f3a3310a33204885e",
+      "git_content_sha256": "42af8763b4a271e32de9a2509a3103bc839d752cf86c7ac42a4be2c67e5abb68",
+      "local_sha256": "42af8763b4a271e32de9a2509a3103bc839d752cf86c7ac42a4be2c67e5abb68",
+      "lines": 5,
+      "url": "https://github.com/VisDrone/VisDrone2018-DET-toolkit/blob/005445782213e20cb91bc50a597db3dd949e749a/utils/findImageList.m"
+    },
+    "utils/saveAnnoRes.m": {
+      "git_blob": "2ade44fdf3045c367db1975df8dd69a09d8b8d65",
+      "git_content_sha256": "3210fb8fd98aed19cab61c996e0daf1dbfdb23fd5eb2fafff29afc71bb45876d",
+      "local_sha256": "3210fb8fd98aed19cab61c996e0daf1dbfdb23fd5eb2fafff29afc71bb45876d",
+      "lines": 18,
+      "url": "https://github.com/VisDrone/VisDrone2018-DET-toolkit/blob/005445782213e20cb91bc50a597db3dd949e749a/utils/saveAnnoRes.m"
+    },
+    "utils/VOCap.m": {
+      "git_blob": "92b87803283bf0adb79913c5bede04b5ef33c1f1",
+      "git_content_sha256": "95dd1e02c956124e777caf6f44b50b0986a2a37785bd11982ef775e696c17945",
+      "local_sha256": "95dd1e02c956124e777caf6f44b50b0986a2a37785bd11982ef775e696c17945",
+      "lines": 9,
+      "url": "https://github.com/VisDrone/VisDrone2018-DET-toolkit/blob/005445782213e20cb91bc50a597db3dd949e749a/utils/VOCap.m"
+    }
+  },
+  "python_functions": {
+    "comp_oas": [
+      19,
+      32
+    ],
+    "matlab_round_positive": [
+      35,
+      37
+    ],
+    "_filter_rows": [
+      40,
+      72
+    ],
+    "_eval_res": [
+      75,
+      102
+    ],
+    "_voc_ap": [
+      105,
+      111
+    ],
+    "evaluate": [
+      114,
+      171
+    ],
+    "read": [
+      174,
+      177
+    ],
+    "main": [
+      180,
+      216
+    ]
+  },
+  "evaluator_sha256": "c54f925be2c70fe90e57c123ccc7c2653e83b7800e7d8209196b5f1df6e0f460",
+  "test_sha256": "796bcd5a43d57fddefd2688efb3a1ce16c9f2ce8def8c6adacdceeee7e0a7a5f",
+  "audit_script_sha256": "09fbb83c6c83626765106379cf56f6989c76d75bcc80ef85da2fbd8e2b22c10a",
+  "environment": {
+    "python": "3.11.15 | packaged by conda-forge | (main, Jun 11 2026, 03:27:10) [MSC v.1944 64 bit (AMD64)]",
+    "numpy": "2.4.6",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "device": "cpu"
+  },
+  "input_checks": {
+    "images": 548,
+    "all_annotation_files_are_ascii_named_txt": true,
+    "finite_integer_gt_and_binary_score_flags": true,
+    "finite_detection_rows_nonnegative_width_height": true,
+    "zero_width_or_height_detection_rows": 155,
+    "gt_rows": 40169,
+    "dt_rows": 259831,
+    "exact_coordinate_half_ties": 1042,
+    "nonexact_coordinates_within_1e_minus_10_of_half": 0
+  },
+  "checkpoint_sha256": "3d15a0b7f9562f18850766284c601394e970eac9607524bc2ad91c3ec8f4ab87",
+  "full_training_yaml": "results\\closure-evaluation\\p0-locked-s20260824-stats120\\args.yaml",
+  "full_training_yaml_sha256": "d9b2c4d918f4b03237905b4425fc04f58d1d6d655baecba41aff8c4dabaa88bc",
+  "commands": [
+    {
+      "argv": [
+        "F:\\conda-envs\\yolo-master\\python.exe",
+        "-m",
+        "pytest",
+        "tests/test_det_source_audit.py",
+        "-q",
+        "--junitxml=E:\\desktop\\保研+工作\\就业\\实践\\腾讯犀牛鸟\\YOLO-Master-A2-Smoke-2026\\results\\det-source-alignment-20260911\\tests.xml"
+      ],
+      "cwd": "E:\\desktop\\保研+工作\\就业\\实践\\腾讯犀牛鸟\\YOLO-Master-A2-Smoke-2026",
+      "exit_code": 0,
+      "duration_seconds": 1.764999999999418,
+      "log": "edge-tests.log"
+    },
+    {
+      "argv": [
+        "F:\\conda-envs\\yolo-master\\python.exe",
+        "E:\\desktop\\保研+工作\\就业\\实践\\腾讯犀牛鸟\\YOLO-Master-A2-Smoke-2026\\scripts\\evaluate_visdrone_det_strict.py",
+        "--dataset-dir",
+        "F:\\datasets\\VisDrone\\VisDrone2019-DET-val",
+        "--results-dir",
+        "F:\\YOLO-Master-A2-P1\\closure-evaluation\\p0-locked-s20260824-stats120\\det",
+        "--output",
+        "E:\\desktop\\保研+工作\\就业\\实践\\腾讯犀牛鸟\\YOLO-Master-A2-Smoke-2026\\results\\det-source-alignment-20260911\\p0-python-rerun.json"
+      ],
+      "cwd": "E:\\desktop\\保研+工作\\就业\\实践\\腾讯犀牛鸟\\YOLO-Master-A2-Smoke-2026",
+      "exit_code": 0,
+      "duration_seconds": 145.96899999999914,
+      "log": "p0-python-rerun.log"
+    }
+  ],
+  "python_reproducibility_comparison_not_matlab": {
+    "AP": {
+      "original": 21.700296590049476,
+      "rerun": 21.700296590049476,
+      "absolute_difference_pp": 0.0
+    },
+    "AP50": {
+      "original": 39.36059518273381,
+      "rerun": 39.36059518273381,
+      "absolute_difference_pp": 0.0
+    },
+    "AP75": {
+      "original": 20.60837422045259,
+      "rerun": 20.60837422045259,
+      "absolute_difference_pp": 0.0
+    },
+    "AR1": {
+      "original": 0.7542735577328021,
+      "rerun": 0.7542735577328021,
+      "absolute_difference_pp": 0.0
+    },
+    "AR10": {
+      "original": 6.4358690283454685,
+      "rerun": 6.4358690283454685,
+      "absolute_difference_pp": 0.0
+    },
+    "AR100": {
+      "original": 27.895558347680822,
+      "rerun": 27.895558347680822,
+      "absolute_difference_pp": 0.0
+    },
+    "AR500": {
+      "original": 38.2193707409014,
+      "rerun": 38.2193707409014,
+      "absolute_difference_pp": 0.0
+    }
+  },
+  "rerun_output_byte_equal_to_original": true
+}
