@@ -14,6 +14,8 @@ Issue 已发布评论正文备份：[`github-issue-246-update.md`](github-issue-
 
 最终课题 PR：[Tencent/YOLO-Master #274](https://github.com/Tencent/YOLO-Master/pull/274)，北京时间2026-09-11 01:53已提交，标题含 `[犀牛鸟-A2]`，当前待review、尚未合并。
 
+9月13日补充：[第三seed完成评论](https://github.com/Tencent/YOLO-Master/pull/274#issuecomment-5649833037)，已发布并回读核对；[九组结果报告固定版本](https://github.com/YilinWang121054/YOLO-Master-A2-Smoke-2026/blob/da0374c83bf9099dc6097c86e92352ce59c96e46/docs/closure-review/研究报告.md)。原始P0与已有负结果均保留，未宣称P1达标。
+
 研究报告：[已发布的固定版本](https://github.com/YilinWang121054/YOLO-Master-A2-Smoke-2026/blob/ce408692c0ce86c08f3803b2c4ceacedb6e941b6/docs/closure-review/研究报告.md)。P0材料：[120轮统计、分档结果及预测包](../results/closure-evaluation/p0-locked-s20260824-stats120/)，[原始训练日志](../logs/closure-evaluation/p0-locked-s20260824-stats120/training-original/)。材料公开不等于导师已认定P0验收通过。
 
 9月11日补充：[研究报告更新版](closure-review/研究报告.md)、[DET源码逐项对照](closure-review/DET源码逐项对照-20260911.md)、[完整复现入口](closure-review/P0复现入口与后续安排-20260911.md)。建议登记文字：**“P0材料已提交，评测对齐待补；已补交Python与官方DET源码逐项对照、29项边界测试及548张预测复算，待review。PR #274已提交，待review。”** 未找到实际登记表入口，尚未代填。
