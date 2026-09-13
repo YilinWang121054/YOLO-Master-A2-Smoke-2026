@@ -8,3 +8,4 @@ __pycache__/
 *.pyc
 .local/
 .pytest_cache/
+results/pr274-review-checks-20260914/isolated-*/

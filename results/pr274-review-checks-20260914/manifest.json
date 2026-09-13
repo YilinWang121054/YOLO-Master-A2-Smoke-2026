@@ -1,0 +1,18 @@
+{
+  "started_at": "2026-09-13T16:13:34.043587+00:00",
+  "command": [
+    "F:\\conda-envs\\yolo-master\\python.exe",
+    "-X",
+    "utf8",
+    "E:\\desktop\\\u4fdd\u7814+\u5de5\u4f5c\\\u5c31\u4e1a\\\u5b9e\u8df5\\\u817e\u8baf\u7280\u725b\u9e1f\\YOLO-Master-A2-Smoke-2026\\scripts\\check_pr274_fixed_compatibility.py",
+    "--worker",
+    "E:\\desktop\\\u4fdd\u7814+\u5de5\u4f5c\\\u5c31\u4e1a\\\u5b9e\u8df5\\\u817e\u8baf\u7280\u725b\u9e1f\\YOLO-Master-A2-Smoke-2026\\results\\pr274-review-checks-20260914"
+  ],
+  "public_pr_head": "2efc4d91d7363d65b6f38e7d47c585231bb98158",
+  "public_pr_tree": "f1ae8461c9108b89d41fee6df4fd95023ab031c1",
+  "tested_local_head": "6f558609882d9cc39379f88c912c9c3c5ec515d6",
+  "base": "7bfbfd374a6b44720f98366e088f3a962e16321d",
+  "runner_sha256": "5eb9b8639b414de26cc9a8276318a49662f796991d2d862725fb6b4b31c3e52f",
+  "cpu_threads": 2,
+  "pytest_cleanup_isolated": true
+}

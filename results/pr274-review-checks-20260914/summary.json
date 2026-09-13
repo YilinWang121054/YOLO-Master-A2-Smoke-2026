@@ -1,0 +1,1374 @@
+{
+  "observed_at": "2026-09-13T16:13:41.498044+00:00",
+  "status": "pass",
+  "device": "CPU FP32",
+  "cuda_visible": false,
+  "pytest_exit_code": 0,
+  "test_files": [
+    "test_default_config_integrity.py",
+    "test_stal_assignment.py",
+    "test_tal_conflict_resolution.py"
+  ],
+  "unchanged_existing_default_keys": 332,
+  "new_keys": [
+    "stal_candidate_scale",
+    "stal_medium_area",
+    "stal_min_candidates",
+    "stal_mode",
+    "stal_small_area",
+    "stal_topk_large",
+    "stal_topk_medium",
+    "stal_topk_small"
+  ],
+  "default_mode": "fixed",
+  "exact_assignment_comparisons": 192,
+  "exact_output_tensors": 960,
+  "cases": [
+    {
+      "seed": 0,
+      "case": "random",
+      "topk": 10,
+      "topk2": 10,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 0,
+      "case": "random",
+      "topk": 10,
+      "topk2": 10,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 0,
+      "case": "random",
+      "topk": 13,
+      "topk2": 5,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 0,
+      "case": "random",
+      "topk": 13,
+      "topk2": 5,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 0,
+      "case": "random",
+      "topk": 1,
+      "topk2": 1,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 0,
+      "case": "random",
+      "topk": 1,
+      "topk2": 1,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 0,
+      "case": "dense_overlap",
+      "topk": 10,
+      "topk2": 10,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 0,
+      "case": "dense_overlap",
+      "topk": 10,
+      "topk2": 10,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 0,
+      "case": "dense_overlap",
+      "topk": 13,
+      "topk2": 5,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 0,
+      "case": "dense_overlap",
+      "topk": 13,
+      "topk2": 5,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 0,
+      "case": "dense_overlap",
+      "topk": 1,
+      "topk2": 1,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 0,
+      "case": "dense_overlap",
+      "topk": 1,
+      "topk2": 1,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 0,
+      "case": "tiny_boundary",
+      "topk": 10,
+      "topk2": 10,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 0,
+      "case": "tiny_boundary",
+      "topk": 10,
+      "topk2": 10,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 0,
+      "case": "tiny_boundary",
+      "topk": 13,
+      "topk2": 5,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 0,
+      "case": "tiny_boundary",
+      "topk": 13,
+      "topk2": 5,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 0,
+      "case": "tiny_boundary",
+      "topk": 1,
+      "topk2": 1,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 0,
+      "case": "tiny_boundary",
+      "topk": 1,
+      "topk2": 1,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 0,
+      "case": "empty",
+      "topk": 10,
+      "topk2": 10,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 0,
+      "case": "empty",
+      "topk": 10,
+      "topk2": 10,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 0,
+      "case": "empty",
+      "topk": 13,
+      "topk2": 5,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 0,
+      "case": "empty",
+      "topk": 13,
+      "topk2": 5,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 0,
+      "case": "empty",
+      "topk": 1,
+      "topk2": 1,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 0,
+      "case": "empty",
+      "topk": 1,
+      "topk2": 1,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 1,
+      "case": "random",
+      "topk": 10,
+      "topk2": 10,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 1,
+      "case": "random",
+      "topk": 10,
+      "topk2": 10,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 1,
+      "case": "random",
+      "topk": 13,
+      "topk2": 5,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 1,
+      "case": "random",
+      "topk": 13,
+      "topk2": 5,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 1,
+      "case": "random",
+      "topk": 1,
+      "topk2": 1,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 1,
+      "case": "random",
+      "topk": 1,
+      "topk2": 1,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 1,
+      "case": "dense_overlap",
+      "topk": 10,
+      "topk2": 10,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 1,
+      "case": "dense_overlap",
+      "topk": 10,
+      "topk2": 10,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 1,
+      "case": "dense_overlap",
+      "topk": 13,
+      "topk2": 5,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 1,
+      "case": "dense_overlap",
+      "topk": 13,
+      "topk2": 5,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 1,
+      "case": "dense_overlap",
+      "topk": 1,
+      "topk2": 1,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 1,
+      "case": "dense_overlap",
+      "topk": 1,
+      "topk2": 1,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 1,
+      "case": "tiny_boundary",
+      "topk": 10,
+      "topk2": 10,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 1,
+      "case": "tiny_boundary",
+      "topk": 10,
+      "topk2": 10,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 1,
+      "case": "tiny_boundary",
+      "topk": 13,
+      "topk2": 5,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 1,
+      "case": "tiny_boundary",
+      "topk": 13,
+      "topk2": 5,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 1,
+      "case": "tiny_boundary",
+      "topk": 1,
+      "topk2": 1,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 1,
+      "case": "tiny_boundary",
+      "topk": 1,
+      "topk2": 1,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 1,
+      "case": "empty",
+      "topk": 10,
+      "topk2": 10,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 1,
+      "case": "empty",
+      "topk": 10,
+      "topk2": 10,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 1,
+      "case": "empty",
+      "topk": 13,
+      "topk2": 5,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 1,
+      "case": "empty",
+      "topk": 13,
+      "topk2": 5,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 1,
+      "case": "empty",
+      "topk": 1,
+      "topk2": 1,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 1,
+      "case": "empty",
+      "topk": 1,
+      "topk2": 1,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 2,
+      "case": "random",
+      "topk": 10,
+      "topk2": 10,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 2,
+      "case": "random",
+      "topk": 10,
+      "topk2": 10,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 2,
+      "case": "random",
+      "topk": 13,
+      "topk2": 5,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 2,
+      "case": "random",
+      "topk": 13,
+      "topk2": 5,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 2,
+      "case": "random",
+      "topk": 1,
+      "topk2": 1,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 2,
+      "case": "random",
+      "topk": 1,
+      "topk2": 1,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 2,
+      "case": "dense_overlap",
+      "topk": 10,
+      "topk2": 10,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 2,
+      "case": "dense_overlap",
+      "topk": 10,
+      "topk2": 10,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 2,
+      "case": "dense_overlap",
+      "topk": 13,
+      "topk2": 5,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 2,
+      "case": "dense_overlap",
+      "topk": 13,
+      "topk2": 5,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 2,
+      "case": "dense_overlap",
+      "topk": 1,
+      "topk2": 1,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 2,
+      "case": "dense_overlap",
+      "topk": 1,
+      "topk2": 1,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 2,
+      "case": "tiny_boundary",
+      "topk": 10,
+      "topk2": 10,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 2,
+      "case": "tiny_boundary",
+      "topk": 10,
+      "topk2": 10,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 2,
+      "case": "tiny_boundary",
+      "topk": 13,
+      "topk2": 5,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 2,
+      "case": "tiny_boundary",
+      "topk": 13,
+      "topk2": 5,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 2,
+      "case": "tiny_boundary",
+      "topk": 1,
+      "topk2": 1,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 2,
+      "case": "tiny_boundary",
+      "topk": 1,
+      "topk2": 1,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 2,
+      "case": "empty",
+      "topk": 10,
+      "topk2": 10,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 2,
+      "case": "empty",
+      "topk": 10,
+      "topk2": 10,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 2,
+      "case": "empty",
+      "topk": 13,
+      "topk2": 5,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 2,
+      "case": "empty",
+      "topk": 13,
+      "topk2": 5,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 2,
+      "case": "empty",
+      "topk": 1,
+      "topk2": 1,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 2,
+      "case": "empty",
+      "topk": 1,
+      "topk2": 1,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 3,
+      "case": "random",
+      "topk": 10,
+      "topk2": 10,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 3,
+      "case": "random",
+      "topk": 10,
+      "topk2": 10,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 3,
+      "case": "random",
+      "topk": 13,
+      "topk2": 5,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 3,
+      "case": "random",
+      "topk": 13,
+      "topk2": 5,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 3,
+      "case": "random",
+      "topk": 1,
+      "topk2": 1,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 3,
+      "case": "random",
+      "topk": 1,
+      "topk2": 1,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 3,
+      "case": "dense_overlap",
+      "topk": 10,
+      "topk2": 10,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 3,
+      "case": "dense_overlap",
+      "topk": 10,
+      "topk2": 10,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 3,
+      "case": "dense_overlap",
+      "topk": 13,
+      "topk2": 5,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 3,
+      "case": "dense_overlap",
+      "topk": 13,
+      "topk2": 5,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 3,
+      "case": "dense_overlap",
+      "topk": 1,
+      "topk2": 1,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 3,
+      "case": "dense_overlap",
+      "topk": 1,
+      "topk2": 1,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 3,
+      "case": "tiny_boundary",
+      "topk": 10,
+      "topk2": 10,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 3,
+      "case": "tiny_boundary",
+      "topk": 10,
+      "topk2": 10,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 3,
+      "case": "tiny_boundary",
+      "topk": 13,
+      "topk2": 5,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 3,
+      "case": "tiny_boundary",
+      "topk": 13,
+      "topk2": 5,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 3,
+      "case": "tiny_boundary",
+      "topk": 1,
+      "topk2": 1,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 3,
+      "case": "tiny_boundary",
+      "topk": 1,
+      "topk2": 1,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 3,
+      "case": "empty",
+      "topk": 10,
+      "topk2": 10,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 3,
+      "case": "empty",
+      "topk": 10,
+      "topk2": 10,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 3,
+      "case": "empty",
+      "topk": 13,
+      "topk2": 5,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 3,
+      "case": "empty",
+      "topk": 13,
+      "topk2": 5,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 3,
+      "case": "empty",
+      "topk": 1,
+      "topk2": 1,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 3,
+      "case": "empty",
+      "topk": 1,
+      "topk2": 1,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 4,
+      "case": "random",
+      "topk": 10,
+      "topk2": 10,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 4,
+      "case": "random",
+      "topk": 10,
+      "topk2": 10,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 4,
+      "case": "random",
+      "topk": 13,
+      "topk2": 5,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 4,
+      "case": "random",
+      "topk": 13,
+      "topk2": 5,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 4,
+      "case": "random",
+      "topk": 1,
+      "topk2": 1,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 4,
+      "case": "random",
+      "topk": 1,
+      "topk2": 1,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 4,
+      "case": "dense_overlap",
+      "topk": 10,
+      "topk2": 10,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 4,
+      "case": "dense_overlap",
+      "topk": 10,
+      "topk2": 10,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 4,
+      "case": "dense_overlap",
+      "topk": 13,
+      "topk2": 5,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 4,
+      "case": "dense_overlap",
+      "topk": 13,
+      "topk2": 5,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 4,
+      "case": "dense_overlap",
+      "topk": 1,
+      "topk2": 1,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 4,
+      "case": "dense_overlap",
+      "topk": 1,
+      "topk2": 1,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 4,
+      "case": "tiny_boundary",
+      "topk": 10,
+      "topk2": 10,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 4,
+      "case": "tiny_boundary",
+      "topk": 10,
+      "topk2": 10,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 4,
+      "case": "tiny_boundary",
+      "topk": 13,
+      "topk2": 5,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 4,
+      "case": "tiny_boundary",
+      "topk": 13,
+      "topk2": 5,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 4,
+      "case": "tiny_boundary",
+      "topk": 1,
+      "topk2": 1,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 4,
+      "case": "tiny_boundary",
+      "topk": 1,
+      "topk2": 1,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 4,
+      "case": "empty",
+      "topk": 10,
+      "topk2": 10,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 4,
+      "case": "empty",
+      "topk": 10,
+      "topk2": 10,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 4,
+      "case": "empty",
+      "topk": 13,
+      "topk2": 5,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 4,
+      "case": "empty",
+      "topk": 13,
+      "topk2": 5,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 4,
+      "case": "empty",
+      "topk": 1,
+      "topk2": 1,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 4,
+      "case": "empty",
+      "topk": 1,
+      "topk2": 1,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 5,
+      "case": "random",
+      "topk": 10,
+      "topk2": 10,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 5,
+      "case": "random",
+      "topk": 10,
+      "topk2": 10,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 5,
+      "case": "random",
+      "topk": 13,
+      "topk2": 5,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 5,
+      "case": "random",
+      "topk": 13,
+      "topk2": 5,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 5,
+      "case": "random",
+      "topk": 1,
+      "topk2": 1,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 5,
+      "case": "random",
+      "topk": 1,
+      "topk2": 1,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 5,
+      "case": "dense_overlap",
+      "topk": 10,
+      "topk2": 10,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 5,
+      "case": "dense_overlap",
+      "topk": 10,
+      "topk2": 10,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 5,
+      "case": "dense_overlap",
+      "topk": 13,
+      "topk2": 5,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 5,
+      "case": "dense_overlap",
+      "topk": 13,
+      "topk2": 5,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 5,
+      "case": "dense_overlap",
+      "topk": 1,
+      "topk2": 1,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 5,
+      "case": "dense_overlap",
+      "topk": 1,
+      "topk2": 1,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 5,
+      "case": "tiny_boundary",
+      "topk": 10,
+      "topk2": 10,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 5,
+      "case": "tiny_boundary",
+      "topk": 10,
+      "topk2": 10,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 5,
+      "case": "tiny_boundary",
+      "topk": 13,
+      "topk2": 5,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 5,
+      "case": "tiny_boundary",
+      "topk": 13,
+      "topk2": 5,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 5,
+      "case": "tiny_boundary",
+      "topk": 1,
+      "topk2": 1,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 5,
+      "case": "tiny_boundary",
+      "topk": 1,
+      "topk2": 1,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 5,
+      "case": "empty",
+      "topk": 10,
+      "topk2": 10,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 5,
+      "case": "empty",
+      "topk": 10,
+      "topk2": 10,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 5,
+      "case": "empty",
+      "topk": 13,
+      "topk2": 5,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 5,
+      "case": "empty",
+      "topk": 13,
+      "topk2": 5,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 5,
+      "case": "empty",
+      "topk": 1,
+      "topk2": 1,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 5,
+      "case": "empty",
+      "topk": 1,
+      "topk2": 1,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 6,
+      "case": "random",
+      "topk": 10,
+      "topk2": 10,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 6,
+      "case": "random",
+      "topk": 10,
+      "topk2": 10,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 6,
+      "case": "random",
+      "topk": 13,
+      "topk2": 5,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 6,
+      "case": "random",
+      "topk": 13,
+      "topk2": 5,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 6,
+      "case": "random",
+      "topk": 1,
+      "topk2": 1,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 6,
+      "case": "random",
+      "topk": 1,
+      "topk2": 1,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 6,
+      "case": "dense_overlap",
+      "topk": 10,
+      "topk2": 10,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 6,
+      "case": "dense_overlap",
+      "topk": 10,
+      "topk2": 10,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 6,
+      "case": "dense_overlap",
+      "topk": 13,
+      "topk2": 5,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 6,
+      "case": "dense_overlap",
+      "topk": 13,
+      "topk2": 5,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 6,
+      "case": "dense_overlap",
+      "topk": 1,
+      "topk2": 1,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 6,
+      "case": "dense_overlap",
+      "topk": 1,
+      "topk2": 1,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 6,
+      "case": "tiny_boundary",
+      "topk": 10,
+      "topk2": 10,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 6,
+      "case": "tiny_boundary",
+      "topk": 10,
+      "topk2": 10,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 6,
+      "case": "tiny_boundary",
+      "topk": 13,
+      "topk2": 5,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 6,
+      "case": "tiny_boundary",
+      "topk": 13,
+      "topk2": 5,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 6,
+      "case": "tiny_boundary",
+      "topk": 1,
+      "topk2": 1,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 6,
+      "case": "tiny_boundary",
+      "topk": 1,
+      "topk2": 1,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 6,
+      "case": "empty",
+      "topk": 10,
+      "topk2": 10,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 6,
+      "case": "empty",
+      "topk": 10,
+      "topk2": 10,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 6,
+      "case": "empty",
+      "topk": 13,
+      "topk2": 5,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 6,
+      "case": "empty",
+      "topk": 13,
+      "topk2": 5,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 6,
+      "case": "empty",
+      "topk": 1,
+      "topk2": 1,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 6,
+      "case": "empty",
+      "topk": 1,
+      "topk2": 1,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 7,
+      "case": "random",
+      "topk": 10,
+      "topk2": 10,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 7,
+      "case": "random",
+      "topk": 10,
+      "topk2": 10,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 7,
+      "case": "random",
+      "topk": 13,
+      "topk2": 5,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 7,
+      "case": "random",
+      "topk": 13,
+      "topk2": 5,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 7,
+      "case": "random",
+      "topk": 1,
+      "topk2": 1,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 7,
+      "case": "random",
+      "topk": 1,
+      "topk2": 1,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 7,
+      "case": "dense_overlap",
+      "topk": 10,
+      "topk2": 10,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 7,
+      "case": "dense_overlap",
+      "topk": 10,
+      "topk2": 10,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 7,
+      "case": "dense_overlap",
+      "topk": 13,
+      "topk2": 5,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 7,
+      "case": "dense_overlap",
+      "topk": 13,
+      "topk2": 5,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 7,
+      "case": "dense_overlap",
+      "topk": 1,
+      "topk2": 1,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 7,
+      "case": "dense_overlap",
+      "topk": 1,
+      "topk2": 1,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 7,
+      "case": "tiny_boundary",
+      "topk": 10,
+      "topk2": 10,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 7,
+      "case": "tiny_boundary",
+      "topk": 10,
+      "topk2": 10,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 7,
+      "case": "tiny_boundary",
+      "topk": 13,
+      "topk2": 5,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 7,
+      "case": "tiny_boundary",
+      "topk": 13,
+      "topk2": 5,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 7,
+      "case": "tiny_boundary",
+      "topk": 1,
+      "topk2": 1,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 7,
+      "case": "tiny_boundary",
+      "topk": 1,
+      "topk2": 1,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 7,
+      "case": "empty",
+      "topk": 10,
+      "topk2": 10,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 7,
+      "case": "empty",
+      "topk": 10,
+      "topk2": 10,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 7,
+      "case": "empty",
+      "topk": 13,
+      "topk2": 5,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 7,
+      "case": "empty",
+      "topk": 13,
+      "topk2": 5,
+      "mode": "explicit_fixed"
+    },
+    {
+      "seed": 7,
+      "case": "empty",
+      "topk": 1,
+      "topk2": 1,
+      "mode": "implicit_default"
+    },
+    {
+      "seed": 7,
+      "case": "empty",
+      "topk": 1,
+      "topk2": 1,
+      "mode": "explicit_fixed"
+    }
+  ],
+  "scope": "Deterministic synthetic CPU regression against exact PR base; not proof for all inputs, CUDA/AMP or training outcomes.",
+  "reference_import_helpers": "Same Git blobs for metrics.py, ops.py and torch_utils.py in base and head"
+}

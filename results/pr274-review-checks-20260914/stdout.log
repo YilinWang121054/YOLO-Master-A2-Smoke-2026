@@ -1,0 +1,41 @@
+WARNING user config directory 'E:\desktop\+\\\\YOLO-Master-A2-Smoke-2026\results\pr274-review-checks-20260914\isolated-config\Ultralytics' is not writable, using 'E:\desktop\+\\\\YOLO-Master-A2-Smoke-2026\results\pr274-review-checks-20260914\isolated-work\Ultralytics'. Set YOLO_CONFIG_DIR to override.
+Creating new Ultralytics Settings v0.0.6 file  
+View Ultralytics Settings with 'yolo settings' or at 'E:\desktop\+\\\\YOLO-Master-A2-Smoke-2026\results\pr274-review-checks-20260914\isolated-work\Ultralytics\settings.json'
+Update Settings with 'yolo settings key=value', i.e. 'yolo settings runs_dir=path/to/dir'. For help see https://docs.ultralytics.com/quickstart/#ultralytics-settings.
+Imported source: E:\desktop\保研+工作\就业\实践\腾讯犀牛鸟\YOLO-Master-A2-final-review\ultralytics\utils\__init__.py
+Python 3.11.15 | packaged by conda-forge | (main, Jun 11 2026, 03:27:10) [MSC v.1944 64 bit (AMD64)]; torch 2.5.1+cu121; device CPU
+Exact CPU assignment comparisons passed: 192 x 5 output tensors
+============================= test session starts =============================
+platform win32 -- Python 3.11.15, pytest-9.1.1, pluggy-1.6.0 -- F:\conda-envs\yolo-master\python.exe
+rootdir: E:\desktop\保研+工作\就业\实践\腾讯犀牛鸟\YOLO-Master-A2-final-review
+configfile: pyproject.toml
+plugins: anyio-4.14.2, cov-7.1.0, xdist-3.8.0
+collecting ... collected 24 items
+
+..\..\..\..\YOLO-Master-A2-final-review\tests\test_default_config_integrity.py::test_default_yaml_has_unique_top_level_keys PASSED [  4%]
+..\..\..\..\YOLO-Master-A2-final-review\tests\test_default_config_integrity.py::test_mixture_defaults_parse_with_expected_types PASSED [  8%]
+..\..\..\..\YOLO-Master-A2-final-review\tests\test_default_config_integrity.py::test_new_mixture_float_key_is_type_checked PASSED [ 12%]
+..\..\..\..\YOLO-Master-A2-final-review\tests\test_default_config_integrity.py::test_scene_inference_mode_is_type_checked PASSED [ 16%]
+..\..\..\..\YOLO-Master-A2-final-review\tests\test_default_config_integrity.py::test_molora_none_and_empty_optional_values_have_stable_semantics PASSED [ 20%]
+..\..\..\..\YOLO-Master-A2-final-review\tests\test_stal_assignment.py::test_stal_default_config_preserves_fixed_stride_mode PASSED [ 25%]
+..\..\..\..\YOLO-Master-A2-final-review\tests\test_stal_assignment.py::test_stal_config_rejects_invalid_values_and_relationships[overrides0-stal_mode] PASSED [ 29%]
+..\..\..\..\YOLO-Master-A2-final-review\tests\test_stal_assignment.py::test_stal_config_rejects_invalid_values_and_relationships[overrides1-0 < small < medium] PASSED [ 33%]
+..\..\..\..\YOLO-Master-A2-final-review\tests\test_stal_assignment.py::test_stal_config_rejects_invalid_values_and_relationships[overrides2-between 1.0 and 4.0] PASSED [ 37%]
+..\..\..\..\YOLO-Master-A2-final-review\tests\test_stal_assignment.py::test_stal_config_rejects_invalid_values_and_relationships[overrides3-greater than or equal] PASSED [ 41%]
+..\..\..\..\YOLO-Master-A2-final-review\tests\test_stal_assignment.py::test_stal_config_rejects_invalid_values_and_relationships[overrides4-stal_topk_small] PASSED [ 45%]
+..\..\..\..\YOLO-Master-A2-final-review\tests\test_stal_assignment.py::test_stal_config_rejects_invalid_values_and_relationships[overrides5-finite] PASSED [ 50%]
+..\..\..\..\YOLO-Master-A2-final-review\tests\test_stal_assignment.py::test_stal_config_rejects_invalid_values_and_relationships[overrides6-finite] PASSED [ 54%]
+..\..\..\..\YOLO-Master-A2-final-review\tests\test_stal_assignment.py::test_stal_config_rejects_invalid_values_and_relationships[overrides7-finite] PASSED [ 58%]
+..\..\..\..\YOLO-Master-A2-final-review\tests\test_stal_assignment.py::test_detection_loss_receives_stal_configuration PASSED [ 62%]
+..\..\..\..\YOLO-Master-A2-final-review\tests\test_stal_assignment.py::test_tal_mode_uses_unmodified_gt_box PASSED [ 66%]
+..\..\..\..\YOLO-Master-A2-final-review\tests\test_stal_assignment.py::test_fixed_mode_keeps_legacy_stride_expansion PASSED [ 70%]
+..\..\..\..\YOLO-Master-A2-final-review\tests\test_stal_assignment.py::test_adaptive_area_boundaries_use_coco_style_training_thresholds PASSED [ 75%]
+..\..\..\..\YOLO-Master-A2-final-review\tests\test_stal_assignment.py::test_adaptive_mode_guarantees_minimum_pre_conflict_candidates_for_tiny_gt PASSED [ 79%]
+..\..\..\..\YOLO-Master-A2-final-review\tests\test_stal_assignment.py::test_adaptive_assigner_handles_empty_gt PASSED [ 83%]
+..\..\..\..\YOLO-Master-A2-final-review\tests\test_stal_assignment.py::test_adaptive_assigner_resolves_overlapping_gt_conflicts_once_per_anchor PASSED [ 87%]
+..\..\..\..\YOLO-Master-A2-final-review\tests\test_stal_assignment.py::test_conflict_resolution_cannot_assign_anchor_to_non_candidate_gt PASSED [ 91%]
+..\..\..\..\YOLO-Master-A2-final-review\tests\test_stal_assignment.py::test_adaptive_assigner_fp32_amp_masks_counts_loss_and_gradients_are_stable PASSED [ 95%]
+..\..\..\..\YOLO-Master-A2-final-review\tests\test_tal_conflict_resolution.py::test_conflict_resolution_cannot_assign_anchor_to_non_candidate_gt PASSED [100%]
+
+- generated xml file: E:\desktop\保研+工作\就业\实践\腾讯犀牛鸟\YOLO-Master-A2-Smoke-2026\results\pr274-review-checks-20260914\pytest.xml -
+============================= 24 passed in 0.71s ==============================
