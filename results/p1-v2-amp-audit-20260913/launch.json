@@ -1,0 +1,10 @@
+{
+  "command": [
+    "scripts/run_p1_amp_audit.py",
+    "--config",
+    "configs/p1-v2-amp-audit-20260913.json"
+  ],
+  "config_sha256": "129f48750546313f2bd2bbce7ee39be6cb06f377c17eab38d001b905e61c7195",
+  "started_at": "2026-09-13T13:32:45.116595+00:00",
+  "pid": 20528
+}

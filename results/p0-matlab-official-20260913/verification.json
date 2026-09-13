@@ -1,0 +1,16 @@
+{
+  "status": "pass",
+  "verified_at": "2026-09-13T13:48:12.243951+00:00",
+  "copied_sha256": {
+    "comparison.json": "f7af37ed9298b5740d2ef746fc3e50c3e16b1edc31dfd516786233c0cce3caf0",
+    "launch.json": "21e5f2bb5adec29e5fcb0f9bdccd15a989864cdb97dfcd2477ef48a4479737ce",
+    "matlab-metrics.json": "e9e9f773e1faba6e4e8dae4641781e9b2b2ddfafff82885c17454e2482733ab4",
+    "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout.log": "8f9b349fceb99ab7eda3b862b28ba8a70039208bf38655d402cd012ac085a892"
+  },
+  "scope": "P0 actual runtime logs and seven metric comparisons; P1 six paired mask/count archives. Gradient finiteness checked during execution, gradients not independently replayed.",
+  "local_only_exclusions": [
+    "*.pt augmented image tensors",
+    "MathWorks account/ServiceHost logs"
+  ]
+}

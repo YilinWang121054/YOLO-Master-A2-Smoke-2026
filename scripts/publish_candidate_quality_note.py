@@ -18,6 +18,12 @@ COMMIT = "2389a4b435dfaf7111037be24ee558b61a6a8a44"
 PREFIX = "A2 候选质量诊断补充（2026-09-13）"
 NOTE = ROOT / "docs/closure-review/PR候选诊断进度-20260913.md"
 PROOF = ROOT / "results/github-candidate-figures-publication-20260913.json"
+EVIDENCE_PATHS = [
+    "results/candidate-quality-20260913/figures-v1/README.md",
+    "results/candidate-quality-20260913/figures-v1/verification.json",
+    "results/candidate-quality-20260913/figures-v1/publication-manifest.json",
+    "docs/closure-review/研究报告.md",
+]
 
 
 def main():
@@ -68,12 +74,7 @@ def main():
     pr = api("/repos/Tencent/YOLO-Master/pulls/274")
     assert pr["state"] == "open" and not pr["merged"]
     assert pr["head"]["sha"] == "2efc4d91d7363d65b6f38e7d47c585231bb98158"
-    paths = [
-        "results/candidate-quality-20260913/figures-v1/README.md",
-        "results/candidate-quality-20260913/figures-v1/verification.json",
-        "results/candidate-quality-20260913/figures-v1/publication-manifest.json",
-        "docs/closure-review/研究报告.md",
-    ]
+    paths = EVIDENCE_PATHS
     for path in paths:
         remote = api(f"/repos/{REPO}/contents/{quote(path)}?ref={COMMIT}")
         assert base64.b64decode(remote["content"]) == (ROOT / path).read_bytes(), path

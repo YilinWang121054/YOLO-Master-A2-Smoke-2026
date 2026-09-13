@@ -1,0 +1,27 @@
+{
+  "status": "pass",
+  "verified_at": "2026-09-13T13:48:12.292785+00:00",
+  "copied_sha256": {
+    "launch.json": "de4219f9450c17cd5a5002fb8092b6cd9c293a8bd5a609cfa069acf72df8538b",
+    "m0-adaptive-amp-masks.npz": "b41e8219149e1b08ed740d59dc85a8d828ce62bb42793fd1f9a2e779287b8fb6",
+    "m0-adaptive-fp32-masks.npz": "23f65db3aaff98756ec9d469b710e030fa98a4021673c5a41670119239b8ace0",
+    "m0-fixed-amp-masks.npz": "15c81ccc6a5f432c92f448b711312103500caf91cd84bf61ac9a663089e51747",
+    "m0-fixed-fp32-masks.npz": "0480318e35785e75191b8b3b1e0dca0f70203f12d92bb8d4c794a012b332bd1a",
+    "m0-tal-amp-masks.npz": "97b22d973bdc111ec22e7842225ea9c58826d6b4b88768e13f0eabc6087bb1e1",
+    "m0-tal-fp32-masks.npz": "d7cc982ab7931119d4e0f6bc45504b537b7697b2d89bcdff7f18e4876a254a84",
+    "m1-adaptive-amp-masks.npz": "db52335fde836bc333753b26d4bcd00ea85f44cccc746d5e296ca6c215282fc8",
+    "m1-adaptive-fp32-masks.npz": "1374c2a1a79949c1a5b9e3e09d22be7cb446176cf916d3fa019bac11b685e7d9",
+    "m1-fixed-amp-masks.npz": "830636304d429522b4b6e425794c5ae09442f06a7a27c605a50b3a81e9456132",
+    "m1-fixed-fp32-masks.npz": "e27f8c7f39893d0655ffc8847ce0b6516c0f29034652650e2a75a8ff75fb9e23",
+    "m1-tal-amp-masks.npz": "e9d9b401e063714541220d77514e0bb5bd81385f7881103207a3e9e3573a7130",
+    "m1-tal-fp32-masks.npz": "e7a4156dc72ee2cc49ad055d78823b999ad986b42c522c3ba82f19ffe585683b",
+    "manifest.json": "f6d6bade7395c16a99cccfad274a38cd2bc2a630693bf09eb5e206032802c9d2",
+    "progress.json": "0398a4146e86a099449ee0097fa0e842a35332ea306f0308537007146e34be75",
+    "summary.json": "cf5470d0ef9237273d039da33f3035e2e51dcfb06c498ca38a27a8cf04228044"
+  },
+  "scope": "P0 actual runtime logs and seven metric comparisons; P1 six paired mask/count archives. Gradient finiteness checked during execution, gradients not independently replayed.",
+  "local_only_exclusions": [
+    "*.pt augmented image tensors",
+    "MathWorks account/ServiceHost logs"
+  ]
+}

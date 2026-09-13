@@ -1,0 +1,29 @@
+{
+  "toolkit_commit": "005445782213e20cb91bc50a597db3dd949e749a",
+  "source_sha256": {
+    "evalDET.m": "10e88f1a8b45002bf5ca3e27cdc7fc870c59aef83ba806d74b60738cfecb2d61",
+    "utils/VOCap.m": "95dd1e02c956124e777caf6f44b50b0986a2a37785bd11982ef775e696c17945",
+    "utils/calcAccuracy.m": "285508f54903acd75eeda346c11c8e53267e72facd648f2e22bce121d4f55d7f",
+    "utils/compOas.m": "3e5c2d473c07bf2ddbe0d902284af98ef7104c609e867b2ed59083d31f3ed2af",
+    "utils/createIntImg.m": "7ce3de4fc105be4f088cae5d1fcfc8f4383f3d7ffd4a551bf1afe711eff09f72",
+    "utils/displayImage.m": "dd5c24c2b824f1a9c884eff4f61bc9bfeef635cd6a46d3dab0071c48a67667b2",
+    "utils/dropObjectsInIgr.m": "30dee2713d76a537f5c98ec5d0804e17cfd3993d83d8a80a70b90ef9461fa4de",
+    "utils/evalRes.m": "610f0d078f1af8d7987e360e6e88665c0290587191d5542b469a9792402f539b",
+    "utils/findImageList.m": "42af8763b4a271e32de9a2509a3103bc839d752cf86c7ac42a4be2c67e5abb68",
+    "utils/saveAnnoRes.m": "3210fb8fd98aed19cab61c996e0daf1dbfdb23fd5eb2fafff29afc71bb45876d"
+  },
+  "input_manifest_sha256": "80608a06e3d6bdfda75f21e3769bd737f646c6fa11085a3afaa847f6f79b488f",
+  "images": 548,
+  "checkpoint_sha256": "3d15a0b7f9562f18850766284c601394e970eac9607524bc2ad91c3ec8f4ab87",
+  "command": [
+    "E:\\Program Files\\MATLAB\\R2024a\\bin\\matlab.exe",
+    "-wait",
+    "-batch",
+    "addpath('E:/desktop/\u4fdd\u7814+\u5de5\u4f5c/\u5c31\u4e1a/\u5b9e\u8df5/\u817e\u8baf\u7280\u725b\u9e1f/YOLO-Master-A2-Smoke-2026/scripts'); disp(version); run_visdrone_official_matlab('F:/tools/VisDrone2018-DET-toolkit','F:/datasets/VisDrone/VisDrone2019-DET-val','F:/YOLO-Master-A2-P1/closure-evaluation/p0-locked-s20260824-stats120/det','F:/YOLO-Master-A2-P1/diagnostics/p0-matlab-official-20260913/matlab-metrics.json');"
+  ],
+  "started_at": "2026-09-13T13:43:50.137492+00:00",
+  "wrapper_sha256": "9d71ec2d4c1e2c4294ffea769da90203a97ba291b358f638ca8d67aa8718cb0e",
+  "runner_sha256": "1d290ef76638cdc895aff57264037d2ab70f98aa31850df98d743d3dd98a95d3",
+  "timeout_seconds": 3600,
+  "pid": 10828
+}

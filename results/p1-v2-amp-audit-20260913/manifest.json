@@ -1,0 +1,69 @@
+{
+  "config": {
+    "experiment_id": "p1-v2-amp-audit-20260913",
+    "source_commit": "52c2befa50706b9dff13b6e0813b19413d9f532d",
+    "checkpoint": "F:/YOLO-Master-A2-P1/p1-fixed-s20260826/weights/last.pt",
+    "checkpoint_sha256": "6b54948c4df863a25e5d57c1423bc6d6b4226fbb1a22d69f007881ad209230cd",
+    "input_manifest": "results/candidate-quality-20260913/manifest.json",
+    "selection": "first four preselected sequence-distinct images in the existing manifest; no outcome-based selection",
+    "batch": 4,
+    "imgsz": 800,
+    "seed": 20260913,
+    "threads": 2,
+    "mosaic_conditions": [
+      0.0,
+      1.0
+    ],
+    "modes": [
+      "tal",
+      "fixed",
+      "adaptive"
+    ],
+    "amp_loss_scale": 128.0,
+    "timeout_seconds": 1800,
+    "output": "F:/YOLO-Master-A2-P1/diagnostics/p1-v2-amp-audit-20260913",
+    "advisory_thresholds": {
+      "loss_relative_difference": 0.02,
+      "gradient_relative_l2": 0.05
+    },
+    "scope": "Real CUDA train-mode forward/backward on paired frozen augmented batches, no optimizer steps. Counts are diagnostic, not historical training statistics or AP evidence."
+  },
+  "started_at": "2026-09-13T13:32:46.559867+00:00",
+  "source_commit": "52c2befa50706b9dff13b6e0813b19413d9f532d",
+  "input_manifest_sha256": "b983374cfe74a3854ec8b22500d10a0a0543513116af6f1d25d9b221f27b1ac5",
+  "script_sha256": "f5f26cdbf22fd19d5519304c3f7b27a019cfeccaf35605ad540c53ee37365b64",
+  "selected": [
+    {
+      "image": "images/train/0000084_01436_d_0000004.jpg",
+      "image_sha256": "bcc18885ea00913cfc9a86e07a60b5dd4499d60ab8db1429c9b0b2f34e952a72",
+      "label": "labels/train/0000084_01436_d_0000004.txt",
+      "label_sha256": "b7d214f8b3376048c0440f5a298faed67439907738f64c67359cdd42a33aef41"
+    },
+    {
+      "image": "images/train/0000122_01200_d_0000119.jpg",
+      "image_sha256": "248aec06b3f0b274eb189d0f1264c57c81b5973f5711d89f25e2beb54fa0361e",
+      "label": "labels/train/0000122_01200_d_0000119.txt",
+      "label_sha256": "95fdb1e4644acae7e68a6725c5d28ee6f5ab0b86661e55df90265c71aaae012e"
+    },
+    {
+      "image": "images/train/0000260_01408_d_0000107.jpg",
+      "image_sha256": "25e044d739170216d5fab7322ac93d4781e3e6931ab2cbff82c18f0df0e636f7",
+      "label": "labels/train/0000260_01408_d_0000107.txt",
+      "label_sha256": "1df9499b430ddf59c08c7d9b1e2a48cdb29c0aa8daf8513a4d397737d08bc5aa"
+    },
+    {
+      "image": "images/train/0000235_00467_d_0000002.jpg",
+      "image_sha256": "14a0f9c8a91faae5fea6216f99c785b84597bdf127985907c08049d5292a1569",
+      "label": "labels/train/0000235_00467_d_0000002.txt",
+      "label_sha256": "0c18e1e5fad49b6a3632700bda099f0964fe104ecf58768d7613c26dfccd23ef"
+    }
+  ],
+  "batches": [],
+  "comparisons": [],
+  "environment": {
+    "torch": "2.5.1+cu121",
+    "cuda": "12.1",
+    "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU",
+    "python": "3.11.15 | packaged by conda-forge | (main, Jun 11 2026, 03:27:10) [MSC v.1944 64 bit (AMD64)]"
+  }
+}
