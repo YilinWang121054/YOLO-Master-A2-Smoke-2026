@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "source_commit": "ecdd72de51d257f267417d69a1496a6b49df4a45",
+  "scope": "Source-bound candidate-quality figures and report update; no new inference or training",
+  "old_publication_manifest": "results/candidate-quality-20260913/publication-sha256.txt remains the ecdd72d historical snapshot",
+  "files": {
+    "docs/closure-review/P0-P1-P2验收核对.md": {
+      "bytes": 9038,
+      "sha256": "d54648ad9b6571d8e62d7b2139b9f18b51efffe75ba350ee20dc7c3f444879ab"
+    },
+    "docs/closure-review/P0复现入口与后续安排-20260911.md": {
+      "bytes": 6552,
+      "sha256": "3d28ea415c3d8e48bda852b7fc0f4bdc6a7cff2e4dab2091b687ef08d106ffe3"
+    },
+    "docs/closure-review/候选诊断绘图契约-20260913.md": {
+      "bytes": 3657,
+      "sha256": "d711a0310ef185eef39655da9d755617430b5494a149d437ffe91218a5a259b5"
+    },
+    "docs/closure-review/研究报告.md": {
+      "bytes": 17531,
+      "sha256": "5f081e44afcc3b7b9fa8d3d36ad16e678c448a62b92e0718563016f1cdda7495"
+    },
+    "docs/closure-review/诊断图报告修订核对-20260913.md": {
+      "bytes": 2942,
+      "sha256": "945266152917e4a0a4d0db1a379b44630bc5bef9e374afdab22c2d3f31adb2a7"
+    },
+    "README.md": {
+      "bytes": 13704,
+      "sha256": "8c4c15d0e4af1a28c4a0b7c5ae2d7ff62abd794ec9534e052e44cbfb24a929d5"
+    },
+    "results/candidate-quality-20260913/figures-v1/candidate-geometry-panel-a.png": {
+      "bytes": 46104,
+      "sha256": "d9fa663440e94880c9248eb28b8e4a5279529628c0c9b505165c329505e0e6cf"
+    },
+    "results/candidate-quality-20260913/figures-v1/candidate-geometry-panel-b.png": {
+      "bytes": 43611,
+      "sha256": "a163ea06d93e37c1b77b6774d89187998abea885ce84d70fa8aa1bda490d1792"
+    },
+    "results/candidate-quality-20260913/figures-v1/candidate-geometry-panel-c.png": {
+      "bytes": 58219,
+      "sha256": "5c4840a4fd4034baf33ced8c4ef5a9e43615b16b84c86e8e1a933b485e137a0d"
+    },
+    "results/candidate-quality-20260913/figures-v1/candidate-geometry.pdf": {
+      "bytes": 46435,
+      "sha256": "48de381edabf4ba9d36e7f7aaa8d604718192cd3e58511ee3348eb01825194c3"
+    },
+    "results/candidate-quality-20260913/figures-v1/candidate-geometry.png": {
+      "bytes": 422359,
+      "sha256": "39d5dd22eef2272f550a3dd9fbaffbcd673e38046cafe588afd044ce29b4a2d9"
+    },
+    "results/candidate-quality-20260913/figures-v1/candidate-geometry.svg": {
+      "bytes": 53308,
+      "sha256": "1543c744d78ad515028d6520d6973953b8e2e6592d4fd14db86f8231be714914"
+    },
+    "results/candidate-quality-20260913/figures-v1/candidate-quality-panel-a.png": {
+      "bytes": 107803,
+      "sha256": "23efe9d19f676a25ac6de7125deef278875ecb32adf59267e0352104355c4f58"
+    },
+    "results/candidate-quality-20260913/figures-v1/candidate-quality-panel-b.png": {
+      "bytes": 40147,
+      "sha256": "a292057448171b3e25597707d2f97baea225612b042013a4bc422bdd12b1efcc"
+    },
+    "results/candidate-quality-20260913/figures-v1/candidate-quality-panel-c.png": {
+      "bytes": 39552,
+      "sha256": "6c1cfbc938458a440c2d6d8ff9801e4da2e7187d62d08d1aa9b058ccd751ca5a"
+    },
+    "results/candidate-quality-20260913/figures-v1/candidate-quality.pdf": {
+      "bytes": 169981,
+      "sha256": "45e5382ae0eb4c1d71dce831be2a5518107d52b5edd8fd7bbecb9e594b7d0f0a"
+    },
+    "results/candidate-quality-20260913/figures-v1/candidate-quality.png": {
+      "bytes": 558049,
+      "sha256": "0155235cac6adf558f0465d0b7415e32a7c4346730856a38c3fae2657ef4571a"
+    },
+    "results/candidate-quality-20260913/figures-v1/candidate-quality.svg": {
+      "bytes": 263666,
+      "sha256": "8727659bab97a2253c2cf1a3cb9e0e05f70cfa9f9dfd5cfa2a6d7ab4a28bf447"
+    },
+    "results/candidate-quality-20260913/figures-v1/figure-manifest.json": {
+      "bytes": 3577,
+      "sha256": "bf3f07bb702ba645746ac9502de772482386c88766c65a1a71d1fa906faf52c9"
+    },
+    "results/candidate-quality-20260913/figures-v1/geometry-example-candidates.csv": {
+      "bytes": 13140,
+      "sha256": "f9f76a14a9c7bffc9532029c95fe7a1d4561dca9d26d4c2e93cce5017f46caeb"
+    },
+    "results/candidate-quality-20260913/figures-v1/paired-small-gt.csv": {
+      "bytes": 133755,
+      "sha256": "c3b6fe24f463f1aaee08304f41ee90a69a223a442826c161799d9e2fbf966b3b"
+    },
+    "results/candidate-quality-20260913/figures-v1/QA.md": {
+      "bytes": 3894,
+      "sha256": "b01a91991456a897b2acd2ec26c073c2532c852735b25d6aba5777ec7453f40b"
+    },
+    "results/candidate-quality-20260913/figures-v1/README.md": {
+      "bytes": 3478,
+      "sha256": "f053bf963a6ce6bda8edbd58ab1a2f2483dbc6d91d020af9176bdcd279799789"
+    },
+    "results/candidate-quality-20260913/figures-v1/selected-small-candidates.csv": {
+      "bytes": 1557887,
+      "sha256": "5feaf7e297cdcf02f1d7c44707f544cc898689da6c5935e0987697fb46501e2b"
+    },
+    "results/candidate-quality-20260913/figures-v1/verification.json": {
+      "bytes": 6070,
+      "sha256": "3c91c718ee633c8ba7e3456249987ff455f06ddedd1e52c7c0a4e9125512f846"
+    },
+    "results/candidate-quality-20260913/README.md": {
+      "bytes": 6716,
+      "sha256": "4d8038effc7b88c53f40bb37123e735861a11ed9b6438137742f3e756c235523"
+    },
+    "results/report-table-verification-20260913-figures.json": {
+      "bytes": 626,
+      "sha256": "522e7f69959dee8bad25471773fb9f4b77a4aa7cf70c4aba8514dcf2c18c52a5"
+    },
+    "scripts/plot_candidate_quality.py": {
+      "bytes": 15049,
+      "sha256": "73d4d82677ff1d55bd617821daf60310459a344917abb4fa02ba654c0b6f2914"
+    },
+    "scripts/verify_candidate_figures.py": {
+      "bytes": 7555,
+      "sha256": "a41f0634bd30122519b348dd6fef061ee56481ef907fdddbfdf54637d2295a5e"
+    },
+    "tests/test_candidate_quality_figures.py": {
+      "bytes": 1243,
+      "sha256": "a781b9d2fd10f62357349aa525bcd9ad7eff204ebd5f650190b7c80c90af9065"
+    }
+  }
+}

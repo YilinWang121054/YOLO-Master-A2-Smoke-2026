@@ -1,0 +1,87 @@
+{
+  "backend": "Python/matplotlib",
+  "matplotlib_version": "3.11.1",
+  "script_sha256": "73d4d82677ff1d55bd617821daf60310459a344917abb4fa02ba654c0b6f2914",
+  "source_data_sha256": {
+    "manifest.json": "b983374cfe74a3854ec8b22500d10a0a0543513116af6f1d25d9b221f27b1ac5",
+    "gt-records.jsonl": "965eefbe380176d19d3711c30019ac20e19907fdd1dcea75faef7e95edff810a",
+    "candidate-records.csv.gz": "7e2cda7e39990d4c330776da3fb74b83b1820667fdf705ad33b9b1276f760437"
+  },
+  "source_summary_sha256": "f6cf910b02010b2ff772b5d8e7650f5c21abe542d4c11b5035900711b1558516",
+  "selection_counts": {
+    "unique_gt_before": 1432,
+    "small_gt_plotted": 1321,
+    "other_gt_not_plotted": 111,
+    "reason": "A2 small-object diagnostic; all other sizes retained in source tables",
+    "adaptive_small_selected": 8404,
+    "ecdf_zero_values_retained": true
+  },
+  "quality": {
+    "physical_size_mm": [
+      183.0,
+      130.0
+    ],
+    "text_outside_canvas": [],
+    "panels": [
+      "a",
+      "b",
+      "c"
+    ]
+  },
+  "geometry": {
+    "physical_size_mm": [
+      183.0,
+      86.0
+    ],
+    "text_outside_canvas": [],
+    "panels": [
+      "a",
+      "b",
+      "c"
+    ],
+    "image": "images/train/0000084_01436_d_0000004.jpg",
+    "gt": 3,
+    "actual_bbox_fp32": [
+      20.833599090576172,
+      310.8334045410156,
+      40.83359909057617,
+      354.1665954589844
+    ],
+    "counts": {
+      "tal": {
+        "candidates": 16,
+        "selected": 10,
+        "lost_after_preselection": 0
+      },
+      "fixed": {
+        "candidates": 16,
+        "selected": 10,
+        "lost_after_preselection": 0
+      },
+      "adaptive": {
+        "candidates": 42,
+        "selected": 13,
+        "lost_after_preselection": 0
+      }
+    },
+    "example_selection": "First input image; smallest small-GT index, not selected by effect"
+  },
+  "outputs_sha256": {
+    "candidate-geometry-panel-a.png": "d9fa663440e94880c9248eb28b8e4a5279529628c0c9b505165c329505e0e6cf",
+    "candidate-geometry-panel-b.png": "a163ea06d93e37c1b77b6774d89187998abea885ce84d70fa8aa1bda490d1792",
+    "candidate-geometry-panel-c.png": "5c4840a4fd4034baf33ced8c4ef5a9e43615b16b84c86e8e1a933b485e137a0d",
+    "candidate-geometry.pdf": "48de381edabf4ba9d36e7f7aaa8d604718192cd3e58511ee3348eb01825194c3",
+    "candidate-geometry.png": "39d5dd22eef2272f550a3dd9fbaffbcd673e38046cafe588afd044ce29b4a2d9",
+    "candidate-geometry.svg": "1543c744d78ad515028d6520d6973953b8e2e6592d4fd14db86f8231be714914",
+    "candidate-quality-panel-a.png": "23efe9d19f676a25ac6de7125deef278875ecb32adf59267e0352104355c4f58",
+    "candidate-quality-panel-b.png": "a292057448171b3e25597707d2f97baea225612b042013a4bc422bdd12b1efcc",
+    "candidate-quality-panel-c.png": "6c1cfbc938458a440c2d6d8ff9801e4da2e7187d62d08d1aa9b058ccd751ca5a",
+    "candidate-quality.pdf": "45e5382ae0eb4c1d71dce831be2a5518107d52b5edd8fd7bbecb9e594b7d0f0a",
+    "candidate-quality.png": "0155235cac6adf558f0465d0b7415e32a7c4346730856a38c3fae2657ef4571a",
+    "candidate-quality.svg": "8727659bab97a2253c2cf1a3cb9e0e05f70cfa9f9dfd5cfa2a6d7ab4a28bf447",
+    "geometry-example-candidates.csv": "f9f76a14a9c7bffc9532029c95fe7a1d4561dca9d26d4c2e93cce5017f46caeb",
+    "paired-small-gt.csv": "c3b6fe24f463f1aaee08304f41ee90a69a223a442826c161799d9e2fbf966b3b",
+    "selected-small-candidates.csv": "5feaf7e297cdcf02f1d7c44707f544cc898689da6c5935e0987697fb46501e2b"
+  },
+  "scope": "Rendered existing records; no model inference or training, no causal or acceptance verdict"
+}

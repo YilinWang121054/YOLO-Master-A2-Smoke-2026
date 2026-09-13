@@ -52,10 +52,10 @@ Material Passport：academic-research-suite / experiment-agent run + validate；
 - [summary.json](summary.json)：全部面积档和分组的均值、P50/P90、零值比例。
 - [verification.json](verification.json)：独立汇总核验与浮点边界例子；[核验脚本](../../scripts/verify_candidate_quality_probe.py)已有输出时拒绝覆盖。
 
-没有上传原始图像或checkpoint。候选区域和质量分布图尚待基于这些固定记录制作，不能把本次数据采集写成已经完成可视化。
+没有上传原始图像或checkpoint。9月13日后续更新已根据这些固定记录制作[候选位置与质量分布图](figures-v1/)，包含图级CSV、SVG/PDF、PNG与逐图检查。图版未重跑推理。上一级原始发布清单仍对应提交ecdd72d的历史快照，图版另存独立清单。
 
 ## 解释边界
 
 11/11类方法学误判已按研究核验流程检查。分档保留而不以总体替代分层（Simpson）；不把GT或候选当独立seed（生态推断）；固定模型与样本仍可能有选择偏差（Berkson）；只看已选正样本是条件分布而非全候选因果效果（碰撞偏差）；报告各档数量和零值分母（基率）；没有按极端结果选样或作前后改善推断（回归均值）；16张全部保留、无删图（幸存者偏差）；不只报告有利指标、不作多重寻找后的显著性声明（look-elsewhere）；方案与代码先固定，边界核验修正保留（分析路径）；局部分配差异不能证明长期训练精度原因（相关/因果与反向因果）。解释等级为CAUTION，没有p值或置信区间。
 
-尤其要注意，checkpoint来自fixed训练，本次预测对fixed学习状态可能更有利；large只有2个GT。结果不证明Mosaic交互、CUDA AMP等价、跨checkpoint稳健性，不能替代P0在线统计或P1/P2验收。后续可先做图，再以另一固定checkpoint交叉核验；新的训练预算仍单独确认。
+尤其要注意，checkpoint来自fixed训练，本次预测对fixed学习状态可能更有利；large只有2个GT。结果不证明Mosaic交互、CUDA AMP等价、跨checkpoint稳健性，不能替代P0在线统计或P1/P2验收。后续可用另一事先固定的checkpoint交叉核验；新的训练预算仍单独确认。
