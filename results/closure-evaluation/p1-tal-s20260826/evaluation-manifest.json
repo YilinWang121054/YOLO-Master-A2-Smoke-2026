@@ -1,0 +1,30 @@
+{
+  "run": "p1-tal-s20260826",
+  "protocol": {
+    "source_commit": "52c2befa50706b9dff13b6e0813b19413d9f532d",
+    "checkpoint_sha256": "d26aea2e395a71222cc8fa6fe932dbe0f10d9d7a0647242c12c7972e12c96e80",
+    "data_sha256": "2fdb317ec85f9e68a6669c4ea1b85789525b569cfb5a508eeac79f906c168c0a",
+    "device": "cpu",
+    "threads": 2,
+    "imgsz": 800,
+    "batch": 4,
+    "quantize": 32,
+    "max_det": 500,
+    "conf": 0.001,
+    "iou": 0.7,
+    "rect": true,
+    "augment": false,
+    "workers": 0
+  },
+  "primary": "epoch-120 last.pt",
+  "images": 548,
+  "completed_epochs": 120,
+  "predictions_sha256": "07d06c749c541e10c19465bae4c629cfea213b3fa7e4e5270d2b617560d45bfa",
+  "status": "evaluated_pending_official_runtime_parity_and_author_review",
+  "generated_at": "2026-09-13T00:07:34.123835+00:00",
+  "script_sha256": {
+    "evaluate_completed_run.py": "fc163b32e6cb57b71541306a082417683468a82ab684b2f4010098dcf914ec5b",
+    "evaluate_visdrone_coco_style.py": "9c550f903b55ed042c6553ca6b36426d91fba5dbe3e0e2ffba81f204e7008bac",
+    "evaluate_visdrone_det_strict.py": "c54f925be2c70fe90e57c123ccc7c2653e83b7800e7d8209196b5f1df6e0f460"
+  }
+}

@@ -46,6 +46,7 @@ def main():
     expected = {f"p1-{mode}-s{seed}" for seed in (20260824, 20260825) for mode in ("fixed", "adaptive", "tal")}
     expected.add("p1-fixed-s20260826")
     expected.add("p1-adaptive-s20260826")
+    expected.add("p1-tal-s20260826")
     if set(checked) != expected or len(checked) != len(expected):
         raise ValueError("Report comparison table omits or duplicates a completed run")
     p0 = ROOT / "results/closure-evaluation/p0-locked-s20260824-stats120"

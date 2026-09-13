@@ -24,12 +24,12 @@ Issue 已发布评论正文备份：[`github-issue-246-update.md`](github-issue-
 
 首轮 exploratory 补充：`a2-visdrone-baseline-r1`，647 train / 548 val，3 epoch，最终 mAP50 `0.0558`、mAP50-95 `0.0264`；它不是正式 P0。v0.1-N 三组 1 epoch 机制 smoke 中，adaptive 相比 fixed 将 train/val small 零正样本比例从 `17.91%/16.03%` 降至 `5.88%/7.66%`，但三组 mAP 均为 0，只支持覆盖机制判断。详见 [首轮报告](first-round-analysis.md)、[`results/mechanism-r4/`](../results/mechanism-r4/) 和 [Issue #246](https://github.com/Tencent/YOLO-Master/issues/246)。
 
-## 当前 P0/P1 进度（2026-09-11）
+## 当前 P0/P1 进度（2026-09-13）
 
 - seed 20260824：fixed/adaptive/pure TAL 均已完成 120/120 epoch；正式补充指标使用官方 ignore-region 过滤后的 COCO-style 结果。
 - seed 20260825：fixed/adaptive/pure TAL 均已完成120/120 epoch；中断恢复记录已保留。
 - 经20260910版ignore规则及面积边界重评，两对adaptive-fixed的APs变化为−0.1625、−0.3405 pp，描述性均值−0.2515 pp。按9月11日确认的口径，seed20260824归为探索性并排除正式矩阵；早期统计不完整组仅供参考，当前不能形成同协议三seed的P1达标结论。
-- seed 20260826：fixed/adaptive均完成120轮及CPU完整验证；adaptive的APs为13.0384，比fixed高0.3930个百分点，但这不是P1达标结论。[新结果与原始日志](../results/closure-evaluation/p1-adaptive-s20260826/)。9月11日14:42观察到pure TAL已完成4/120轮；以实际CSV为准。启动历史见 [p1-seed3-launch.md](p1-seed3-launch.md)。
+- seed 20260826：fixed/adaptive/pure TAL均完成120轮及CPU完整548张验证；APs依次为12.6454、13.0384、12.6504。adaptive比fixed高0.3930个百分点，但这不是P1达标结论。[adaptive结果](../results/closure-evaluation/p1-adaptive-s20260826/)、[pure TAL结果与原始日志](../results/closure-evaluation/p1-tal-s20260826/)。第三seed队列已完成，不再重复启动。启动历史见 [p1-seed3-launch.md](p1-seed3-launch.md)。
 - 原始P0 acce839补跑已完成120轮、548张验证和120份真实增强后在线统计，覆盖194160个训练batch。9月11日补交允许的DET源码核验替代材料；Python完整重算与原记录逐字节一致，未取得实际MATLAB执行结果。
 - 当前数值以[结题报告](closure-review/研究报告.md)及其引用的20260910重评结果为准；seed1/2早期比较文档和汇总JSON保留为历史记录，不替代修正后的结果。
 
