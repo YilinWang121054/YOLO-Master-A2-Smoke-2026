@@ -1,0 +1,17 @@
+2026-09-13 10:00:26,482 INFO Image 1/16 complete: images/train/0000084_01436_d_0000004.jpg, GT=51
+2026-09-13 10:00:27,281 INFO Image 2/16 complete: images/train/0000122_01200_d_0000119.jpg, GT=87
+2026-09-13 10:00:28,007 INFO Image 3/16 complete: images/train/0000260_01408_d_0000107.jpg, GT=80
+2026-09-13 10:00:28,365 INFO Image 4/16 complete: images/train/0000235_00467_d_0000002.jpg, GT=29
+2026-09-13 10:00:28,863 INFO Image 5/16 complete: images/train/9999943_00000_d_0000065.jpg, GT=26
+2026-09-13 10:00:30,031 INFO Image 6/16 complete: images/train/0000226_01146_d_0000004.jpg, GT=152
+2026-09-13 10:00:32,163 INFO Image 7/16 complete: images/train/0000136_00162_d_0000154.jpg, GT=242
+2026-09-13 10:00:33,296 INFO Image 8/16 complete: images/train/0000290_03001_d_0000862.jpg, GT=122
+2026-09-13 10:00:33,685 INFO Image 9/16 complete: images/train/0000200_00000_d_0000168.jpg, GT=36
+2026-09-13 10:00:34,082 INFO Image 10/16 complete: images/train/0000199_00000_d_0000162.jpg, GT=40
+2026-09-13 10:00:34,534 INFO Image 11/16 complete: images/train/0000112_01120_d_0000074.jpg, GT=45
+2026-09-13 10:00:35,384 INFO Image 12/16 complete: images/train/0000304_00201_d_0000203.jpg, GT=56
+2026-09-13 10:00:35,809 INFO Image 13/16 complete: images/train/0000080_00002_d_0000001.jpg, GT=29
+2026-09-13 10:00:37,401 INFO Image 14/16 complete: images/train/0000196_03072_d_0000141.jpg, GT=217
+2026-09-13 10:00:38,671 INFO Image 15/16 complete: images/train/0000123_01819_d_0000120.jpg, GT=135
+2026-09-13 10:00:39,588 INFO Image 16/16 complete: images/train/0000146_00601_d_0000060.jpg, GT=85
+2026-09-13 10:00:39,715 INFO Complete: F:\YOLO-Master-A2-P1\diagnostics\candidate-quality-20260913; observer equality checks=48

@@ -1,5 +1,6 @@
 """Observer correctness gates for the independent fixed-checkpoint probe."""
 
+import json
 import sys
 from pathlib import Path
 
@@ -71,3 +72,43 @@ def test_descriptive_empty_and_quantiles():
     }
     with pytest.raises(ValueError):
         describe([float("nan")])
+
+
+def test_fixed_roundtrip_can_exclude_a_boundary_candidate():
+    points = torch.tensor([[500.0, 388.0]])
+    boxes = torch.tensor(
+        [
+            [
+                [
+                    499.9999776482582,
+                    380.41689693927765,
+                    514.1663774847984,
+                    390.8334970474243,
+                ]
+            ]
+        ]
+    )
+    valid = torch.ones(1, 1, 1, dtype=torch.bool)
+    raw = TaskAlignedAssigner(stal_mode="tal").select_candidates_in_gts(
+        points, boxes, valid
+    )
+    fixed = TaskAlignedAssigner(stal_mode="fixed").select_candidates_in_gts(
+        points, boxes, valid
+    )
+    assert raw.item() and not fixed.item()
+
+
+def test_archived_diagnostic_table_matches_source_values():
+    folder = ROOT / "results/candidate-quality-20260913"
+    groups = json.loads((folder / "summary.json").read_text())["gt_statistics"]
+    text = (folder / "README.md").read_text(encoding="utf-8")
+    for size in ("small", "medium", "large"):
+        for mode in ("tal", "fixed", "adaptive"):
+            count = groups[f"{mode}/{size}/after_conflict"]
+            weight = groups[f"{mode}/{size}/weight_sum"]
+            row = (
+                f"| {size} | {mode} | {count['n']} | {count['mean']:.4f} | "
+                f"{100 * count['zero_fraction']:.4f}% | {weight['mean']:.4f} | "
+                f"{100 * weight['zero_fraction']:.4f}% |"
+            )
+            assert row in text

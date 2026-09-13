@@ -1,0 +1,148 @@
+{
+  "created_at": "2026-09-13T02:00:23.379953+00:00",
+  "config": {
+    "experiment_id": "candidate-quality-20260913",
+    "checkpoint": "F:/YOLO-Master-A2-P1/p1-fixed-s20260826/weights/last.pt",
+    "checkpoint_sha256": "6b54948c4df863a25e5d57c1423bc6d6b4226fbb1a22d69f007881ad209230cd",
+    "source_commit": "52c2befa50706b9dff13b6e0813b19413d9f532d",
+    "dataset_root": "F:/datasets/VisDrone",
+    "output": "F:/YOLO-Master-A2-P1/diagnostics/candidate-quality-20260913",
+    "sample_count": 16,
+    "sampling_seed": 20260913,
+    "sampling": "one filename per sequence-prefix, selected by SHA256(seed:filename); sequences ordered by SHA256(seed:sequence)",
+    "imgsz": 800,
+    "inference_device": "cuda:0",
+    "assigner_device": "cpu",
+    "threads": 2,
+    "dtype": "float32",
+    "mosaic": false,
+    "augmentation": "LetterBox only: square, centered, auto=False, scaleup=True",
+    "timeout_seconds": 1800,
+    "modes": [
+      "tal",
+      "fixed",
+      "adaptive"
+    ],
+    "assigner": {
+      "topk": 10,
+      "topk2": 10,
+      "num_classes": 10,
+      "alpha": 0.5,
+      "beta": 6.0,
+      "stride": [
+        8,
+        16,
+        32
+      ],
+      "stal_small_area": 1024,
+      "stal_medium_area": 9216,
+      "stal_candidate_scale": 1.5,
+      "stal_min_candidates": 3,
+      "stal_topk_small": 13,
+      "stal_topk_medium": 10,
+      "stal_topk_large": 10
+    }
+  },
+  "config_sha256": "2ceddacf007b4aeee414775ad7f777e4cc978301ad87e32e343c9a90dd45a382",
+  "script_sha256": "c92a22595f822bf03a940809cbd0ed9702ff1c13a8aeef6837f3811e4265847d",
+  "inputs": [
+    {
+      "image": "images/train/0000084_01436_d_0000004.jpg",
+      "image_sha256": "bcc18885ea00913cfc9a86e07a60b5dd4499d60ab8db1429c9b0b2f34e952a72",
+      "label": "labels/train/0000084_01436_d_0000004.txt",
+      "label_sha256": "b7d214f8b3376048c0440f5a298faed67439907738f64c67359cdd42a33aef41"
+    },
+    {
+      "image": "images/train/0000122_01200_d_0000119.jpg",
+      "image_sha256": "248aec06b3f0b274eb189d0f1264c57c81b5973f5711d89f25e2beb54fa0361e",
+      "label": "labels/train/0000122_01200_d_0000119.txt",
+      "label_sha256": "95fdb1e4644acae7e68a6725c5d28ee6f5ab0b86661e55df90265c71aaae012e"
+    },
+    {
+      "image": "images/train/0000260_01408_d_0000107.jpg",
+      "image_sha256": "25e044d739170216d5fab7322ac93d4781e3e6931ab2cbff82c18f0df0e636f7",
+      "label": "labels/train/0000260_01408_d_0000107.txt",
+      "label_sha256": "1df9499b430ddf59c08c7d9b1e2a48cdb29c0aa8daf8513a4d397737d08bc5aa"
+    },
+    {
+      "image": "images/train/0000235_00467_d_0000002.jpg",
+      "image_sha256": "14a0f9c8a91faae5fea6216f99c785b84597bdf127985907c08049d5292a1569",
+      "label": "labels/train/0000235_00467_d_0000002.txt",
+      "label_sha256": "0c18e1e5fad49b6a3632700bda099f0964fe104ecf58768d7613c26dfccd23ef"
+    },
+    {
+      "image": "images/train/9999943_00000_d_0000065.jpg",
+      "image_sha256": "1ff7d478a10396a1cd14aca721fd06b9f566576b064be695e89ce8560213b132",
+      "label": "labels/train/9999943_00000_d_0000065.txt",
+      "label_sha256": "789978402124b99136f5ddc85bdc94ea2d3caed3443b19afc85d46905940abdd"
+    },
+    {
+      "image": "images/train/0000226_01146_d_0000004.jpg",
+      "image_sha256": "fa94d467b9eb9885b3c6d8f00f8286c14b2f731cf1f0058c51d137997d493483",
+      "label": "labels/train/0000226_01146_d_0000004.txt",
+      "label_sha256": "e32ba6801163a7e633a4a24275d10c73ab572eb568c872ed219770deebb866e2"
+    },
+    {
+      "image": "images/train/0000136_00162_d_0000154.jpg",
+      "image_sha256": "eac6867a718f1c5ff67cb497bb44386fc24f657ce13ce4bdecf54d1569e35672",
+      "label": "labels/train/0000136_00162_d_0000154.txt",
+      "label_sha256": "fe9aa104c34f0d0dfedf765c052f9686a937b477d82b1c771ffe2971a99011d6"
+    },
+    {
+      "image": "images/train/0000290_03001_d_0000862.jpg",
+      "image_sha256": "a98bf4b341d4682bac30c31e6ad07d8dbaf411374ed49fdd1209fe5155560de4",
+      "label": "labels/train/0000290_03001_d_0000862.txt",
+      "label_sha256": "fbb93cc61630b1a9e66b057cdd12c3531365f9a34ded53987f0f36dde88f8e96"
+    },
+    {
+      "image": "images/train/0000200_00000_d_0000168.jpg",
+      "image_sha256": "6e0c88962f74e6e33db212ddc91e0a0e575d5470f98d27691b18e430493309aa",
+      "label": "labels/train/0000200_00000_d_0000168.txt",
+      "label_sha256": "2171206b16e8fb25527ed2579caa0582b34ae39e5a4b6800aff2e9f9950cc35e"
+    },
+    {
+      "image": "images/train/0000199_00000_d_0000162.jpg",
+      "image_sha256": "ea71a75a1110575cf98abe5cf4e4aa34d0780b8d7e9cc77edef477ed670caf39",
+      "label": "labels/train/0000199_00000_d_0000162.txt",
+      "label_sha256": "a8f293e9df314303c12762ba612565b3150af2cfafcc1958638c224d0a5159ca"
+    },
+    {
+      "image": "images/train/0000112_01120_d_0000074.jpg",
+      "image_sha256": "83695944cb643ca0680288b1c9e45a6c5f4a8f9eba59c658f79fc845e2728b36",
+      "label": "labels/train/0000112_01120_d_0000074.txt",
+      "label_sha256": "5111d90b48e87a1b5339a4f50bc9a869abd2b21ad30ddbba527813186d5b4403"
+    },
+    {
+      "image": "images/train/0000304_00201_d_0000203.jpg",
+      "image_sha256": "65fe689f64527167ecf61eda202c10afb1d05038d55fd93699cbd01078d66384",
+      "label": "labels/train/0000304_00201_d_0000203.txt",
+      "label_sha256": "87c7a2bd50ed54f4c5f3738820b8d1a8f13b07d31bf1cab5cbfc318a943af5e8"
+    },
+    {
+      "image": "images/train/0000080_00002_d_0000001.jpg",
+      "image_sha256": "12a59470126564f61ec2b83c8cbef56e44b5654748e746c084049c42f8012caf",
+      "label": "labels/train/0000080_00002_d_0000001.txt",
+      "label_sha256": "08b11ae17eba01896a2546911d6e1877f96b34af44c39278a127b2c874250fcd"
+    },
+    {
+      "image": "images/train/0000196_03072_d_0000141.jpg",
+      "image_sha256": "299f2975b34fd86817b2ee28c2dcde88905198a1c22756196c5df5e9e2d3cd2a",
+      "label": "labels/train/0000196_03072_d_0000141.txt",
+      "label_sha256": "8a887dd628e1996a7177325f998f7d3758e8dc0e25c86e038de4fcd7ae2958a1"
+    },
+    {
+      "image": "images/train/0000123_01819_d_0000120.jpg",
+      "image_sha256": "2f7635d1363dacd69ca6765bf246a65db67899e4bfb49796a153f70ae52812a8",
+      "label": "labels/train/0000123_01819_d_0000120.txt",
+      "label_sha256": "51848f4383c5a6b8845e44a331a1eb51498b5ab69b3ec951c6c14f37c7c825c4"
+    },
+    {
+      "image": "images/train/0000146_00601_d_0000060.jpg",
+      "image_sha256": "3684258474163927875f18f1e87ae3a3a0fd23d48707ed414507fbee741f6bca",
+      "label": "labels/train/0000146_00601_d_0000060.txt",
+      "label_sha256": "c97e7704586f2e4cb922813d4f92fc4a94d5c960b671b4f92fd7a8e81f2691ba"
+    }
+  ],
+  "evidence_commit_before_run": "1d90ccbe560d8a39557fd9a0e0f8d522fb67ee5a",
+  "scope": "Post-hoc fixed-checkpoint assignment probe, no optimizer steps; not historical online statistics"
+}

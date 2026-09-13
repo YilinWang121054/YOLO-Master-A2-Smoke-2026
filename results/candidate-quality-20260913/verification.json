@@ -1,0 +1,29 @@
+{
+  "status": "pass",
+  "images": 16,
+  "mode_gt_records": 4296,
+  "candidate_pairs": 46526,
+  "selected_pairs": 21757,
+  "summary_groups_verified": 108,
+  "max_gt_weight_sum_float32_error": 1.341104507446289e-06,
+  "raw_candidates_not_retained_by_mode": [
+    {
+      "image": "images/train/0000136_00162_d_0000154.jpg",
+      "mode": "fixed",
+      "gt": 125,
+      "anchors": [
+        4862
+      ],
+      "recorded_precast_bbox": [
+        499.9999776482582,
+        380.41689693927765,
+        514.1663774847984,
+        390.8334970474243
+      ]
+    }
+  ],
+  "coordinate_note": "gt-records input_bbox preserves precast coordinates; cast to FP32 before reproducing assignment geometry. input_area and masks were computed on actual FP32 inputs.",
+  "summary_sha256": "f6cf910b02010b2ff772b5d8e7650f5c21abe542d4c11b5035900711b1558516",
+  "verification_script_sha256": "4508a9af5d2ac3950e05cb92e94ffdae64095211f946b0a23aa0319f40cfcece",
+  "scope": "Raw saved candidate-to-GT and summary reconciliation, not rerun model inference or causality"
+}
