@@ -79,14 +79,19 @@ def running_processes(experiment_id: str, run_dir: Path) -> list[int]:
                 "run_p1_tal_seed1.py",
                 "run_p1_seed.py",
                 "run_p0_baseline.py",
+                "run_p1_v2_fixed.py",
             )
         )
         is_p0_runner = (
             experiment_id == "p0-locked-s20260824-stats120"
             and "run_p0_baseline.py" in joined
         )
+        is_v2_fixed_runner = (
+            experiment_id == "p1-v2-fixed-s20260825-stats120"
+            and "run_p1_v2_fixed.py" in joined
+        )
         if (is_yolo_train or is_explicit_runner) and (
-            any(needle in joined for needle in needles) or is_p0_runner
+            any(needle in joined for needle in needles) or is_p0_runner or is_v2_fixed_runner
         ):
             found.append(int(process.info["pid"]))
     return sorted(set(found))

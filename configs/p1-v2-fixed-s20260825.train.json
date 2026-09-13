@@ -1,0 +1,18 @@
+{
+  "source_commit": "52c2befa50706b9dff13b6e0813b19413d9f532d",
+  "name": "p1-v2-fixed-s20260825-stats120",
+  "train": {
+    "epochs": 120, "imgsz": 800, "batch": 4, "nbs": 64,
+    "workers": 0, "device": 0, "seed": 20260825,
+    "deterministic": true, "amp": false, "patience": 0, "pretrained": false,
+    "optimizer": "MuSGD", "lr0": 0.01, "lrf": 0.01, "momentum": 0.9,
+    "weight_decay": 0.0005, "warmup_epochs": 3.0,
+    "warmup_momentum": 0.8, "warmup_bias_lr": 0.0,
+    "lora_r": 0, "val": true, "max_det": 500,
+    "mosaic": 1.0, "mixup": 0.0, "copy_paste": 0.0, "close_mosaic": 10,
+    "save": true, "save_period": 10, "plots": true, "verbose": true,
+    "stal_mode": "fixed", "stal_small_area": 1024, "stal_medium_area": 9216,
+    "stal_candidate_scale": 1.5, "stal_min_candidates": 3,
+    "stal_topk_small": 13, "stal_topk_medium": 10, "stal_topk_large": 10
+  }
+}
