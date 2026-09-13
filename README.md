@@ -10,6 +10,8 @@
 
 本仓库保存腾讯犀牛鸟开源人才计划 YOLO-Master 课题 A2 的准入 smoke、首轮探索实验和初步机制分析证据。内容只覆盖 A2；它不是上游功能 PR，也不包含 A3/F1 材料。
 
+9月14日按林老师的合并前意见，补跑了默认配置、STAL和冲突测试，共24项通过；192组CPU分配对照的输出与PR基点完全相同。[复核证据](results/pr274-review-checks-20260914/)已公开，并已在[PR回复](https://github.com/Tencent/YOLO-Master/pull/274#issuecomment-5654468495)直接附上第三seed的三模式完整结果表。功能分支未修改，PR仍待维护者处理；这次兼容性检查不代表P1达标或CUDA/AMP完全等价。
+
 9月13日新增[固定checkpoint的候选质量诊断](results/candidate-quality-20260913/)及[候选位置与质量分布图](results/candidate-quality-20260913/figures-v1/)：同一模型与16张图像下，adaptive增加的正样本数量没有转化为同比例的监督权重增量。图和局限已补入研究报告，原始候选记录、采集等价测试和独立汇总核验均保留；这是离线诊断，不是训练历史补录或P1达标证据。
 
 ## 结论
