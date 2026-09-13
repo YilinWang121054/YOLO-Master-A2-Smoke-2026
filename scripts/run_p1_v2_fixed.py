@@ -16,6 +16,16 @@ SOURCE = ROOT.parent / "YOLO-Master"
 CONFIG = ROOT / "configs/p1-v2-fixed-s20260825.train.json"
 
 
+def validate_train_args(expected, recorded):
+    for key, value in expected.items():
+        actual = recorded.get(key)
+        # Ultralytics serializes device=0 as "0". This is not a training change.
+        if key == "device" and str(actual) == str(value):
+            continue
+        if actual != value:
+            raise ValueError(f"Frozen training parameter changed: {key}")
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--resume", type=Path)
@@ -63,9 +73,7 @@ def main():
         if args.resume.resolve().parent != (run_dir / "weights").resolve():
             raise ValueError("Resume checkpoint is outside this experiment")
         ckpt = torch.load(args.resume, map_location="cpu", weights_only=False)
-        for key, value in config["train"].items():
-            if ckpt["train_args"].get(key) != value:
-                raise ValueError(f"Frozen training parameter changed: {key}")
+        validate_train_args(config["train"], ckpt["train_args"])
         epoch = ckpt.get("epoch", -2)
         if not -1 <= epoch < 119 or ckpt.get("optimizer") is None:
             raise ValueError("Not an incomplete resumable checkpoint")

@@ -28,6 +28,8 @@ Issue 已发布评论正文备份：[`github-issue-246-update.md`](github-issue-
 
 ## 当前 P0/P1 进度（2026-09-13）
 
+官方 MATLAB 实测已在 [PR #274 评论](https://github.com/Tencent/YOLO-Master/pull/274#issuecomment-5653695161)同步，正文与公开证据均回读核对。登记时可附此评论和上面的对齐说明。
+
 - seed 20260824：fixed/adaptive/pure TAL 均已完成 120/120 epoch；正式补充指标使用官方 ignore-region 过滤后的 COCO-style 结果。
 - seed 20260825：fixed/adaptive/pure TAL 均已完成120/120 epoch；中断恢复记录已保留。
 - 经20260910版ignore规则及面积边界重评，两对adaptive-fixed的APs变化为−0.1625、−0.3405 pp，描述性均值−0.2515 pp。按9月11日确认的口径，seed20260824归为探索性并排除正式矩阵；早期统计不完整组仅供参考，当前不能形成同协议三seed的P1达标结论。

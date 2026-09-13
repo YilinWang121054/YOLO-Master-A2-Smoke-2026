@@ -6,7 +6,7 @@
 
 最终课题 [PR #274](https://github.com/Tencent/YOLO-Master/pull/274) 已于北京时间2026年9月11日01:53提交，标题为 `[犀牛鸟-A2]：Add configurable scale-aware TAL assignment for small objects`。当前为open，尚未合并；PR内的研究报告和证据链接固定到已核验提交ce40869，后续按审核意见追加修订。
 
-原始锁定基线已完成120轮训练、完整548张验证及120份在线正样本统计。[DET源码逐项核验](docs/closure-review/DET源码逐项对照-20260911.md)已按允许的替代方案补交，待review，未声称成功运行原MATLAB。seed 20260826三模式也已完成120轮及完整验证，[pure TAL最终记录](results/closure-evaluation/p1-tal-s20260826/)已归档；同seed adaptive相对fixed的ΔAPs为+0.3930个百分点。当前仍不满足完整的P1验收要求，P2尚未完成。详情和限制见研究报告；下方smoke结论只针对准入测试，不代表结题验收通过。
+原始锁定基线已完成120轮训练、完整548张验证及120份在线正样本统计。**9月13日晚已成功运行[官方 MATLAB DET](docs/closure-review/DET官方MATLAB实测对齐-20260913.md)**，AP/AP50/AP75/AR500与Python移植实现最大差异1.28×10⁻¹²个百分点，P0材料及实测对齐已补齐、待导师验收。[PR补充评论](https://github.com/Tencent/YOLO-Master/pull/274#issuecomment-5653695161)已发布。旧seed20260826三模式全部完成，adaptive−fixed ΔAPs为+0.3930个百分点，仍不满足P1。新的[fixed 120e＋逐轮统计对照](docs/closure-review/P1第二轮fixed启动-20260913.md)已启动；[实批次FP32/AMP检查](results/p1-v2-amp-audit-20260913/)发现分配和梯度差异，继续调查。P1其余缺项、提升要求及P2未完成的状态均保留；下方smoke仅代表准入测试。
 
 本仓库保存腾讯犀牛鸟开源人才计划 YOLO-Master 课题 A2 的准入 smoke、首轮探索实验和初步机制分析证据。内容只覆盖 A2；它不是上游功能 PR，也不包含 A3/F1 材料。
 
