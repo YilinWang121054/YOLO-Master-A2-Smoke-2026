@@ -18,6 +18,8 @@ def main():
         raise RuntimeError("Output exists; use resume_p1_training.py with the v2 recovery config")
     for process in psutil.process_iter(["pid", "name", "cmdline"]):
         try:
+            if (process.info.get("name") or "").lower() not in ("python.exe", "pythonw.exe", "python", "python3", "yolo.exe"):
+                continue
             command = " ".join(process.info["cmdline"] or []).lower()
             if process.pid != psutil.Process().pid and any(token in command for token in (
                 "run_p1_seed.py", "run_p0_baseline.py", "run_p1_v2_fixed.py", "run_p1_tal_seed1.py")):
