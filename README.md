@@ -6,7 +6,7 @@
 
 [A2研究报告](docs/closure-review/研究报告.md) · [P0结果与逐轮统计](results/closure-evaluation/p0-locked-s20260824-stats120/) · [原始训练日志](logs/closure-evaluation/p0-locked-s20260824-stats120/training-original/) · [功能代码](https://github.com/YilinWang121054/YOLO-Master/commit/2efc4d91d7363d65b6f38e7d47c585231bb98158)
 
-9月15日下午，[第二轮筛选的fixed 20轮对照及五次评测已归档](docs/closure-review/P1第二轮筛选-fixed对照归档-20260915.md)，最后5轮平均APs为6.4417。此值只用于同预算筛选，不与120轮结果混比。首个adaptive已完成20轮训练、尚待评测，后续候选继续按原队列运行。
+9月15日下午，[第二轮筛选的fixed 20轮对照及五次评测已归档](docs/closure-review/P1第二轮筛选-fixed对照归档-20260915.md)，最后5轮平均APs为6.4417。[首个adaptive候选也已完成全部评测并归档](docs/closure-review/P1第二轮筛选-首个adaptive结果-20260915.md)：平均APs为6.3919，相对fixed为−0.0498个百分点；APl下降2.1984个百分点，large零正样本观测从3次变为4次，不满足冻结的筛选条件。small零正样本比例虽从8.4263%降至4.9923%，本次短训中仍未对应APs提升。这些数值只用于同预算筛选，不与120轮结果混比；其余四个候选继续按原队列运行。
 
 最终课题 [PR #274](https://github.com/Tencent/YOLO-Master/pull/274) 已于北京时间2026年9月11日01:53提交，标题为 `[犀牛鸟-A2]：Add configurable scale-aware TAL assignment for small objects`。当前为open，尚未合并；PR内的研究报告和证据链接固定到已核验提交ce40869，后续按审核意见追加修订。
 

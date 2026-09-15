@@ -1,0 +1,17 @@
+{
+  "worker": "cpu",
+  "case": "s1-adaptive-reference",
+  "pid": 31688,
+  "command": [
+    "F:\\conda-envs\\yolo-master\\python.exe",
+    "-X",
+    "utf8",
+    "E:\\desktop\\\u4fdd\u7814+\u5de5\u4f5c\\\u5c31\u4e1a\\\u5b9e\u8df5\\\u817e\u8baf\u7280\u725b\u9e1f\\YOLO-Master-A2-Smoke-2026\\scripts\\evaluate_p1_screen.py",
+    "--case",
+    "s1-adaptive-reference",
+    "--epoch",
+    "17"
+  ],
+  "started_at": "2026-09-15T08:34:41.178211+00:00",
+  "timeout_seconds": 7200
+}
