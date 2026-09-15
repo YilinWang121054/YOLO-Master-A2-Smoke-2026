@@ -2,7 +2,7 @@
 
 ## 结题材料入口（2026-09-15）
 
-**9月15日更新：**[第二轮 fixed 对照](docs/closure-review/P1第二轮fixed完成-20260915.md)已完成120轮、120份在线统计和548张正式评测，APs=13.0095。原始日志、预测包、配置及校验已归档。本组补跑MATLAB时启动报5201，未获得本组MATLAB指标；此前P0已成功实测的证据不受影响。P1仍未达标，未将这组fixed与旧adaptive拼成正式对照。
+**9月15日更新：**[第二轮 fixed 对照](docs/closure-review/P1第二轮fixed完成-20260915.md)已完成120轮、120份在线统计和548张正式评测，APs=13.0095。[本组官方MATLAB补评](docs/closure-review/P1第二轮fixed-MATLAB补评成功-20260915.md)已于09:24成功，四项总体指标与Python最大差约1.21×10⁻¹²个百分点；早先5201失败记录保留。作者已确认第二轮筛选获准，[1组fixed＋5组adaptive、各20轮的配置与规则](docs/closure-review/P1第二轮筛选冻结-20260915.md)已冻结，GPU/CPU队列已启动。P1仍未达标，不将短训或旧组拼接当作正式结论。
 
 [A2研究报告](docs/closure-review/研究报告.md) · [P0结果与逐轮统计](results/closure-evaluation/p0-locked-s20260824-stats120/) · [原始训练日志](logs/closure-evaluation/p0-locked-s20260824-stats120/training-original/) · [功能代码](https://github.com/YilinWang121054/YOLO-Master/commit/2efc4d91d7363d65b6f38e7d47c585231bb98158)
 

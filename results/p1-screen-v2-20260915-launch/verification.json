@@ -1,0 +1,69 @@
+{
+  "observed_at": "2026-09-15T01:42:08.871469+00:00",
+  "snapshots": [
+    {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\freeze-manifest.json",
+      "snapshot": "freeze-manifest.json",
+      "bytes": 1837,
+      "sha256": "e31058ba38aaf6324649308608c04fe6d4793cca7660fcf8109bcba883fb8f03"
+    },
+    {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\gpu-state.json",
+      "snapshot": "gpu-state-at-launch.json",
+      "bytes": 490,
+      "sha256": "2b6442ebf360737e83cc9819136935cec4f05ae49964281ff83fbfdf8aed04c9"
+    },
+    {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\cpu-state.json",
+      "snapshot": "cpu-state-at-launch.json",
+      "bytes": 118,
+      "sha256": "026213b88f4d29a0813ffb94e470cc7fed652bac351317071854925fd51702ca"
+    },
+    {
+      "source": "F:\\YOLO-Master-A2-P1\\diagnostics\\screen-v2-smoke-s1-adaptive-reference\\args.yaml",
+      "snapshot": "smoke-args.yaml",
+      "bytes": 8619,
+      "sha256": "9a301362926a666aae6dd5df4ec6254172c61e22e228cfcde4b6ffa4e70f4c61"
+    },
+    {
+      "source": "F:\\YOLO-Master-A2-P1\\diagnostics\\screen-v2-smoke-s1-adaptive-reference\\results.csv",
+      "snapshot": "smoke-results.csv",
+      "bytes": 397,
+      "sha256": "c9b1783e728ce59b490a290c7a5b998d178f8ab6788cfbeb15bc0fe6b3dd1cca"
+    },
+    {
+      "source": "F:\\YOLO-Master-A2-P1\\diagnostics\\screen-v2-smoke-s1-adaptive-reference\\assignment\\epoch-001.json",
+      "snapshot": "smoke-epoch-001.json",
+      "bytes": 2948,
+      "sha256": "d10006ae45c2c82664ffff0b8360c67daebe6cb8153208bd52756454b6a5c84d"
+    }
+  ],
+  "test_command": [
+    "F:\\conda-envs\\yolo-master\\python.exe",
+    "-X",
+    "utf8",
+    "-m",
+    "pytest",
+    "tests/test_p1_screen_contract.py",
+    "tests/test_p1_v2_resume_contract.py",
+    "tests/test_evaluation_boundaries.py",
+    "tests/test_archive_raw_logs.py",
+    "-q",
+    "-o",
+    "addopts="
+  ],
+  "tests_exit_code": 0,
+  "cpu_smoke_exit_code_observed_by_caller": 0,
+  "smoke_scope": "One bundled mini image, CPU,1 epoch; not a VisDrone screening result; no separate original stdout file retained",
+  "state_scope": "Snapshot of queued/running workers, not completed training",
+  "files_sha256": {
+    "cpu-state-at-launch.json": "026213b88f4d29a0813ffb94e470cc7fed652bac351317071854925fd51702ca",
+    "freeze-manifest.json": "e31058ba38aaf6324649308608c04fe6d4793cca7660fcf8109bcba883fb8f03",
+    "gpu-state-at-launch.json": "2b6442ebf360737e83cc9819136935cec4f05ae49964281ff83fbfdf8aed04c9",
+    "smoke-args.yaml": "9a301362926a666aae6dd5df4ec6254172c61e22e228cfcde4b6ffa4e70f4c61",
+    "smoke-epoch-001.json": "d10006ae45c2c82664ffff0b8360c67daebe6cb8153208bd52756454b6a5c84d",
+    "smoke-results.csv": "c9b1783e728ce59b490a290c7a5b998d178f8ab6788cfbeb15bc0fe6b3dd1cca",
+    "tests.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tests.stdout.log": "3c57e6f658cdf3aad31d77a51ea1148785b7edabb4f23e77c63c2c3dbd413396"
+  }
+}

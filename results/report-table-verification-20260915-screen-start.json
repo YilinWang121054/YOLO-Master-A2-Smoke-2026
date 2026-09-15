@@ -1,0 +1,24 @@
+{
+  "checked_at": "2026-09-15T01:42:09.118017+00:00",
+  "report_sha256": "b7578901fa02a9f3a4287c253aecc8a51014c348850987f3aeeb740334594fbe",
+  "comparison_rows": 9,
+  "checked_numeric_cells": 126,
+  "completed_v2": {
+    "note_sha256": "eefd01e170de85624c88a9d281a28311dc30a5f876f79d1b522573878fae1823",
+    "report_numeric_cells": 8,
+    "note_numeric_cells": 23
+  },
+  "scope": "Table-to-JSON equality at displayed precision and local link existence; not evaluator runtime parity or acceptance",
+  "status": "pass",
+  "checked_runs": [
+    "p1-fixed-s20260824",
+    "p1-adaptive-s20260824",
+    "p1-tal-s20260824",
+    "p1-fixed-s20260825",
+    "p1-adaptive-s20260825",
+    "p1-tal-s20260825",
+    "p1-fixed-s20260826",
+    "p1-adaptive-s20260826",
+    "p1-tal-s20260826"
+  ]
+}
