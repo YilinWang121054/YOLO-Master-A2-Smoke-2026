@@ -10,6 +10,8 @@
 
 9月15日晚，[adaptive-k10的五次评测和原始证据已归档](docs/closure-review/P1第二轮筛选-k10结果-20260915.md)：最后5轮平均APs为6.7779，相对fixed提高0.3362个百分点，总体DET AP提高0.4440个百分点，三档零正样本比例均未恶化。但APl下降0.6340个百分点，超过冻结规则允许的0.5，本组仍不能入选。后三个候选继续按预定队列运行，完整筛选尚未结束。
 
+23:17，[adaptive-compact（scale=1.25、k10）完成五次评测](docs/closure-review/P1第二轮筛选-compact结果-20260915.md)，原始证据随后归档。最后5轮平均APs为6.9234，相对fixed提高0.4817个百分点，但APl下降1.7148个百分点，medium/large零正样本次数分别从46/3变为47/5，仍不满足筛选条件。目前四组已完成训练和评测，剩余两组按冻结队列继续。
+
 最终课题 [PR #274](https://github.com/Tencent/YOLO-Master/pull/274) 已于北京时间2026年9月11日01:53提交，标题为 `[犀牛鸟-A2]：Add configurable scale-aware TAL assignment for small objects`。当前为open，尚未合并；PR内的研究报告和证据链接固定到已核验提交ce40869，后续按审核意见追加修订。
 
 原始锁定基线已完成120轮训练、完整548张验证及120份在线正样本统计。**9月13日晚已成功运行[官方 MATLAB DET](docs/closure-review/DET官方MATLAB实测对齐-20260913.md)**，AP/AP50/AP75/AR500与Python移植实现最大差异1.28×10⁻¹²个百分点，P0材料及实测对齐已补齐、待导师验收。[PR补充评论](https://github.com/Tencent/YOLO-Master/pull/274#issuecomment-5653695161)已发布。旧seed20260826三模式全部完成，adaptive−fixed ΔAPs为+0.3930个百分点，仍不满足P1。新的[fixed 120e＋逐轮统计对照](docs/closure-review/P1第二轮fixed完成-20260915.md)也已完成；[实批次FP32/AMP检查](results/p1-v2-amp-audit-20260913/)发现分配和梯度差异，继续调查。P1其余缺项、提升要求及P2未完成的状态均保留；下方smoke仅代表准入测试。
