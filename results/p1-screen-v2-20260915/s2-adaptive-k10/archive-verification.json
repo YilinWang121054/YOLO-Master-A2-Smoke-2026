@@ -1,0 +1,819 @@
+{
+  "archived_at": "2026-09-15T14:28:30.693208+00:00",
+  "case": "s2-adaptive-k10",
+  "files": {
+    "freeze-manifest.json": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\freeze-manifest.json",
+      "source_sha256": "e31058ba38aaf6324649308608c04fe6d4793cca7660fcf8109bcba883fb8f03",
+      "source_bytes": 1837,
+      "archived_sha256": "e31058ba38aaf6324649308608c04fe6d4793cca7660fcf8109bcba883fb8f03",
+      "archived_bytes": 1837,
+      "encoding": "original bytes"
+    },
+    "screen-config.json": {
+      "source": "E:\\desktop\\\u4fdd\u7814+\u5de5\u4f5c\\\u5c31\u4e1a\\\u5b9e\u8df5\\\u817e\u8baf\u7280\u725b\u9e1f\\YOLO-Master-A2-Smoke-2026\\configs\\p1-screen-v2-20260915.json",
+      "source_sha256": "fa913f6ed227e9d0d624c847fbe8fff145ea2782e13ce4ffd43ac079b9f27626",
+      "source_bytes": 2374,
+      "archived_sha256": "fa913f6ed227e9d0d624c847fbe8fff145ea2782e13ce4ffd43ac079b9f27626",
+      "archived_bytes": 2374,
+      "encoding": "original bytes"
+    },
+    "executed-sources/configs/p1-screen-v2-20260915.json": {
+      "source": "E:\\desktop\\\u4fdd\u7814+\u5de5\u4f5c\\\u5c31\u4e1a\\\u5b9e\u8df5\\\u817e\u8baf\u7280\u725b\u9e1f\\YOLO-Master-A2-Smoke-2026\\configs\\p1-screen-v2-20260915.json",
+      "source_sha256": "fa913f6ed227e9d0d624c847fbe8fff145ea2782e13ce4ffd43ac079b9f27626",
+      "source_bytes": 2374,
+      "archived_sha256": "fa913f6ed227e9d0d624c847fbe8fff145ea2782e13ce4ffd43ac079b9f27626",
+      "archived_bytes": 2374,
+      "encoding": "original bytes"
+    },
+    "executed-sources/configs/VisDrone-full.yaml": {
+      "source": "E:\\desktop\\\u4fdd\u7814+\u5de5\u4f5c\\\u5c31\u4e1a\\\u5b9e\u8df5\\\u817e\u8baf\u7280\u725b\u9e1f\\YOLO-Master-A2-Smoke-2026\\configs\\VisDrone-full.yaml",
+      "source_sha256": "2fdb317ec85f9e68a6669c4ea1b85789525b569cfb5a508eeac79f906c168c0a",
+      "source_bytes": 196,
+      "archived_sha256": "2fdb317ec85f9e68a6669c4ea1b85789525b569cfb5a508eeac79f906c168c0a",
+      "archived_bytes": 196,
+      "encoding": "original bytes"
+    },
+    "executed-sources/scripts/p1_screen_contract.py": {
+      "source": "E:\\desktop\\\u4fdd\u7814+\u5de5\u4f5c\\\u5c31\u4e1a\\\u5b9e\u8df5\\\u817e\u8baf\u7280\u725b\u9e1f\\YOLO-Master-A2-Smoke-2026\\scripts\\p1_screen_contract.py",
+      "source_sha256": "76444a3498705d05d607e9d7e0bfda98ebdeed3a70476c27fe7fd9ccaece2c6a",
+      "source_bytes": 6258,
+      "archived_sha256": "76444a3498705d05d607e9d7e0bfda98ebdeed3a70476c27fe7fd9ccaece2c6a",
+      "archived_bytes": 6258,
+      "encoding": "original bytes"
+    },
+    "executed-sources/scripts/run_p1_screen.py": {
+      "source": "E:\\desktop\\\u4fdd\u7814+\u5de5\u4f5c\\\u5c31\u4e1a\\\u5b9e\u8df5\\\u817e\u8baf\u7280\u725b\u9e1f\\YOLO-Master-A2-Smoke-2026\\scripts\\run_p1_screen.py",
+      "source_sha256": "c450b5c5825f0c38da78d3eb18db50a8cf972135500fa57da72c32950cc6551e",
+      "source_bytes": 7743,
+      "archived_sha256": "c450b5c5825f0c38da78d3eb18db50a8cf972135500fa57da72c32950cc6551e",
+      "archived_bytes": 7743,
+      "encoding": "original bytes"
+    },
+    "executed-sources/scripts/evaluate_p1_screen.py": {
+      "source": "E:\\desktop\\\u4fdd\u7814+\u5de5\u4f5c\\\u5c31\u4e1a\\\u5b9e\u8df5\\\u817e\u8baf\u7280\u725b\u9e1f\\YOLO-Master-A2-Smoke-2026\\scripts\\evaluate_p1_screen.py",
+      "source_sha256": "e28591907f1fc6e5a69d0106fba720d0ba35c17ebcedb2766a7e5c04ccc4a117",
+      "source_bytes": 7468,
+      "archived_sha256": "e28591907f1fc6e5a69d0106fba720d0ba35c17ebcedb2766a7e5c04ccc4a117",
+      "archived_bytes": 7468,
+      "encoding": "original bytes"
+    },
+    "executed-sources/scripts/supervise_p1_screen.py": {
+      "source": "E:\\desktop\\\u4fdd\u7814+\u5de5\u4f5c\\\u5c31\u4e1a\\\u5b9e\u8df5\\\u817e\u8baf\u7280\u725b\u9e1f\\YOLO-Master-A2-Smoke-2026\\scripts\\supervise_p1_screen.py",
+      "source_sha256": "8bc44b2b4f32b6faaece738da05065d0da6d91a1950bf30cec7050ee41db3cb4",
+      "source_bytes": 11514,
+      "archived_sha256": "8bc44b2b4f32b6faaece738da05065d0da6d91a1950bf30cec7050ee41db3cb4",
+      "archived_bytes": 11514,
+      "encoding": "original bytes"
+    },
+    "executed-sources/scripts/select_p1_screen.py": {
+      "source": "E:\\desktop\\\u4fdd\u7814+\u5de5\u4f5c\\\u5c31\u4e1a\\\u5b9e\u8df5\\\u817e\u8baf\u7280\u725b\u9e1f\\YOLO-Master-A2-Smoke-2026\\scripts\\select_p1_screen.py",
+      "source_sha256": "d18378cf96f9765527912d3c2530639948f3a05cb4a68e4656a02eb2c7c39f30",
+      "source_bytes": 3697,
+      "archived_sha256": "d18378cf96f9765527912d3c2530639948f3a05cb4a68e4656a02eb2c7c39f30",
+      "archived_bytes": 3697,
+      "encoding": "original bytes"
+    },
+    "executed-sources/scripts/assignment_observer.py": {
+      "source": "E:\\desktop\\\u4fdd\u7814+\u5de5\u4f5c\\\u5c31\u4e1a\\\u5b9e\u8df5\\\u817e\u8baf\u7280\u725b\u9e1f\\YOLO-Master-A2-Smoke-2026\\scripts\\assignment_observer.py",
+      "source_sha256": "be41773cb69d9fc0c0397d66fa83b0b178c0367bef0a132163db9b106c70c4c2",
+      "source_bytes": 8159,
+      "archived_sha256": "be41773cb69d9fc0c0397d66fa83b0b178c0367bef0a132163db9b106c70c4c2",
+      "archived_bytes": 8159,
+      "encoding": "original bytes"
+    },
+    "executed-sources/scripts/assignment_coverage.py": {
+      "source": "E:\\desktop\\\u4fdd\u7814+\u5de5\u4f5c\\\u5c31\u4e1a\\\u5b9e\u8df5\\\u817e\u8baf\u7280\u725b\u9e1f\\YOLO-Master-A2-Smoke-2026\\scripts\\assignment_coverage.py",
+      "source_sha256": "1854bc27008f3763b26a77022911453cb6f794f3581d0535c05e94ef14ebd077",
+      "source_bytes": 837,
+      "archived_sha256": "1854bc27008f3763b26a77022911453cb6f794f3581d0535c05e94ef14ebd077",
+      "archived_bytes": 837,
+      "encoding": "original bytes"
+    },
+    "executed-sources/scripts/resume_p1_training.py": {
+      "source": "E:\\desktop\\\u4fdd\u7814+\u5de5\u4f5c\\\u5c31\u4e1a\\\u5b9e\u8df5\\\u817e\u8baf\u7280\u725b\u9e1f\\YOLO-Master-A2-Smoke-2026\\scripts\\resume_p1_training.py",
+      "source_sha256": "2e6bdc1267c7876db9ed56454d4d2a4531bb7353956deec5e44e613351f3483a",
+      "source_bytes": 13758,
+      "archived_sha256": "2e6bdc1267c7876db9ed56454d4d2a4531bb7353956deec5e44e613351f3483a",
+      "archived_bytes": 13758,
+      "encoding": "original bytes"
+    },
+    "executed-sources/scripts/run_p1_v2_fixed.py": {
+      "source": "E:\\desktop\\\u4fdd\u7814+\u5de5\u4f5c\\\u5c31\u4e1a\\\u5b9e\u8df5\\\u817e\u8baf\u7280\u725b\u9e1f\\YOLO-Master-A2-Smoke-2026\\scripts\\run_p1_v2_fixed.py",
+      "source_sha256": "ddaef0004c46e4165d1afc756daa9eada93b9295b167502d4743bb1928fa4a3a",
+      "source_bytes": 5251,
+      "archived_sha256": "ddaef0004c46e4165d1afc756daa9eada93b9295b167502d4743bb1928fa4a3a",
+      "archived_bytes": 5251,
+      "encoding": "original bytes"
+    },
+    "executed-sources/scripts/export_visdrone_det_txt.py": {
+      "source": "E:\\desktop\\\u4fdd\u7814+\u5de5\u4f5c\\\u5c31\u4e1a\\\u5b9e\u8df5\\\u817e\u8baf\u7280\u725b\u9e1f\\YOLO-Master-A2-Smoke-2026\\scripts\\export_visdrone_det_txt.py",
+      "source_sha256": "dcdb94bd8e37d5e3a3cc31e161295e39e112dffcaef53972d2d6b516da8aa67c",
+      "source_bytes": 3154,
+      "archived_sha256": "dcdb94bd8e37d5e3a3cc31e161295e39e112dffcaef53972d2d6b516da8aa67c",
+      "archived_bytes": 3154,
+      "encoding": "original bytes"
+    },
+    "executed-sources/scripts/evaluate_visdrone_det_strict.py": {
+      "source": "E:\\desktop\\\u4fdd\u7814+\u5de5\u4f5c\\\u5c31\u4e1a\\\u5b9e\u8df5\\\u817e\u8baf\u7280\u725b\u9e1f\\YOLO-Master-A2-Smoke-2026\\scripts\\evaluate_visdrone_det_strict.py",
+      "source_sha256": "c54f925be2c70fe90e57c123ccc7c2653e83b7800e7d8209196b5f1df6e0f460",
+      "source_bytes": 8767,
+      "archived_sha256": "c54f925be2c70fe90e57c123ccc7c2653e83b7800e7d8209196b5f1df6e0f460",
+      "archived_bytes": 8767,
+      "encoding": "original bytes"
+    },
+    "executed-sources/scripts/evaluate_visdrone_coco_style.py": {
+      "source": "E:\\desktop\\\u4fdd\u7814+\u5de5\u4f5c\\\u5c31\u4e1a\\\u5b9e\u8df5\\\u817e\u8baf\u7280\u725b\u9e1f\\YOLO-Master-A2-Smoke-2026\\scripts\\evaluate_visdrone_coco_style.py",
+      "source_sha256": "9c550f903b55ed042c6553ca6b36426d91fba5dbe3e0e2ffba81f204e7008bac",
+      "source_bytes": 20677,
+      "archived_sha256": "9c550f903b55ed042c6553ca6b36426d91fba5dbe3e0e2ffba81f204e7008bac",
+      "archived_bytes": 20677,
+      "encoding": "original bytes"
+    },
+    "executed-sources/scripts/archive_p1_screen_case.py": {
+      "source": "E:\\desktop\\\u4fdd\u7814+\u5de5\u4f5c\\\u5c31\u4e1a\\\u5b9e\u8df5\\\u817e\u8baf\u7280\u725b\u9e1f\\YOLO-Master-A2-Smoke-2026\\scripts\\archive_p1_screen_case.py",
+      "source_sha256": "4ae54a3a63214f294fe9cea01104b54e1b570d4eb9974638daf2be5252fd5b25",
+      "source_bytes": 7265,
+      "archived_sha256": "4ae54a3a63214f294fe9cea01104b54e1b570d4eb9974638daf2be5252fd5b25",
+      "archived_bytes": 7265,
+      "encoding": "original bytes"
+    },
+    "training/training-complete.json": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\s2-adaptive-k10\\training-complete.json",
+      "source_sha256": "17e5db81f365fa021550d47e23e9f6371277a68acd09dc62aa8fefad3cbc46c3",
+      "source_bytes": 3333,
+      "archived_sha256": "17e5db81f365fa021550d47e23e9f6371277a68acd09dc62aa8fefad3cbc46c3",
+      "archived_bytes": 3333,
+      "encoding": "original bytes"
+    },
+    "training/args.yaml": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\s2-adaptive-k10\\args.yaml",
+      "source_sha256": "29295e9038cbc5af95a8521a0652abf1d66c416f70fc28de760200fc855dd4ee",
+      "source_bytes": 8597,
+      "archived_sha256": "29295e9038cbc5af95a8521a0652abf1d66c416f70fc28de760200fc855dd4ee",
+      "archived_bytes": 8597,
+      "encoding": "original bytes"
+    },
+    "training/results.csv": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\s2-adaptive-k10\\results.csv",
+      "source_sha256": "c636bfe213e5197c81fed73c7c80fd23ee9f330565cd9ba456ddbea145168599",
+      "source_bytes": 4440,
+      "archived_sha256": "c636bfe213e5197c81fed73c7c80fd23ee9f330565cd9ba456ddbea145168599",
+      "archived_bytes": 4440,
+      "encoding": "original bytes"
+    },
+    "training/assignment/epoch-001.json": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\s2-adaptive-k10\\assignment\\epoch-001.json",
+      "source_sha256": "d3b302f32662373318c83ed7c4c0cf9be45d0deb28ade38f27ef6d045297f3a9",
+      "source_bytes": 37070,
+      "archived_sha256": "d3b302f32662373318c83ed7c4c0cf9be45d0deb28ade38f27ef6d045297f3a9",
+      "archived_bytes": 37070,
+      "encoding": "original bytes"
+    },
+    "training/assignment/epoch-002.json": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\s2-adaptive-k10\\assignment\\epoch-002.json",
+      "source_sha256": "7cc9f3fced3715a6aa2645d451a9f0fb25c82c48fd2c2f87612721e10f8e75db",
+      "source_bytes": 38201,
+      "archived_sha256": "7cc9f3fced3715a6aa2645d451a9f0fb25c82c48fd2c2f87612721e10f8e75db",
+      "archived_bytes": 38201,
+      "encoding": "original bytes"
+    },
+    "training/assignment/epoch-003.json": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\s2-adaptive-k10\\assignment\\epoch-003.json",
+      "source_sha256": "427a928fa4250f5c6e5403706c3b39e0cebfb16969cb04e0ff94ddab7adad565",
+      "source_bytes": 37586,
+      "archived_sha256": "427a928fa4250f5c6e5403706c3b39e0cebfb16969cb04e0ff94ddab7adad565",
+      "archived_bytes": 37586,
+      "encoding": "original bytes"
+    },
+    "training/assignment/epoch-004.json": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\s2-adaptive-k10\\assignment\\epoch-004.json",
+      "source_sha256": "f0767b5451626491bae3b648051f232ab1a6d015fb3afafa08906d7b7e587b72",
+      "source_bytes": 37636,
+      "archived_sha256": "f0767b5451626491bae3b648051f232ab1a6d015fb3afafa08906d7b7e587b72",
+      "archived_bytes": 37636,
+      "encoding": "original bytes"
+    },
+    "training/assignment/epoch-005.json": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\s2-adaptive-k10\\assignment\\epoch-005.json",
+      "source_sha256": "c04a091e16cb8b5c334849c19591da5cafd4bd9369a7beea0d302551441bb6ed",
+      "source_bytes": 38031,
+      "archived_sha256": "c04a091e16cb8b5c334849c19591da5cafd4bd9369a7beea0d302551441bb6ed",
+      "archived_bytes": 38031,
+      "encoding": "original bytes"
+    },
+    "training/assignment/epoch-006.json": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\s2-adaptive-k10\\assignment\\epoch-006.json",
+      "source_sha256": "e52562b971bb1cda3ca72276d56c07c6b89f7a7d8b1a15461b2642ebd453d227",
+      "source_bytes": 39145,
+      "archived_sha256": "e52562b971bb1cda3ca72276d56c07c6b89f7a7d8b1a15461b2642ebd453d227",
+      "archived_bytes": 39145,
+      "encoding": "original bytes"
+    },
+    "training/assignment/epoch-007.json": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\s2-adaptive-k10\\assignment\\epoch-007.json",
+      "source_sha256": "2a7237b68522667cebe8d9d860c3277e83d1263e5c0b40b80cc19b797afa612f",
+      "source_bytes": 38744,
+      "archived_sha256": "2a7237b68522667cebe8d9d860c3277e83d1263e5c0b40b80cc19b797afa612f",
+      "archived_bytes": 38744,
+      "encoding": "original bytes"
+    },
+    "training/assignment/epoch-008.json": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\s2-adaptive-k10\\assignment\\epoch-008.json",
+      "source_sha256": "7a477974ab2bb1fcb8509f66c79575a0af8b0e47cb1cf0951eb9cc3a6b693da9",
+      "source_bytes": 38585,
+      "archived_sha256": "7a477974ab2bb1fcb8509f66c79575a0af8b0e47cb1cf0951eb9cc3a6b693da9",
+      "archived_bytes": 38585,
+      "encoding": "original bytes"
+    },
+    "training/assignment/epoch-009.json": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\s2-adaptive-k10\\assignment\\epoch-009.json",
+      "source_sha256": "b9163e182febfa202aa56d4f816fedb47b73ec5b80b6e58fec84fbd8cc2ed0ea",
+      "source_bytes": 37496,
+      "archived_sha256": "b9163e182febfa202aa56d4f816fedb47b73ec5b80b6e58fec84fbd8cc2ed0ea",
+      "archived_bytes": 37496,
+      "encoding": "original bytes"
+    },
+    "training/assignment/epoch-010.json": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\s2-adaptive-k10\\assignment\\epoch-010.json",
+      "source_sha256": "ef15c79c47e2423d231a6fdcae5bdd3f4d1b0673558ce8c48932f769ee9e9fde",
+      "source_bytes": 37278,
+      "archived_sha256": "ef15c79c47e2423d231a6fdcae5bdd3f4d1b0673558ce8c48932f769ee9e9fde",
+      "archived_bytes": 37278,
+      "encoding": "original bytes"
+    },
+    "training/assignment/epoch-011.json": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\s2-adaptive-k10\\assignment\\epoch-011.json",
+      "source_sha256": "49bc03486f80de7138353eb93165b31a5936203a31bd4af5e017f631cb02e093",
+      "source_bytes": 37968,
+      "archived_sha256": "49bc03486f80de7138353eb93165b31a5936203a31bd4af5e017f631cb02e093",
+      "archived_bytes": 37968,
+      "encoding": "original bytes"
+    },
+    "training/assignment/epoch-012.json": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\s2-adaptive-k10\\assignment\\epoch-012.json",
+      "source_sha256": "e2fcad5d596984f397dccbe5685d228f4b58566451ddf15aa564116ac1098cdf",
+      "source_bytes": 37206,
+      "archived_sha256": "e2fcad5d596984f397dccbe5685d228f4b58566451ddf15aa564116ac1098cdf",
+      "archived_bytes": 37206,
+      "encoding": "original bytes"
+    },
+    "training/assignment/epoch-013.json": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\s2-adaptive-k10\\assignment\\epoch-013.json",
+      "source_sha256": "d8274dcdb975d33a5327d6ed3ee09b09c7d60ceaa5efcde245932d7f2aca6f7c",
+      "source_bytes": 37476,
+      "archived_sha256": "d8274dcdb975d33a5327d6ed3ee09b09c7d60ceaa5efcde245932d7f2aca6f7c",
+      "archived_bytes": 37476,
+      "encoding": "original bytes"
+    },
+    "training/assignment/epoch-014.json": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\s2-adaptive-k10\\assignment\\epoch-014.json",
+      "source_sha256": "8cd64e8ea8dcdf528c5da3c99b2c97c0cdca71654702a77fc0a0b5a6f81ed18f",
+      "source_bytes": 37381,
+      "archived_sha256": "8cd64e8ea8dcdf528c5da3c99b2c97c0cdca71654702a77fc0a0b5a6f81ed18f",
+      "archived_bytes": 37381,
+      "encoding": "original bytes"
+    },
+    "training/assignment/epoch-015.json": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\s2-adaptive-k10\\assignment\\epoch-015.json",
+      "source_sha256": "3e1154c993ea0cd35d3b4928a02ed1a2eb4ed933ea461633ca3bc1ec77ef73c0",
+      "source_bytes": 37332,
+      "archived_sha256": "3e1154c993ea0cd35d3b4928a02ed1a2eb4ed933ea461633ca3bc1ec77ef73c0",
+      "archived_bytes": 37332,
+      "encoding": "original bytes"
+    },
+    "training/assignment/epoch-016.json": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\s2-adaptive-k10\\assignment\\epoch-016.json",
+      "source_sha256": "3e0f561b9325f38989f6ef7dbbdaff4cb2e206309b79b06e50aeb6c148d7e8ff",
+      "source_bytes": 38387,
+      "archived_sha256": "3e0f561b9325f38989f6ef7dbbdaff4cb2e206309b79b06e50aeb6c148d7e8ff",
+      "archived_bytes": 38387,
+      "encoding": "original bytes"
+    },
+    "training/assignment/epoch-017.json": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\s2-adaptive-k10\\assignment\\epoch-017.json",
+      "source_sha256": "eda2504695a3f74743c61c01a5d9753d1081d33f3be4060ca2a2d07a0d836248",
+      "source_bytes": 37889,
+      "archived_sha256": "eda2504695a3f74743c61c01a5d9753d1081d33f3be4060ca2a2d07a0d836248",
+      "archived_bytes": 37889,
+      "encoding": "original bytes"
+    },
+    "training/assignment/epoch-018.json": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\s2-adaptive-k10\\assignment\\epoch-018.json",
+      "source_sha256": "1458c3e78f6a5a962bb6f8e1170be7a0304ae1f3f2744f42b1c504a7315cfc8f",
+      "source_bytes": 38203,
+      "archived_sha256": "1458c3e78f6a5a962bb6f8e1170be7a0304ae1f3f2744f42b1c504a7315cfc8f",
+      "archived_bytes": 38203,
+      "encoding": "original bytes"
+    },
+    "training/assignment/epoch-019.json": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\s2-adaptive-k10\\assignment\\epoch-019.json",
+      "source_sha256": "1f521ca7c88630934877500f3e827aa946ba785df40373019d3d1776eda0a592",
+      "source_bytes": 37436,
+      "archived_sha256": "1f521ca7c88630934877500f3e827aa946ba785df40373019d3d1776eda0a592",
+      "archived_bytes": 37436,
+      "encoding": "original bytes"
+    },
+    "training/assignment/epoch-020.json": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\s2-adaptive-k10\\assignment\\epoch-020.json",
+      "source_sha256": "88aa87b8f9184798d8d10c9273e0501bbc2ba53c1a302a0fd81b691fc6dd0ff0",
+      "source_bytes": 37320,
+      "archived_sha256": "88aa87b8f9184798d8d10c9273e0501bbc2ba53c1a302a0fd81b691fc6dd0ff0",
+      "archived_bytes": 37320,
+      "encoding": "original bytes"
+    },
+    "original-logs/cpu-2026-09-15T132727164929+0000.exit.json": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\logs\\s2-adaptive-k10\\cpu-2026-09-15T132727164929+0000.exit.json",
+      "source_sha256": "81717e22d7bd0e9019d755a0977782c8a6e9a0c7f59e08a76544b3fb8a37076a",
+      "source_bytes": 548,
+      "archived_sha256": "81717e22d7bd0e9019d755a0977782c8a6e9a0c7f59e08a76544b3fb8a37076a",
+      "archived_bytes": 548,
+      "encoding": "original bytes"
+    },
+    "original-logs/cpu-2026-09-15T132727164929+0000.launch.json": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\logs\\s2-adaptive-k10\\cpu-2026-09-15T132727164929+0000.launch.json",
+      "source_sha256": "9886e3e3735686cdb3bf808257b1247ffdd6400e6dd0e795ee4d57baa22b2117",
+      "source_bytes": 478,
+      "archived_sha256": "9886e3e3735686cdb3bf808257b1247ffdd6400e6dd0e795ee4d57baa22b2117",
+      "archived_bytes": 478,
+      "encoding": "original bytes"
+    },
+    "original-logs/cpu-2026-09-15T132727164929+0000.stderr.log": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\logs\\s2-adaptive-k10\\cpu-2026-09-15T132727164929+0000.stderr.log",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_bytes": 0,
+      "archived_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archived_bytes": 0,
+      "encoding": "original bytes"
+    },
+    "original-logs/cpu-2026-09-15T132727164929+0000.stdout.log": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\logs\\s2-adaptive-k10\\cpu-2026-09-15T132727164929+0000.stdout.log",
+      "source_sha256": "ec996dd83e4a1dc4ed29b68e2b106a157eb089c1451bda661dc9a442c7b81be2",
+      "source_bytes": 22854,
+      "archived_sha256": "ec996dd83e4a1dc4ed29b68e2b106a157eb089c1451bda661dc9a442c7b81be2",
+      "archived_bytes": 22854,
+      "encoding": "original bytes"
+    },
+    "original-logs/cpu-2026-09-15T133141461788+0000.exit.json": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\logs\\s2-adaptive-k10\\cpu-2026-09-15T133141461788+0000.exit.json",
+      "source_sha256": "8c4f7d0bcd9f85b4ec09bdb69c459ada21bd389395ca73a014e0f220bdb9b602",
+      "source_bytes": 548,
+      "archived_sha256": "8c4f7d0bcd9f85b4ec09bdb69c459ada21bd389395ca73a014e0f220bdb9b602",
+      "archived_bytes": 548,
+      "encoding": "original bytes"
+    },
+    "original-logs/cpu-2026-09-15T133141461788+0000.launch.json": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\logs\\s2-adaptive-k10\\cpu-2026-09-15T133141461788+0000.launch.json",
+      "source_sha256": "771a24c268f46b0144f121812bd88955b9db3669067b22ba4490faa49748ba85",
+      "source_bytes": 478,
+      "archived_sha256": "771a24c268f46b0144f121812bd88955b9db3669067b22ba4490faa49748ba85",
+      "archived_bytes": 478,
+      "encoding": "original bytes"
+    },
+    "original-logs/cpu-2026-09-15T133141461788+0000.stderr.log": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\logs\\s2-adaptive-k10\\cpu-2026-09-15T133141461788+0000.stderr.log",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_bytes": 0,
+      "archived_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archived_bytes": 0,
+      "encoding": "original bytes"
+    },
+    "original-logs/cpu-2026-09-15T133141461788+0000.stdout.log": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\logs\\s2-adaptive-k10\\cpu-2026-09-15T133141461788+0000.stdout.log",
+      "source_sha256": "6d7fcfe6b539d075b32a13b6129a869560d6a42b143d0442b6ac390052ee84e6",
+      "source_bytes": 22875,
+      "archived_sha256": "6d7fcfe6b539d075b32a13b6129a869560d6a42b143d0442b6ac390052ee84e6",
+      "archived_bytes": 22875,
+      "encoding": "original bytes"
+    },
+    "original-logs/cpu-2026-09-15T133550872846+0000.exit.json": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\logs\\s2-adaptive-k10\\cpu-2026-09-15T133550872846+0000.exit.json",
+      "source_sha256": "a3579e4c3a6dbe515360dda98d205b4fe24927099dbef2e60bfd1f9f802e6e4a",
+      "source_bytes": 548,
+      "archived_sha256": "a3579e4c3a6dbe515360dda98d205b4fe24927099dbef2e60bfd1f9f802e6e4a",
+      "archived_bytes": 548,
+      "encoding": "original bytes"
+    },
+    "original-logs/cpu-2026-09-15T133550872846+0000.launch.json": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\logs\\s2-adaptive-k10\\cpu-2026-09-15T133550872846+0000.launch.json",
+      "source_sha256": "e28a38bd80d072e4620be14600b872cafce7292c603560542bd74f7588bd489e",
+      "source_bytes": 478,
+      "archived_sha256": "e28a38bd80d072e4620be14600b872cafce7292c603560542bd74f7588bd489e",
+      "archived_bytes": 478,
+      "encoding": "original bytes"
+    },
+    "original-logs/cpu-2026-09-15T133550872846+0000.stderr.log": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\logs\\s2-adaptive-k10\\cpu-2026-09-15T133550872846+0000.stderr.log",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_bytes": 0,
+      "archived_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archived_bytes": 0,
+      "encoding": "original bytes"
+    },
+    "original-logs/cpu-2026-09-15T133550872846+0000.stdout.log": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\logs\\s2-adaptive-k10\\cpu-2026-09-15T133550872846+0000.stdout.log",
+      "source_sha256": "ef8e42c9cf442a721d8ebcca0027676f6f25056da6790423268be8687f9bfdcd",
+      "source_bytes": 22870,
+      "archived_sha256": "ef8e42c9cf442a721d8ebcca0027676f6f25056da6790423268be8687f9bfdcd",
+      "archived_bytes": 22870,
+      "encoding": "original bytes"
+    },
+    "original-logs/cpu-2026-09-15T134004393369+0000.exit.json": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\logs\\s2-adaptive-k10\\cpu-2026-09-15T134004393369+0000.exit.json",
+      "source_sha256": "7e819814b3680f82215a337ad6eee11062bad6192bc77f95c516c8c93a6d7ee7",
+      "source_bytes": 548,
+      "archived_sha256": "7e819814b3680f82215a337ad6eee11062bad6192bc77f95c516c8c93a6d7ee7",
+      "archived_bytes": 548,
+      "encoding": "original bytes"
+    },
+    "original-logs/cpu-2026-09-15T134004393369+0000.launch.json": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\logs\\s2-adaptive-k10\\cpu-2026-09-15T134004393369+0000.launch.json",
+      "source_sha256": "0f8db81aff09354787a52d4a769a6a2346431c7c056dfe41f47d59fea0e740d4",
+      "source_bytes": 478,
+      "archived_sha256": "0f8db81aff09354787a52d4a769a6a2346431c7c056dfe41f47d59fea0e740d4",
+      "archived_bytes": 478,
+      "encoding": "original bytes"
+    },
+    "original-logs/cpu-2026-09-15T134004393369+0000.stderr.log": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\logs\\s2-adaptive-k10\\cpu-2026-09-15T134004393369+0000.stderr.log",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_bytes": 0,
+      "archived_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archived_bytes": 0,
+      "encoding": "original bytes"
+    },
+    "original-logs/cpu-2026-09-15T134004393369+0000.stdout.log": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\logs\\s2-adaptive-k10\\cpu-2026-09-15T134004393369+0000.stdout.log",
+      "source_sha256": "c014e6111a5264525e8da8d816e814b043e217eaf99ad4ebb55304c80553834c",
+      "source_bytes": 22875,
+      "archived_sha256": "c014e6111a5264525e8da8d816e814b043e217eaf99ad4ebb55304c80553834c",
+      "archived_bytes": 22875,
+      "encoding": "original bytes"
+    },
+    "original-logs/cpu-2026-09-15T134359408389+0000.exit.json": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\logs\\s2-adaptive-k10\\cpu-2026-09-15T134359408389+0000.exit.json",
+      "source_sha256": "b12b1d8656f32fad873863468127750132bbebba2081beacb833f3532f161d63",
+      "source_bytes": 548,
+      "archived_sha256": "b12b1d8656f32fad873863468127750132bbebba2081beacb833f3532f161d63",
+      "archived_bytes": 548,
+      "encoding": "original bytes"
+    },
+    "original-logs/cpu-2026-09-15T134359408389+0000.launch.json": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\logs\\s2-adaptive-k10\\cpu-2026-09-15T134359408389+0000.launch.json",
+      "source_sha256": "0674b677cb711a48386b1d4b764264ffe7841937b70b258d3b7044cdbf6e47ed",
+      "source_bytes": 478,
+      "archived_sha256": "0674b677cb711a48386b1d4b764264ffe7841937b70b258d3b7044cdbf6e47ed",
+      "archived_bytes": 478,
+      "encoding": "original bytes"
+    },
+    "original-logs/cpu-2026-09-15T134359408389+0000.stderr.log": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\logs\\s2-adaptive-k10\\cpu-2026-09-15T134359408389+0000.stderr.log",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_bytes": 0,
+      "archived_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archived_bytes": 0,
+      "encoding": "original bytes"
+    },
+    "original-logs/cpu-2026-09-15T134359408389+0000.stdout.log": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\logs\\s2-adaptive-k10\\cpu-2026-09-15T134359408389+0000.stdout.log",
+      "source_sha256": "d5b543eccc6141f9290b87e90bde9a9231bb7759698afca4cb7754f63226f14c",
+      "source_bytes": 22877,
+      "archived_sha256": "d5b543eccc6141f9290b87e90bde9a9231bb7759698afca4cb7754f63226f14c",
+      "archived_bytes": 22877,
+      "encoding": "original bytes"
+    },
+    "original-logs/gpu-2026-09-15T080227841252+0000.exit.json": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\logs\\s2-adaptive-k10\\gpu-2026-09-15T080227841252+0000.exit.json",
+      "source_sha256": "d2738cac0a4e6a6ac7e43089e5f082e9cc5b94a81ceac00808b8707874438642",
+      "source_bytes": 517,
+      "archived_sha256": "d2738cac0a4e6a6ac7e43089e5f082e9cc5b94a81ceac00808b8707874438642",
+      "archived_bytes": 517,
+      "encoding": "original bytes"
+    },
+    "original-logs/gpu-2026-09-15T080227841252+0000.launch.json": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\logs\\s2-adaptive-k10\\gpu-2026-09-15T080227841252+0000.launch.json",
+      "source_sha256": "2d2368eda395b3ab565302416274094a998ef6649a158c2b334894ef39ad7721",
+      "source_bytes": 447,
+      "archived_sha256": "2d2368eda395b3ab565302416274094a998ef6649a158c2b334894ef39ad7721",
+      "archived_bytes": 447,
+      "encoding": "original bytes"
+    },
+    "original-logs/gpu-2026-09-15T080227841252+0000.stderr.log": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\logs\\s2-adaptive-k10\\gpu-2026-09-15T080227841252+0000.stderr.log",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_bytes": 0,
+      "archived_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archived_bytes": 0,
+      "encoding": "original bytes"
+    },
+    "original-logs/gpu-2026-09-15T080227841252+0000.stdout.log": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\logs\\s2-adaptive-k10\\gpu-2026-09-15T080227841252+0000.stdout.log",
+      "source_sha256": "521f2ce9ca26d2083aa1a15f0db3ce102133384cd2bc12c3202a6d3c9e7665ea",
+      "source_bytes": 5475104,
+      "archived_sha256": "521f2ce9ca26d2083aa1a15f0db3ce102133384cd2bc12c3202a6d3c9e7665ea",
+      "archived_bytes": 5475104,
+      "encoding": "original bytes"
+    },
+    "original-logs/runner-2026-09-15T080230973624+0000.json": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\logs\\s2-adaptive-k10\\runner-2026-09-15T080230973624+0000.json",
+      "source_sha256": "e73c301b4cb883d6c65143d81bff486cab6296530ab340a9ea96def242c70a94",
+      "source_bytes": 11261,
+      "archived_sha256": "e73c301b4cb883d6c65143d81bff486cab6296530ab340a9ea96def242c70a94",
+      "archived_bytes": 11261,
+      "encoding": "original bytes"
+    },
+    "evaluation/epoch-016/complete.json": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\evaluation\\s2-adaptive-k10\\epoch-016\\complete.json",
+      "source_sha256": "3d9a6e0e012aba58983c28d73df44d32400e1057c9304cd5213dfca8084dc357",
+      "source_bytes": 3107,
+      "archived_sha256": "3d9a6e0e012aba58983c28d73df44d32400e1057c9304cd5213dfca8084dc357",
+      "archived_bytes": 3107,
+      "encoding": "original bytes"
+    },
+    "evaluation/epoch-016/attempt-2026-09-15T132728210781+0000/launch.json": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\evaluation\\s2-adaptive-k10\\epoch-016\\attempt-2026-09-15T132728210781+0000\\launch.json",
+      "source_sha256": "c87fc432b928338b06c23a4d83f0bd8d55b45d7d81a60308662448665583b972",
+      "source_bytes": 479,
+      "archived_sha256": "c87fc432b928338b06c23a4d83f0bd8d55b45d7d81a60308662448665583b972",
+      "archived_bytes": 479,
+      "encoding": "original bytes"
+    },
+    "evaluation/epoch-016/attempt-2026-09-15T132728210781+0000/det-metrics.json": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\evaluation\\s2-adaptive-k10\\epoch-016\\attempt-2026-09-15T132728210781+0000\\det-metrics.json",
+      "source_sha256": "0098a8992a1a807aa8408130c4917158233b26fdde294dfc8f1844799b7001d6",
+      "source_bytes": 37996,
+      "archived_sha256": "0098a8992a1a807aa8408130c4917158233b26fdde294dfc8f1844799b7001d6",
+      "archived_bytes": 37996,
+      "encoding": "original bytes"
+    },
+    "evaluation/epoch-016/attempt-2026-09-15T132728210781+0000/area-metrics.json": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\evaluation\\s2-adaptive-k10\\epoch-016\\attempt-2026-09-15T132728210781+0000\\area-metrics.json",
+      "source_sha256": "7d293727163c81b2755a5cb3e42bf4417a66bebcd6769858255d3ef3677c2fd7",
+      "source_bytes": 1345,
+      "archived_sha256": "7d293727163c81b2755a5cb3e42bf4417a66bebcd6769858255d3ef3677c2fd7",
+      "archived_bytes": 1345,
+      "encoding": "original bytes"
+    },
+    "evaluation/epoch-016/attempt-2026-09-15T132728210781+0000/conversion.log": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\evaluation\\s2-adaptive-k10\\epoch-016\\attempt-2026-09-15T132728210781+0000\\conversion.log",
+      "source_sha256": "4ac211590ee88ad4555f2a39d2be39550cfca376fb1cb293498481b2efc73e12",
+      "source_bytes": 20909,
+      "archived_sha256": "4ac211590ee88ad4555f2a39d2be39550cfca376fb1cb293498481b2efc73e12",
+      "archived_bytes": 20909,
+      "encoding": "original bytes"
+    },
+    "evaluation/epoch-016/attempt-2026-09-15T132728210781+0000/det-evaluation.log": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\evaluation\\s2-adaptive-k10\\epoch-016\\attempt-2026-09-15T132728210781+0000\\det-evaluation.log",
+      "source_sha256": "91cb333f4a43c2826975309fb92e6ba825c36c642dbf5f14880771d4df1bc90b",
+      "source_bytes": 445,
+      "archived_sha256": "91cb333f4a43c2826975309fb92e6ba825c36c642dbf5f14880771d4df1bc90b",
+      "archived_bytes": 445,
+      "encoding": "original bytes"
+    },
+    "evaluation/epoch-016/attempt-2026-09-15T132728210781+0000/val/predictions.json.gz": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\evaluation\\s2-adaptive-k10\\epoch-016\\attempt-2026-09-15T132728210781+0000\\val\\predictions.json",
+      "source_sha256": "936f08a207de6d89be995dbff57809d70389c374940fb7f0d36793ae55ccbc55",
+      "source_bytes": 43918511,
+      "archived_sha256": "32fa708737eb6a806ace53f4eb631898c173f9496c49ddb19b6075dccee1bcbf",
+      "archived_bytes": 4692914,
+      "encoding": "gzip, byte-exact after decompression"
+    },
+    "evaluation/epoch-017/complete.json": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\evaluation\\s2-adaptive-k10\\epoch-017\\complete.json",
+      "source_sha256": "5bb52e0ed2bd06fe005c1e292737b824a11a35b15f1c19dd730e5ea1f4f85bca",
+      "source_bytes": 3105,
+      "archived_sha256": "5bb52e0ed2bd06fe005c1e292737b824a11a35b15f1c19dd730e5ea1f4f85bca",
+      "archived_bytes": 3105,
+      "encoding": "original bytes"
+    },
+    "evaluation/epoch-017/attempt-2026-09-15T133142187913+0000/launch.json": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\evaluation\\s2-adaptive-k10\\epoch-017\\attempt-2026-09-15T133142187913+0000\\launch.json",
+      "source_sha256": "0e5434fcff7675ab252c264f36d61804a2962232a7c8204833d47fedfac496a9",
+      "source_bytes": 479,
+      "archived_sha256": "0e5434fcff7675ab252c264f36d61804a2962232a7c8204833d47fedfac496a9",
+      "archived_bytes": 479,
+      "encoding": "original bytes"
+    },
+    "evaluation/epoch-017/attempt-2026-09-15T133142187913+0000/det-metrics.json": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\evaluation\\s2-adaptive-k10\\epoch-017\\attempt-2026-09-15T133142187913+0000\\det-metrics.json",
+      "source_sha256": "c6171b59dd901a73b57a2d63d225f5354106155ae77fd2d151ba9ac6151b5ed9",
+      "source_bytes": 37996,
+      "archived_sha256": "c6171b59dd901a73b57a2d63d225f5354106155ae77fd2d151ba9ac6151b5ed9",
+      "archived_bytes": 37996,
+      "encoding": "original bytes"
+    },
+    "evaluation/epoch-017/attempt-2026-09-15T133142187913+0000/area-metrics.json": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\evaluation\\s2-adaptive-k10\\epoch-017\\attempt-2026-09-15T133142187913+0000\\area-metrics.json",
+      "source_sha256": "2173c9cebda6ba787d8a0d168f6ffe7f5b747079effe7d3dff2aa32c3aeb50c0",
+      "source_bytes": 1342,
+      "archived_sha256": "2173c9cebda6ba787d8a0d168f6ffe7f5b747079effe7d3dff2aa32c3aeb50c0",
+      "archived_bytes": 1342,
+      "encoding": "original bytes"
+    },
+    "evaluation/epoch-017/attempt-2026-09-15T133142187913+0000/conversion.log": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\evaluation\\s2-adaptive-k10\\epoch-017\\attempt-2026-09-15T133142187913+0000\\conversion.log",
+      "source_sha256": "bfa6e7e3dfbfa2261552738e03bbfdb444a20e2ee17c23f1eb45f02927eaa72e",
+      "source_bytes": 20910,
+      "archived_sha256": "bfa6e7e3dfbfa2261552738e03bbfdb444a20e2ee17c23f1eb45f02927eaa72e",
+      "archived_bytes": 20910,
+      "encoding": "original bytes"
+    },
+    "evaluation/epoch-017/attempt-2026-09-15T133142187913+0000/det-evaluation.log": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\evaluation\\s2-adaptive-k10\\epoch-017\\attempt-2026-09-15T133142187913+0000\\det-evaluation.log",
+      "source_sha256": "6e61f71dab45e30f63b077017d6e67915d265fb7ac10228a4b33ab88e2c7add5",
+      "source_bytes": 445,
+      "archived_sha256": "6e61f71dab45e30f63b077017d6e67915d265fb7ac10228a4b33ab88e2c7add5",
+      "archived_bytes": 445,
+      "encoding": "original bytes"
+    },
+    "evaluation/epoch-017/attempt-2026-09-15T133142187913+0000/val/predictions.json.gz": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\evaluation\\s2-adaptive-k10\\epoch-017\\attempt-2026-09-15T133142187913+0000\\val\\predictions.json",
+      "source_sha256": "7da97e1224ec38702672daa95e5dc32dd8b3e34b5cd26a9dffe7fb8b70f9d688",
+      "source_bytes": 43706690,
+      "archived_sha256": "b7df381447a720df1b30441312252da6e311d8b50f12e0ccb355b1312b61e7ec",
+      "archived_bytes": 4715689,
+      "encoding": "gzip, byte-exact after decompression"
+    },
+    "evaluation/epoch-018/complete.json": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\evaluation\\s2-adaptive-k10\\epoch-018\\complete.json",
+      "source_sha256": "d343415416e49380c2790d1bcf0572cb82fa747dccf6f4437c52aa67517158af",
+      "source_bytes": 3104,
+      "archived_sha256": "d343415416e49380c2790d1bcf0572cb82fa747dccf6f4437c52aa67517158af",
+      "archived_bytes": 3104,
+      "encoding": "original bytes"
+    },
+    "evaluation/epoch-018/attempt-2026-09-15T133551712466+0000/launch.json": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\evaluation\\s2-adaptive-k10\\epoch-018\\attempt-2026-09-15T133551712466+0000\\launch.json",
+      "source_sha256": "39ae14fbd4ea8cee0a8e3dce8960863b4e5cb181ca02299efa7016bd328727f3",
+      "source_bytes": 479,
+      "archived_sha256": "39ae14fbd4ea8cee0a8e3dce8960863b4e5cb181ca02299efa7016bd328727f3",
+      "archived_bytes": 479,
+      "encoding": "original bytes"
+    },
+    "evaluation/epoch-018/attempt-2026-09-15T133551712466+0000/det-metrics.json": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\evaluation\\s2-adaptive-k10\\epoch-018\\attempt-2026-09-15T133551712466+0000\\det-metrics.json",
+      "source_sha256": "0ac65e3e2f4a76b5060cc4861be8ba8ea005b72e61586ef27779e3f755d75e66",
+      "source_bytes": 37995,
+      "archived_sha256": "0ac65e3e2f4a76b5060cc4861be8ba8ea005b72e61586ef27779e3f755d75e66",
+      "archived_bytes": 37995,
+      "encoding": "original bytes"
+    },
+    "evaluation/epoch-018/attempt-2026-09-15T133551712466+0000/area-metrics.json": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\evaluation\\s2-adaptive-k10\\epoch-018\\attempt-2026-09-15T133551712466+0000\\area-metrics.json",
+      "source_sha256": "0fdfa01c395130f7e00bcc6975f30cf39daa0b0a494f46c10ef77c865db5285a",
+      "source_bytes": 1341,
+      "archived_sha256": "0fdfa01c395130f7e00bcc6975f30cf39daa0b0a494f46c10ef77c865db5285a",
+      "archived_bytes": 1341,
+      "encoding": "original bytes"
+    },
+    "evaluation/epoch-018/attempt-2026-09-15T133551712466+0000/conversion.log": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\evaluation\\s2-adaptive-k10\\epoch-018\\attempt-2026-09-15T133551712466+0000\\conversion.log",
+      "source_sha256": "ebe19159251e0af0f711d95b9c002bee9f7e4d5716946a441ea8143285b9c236",
+      "source_bytes": 20911,
+      "archived_sha256": "ebe19159251e0af0f711d95b9c002bee9f7e4d5716946a441ea8143285b9c236",
+      "archived_bytes": 20911,
+      "encoding": "original bytes"
+    },
+    "evaluation/epoch-018/attempt-2026-09-15T133551712466+0000/det-evaluation.log": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\evaluation\\s2-adaptive-k10\\epoch-018\\attempt-2026-09-15T133551712466+0000\\det-evaluation.log",
+      "source_sha256": "db1ba2a05caee6ae2347fce4377842a9bafe022f20ac2c9c97941df6134bacc2",
+      "source_bytes": 444,
+      "archived_sha256": "db1ba2a05caee6ae2347fce4377842a9bafe022f20ac2c9c97941df6134bacc2",
+      "archived_bytes": 444,
+      "encoding": "original bytes"
+    },
+    "evaluation/epoch-018/attempt-2026-09-15T133551712466+0000/val/predictions.json.gz": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\evaluation\\s2-adaptive-k10\\epoch-018\\attempt-2026-09-15T133551712466+0000\\val\\predictions.json",
+      "source_sha256": "486064effdb30373f5ffb4861dd1875fd299c1527be38e6f1fc30113dd99ccaa",
+      "source_bytes": 43882692,
+      "archived_sha256": "3e5473757e4a7e51598dcb2531257f5500db1ad6db4d0473b31aa067bb05150a",
+      "archived_bytes": 4706339,
+      "encoding": "gzip, byte-exact after decompression"
+    },
+    "evaluation/epoch-019/complete.json": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\evaluation\\s2-adaptive-k10\\epoch-019\\complete.json",
+      "source_sha256": "bf4a20c82effa8ecd8de8b3aa5376c09a62be53759a7fc67ed3a8125491ed328",
+      "source_bytes": 3108,
+      "archived_sha256": "bf4a20c82effa8ecd8de8b3aa5376c09a62be53759a7fc67ed3a8125491ed328",
+      "archived_bytes": 3108,
+      "encoding": "original bytes"
+    },
+    "evaluation/epoch-019/attempt-2026-09-15T134005246527+0000/launch.json": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\evaluation\\s2-adaptive-k10\\epoch-019\\attempt-2026-09-15T134005246527+0000\\launch.json",
+      "source_sha256": "8d6056cfbb5743c184c814ab0b1620b6e4f73d6ac630e83a90aecd0f9093496b",
+      "source_bytes": 479,
+      "archived_sha256": "8d6056cfbb5743c184c814ab0b1620b6e4f73d6ac630e83a90aecd0f9093496b",
+      "archived_bytes": 479,
+      "encoding": "original bytes"
+    },
+    "evaluation/epoch-019/attempt-2026-09-15T134005246527+0000/det-metrics.json": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\evaluation\\s2-adaptive-k10\\epoch-019\\attempt-2026-09-15T134005246527+0000\\det-metrics.json",
+      "source_sha256": "fd34ef20861a2a863554622586a484895db5941d75a689e9e62ddc76d8ce4421",
+      "source_bytes": 37997,
+      "archived_sha256": "fd34ef20861a2a863554622586a484895db5941d75a689e9e62ddc76d8ce4421",
+      "archived_bytes": 37997,
+      "encoding": "original bytes"
+    },
+    "evaluation/epoch-019/attempt-2026-09-15T134005246527+0000/area-metrics.json": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\evaluation\\s2-adaptive-k10\\epoch-019\\attempt-2026-09-15T134005246527+0000\\area-metrics.json",
+      "source_sha256": "0a872efb47076f585993f97150d5f0e3dbc68c9eb93c1c9b2a9d4fb415837271",
+      "source_bytes": 1346,
+      "archived_sha256": "0a872efb47076f585993f97150d5f0e3dbc68c9eb93c1c9b2a9d4fb415837271",
+      "archived_bytes": 1346,
+      "encoding": "original bytes"
+    },
+    "evaluation/epoch-019/attempt-2026-09-15T134005246527+0000/conversion.log": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\evaluation\\s2-adaptive-k10\\epoch-019\\attempt-2026-09-15T134005246527+0000\\conversion.log",
+      "source_sha256": "540ff9f5983a067bc87ad1a8c03d77a6265110abf8ba916689f9d9e8b4d8397e",
+      "source_bytes": 20909,
+      "archived_sha256": "540ff9f5983a067bc87ad1a8c03d77a6265110abf8ba916689f9d9e8b4d8397e",
+      "archived_bytes": 20909,
+      "encoding": "original bytes"
+    },
+    "evaluation/epoch-019/attempt-2026-09-15T134005246527+0000/det-evaluation.log": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\evaluation\\s2-adaptive-k10\\epoch-019\\attempt-2026-09-15T134005246527+0000\\det-evaluation.log",
+      "source_sha256": "7496171b00b6fac9986610fdb0a1e13cc832023ec5ae53b83b1b397c528c166e",
+      "source_bytes": 446,
+      "archived_sha256": "7496171b00b6fac9986610fdb0a1e13cc832023ec5ae53b83b1b397c528c166e",
+      "archived_bytes": 446,
+      "encoding": "original bytes"
+    },
+    "evaluation/epoch-019/attempt-2026-09-15T134005246527+0000/val/predictions.json.gz": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\evaluation\\s2-adaptive-k10\\epoch-019\\attempt-2026-09-15T134005246527+0000\\val\\predictions.json",
+      "source_sha256": "53b1069103c8c23db4e26faf304a4f4915d550bbfb4120e52ef32731ba332196",
+      "source_bytes": 43753696,
+      "archived_sha256": "9c9824c551f0652419e0768345f0dda7f0d36c8752e3cbf2aef6c63476196247",
+      "archived_bytes": 4737440,
+      "encoding": "gzip, byte-exact after decompression"
+    },
+    "evaluation/epoch-020/complete.json": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\evaluation\\s2-adaptive-k10\\epoch-020\\complete.json",
+      "source_sha256": "b0b4be9d7a8141b901a043697578c30b1b0e2ebf6094377af4b0c3efd028caac",
+      "source_bytes": 3108,
+      "archived_sha256": "b0b4be9d7a8141b901a043697578c30b1b0e2ebf6094377af4b0c3efd028caac",
+      "archived_bytes": 3108,
+      "encoding": "original bytes"
+    },
+    "evaluation/epoch-020/attempt-2026-09-15T134400206815+0000/launch.json": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\evaluation\\s2-adaptive-k10\\epoch-020\\attempt-2026-09-15T134400206815+0000\\launch.json",
+      "source_sha256": "07704210555049d5beee16356d20220fea12db99ef933dcf33ec7e2c139228b9",
+      "source_bytes": 479,
+      "archived_sha256": "07704210555049d5beee16356d20220fea12db99ef933dcf33ec7e2c139228b9",
+      "archived_bytes": 479,
+      "encoding": "original bytes"
+    },
+    "evaluation/epoch-020/attempt-2026-09-15T134400206815+0000/det-metrics.json": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\evaluation\\s2-adaptive-k10\\epoch-020\\attempt-2026-09-15T134400206815+0000\\det-metrics.json",
+      "source_sha256": "08634e50ce1c48f9462b7ab30be6ba4062b373273de7d9eeaea2265ffde370ea",
+      "source_bytes": 37995,
+      "archived_sha256": "08634e50ce1c48f9462b7ab30be6ba4062b373273de7d9eeaea2265ffde370ea",
+      "archived_bytes": 37995,
+      "encoding": "original bytes"
+    },
+    "evaluation/epoch-020/attempt-2026-09-15T134400206815+0000/area-metrics.json": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\evaluation\\s2-adaptive-k10\\epoch-020\\attempt-2026-09-15T134400206815+0000\\area-metrics.json",
+      "source_sha256": "02468bb60c599f99b28784b65d595f7228c56403af8d66788a593e7757e3c9f9",
+      "source_bytes": 1341,
+      "archived_sha256": "02468bb60c599f99b28784b65d595f7228c56403af8d66788a593e7757e3c9f9",
+      "archived_bytes": 1341,
+      "encoding": "original bytes"
+    },
+    "evaluation/epoch-020/attempt-2026-09-15T134400206815+0000/conversion.log": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\evaluation\\s2-adaptive-k10\\epoch-020\\attempt-2026-09-15T134400206815+0000\\conversion.log",
+      "source_sha256": "3a6e24e1408c38f390538fe11fad34855feda061c6396db29dabc9cebb69f6d8",
+      "source_bytes": 20908,
+      "archived_sha256": "3a6e24e1408c38f390538fe11fad34855feda061c6396db29dabc9cebb69f6d8",
+      "archived_bytes": 20908,
+      "encoding": "original bytes"
+    },
+    "evaluation/epoch-020/attempt-2026-09-15T134400206815+0000/det-evaluation.log": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\evaluation\\s2-adaptive-k10\\epoch-020\\attempt-2026-09-15T134400206815+0000\\det-evaluation.log",
+      "source_sha256": "264d9629602352f800cec97d6d572689bce9e43234585950b60c26bb7afecc05",
+      "source_bytes": 444,
+      "archived_sha256": "264d9629602352f800cec97d6d572689bce9e43234585950b60c26bb7afecc05",
+      "archived_bytes": 444,
+      "encoding": "original bytes"
+    },
+    "evaluation/epoch-020/attempt-2026-09-15T134400206815+0000/val/predictions.json.gz": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\evaluation\\s2-adaptive-k10\\epoch-020\\attempt-2026-09-15T134400206815+0000\\val\\predictions.json",
+      "source_sha256": "79f046a3cecc3fb9308731d66b68716973f580cb868a59d26345e7fe32af580b",
+      "source_bytes": 43677781,
+      "archived_sha256": "3456fa2dfbb119fb22ed9f710d0378f2afdd2b201849490a74fee5bdd9b0473f",
+      "archived_bytes": 4713876,
+      "encoding": "gzip, byte-exact after decompression"
+    },
+    "summary.json": {
+      "archived_sha256": "f57afae4d33f6dccc77aca893c3256e9e9fdba9f56f9af50d27ef14dd580771b"
+    }
+  },
+  "config_sha256": "fa913f6ed227e9d0d624c847fbe8fff145ea2782e13ce4ffd43ac079b9f27626",
+  "freeze_sha256": "e31058ba38aaf6324649308608c04fe6d4793cca7660fcf8109bcba883fb8f03",
+  "all_training_and_evaluation_source_hashes_verified": true,
+  "excluded": [
+    "dataset images",
+    "GT annotations",
+    "checkpoint binaries",
+    "local filtered GT/predictions"
+  ],
+  "prediction_archives": "Original model predictions gzip-compressed with SHA-256 round-trip verification; DET txt can be regenerated with the recorded converter"
+}

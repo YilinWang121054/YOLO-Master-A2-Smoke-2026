@@ -1,0 +1,18 @@
+{
+  "checkpoint_sha256": "21a4bc2fa60b5bb6e4ad8fe25079a85682d7a63bf95a4fd62266e98743846b51",
+  "config_sha256": "fa913f6ed227e9d0d624c847fbe8fff145ea2782e13ce4ffd43ac079b9f27626",
+  "case": "s2-adaptive-k10",
+  "epoch": 19,
+  "device": "cpu",
+  "quantize": 32,
+  "threads": 2,
+  "batch": 4,
+  "imgsz": 800,
+  "conf": 0.001,
+  "iou": 0.7,
+  "max_det": 500,
+  "rect": true,
+  "augment": false,
+  "workers": 0,
+  "started_at": "2026-09-15T13:40:09.635105+00:00"
+}

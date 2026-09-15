@@ -1,0 +1,22 @@
+{
+  "frozen_at": "2026-09-15T01:39:06.850065+00:00",
+  "config_sha256": "fa913f6ed227e9d0d624c847fbe8fff145ea2782e13ce4ffd43ac079b9f27626",
+  "model_yaml_sha256": "700d6af29e3eb1b02392c458b1dbc457efa9b9eda0eb0002c432246019cfed7b",
+  "evidence_git_commit": "4f3f757c3247102a4e273fd866473a335c1b09e6",
+  "files_sha256": {
+    "configs/p1-screen-v2-20260915.json": "fa913f6ed227e9d0d624c847fbe8fff145ea2782e13ce4ffd43ac079b9f27626",
+    "configs/VisDrone-full.yaml": "2fdb317ec85f9e68a6669c4ea1b85789525b569cfb5a508eeac79f906c168c0a",
+    "scripts/p1_screen_contract.py": "76444a3498705d05d607e9d7e0bfda98ebdeed3a70476c27fe7fd9ccaece2c6a",
+    "scripts/run_p1_screen.py": "c450b5c5825f0c38da78d3eb18db50a8cf972135500fa57da72c32950cc6551e",
+    "scripts/evaluate_p1_screen.py": "e28591907f1fc6e5a69d0106fba720d0ba35c17ebcedb2766a7e5c04ccc4a117",
+    "scripts/supervise_p1_screen.py": "8bc44b2b4f32b6faaece738da05065d0da6d91a1950bf30cec7050ee41db3cb4",
+    "scripts/select_p1_screen.py": "d18378cf96f9765527912d3c2530639948f3a05cb4a68e4656a02eb2c7c39f30",
+    "scripts/assignment_observer.py": "be41773cb69d9fc0c0397d66fa83b0b178c0367bef0a132163db9b106c70c4c2",
+    "scripts/assignment_coverage.py": "1854bc27008f3763b26a77022911453cb6f794f3581d0535c05e94ef14ebd077",
+    "scripts/resume_p1_training.py": "2e6bdc1267c7876db9ed56454d4d2a4531bb7353956deec5e44e613351f3483a",
+    "scripts/run_p1_v2_fixed.py": "ddaef0004c46e4165d1afc756daa9eada93b9295b167502d4743bb1928fa4a3a",
+    "scripts/export_visdrone_det_txt.py": "dcdb94bd8e37d5e3a3cc31e161295e39e112dffcaef53972d2d6b516da8aa67c",
+    "scripts/evaluate_visdrone_det_strict.py": "c54f925be2c70fe90e57c123ccc7c2653e83b7800e7d8209196b5f1df6e0f460",
+    "scripts/evaluate_visdrone_coco_style.py": "9c550f903b55ed042c6553ca6b36426d91fba5dbe3e0e2ffba81f204e7008bac"
+  }
+}
