@@ -1,0 +1,13 @@
+{
+  "evaluator": "original VisDrone DET MATLAB utilities",
+  "images": 548,
+  "AP": 21.762253986746124,
+  "AP50": 39.433428802666988,
+  "AP75": 20.644470744209659,
+  "AR1": 0.74056559028183855,
+  "AR10": 6.5149855688544056,
+  "AR100": 28.079879163961163,
+  "AR500": 38.200338280486982,
+  "toolkit_dir": "F:/tools/VisDrone2018-DET-toolkit",
+  "detections_dir": "F:/YOLO-Master-A2-P1/closure-evaluation/p1-v2-fixed-s20260825-stats120/det"
+}

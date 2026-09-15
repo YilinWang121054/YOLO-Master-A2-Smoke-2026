@@ -1,0 +1,35 @@
+{
+  "archived_at": "2026-09-15T01:37:01.622838+00:00",
+  "files": {
+    "comparison.json": {
+      "sha256": "683a96002f8914d13b51c7cb3ed97a02836bdbc96d30c26346e6e65b47b433af",
+      "bytes": 133885
+    },
+    "launch.json": {
+      "sha256": "2972a34f4ab8e253a02e48845b654d14d4cc48e2d54002f18792f47ceb6e75a5",
+      "bytes": 132306
+    },
+    "matlab-metrics.json": {
+      "sha256": "16eedde3aaf01962918b0f6946d8ec426c431f7b1ecd89dbe8c586baf5232e3b",
+      "bytes": 439
+    },
+    "stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "stdout.log": {
+      "sha256": "1e654d3f9af0eb175b61383e70afda3abbf97680d0a785de35da0b70a455ec31",
+      "bytes": 919
+    },
+    "run_p1_v2_matlab_alignment.py": {
+      "sha256": "cf8cade515db29ed90200281ab5964f5a5bfc6e11691549795653476f2026a50",
+      "bytes": 6668
+    },
+    "run_visdrone_official_matlab.m": {
+      "sha256": "9d71ec2d4c1e2c4294ffea769da90203a97ba291b358f638ca8d67aa8718cb0e",
+      "bytes": 1170
+    }
+  },
+  "status": "original_MATLAB_runtime_parity_passed_for_this_fixed_run",
+  "earlier_failed_attempt_preserved": true
+}
