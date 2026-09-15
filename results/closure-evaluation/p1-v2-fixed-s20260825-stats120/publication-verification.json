@@ -1,0 +1,736 @@
+{
+  "checked_at": "2026-09-15T01:15:39.663758+00:00",
+  "run": "p1-v2-fixed-s20260825-stats120",
+  "status": "pass",
+  "files": {
+    "configs/p1-v2-fixed-s20260825.resume.json": {
+      "sha256": "0d0abdbee303d7887574b28c87a8967fe63c0857896c26ec15d55f4b7b996d80",
+      "bytes": 1152
+    },
+    "configs/p1-v2-fixed-s20260825.train.json": {
+      "sha256": "b8757072df166c3197b1c461f3dfaf6c00ca724256015ddba7f50b67ecffa0be",
+      "bytes": 876
+    },
+    "docs/closure-review/P1\u7b2c\u4e8c\u8f6efixed\u5b8c\u6210-20260915.md": {
+      "sha256": "eefd01e170de85624c88a9d281a28311dc30a5f876f79d1b522573878fae1823",
+      "bytes": 6175
+    },
+    "docs/closure-review/\u7814\u7a76\u62a5\u544a.md": {
+      "sha256": "59708a9595fc6b643cd5c154a5f182b0c23a07951e665c0e1018bb2ced17ddf5",
+      "bytes": 18987
+    },
+    "logs/closure-evaluation/p1-v2-fixed-s20260825-stats120/conversion.log": {
+      "sha256": "f8ec367cb6f002f94d734a79241fd9de989746272e927f6f98a06d228947c1b0",
+      "bytes": 20808
+    },
+    "logs/closure-evaluation/p1-v2-fixed-s20260825-stats120/det-source-audit.log": {
+      "sha256": "bfa9a6ca465f641073b6f3afe2b4ff25bbdb644f4efc23c0d478f4c614ab62da",
+      "bytes": 442
+    },
+    "logs/closure-evaluation/p1-v2-fixed-s20260825-stats120/evaluation.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "logs/closure-evaluation/p1-v2-fixed-s20260825-stats120/evaluation.stdout.log": {
+      "sha256": "531cf247b7addd6e68fd93693a4699844cd5c647c0fd497ea454ec4a84ecd5dd",
+      "bytes": 23427
+    },
+    "logs/closure-evaluation/p1-v2-fixed-s20260825-stats120/state.json": {
+      "sha256": "2a7b07a41d7e64252bb72391fbc5679b2ce56b6eed09651b14a0010a3660031d",
+      "bytes": 304
+    },
+    "logs/closure-evaluation/p1-v2-fixed-s20260825-stats120/training-original/recovery/initial.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "logs/closure-evaluation/p1-v2-fixed-s20260825-stats120/training-original/recovery/initial.stdout.log": {
+      "sha256": "c92d80af923ba082c5c7d2f06cf656ee62ed1ec06ad926bb8f70a573c1ed1bf6",
+      "bytes": 17644622
+    },
+    "logs/closure-evaluation/p1-v2-fixed-s20260825-stats120/training-original/recovery/latest-check.json": {
+      "sha256": "61e642f2bedb8d46c94c235a5c5303064e11eb381d09f15d24f63b7594262cba",
+      "bytes": 181
+    },
+    "logs/closure-evaluation/p1-v2-fixed-s20260825-stats120/training-original/recovery/latest-resume.json": {
+      "sha256": "a2c90eb8f01a0721aa9a2dbcf70fe5926c873708964c67c7fc7db5ddfaaaf875",
+      "bytes": 1264
+    },
+    "logs/closure-evaluation/p1-v2-fixed-s20260825-stats120/training-original/recovery/launch.json": {
+      "sha256": "3b3524940746f00493ce40309a79ab8b382b4435ac089a06ea1fb8411dd4a226",
+      "bytes": 585
+    },
+    "logs/closure-evaluation/p1-v2-fixed-s20260825-stats120/training-original/recovery/resume-20260914-184913.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "logs/closure-evaluation/p1-v2-fixed-s20260825-stats120/training-original/recovery/resume-20260914-184913.stdout.log": {
+      "sha256": "84f0e133240357834378e62d8cde1e654134b58f496ec5f43f074d410520205e",
+      "bytes": 15284436
+    },
+    "logs/closure-evaluation/p1-v2-fixed-s20260825-stats120/training-original/recovery/runner-20260913-214451-201449.json": {
+      "sha256": "28275cb3346d57d777cb500ea0d8b7f8a12f785dff7ad4b0c6c321f43fe61962",
+      "bytes": 11440
+    },
+    "logs/closure-evaluation/p1-v2-fixed-s20260825-stats120/training-original/recovery/runner-20260914-184919-932140.json": {
+      "sha256": "5179b54f36462b61fda71b171faff1b14d39f35e80d084c6c6d1500d5417e1f7",
+      "bytes": 11537
+    },
+    "README.md": {
+      "sha256": "320a5ec9cf275a27bee397aa09726f1105704e264df0cc34d9ffb7eda3d2f993",
+      "bytes": 14849
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/args.yaml": {
+      "sha256": "8e367d52fc51a2a2f6595e5852519f0e51072f2015e65339de5bc4f51fd227bd",
+      "bytes": 8586
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-001.json": {
+      "sha256": "552428929099d5df5c245008d94e1037289f45ce8ef1180385498bfebd3c54a3",
+      "bytes": 36566
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-002.json": {
+      "sha256": "e3a63000e95d0bc27f46cff7e2503197834b33df32ab4caf268468f64c4ba7ad",
+      "bytes": 37699
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-003.json": {
+      "sha256": "9b8c8990853325d8621cb705cfab97503831366c9ee91836410628dc2cd3decb",
+      "bytes": 37084
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-004.json": {
+      "sha256": "fa8b1f5d100031d012fa6392ff44f86fb832774f1f95ba7068c665c88bc93877",
+      "bytes": 37073
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-005.json": {
+      "sha256": "88a10c18916c58f0a47fd34826322f17a5a1623d0288b1ef1f08fbc4c1fbab0d",
+      "bytes": 37536
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-006.json": {
+      "sha256": "0f55cda87b2013d3805cc2e2a63ef6421fd8de56ef28a05e1911b84fd115fb74",
+      "bytes": 38561
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-007.json": {
+      "sha256": "5fcd1e78847582d5e1742819d47e2b6ca7507009258b478d99bcc24ce35bedca",
+      "bytes": 38154
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-008.json": {
+      "sha256": "e0344e75b18f66e81219c107f6f1acb6677fe3134051623faee6f0cf15a4503d",
+      "bytes": 38103
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-009.json": {
+      "sha256": "433318efef2f21f7e0012d09a17709f3ebc3f14947b8a9b7e30a226779d6622c",
+      "bytes": 37022
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-010.json": {
+      "sha256": "a8b6a45ddabce0182c47c3376cce538d54e81bc209335a66ea6f76266996e2fa",
+      "bytes": 36840
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-011.json": {
+      "sha256": "0cb5408e4006a9d58880b44f512e94b8eed2372afbcdd2a1d88257a2d9a11d85",
+      "bytes": 37072
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-012.json": {
+      "sha256": "74274b01ae7b21ada026328f53868569f1c4366bf23f556c4b4f44df88a7f35e",
+      "bytes": 37218
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-013.json": {
+      "sha256": "c973b560aeb2966bd96eae6bf52e659691997f970d84b338a4d9e600c0ebc46b",
+      "bytes": 37532
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-014.json": {
+      "sha256": "be067fb50799ada3b585cd181efab845ce68fe02d9d221073260f0eb7e077120",
+      "bytes": 37414
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-015.json": {
+      "sha256": "c933d1620dfd99048d33228fd54c93165a814ad001e371fac36a497d23dd67aa",
+      "bytes": 37127
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-016.json": {
+      "sha256": "2be1ed0a4b6937d7c25c6aa487d044fa292e22539a3fbfc6b7e22dab0d0a5f86",
+      "bytes": 36726
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-017.json": {
+      "sha256": "b5391436da0c8e8948868c07158f5c6f1b125a6c2d7ec188ad851de1c6c6bd32",
+      "bytes": 38351
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-018.json": {
+      "sha256": "5b0cd3965f59b880b40c22dfdfe813d2073ec59febd925f2279a421d078c43b8",
+      "bytes": 37967
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-019.json": {
+      "sha256": "1fd544753e98d51b85c73a981ba1237676ab6b6e6e2e994e17387c1d7cabedd0",
+      "bytes": 35975
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-020.json": {
+      "sha256": "ae98635f6e36f2dcd87a5003707c63e6282bba65fa5f5497a897d8b1074cfe1f",
+      "bytes": 37636
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-021.json": {
+      "sha256": "ce03a2aa7f19a815e8f39b56390281dfb78de0c3fd26ae7facc86c96f19cdd77",
+      "bytes": 35986
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-022.json": {
+      "sha256": "39cda9a94c10dcb264646befab83a93c99c71cd0ce4a25a753d767e5ca8dc8e6",
+      "bytes": 36821
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-023.json": {
+      "sha256": "fcb6ecf0060b73a6a96041449bc7e529ef23a7dbb8f86693ec4eaf074fc3fc62",
+      "bytes": 37860
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-024.json": {
+      "sha256": "79393fdf88bb21775580965078fbf5c34d6132362248f8e78f36f00d8939244c",
+      "bytes": 38222
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-025.json": {
+      "sha256": "fa70c7f24ccc8c98d0da963a43285a564780bed81c294606fea210a20fb5d367",
+      "bytes": 37671
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-026.json": {
+      "sha256": "5bf534e7ae7216601e3f84b1135cbfd6f56e9ceaa9f6c8f9cb14a7e47cc84fe0",
+      "bytes": 37200
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-027.json": {
+      "sha256": "efd284e3adc96fff6727b41d0e7c95f3a304ee2800adeb1fb900cc37bbcce4e2",
+      "bytes": 37551
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-028.json": {
+      "sha256": "34fb14910353ee6752314671f8ab4150c43fba9396093646fbeeaa5f0344ede2",
+      "bytes": 36575
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-029.json": {
+      "sha256": "9d91db07b048e1ec3dc7a2038c520d5aff65bdf3c187088654fe0ae1a3451ee9",
+      "bytes": 37442
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-030.json": {
+      "sha256": "ad1cecea160bf96581f9098e2424bc04af2e7b0e6727102b3fbdf694d5ae0e8f",
+      "bytes": 37635
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-031.json": {
+      "sha256": "0718256e56e79576fb40047b8e229484b3865d82bfc1088e6fd8a5bd8ed177a0",
+      "bytes": 37061
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-032.json": {
+      "sha256": "6ed39c96be2c852dd1b91cf6c1706a2a1d5a5cbca5e3c9a33e787f743337be61",
+      "bytes": 37843
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-033.json": {
+      "sha256": "5209365b4c544f1d35fc4bf8aa80c4a1fb45af42f6c1deb1678696bd541eb0a9",
+      "bytes": 37190
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-034.json": {
+      "sha256": "1b88f60d43fbbd4a35400c5f4dab30879ef48aab9177a507603e53937ba89602",
+      "bytes": 37308
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-035.json": {
+      "sha256": "f646bd9c5055bd0d24ea9ac1b0cfaa413e42fa65b8aeb34f3e60b884ad032cd1",
+      "bytes": 37140
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-036.json": {
+      "sha256": "4823a1edf14bfb9def14d1177d273b67bc2c85a492dfe19374486bf79885830d",
+      "bytes": 38292
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-037.json": {
+      "sha256": "096f5de5ccf463b3cea4402f83b6bde8d10222c7c849eba65b8ed185a0eaf180",
+      "bytes": 38505
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-038.json": {
+      "sha256": "403c4c629dac55d29df46d1bb320e9b687c4cf2fad6d979938fd0033390e3915",
+      "bytes": 37411
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-039.json": {
+      "sha256": "4a816ff9600f1cba38f5bf998d5c7e8cc879efca0ffbb4cb9a1d3f5f3b493a67",
+      "bytes": 36562
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-040.json": {
+      "sha256": "fa51c33cb7ee21ad142dfafbd6b74144d11306bfb1d6d48c07bac3d2f2b27b2e",
+      "bytes": 35937
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-041.json": {
+      "sha256": "3bef09d5ef057058154d25ea3742d74f9b5404d4ca50c7280ae06e63df4c2881",
+      "bytes": 37249
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-042.json": {
+      "sha256": "18568d2accb2782072c061073ec23fbc61c5dca6dac6df42bf01d370ca368d29",
+      "bytes": 37463
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-043.json": {
+      "sha256": "bde374d1a71fa380c24ff4b18a19032349fac0757faddf3f42e42f388afbe74d",
+      "bytes": 36398
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-044.json": {
+      "sha256": "24a0f283353d8382c0c43b91f3eba0bce34e08bbf19a878cb8f03b3ae9babc40",
+      "bytes": 37561
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-045.json": {
+      "sha256": "3466244b5933b3fd5482a4099125e820c406710e742f635b17783c4bb4ab1e1a",
+      "bytes": 37920
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-046.json": {
+      "sha256": "00ccf99dd30f74294ccca9ef6dee66af7d21ba818195ff1e07d81d9b59c3f221",
+      "bytes": 37822
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-047.json": {
+      "sha256": "ffa7382167a464ec726ce0bfb4a1e3dea8df8dcd10c0db95c1d5b3695d251512",
+      "bytes": 37847
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-048.json": {
+      "sha256": "f48e09162d9d94fbe725ecf6d7ca73af9c22c4aaf09732b44502b71e3bfd68b9",
+      "bytes": 37510
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-049.json": {
+      "sha256": "5abd63974def7c25dcae26941847f261bc6ee6ebca4ade9ed51a68408df4fd52",
+      "bytes": 37301
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-050.json": {
+      "sha256": "d3b083782009ef972fb9daa257937ffe960b43082fd45aee1576335bb2a667e6",
+      "bytes": 37492
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-051.json": {
+      "sha256": "4e8e44dc8046a2604ca296d4ed891a52e0ac633a6c54bb9b7542f041ae289a63",
+      "bytes": 37480
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-052.json": {
+      "sha256": "9c92c2c2f0522450d6e17bdc3d831c8ab5e92d07923d27a6355936bda67ff163",
+      "bytes": 37277
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-053.json": {
+      "sha256": "49057b0cad489e451f5c20f925f43f8fcae63b175d3410564c2a712c5620c35e",
+      "bytes": 37630
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-054.json": {
+      "sha256": "3b370568387bcaf1cae45d6ae749216e3ecee02333cdbe14e1e5145b2ed91b05",
+      "bytes": 36858
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-055.json": {
+      "sha256": "1835583575ded6fb9c3373abf0787e2a981ac57279eada86e986c96837108769",
+      "bytes": 36590
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-056.json": {
+      "sha256": "23989c3325153fee4499c4e19dc81aa4857c45092cb1754c713cb1b3e5ca7247",
+      "bytes": 36773
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-057.json": {
+      "sha256": "67e4b3ea09cd478cf359325809f2fa1294494290ca90650f211e70ad2779ce86",
+      "bytes": 37206
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-058.json": {
+      "sha256": "01a642e67202378e3459d0e39a7a375133ac5cc0ea33c5a4b822ffad033207ba",
+      "bytes": 36629
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-059.json": {
+      "sha256": "9c9065f18d62a623e90b4a487cf88330b240a29df0aa6cf82b63f6a3def22a7a",
+      "bytes": 37475
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-060.json": {
+      "sha256": "cbab43b65f92f2caf1aa84b47d64640908f016dc08fccc5e9b1fccc590fc2957",
+      "bytes": 38102
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-061.json": {
+      "sha256": "845154aba9febaacf49ac264542b149b61cf8e0136c0f6be1c6bb37fa1e305a5",
+      "bytes": 36778
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-062.json": {
+      "sha256": "4017232c59be1db6805e9704c88208dc0488751a8045e09fcf1d9256d3955981",
+      "bytes": 36957
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-063.json": {
+      "sha256": "d94c2fa4631ad3c2702ce5f2f8577cf284ff01bef12f34213638f2cbbe8acefb",
+      "bytes": 37390
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-064.json": {
+      "sha256": "fda2d421098d35bbd143c65af29752ccaafb06980f5a169beb5e0c9d446ac74d",
+      "bytes": 37738
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-065.json": {
+      "sha256": "912fe0120d2b7c5c909ba3e0d3341cdd39c61fb62a0254b42417f2deee4f75ac",
+      "bytes": 36688
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-066.json": {
+      "sha256": "0fc3c5fa16d399cc1df0a487b253f9fbf5869e9a1c0181f4a2748776b781167f",
+      "bytes": 37763
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-067.json": {
+      "sha256": "50e80086a1962ddf30de897db2eefe853c5dda3b03c618d011b460edc2d122a1",
+      "bytes": 37163
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-068.json": {
+      "sha256": "5fb6a3b1964dabbe2519ab9f5f5b466a73797708b4da55964c6d1a8a6058c147",
+      "bytes": 37127
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-069.json": {
+      "sha256": "2b7f51ad86f6eb96012a92e4e464f2166bab234b7805a070ea219afad16b7a0e",
+      "bytes": 37638
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-070.json": {
+      "sha256": "9dbdb6ac89deae6bd274b64aac058ae354c56c4e6d6274aecea8ff1649ccb44f",
+      "bytes": 38600
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-071.json": {
+      "sha256": "eb528dc32fd140eece25ad0df021b6fc352d07b1c07cbccc169a475bb79b6c83",
+      "bytes": 38272
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-072.json": {
+      "sha256": "5e11f634a342c4b7918ea154cafbf84bae38385db355599a97f80dbef71d75ee",
+      "bytes": 38081
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-073.json": {
+      "sha256": "72dacbe41fc803a565e36f7043a8972d08d3beed00d5aa5257f97c14a147696b",
+      "bytes": 37124
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-074.json": {
+      "sha256": "9f5f5847b5b1a7a2e9adba28d12f54d2c07bfb3e7fc1115f1785bec3f0471344",
+      "bytes": 36878
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-075.json": {
+      "sha256": "7add67154802a4b49d61dc8bfd1a9c9ecb6acb063a81acf9451fa17740873d09",
+      "bytes": 37104
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-076.json": {
+      "sha256": "a9914740e189cdff5f55365b886fa43d0502afd4461a5e859c91b186d3f34f20",
+      "bytes": 37193
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-077.json": {
+      "sha256": "b92fd55196187b8f2b4605cb775d9446cc34b094fcb557eeabb8ca1ce03a8675",
+      "bytes": 37553
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-078.json": {
+      "sha256": "a4b4d0af0bac0e499b2327e3fbac42bc49d6e35be5ea7cb984634c90c98ad9b6",
+      "bytes": 37410
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-079.json": {
+      "sha256": "333062ef2a27a47c8d357c719d9bcaa696b4b74321f22aecfedda59cc1b00d95",
+      "bytes": 37103
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-080.json": {
+      "sha256": "4e20d1970ef6e251a486ffdc29329b0959917bd93542d741fa69ab6b3229e13d",
+      "bytes": 36842
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-081.json": {
+      "sha256": "fd9a788107965fe6fba1775106c82df610f3dd7f890e6bec1fae115e81cb67a2",
+      "bytes": 38413
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-082.json": {
+      "sha256": "153c9910b298764a9b4d3e295ebc12dd6fd235a080ce8f88c36dfa2ee3e223de",
+      "bytes": 38009
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-083.json": {
+      "sha256": "e8d9245a1d3cd10f521638c8aa07e0c7f068197efc2e819122aa5a7bb4e717f3",
+      "bytes": 36072
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-084.json": {
+      "sha256": "3a06d80eefa2f77634b4955e52ee3ee818cf74f847b930cd36c2c7a0e3450949",
+      "bytes": 37671
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-085.json": {
+      "sha256": "9b960cf35fc3240de3726f26d2ec0cd2a2bae281a33f989d36766a8489c7eabb",
+      "bytes": 35985
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-086.json": {
+      "sha256": "421bbe3481d620918e0fccbdfdec6d94227f1ea991fedc4e753b47c7e8eab5d7",
+      "bytes": 36845
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-087.json": {
+      "sha256": "6b3486338954c9f2efc290ca698ff9cb61eea7eb63be30774d8d592ba29025a3",
+      "bytes": 37777
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-088.json": {
+      "sha256": "0085447e3bac7b8c86d2cf8c7e1ddd21683adc09081f0dec0dfe04426bb86a46",
+      "bytes": 38198
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-089.json": {
+      "sha256": "84ca2c754b871812caa882b2c740496e7ab94c9c5d42730f165c9ea9f0c772a8",
+      "bytes": 37630
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-090.json": {
+      "sha256": "3e6432c6c6d6d64897b2d43f99cc7e9164de84e3f5af5744fb4ad3df82e73462",
+      "bytes": 37200
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-091.json": {
+      "sha256": "e317f6e2defea42abfde37807e202d9eeefb2c16d6b46bf103f2bddaa5065379",
+      "bytes": 37650
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-092.json": {
+      "sha256": "0bb73c44e58d3ba9ae76b143cbfaa165690ea0b2edf6d01624d007e17737f769",
+      "bytes": 36573
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-093.json": {
+      "sha256": "ed4fb73f3517758fa4596902e08c64d7224ee7cdfc669e8724b804207269c76a",
+      "bytes": 37442
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-094.json": {
+      "sha256": "e3a993b35e23397afe9ce164e6214e56002c094663ff7ea7d00c9c0d8008a40b",
+      "bytes": 37631
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-095.json": {
+      "sha256": "8af9dcd751d00818f82d556214f68663683b141935b7bdfdc99780a4afadc711",
+      "bytes": 37099
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-096.json": {
+      "sha256": "fb7d960454752bb0100253cba2c396d78db2a9e331a5e9ef29c37dda4028bc4e",
+      "bytes": 37879
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-097.json": {
+      "sha256": "47abfbb2a023523072af52bcb815d59a533a2ba517ee83849af170e39916afd5",
+      "bytes": 37172
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-098.json": {
+      "sha256": "0680c220ad4a963adbd0c8d0487e4c83e8cfd850ab40b5328dbdf2c47c95df9b",
+      "bytes": 37307
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-099.json": {
+      "sha256": "d49b4b06f98af189d491342bab437d1bbddd3cbc8950120fff98da9cc2fb3fa4",
+      "bytes": 37117
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-100.json": {
+      "sha256": "2a2d4a9428d767f8a2d2ae9c233e61ec57b3f5835703726df8a29eb7896ca18a",
+      "bytes": 38333
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-101.json": {
+      "sha256": "0a1736a7636e085866c6cba4457be54e5b194c957ecde98cbcff99aa8bd0f882",
+      "bytes": 38421
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-102.json": {
+      "sha256": "0f938a5da45f2ea291c700bcf6cbedb529368d74026bfad24ca4bf72052d1819",
+      "bytes": 37535
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-103.json": {
+      "sha256": "7d4dfcf1a39f03e031e09bd6a40722e0be8f62106723f5767b14b0277e757e67",
+      "bytes": 36578
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-104.json": {
+      "sha256": "cffd6e74d2fc112a4c3df27e13a9568fb18a284f1c974c85d0f20c6fd8b7179b",
+      "bytes": 35848
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-105.json": {
+      "sha256": "dd1dd99261c02e210a9ad27f2c37186e5928add7f1bb18a08d707f4f571d82af",
+      "bytes": 37232
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-106.json": {
+      "sha256": "444ec634202f71dc11abdf871f6a2c5b1fc0972c38ace8c6b4cfff4ab21a496e",
+      "bytes": 37482
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-107.json": {
+      "sha256": "3a51ad54ddcaded55779d11afbd97c422b057d658920a0897c9626f9e5bd8c9a",
+      "bytes": 36360
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-108.json": {
+      "sha256": "52fb673203d898603cd4c9879e4e623a7c51dc6a3762764c6112db3e7ea96ab6",
+      "bytes": 37583
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-109.json": {
+      "sha256": "b9515a2233f4a01dc36e3226e7edba2c99b1363ad372c6422cf3ccb4025aa52c",
+      "bytes": 37927
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-110.json": {
+      "sha256": "f6d663b3392817a67478119df26bb102221fd3081103fe5ce0a3586b507bff8b",
+      "bytes": 37838
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-111.json": {
+      "sha256": "6b9c02a1b220d5003d800e136dd636bda4152fa51d223312b25988ecd3ac2da7",
+      "bytes": 36963
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-112.json": {
+      "sha256": "27853922bba98fc0d7eb3e041d1719a60e78cf0104ff77efba1134b1fdc530a2",
+      "bytes": 36724
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-113.json": {
+      "sha256": "cbe05b7e9a708cb1fe014672d1ad0f6302d15afc4614849759d93cf7f208b427",
+      "bytes": 37721
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-114.json": {
+      "sha256": "473e7df8685823fcca9db48766d81d7e5c3312d8e9b86f57647a104f464b97ed",
+      "bytes": 37468
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-115.json": {
+      "sha256": "a5cc8232e4a7292440e92e592eee02b30f9904444d976b9443b69fceff39dfe9",
+      "bytes": 37391
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-116.json": {
+      "sha256": "c662f8e5d0a58185728e2892c3e4ef52a945e2501fe483a308170c5c203beb07",
+      "bytes": 36993
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-117.json": {
+      "sha256": "69338c299d28d3adb84fee498f1351f79d55ea4ddeb6a23412ba8c95458d0d20",
+      "bytes": 36825
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-118.json": {
+      "sha256": "6941cc49de83c5bd8031e417a59b3e9d1b9310148d92ad930972189267495809",
+      "bytes": 36118
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-119.json": {
+      "sha256": "c3a31b176a8a4a59c882f1d3af5a8205a1862cea0abcd3a78f870c5a3ca9493f",
+      "bytes": 38591
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/assignment/epoch-120.json": {
+      "sha256": "a2779c2446538e12138b81addcc60cf2fff5ceff8773b81828b01f2321b75672",
+      "bytes": 37378
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/coco-area-metrics.json": {
+      "sha256": "f9ebccdd3fcdf983bdb723b6bf08554dc03b32f9f5fd48f75728b40f9b022db3",
+      "bytes": 1595
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/completion-verification.json": {
+      "sha256": "aae6f700d8fb89dc880c8ed9bcd4174138570c04d5518b9fe3939062018aa0d8",
+      "bytes": 49379
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/det-source-metrics.json": {
+      "sha256": "8c008bd7b3fbf76bb7ddeb96eaa5e21a9c14f189e51266556deb05186b106cb8",
+      "bytes": 37993
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/evaluation-manifest.json": {
+      "sha256": "56178cf6e5e86abb12af78bb8d1747afe325677e7f51961d55a10bfadc088291",
+      "bytes": 1186
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/executed-sources/assignment_observer.py": {
+      "sha256": "be41773cb69d9fc0c0397d66fa83b0b178c0367bef0a132163db9b106c70c4c2",
+      "bytes": 8159
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/executed-sources/evaluate_completed_run.py": {
+      "sha256": "2bb93673d0dd7633f19a066977a6a6e6a6c2348270ac202a1789a336dbe08b7f",
+      "bytes": 11070
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/executed-sources/evaluate_visdrone_coco_style.py": {
+      "sha256": "9c550f903b55ed042c6553ca6b36426d91fba5dbe3e0e2ffba81f204e7008bac",
+      "bytes": 20677
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/executed-sources/evaluate_visdrone_det_strict.py": {
+      "sha256": "c54f925be2c70fe90e57c123ccc7c2653e83b7800e7d8209196b5f1df6e0f460",
+      "bytes": 8767
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/executed-sources/plot_assignment_evolution.py": {
+      "sha256": "1ab3c9eca6e5def771b75c37b308fd8bcccf13ca6d6af48cdd6807048fbf9e76",
+      "bytes": 7202
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/executed-sources/run_p1_v2_fixed.py": {
+      "sha256": "ddaef0004c46e4165d1afc756daa9eada93b9295b167502d4743bb1928fa4a3a",
+      "bytes": 5251
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/executed-sources/run_p1_v2_matlab_alignment.py": {
+      "sha256": "cf8cade515db29ed90200281ab5964f5a5bfc6e11691549795653476f2026a50",
+      "bytes": 6668
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/executed-sources/run_visdrone_official_matlab.m": {
+      "sha256": "9d71ec2d4c1e2c4294ffea769da90203a97ba291b358f638ca8d67aa8718cb0e",
+      "bytes": 1170
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/figures/assignment-source-data.csv": {
+      "sha256": "6915ecff06afa724312acf64a3a6e4b072b8360ee6ba105de4a9dc566a1d6845",
+      "bytes": 116412
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/figures/caption.md": {
+      "sha256": "d03d8882b8120a8063d67a3611dcf9f6b9c6274e655935c57f499dae1f9f87c0",
+      "bytes": 470
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/figures/figure-manifest.json": {
+      "sha256": "93cf60cc3a46eca683513bd8a7ff3b02fde8d9a6d7becf5b13c790da9cb256e6",
+      "bytes": 11706
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/figures/positive-count-evolution-topk10_topk210.pdf": {
+      "sha256": "c7c180b461dbb2605618c55fde9eccd2fb499b8b1cb0bd8487a41bc4df0a0588",
+      "bytes": 34063
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/figures/positive-count-evolution-topk10_topk210.png": {
+      "sha256": "d5504e7843a8f15e06dfa034563e2207e5b2884bb18607004cc085ab2439add3",
+      "bytes": 217841
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/figures/positive-count-evolution-topk10_topk210.svg": {
+      "sha256": "fb6d6ae8fca019e58351da1cb9676d07bf0a210fbb6f4ad958f117b321449b23",
+      "bytes": 29236
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/figures/qa-notes.md": {
+      "sha256": "0355c25fe9f78c6f8c0d76c8b756ebff283fd6d9f09031711c99da60f78bbb0c",
+      "bytes": 1609
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/matlab-attempt/comparison.json": {
+      "sha256": "e890db4059f9372464b97e7fa3c6ec1194a8db53d2aad3594ea3d0db842851ba",
+      "bytes": 132693
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/matlab-attempt/launch.json": {
+      "sha256": "8afde21d1127779f54f70fab5cf8cc44cb7b364ee99e8ba1957221e2f842621b",
+      "bytes": 132300
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/matlab-attempt/stderr.log": {
+      "sha256": "0b611563ac0ee0ee74cb30a954872557a7c565d1cf57e1ca3ce3ffb6e511bf97",
+      "bytes": 177
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/matlab-attempt/stdout.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/pause-manifest.json": {
+      "sha256": "55c5b5c5abb96232ede3c22f7b1dca73d140bc8acf4e6a9fd4d5abcf05130eb7",
+      "bytes": 2085
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/prediction-archive-manifest.json": {
+      "sha256": "0ce6dba3bbbe97d33ab6bbe2cac5dee892b1aad0eb7457c253af2d365d896768",
+      "bytes": 57586
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/prediction-provenance.json": {
+      "sha256": "e24783b1d3a4855570a5ba5b6180f06060e2ffb9923153e882ec82f2912282cc",
+      "bytes": 857
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/predictions-det-548.zip": {
+      "sha256": "335c2a1c3f02a5a2b0bcbf01f6d1257d3f4eea5360edb11861c6a2ee01dc4b5f",
+      "bytes": 4226647
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/predictions.json.gz": {
+      "sha256": "cae667cb7bffe89a1bc03e6ef7ab9911ee6dd7c81a33ec412e4099484aca938d",
+      "bytes": 4490462
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/results.csv": {
+      "sha256": "3ea1d96d9c5b0f3b37222ffc37945bf0efd043f68852c66bb14e343eaba8036d",
+      "bytes": 25735
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/resumption-record.md": {
+      "sha256": "99c83208869756cf2234a292c44f6120af5c65f73ede63120209a39534686704",
+      "bytes": 2726
+    },
+    "results/closure-evaluation/p1-v2-fixed-s20260825-stats120/training-log-manifest.json": {
+      "sha256": "35a9ec1e6009afc3e08d6083dbd3875e588f4d0efca83f67b17427161c78b0b1",
+      "bytes": 3927
+    },
+    "results/report-table-verification-20260915.json": {
+      "sha256": "966d92bfb54cef7ba3b169e3690507279fbeba0ae8288c596fe5adc22f801da5",
+      "bytes": 804
+    },
+    "scripts/archive_p0_raw_logs.py": {
+      "sha256": "7b65285e34c6fd445088ae0f86cb79a5d6d42cd0ccece1642d00ede507f86006",
+      "bytes": 5210
+    },
+    "scripts/evaluate_completed_run.py": {
+      "sha256": "2bb93673d0dd7633f19a066977a6a6e6a6c2348270ac202a1789a336dbe08b7f",
+      "bytes": 11070
+    },
+    "scripts/package_p0_predictions.py": {
+      "sha256": "29ebf054199905b33a15ce5447dc18a64ac2ae6862382b3e0cd4995ce8a78f68",
+      "bytes": 4016
+    },
+    "scripts/plot_assignment_evolution.py": {
+      "sha256": "1ab3c9eca6e5def771b75c37b308fd8bcccf13ca6d6af48cdd6807048fbf9e76",
+      "bytes": 7202
+    },
+    "scripts/run_p1_v2_matlab_alignment.py": {
+      "sha256": "cf8cade515db29ed90200281ab5964f5a5bfc6e11691549795653476f2026a50",
+      "bytes": 6668
+    },
+    "scripts/verify_closure_report.py": {
+      "sha256": "eafed717dc2ee09560c445cce08d631b8f5ec5a1b8fc079edea7b1cd0b11e73b",
+      "bytes": 5586
+    },
+    "scripts/verify_completed_v2.py": {
+      "sha256": "9885e577ac710e156808d7cb53e69ed1cdda1622c4e82d0f864c7587e41d002f",
+      "bytes": 9769
+    },
+    "scripts/verify_v2_publication.py": {
+      "sha256": "b0404836abb233addc51e7fc5906f4f6fa79cd0bdb60c8bdddf0b13f970eb9de",
+      "bytes": 6029
+    },
+    "tests/test_archive_raw_logs.py": {
+      "sha256": "1ac2c793284acd9d73c562b08f939496ccf272b250268008762e489161d37950",
+      "bytes": 5146
+    },
+    "tests/test_verify_completed_v2.py": {
+      "sha256": "2aab97b99758000fb6bc8dcb5600450f3d26e05f0b68441874d519c65c338116",
+      "bytes": 1662
+    }
+  },
+  "scope": "Bundle hashes, gzip/548 DET roundtrip, 120 statistics hashes, displayed report values; not new MATLAB success or P1 acceptance"
+}

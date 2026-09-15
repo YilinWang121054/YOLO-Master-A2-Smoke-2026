@@ -1,0 +1,45 @@
+{
+  "status": "paused_by_user",
+  "paused_at": "2026-09-14T09:47:10.9474190+08:00",
+  "run": "F:/YOLO-Master-A2-P1/p1-v2-fixed-s20260825-stats120",
+  "backup": "F:/YOLO-Master-A2-P1/user-pauses/20260914-0947-p1-v2-fixed-s20260825-stats120",
+  "completed_epochs": 64,
+  "resume_from_epoch": 65,
+  "stopped_pid": 44636,
+  "checkpoint_verified_with_optimizer_and_scaler": true,
+  "source_commit": "52c2befa50706b9dff13b6e0813b19413d9f532d",
+  "heartbeat": "PAUSED",
+  "disabled_tasks": [
+    "YOLO-Master-A2-P1-V2-Fixed-Resume",
+    "YOLO-Master-A2-P1-Seed3-Chain",
+    "YOLO-Master-A2-CPU-Evaluation"
+  ],
+  "files": [
+    {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-v2-fixed-s20260825-stats120\\weights\\last.pt",
+      "backup": "F:\\YOLO-Master-A2-P1\\user-pauses\\20260914-0947-p1-v2-fixed-s20260825-stats120\\last.pt",
+      "sha256": "b62b2875eb20e67f0126a41ff86fcb80d8baed4ab841155dcf7a90d76b5cd1c9",
+      "bytes": 45550559
+    },
+    {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-v2-fixed-s20260825-stats120\\weights\\last_healthy.pt",
+      "backup": "F:\\YOLO-Master-A2-P1\\user-pauses\\20260914-0947-p1-v2-fixed-s20260825-stats120\\last_healthy.pt",
+      "sha256": "b3474a7063198e49680c1c1dbc2c4ece0becab83018cd48bd4917e80f0f590dd",
+      "bytes": 61065544
+    },
+    {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-v2-fixed-s20260825-stats120\\args.yaml",
+      "backup": "F:\\YOLO-Master-A2-P1\\user-pauses\\20260914-0947-p1-v2-fixed-s20260825-stats120\\args.yaml",
+      "sha256": "eab76f261004119d3de732a1698398c3805e84023ffc41c5f3fd140562ada67e",
+      "bytes": 8581
+    },
+    {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-v2-fixed-s20260825-stats120\\results.csv",
+      "backup": "F:\\YOLO-Master-A2-P1\\user-pauses\\20260914-0947-p1-v2-fixed-s20260825-stats120\\results.csv",
+      "sha256": "9930e153541d4554a03f2fe2b4f728c761a22998dd9a21aac84003c5f7cbe123",
+      "bytes": 13883
+    }
+  ],
+  "assignment_records": 64,
+  "note": "Incomplete epoch 65 will replay from completed epoch 64. No frozen parameters changed. Do not resume until user requests continuation."
+}

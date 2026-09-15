@@ -1,0 +1,72 @@
+{
+  "run": "p1-v2-fixed-s20260825-stats120",
+  "generated_at": "2026-09-14T21:05:23.676205+00:00",
+  "scope": "Original stdout/stderr plus recovery metadata; failures retained; no log trimming or re-encoding",
+  "status": "local_archive_not_a_publication_or_acceptance_certificate",
+  "completed_epochs": 120,
+  "missing_online_assignment_epochs": [],
+  "source_directories": [
+    {
+      "label": "recovery",
+      "source": "F:\\YOLO-Master-A2-P1\\recovery-logs\\p1-v2-fixed-s20260825-stats120",
+      "status": "present",
+      "note": "All observed .log/.json files are archived below"
+    }
+  ],
+  "records": [
+    {
+      "source": "F:\\YOLO-Master-A2-P1\\recovery-logs\\p1-v2-fixed-s20260825-stats120\\initial.stderr.log",
+      "archived": "logs/closure-evaluation/p1-v2-fixed-s20260825-stats120/training-original/recovery/initial.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "F:\\YOLO-Master-A2-P1\\recovery-logs\\p1-v2-fixed-s20260825-stats120\\initial.stdout.log",
+      "archived": "logs/closure-evaluation/p1-v2-fixed-s20260825-stats120/training-original/recovery/initial.stdout.log",
+      "bytes": 17644622,
+      "sha256": "c92d80af923ba082c5c7d2f06cf656ee62ed1ec06ad926bb8f70a573c1ed1bf6"
+    },
+    {
+      "source": "F:\\YOLO-Master-A2-P1\\recovery-logs\\p1-v2-fixed-s20260825-stats120\\resume-20260914-184913.stderr.log",
+      "archived": "logs/closure-evaluation/p1-v2-fixed-s20260825-stats120/training-original/recovery/resume-20260914-184913.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "F:\\YOLO-Master-A2-P1\\recovery-logs\\p1-v2-fixed-s20260825-stats120\\resume-20260914-184913.stdout.log",
+      "archived": "logs/closure-evaluation/p1-v2-fixed-s20260825-stats120/training-original/recovery/resume-20260914-184913.stdout.log",
+      "bytes": 15284436,
+      "sha256": "84f0e133240357834378e62d8cde1e654134b58f496ec5f43f074d410520205e"
+    },
+    {
+      "source": "F:\\YOLO-Master-A2-P1\\recovery-logs\\p1-v2-fixed-s20260825-stats120\\latest-check.json",
+      "archived": "logs/closure-evaluation/p1-v2-fixed-s20260825-stats120/training-original/recovery/latest-check.json",
+      "bytes": 181,
+      "sha256": "61e642f2bedb8d46c94c235a5c5303064e11eb381d09f15d24f63b7594262cba"
+    },
+    {
+      "source": "F:\\YOLO-Master-A2-P1\\recovery-logs\\p1-v2-fixed-s20260825-stats120\\latest-resume.json",
+      "archived": "logs/closure-evaluation/p1-v2-fixed-s20260825-stats120/training-original/recovery/latest-resume.json",
+      "bytes": 1264,
+      "sha256": "a2c90eb8f01a0721aa9a2dbcf70fe5926c873708964c67c7fc7db5ddfaaaf875"
+    },
+    {
+      "source": "F:\\YOLO-Master-A2-P1\\recovery-logs\\p1-v2-fixed-s20260825-stats120\\launch.json",
+      "archived": "logs/closure-evaluation/p1-v2-fixed-s20260825-stats120/training-original/recovery/launch.json",
+      "bytes": 585,
+      "sha256": "3b3524940746f00493ce40309a79ab8b382b4435ac089a06ea1fb8411dd4a226"
+    },
+    {
+      "source": "F:\\YOLO-Master-A2-P1\\recovery-logs\\p1-v2-fixed-s20260825-stats120\\runner-20260913-214451-201449.json",
+      "archived": "logs/closure-evaluation/p1-v2-fixed-s20260825-stats120/training-original/recovery/runner-20260913-214451-201449.json",
+      "bytes": 11440,
+      "sha256": "28275cb3346d57d777cb500ea0d8b7f8a12f785dff7ad4b0c6c321f43fe61962"
+    },
+    {
+      "source": "F:\\YOLO-Master-A2-P1\\recovery-logs\\p1-v2-fixed-s20260825-stats120\\runner-20260914-184919-932140.json",
+      "archived": "logs/closure-evaluation/p1-v2-fixed-s20260825-stats120/training-original/recovery/runner-20260914-184919-932140.json",
+      "bytes": 11537,
+      "sha256": "5179b54f36462b61fda71b171faff1b14d39f35e80d084c6c6d1500d5417e1f7"
+    }
+  ]
+}

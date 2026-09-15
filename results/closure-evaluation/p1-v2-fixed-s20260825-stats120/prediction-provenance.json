@@ -1,0 +1,27 @@
+{
+  "protocol": {
+    "source_commit": "52c2befa50706b9dff13b6e0813b19413d9f532d",
+    "checkpoint_sha256": "a536bedc80fe2e13c5723c1c1e9636393234067f142ec1fc56e98f1b89d24223",
+    "data_sha256": "2fdb317ec85f9e68a6669c4ea1b85789525b569cfb5a508eeac79f906c168c0a",
+    "device": "cpu",
+    "threads": 2,
+    "imgsz": 800,
+    "batch": 4,
+    "quantize": 32,
+    "max_det": 500,
+    "conf": 0.001,
+    "iou": 0.7,
+    "rect": true,
+    "augment": false,
+    "workers": 0
+  },
+  "sha256": "d3035bcc1bb3de7b345bace247363675018654d6203c51a2f396239bc9dcc9f7",
+  "images": 548,
+  "training_validator_metrics": {
+    "metrics/precision(B)": 0.4738756806128158,
+    "metrics/recall(B)": 0.3685341913006312,
+    "metrics/mAP50(B)": 0.3599612096302126,
+    "metrics/mAP50-95(B)": 0.20688889960788162,
+    "fitness": 0.20688889960788162
+  }
+}

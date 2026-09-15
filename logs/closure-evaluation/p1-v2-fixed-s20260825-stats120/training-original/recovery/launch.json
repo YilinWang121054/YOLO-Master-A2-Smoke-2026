@@ -1,0 +1,15 @@
+{
+  "status": "launched_not_yet_verified",
+  "pid": 44636,
+  "command": [
+    "F:\\conda-envs\\yolo-master\\python.exe",
+    "-X",
+    "utf8",
+    "E:\\desktop\\\u4fdd\u7814+\u5de5\u4f5c\\\u5c31\u4e1a\\\u5b9e\u8df5\\\u817e\u8baf\u7280\u725b\u9e1f\\YOLO-Master-A2-Smoke-2026\\scripts\\run_p1_v2_fixed.py"
+  ],
+  "started_at": "2026-09-13T13:44:43.394167+00:00",
+  "run_dir": "F:\\YOLO-Master-A2-P1\\p1-v2-fixed-s20260825-stats120",
+  "log_dir": "F:\\YOLO-Master-A2-P1\\recovery-logs\\p1-v2-fixed-s20260825-stats120",
+  "epochs": 120,
+  "online_statistics_required": true
+}
