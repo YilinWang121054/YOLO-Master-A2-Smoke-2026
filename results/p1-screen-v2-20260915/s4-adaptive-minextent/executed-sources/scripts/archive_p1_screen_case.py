@@ -102,7 +102,7 @@ def validate_child_logs(logs):
         event, receipt = read(launch), read(receipt_path)
         if (
             receipt.get("schema_version") != 1
-            or receipt.get("status") not in {"interrupted_after_shutdown", "interrupted_after_unexpected_reboot"}
+            or receipt.get("status") != "interrupted_after_shutdown"
             or "exit_code" not in receipt
             or receipt["exit_code"] is not None
             or receipt.get("child_present_at_observation") is not False
@@ -112,14 +112,9 @@ def validate_child_logs(logs):
         expected = {p.name: sha(p) for p in (launch, related[".stdout.log"], related[".stderr.log"])}
         if receipt.get("original_files_sha256") != expected:
             raise ValueError("Interrupted original log hashes differ")
-        # Event 41 is recorded during the next boot; it is not an exact stop time.
-        if receipt["status"] == "interrupted_after_shutdown":
-            evidence_key, expected_event = "shutdown_event", (1074, "User32")
-        else:
-            evidence_key, expected_event = "unexpected_restart_event", (41, "Microsoft-Windows-Kernel-Power")
-        shutdown, reboot = receipt.get(evidence_key, {}), receipt.get("boot_event", {})
+        shutdown, reboot = receipt.get("shutdown_event", {}), receipt.get("boot_event", {})
         if (
-            (shutdown.get("id"), shutdown.get("provider")) != expected_event
+            (shutdown.get("id"), shutdown.get("provider")) != (1074, "User32")
             or (reboot.get("id"), reboot.get("provider")) != (6005, "EventLog")
             or not all(isinstance(e.get("record_id"), int) and e["record_id"] > 0 for e in (shutdown, reboot))
         ):

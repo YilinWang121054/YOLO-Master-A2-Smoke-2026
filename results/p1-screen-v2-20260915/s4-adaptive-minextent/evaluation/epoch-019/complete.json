@@ -1,0 +1,65 @@
+{
+  "checkpoint_sha256": "8489f083f1b23132559228b05ff94dcef428228f60f66aa35762d7eee8f3b42e",
+  "config_sha256": "fa913f6ed227e9d0d624c847fbe8fff145ea2782e13ce4ffd43ac079b9f27626",
+  "case": "s4-adaptive-minextent",
+  "epoch": 19,
+  "device": "cpu",
+  "quantize": 32,
+  "threads": 2,
+  "batch": 4,
+  "imgsz": 800,
+  "conf": 0.001,
+  "iou": 0.7,
+  "max_det": 500,
+  "rect": true,
+  "augment": false,
+  "workers": 0,
+  "started_at": "2026-09-17T07:42:54.307359+00:00",
+  "completed_at": "2026-09-17T07:49:36.154664+00:00",
+  "images": 548,
+  "metrics": {
+    "AP": 13.701672486795067,
+    "AP50": 26.276186781026198,
+    "AP75": 12.502542685545174,
+    "AR500": 29.301979977803303,
+    "APs": 6.72132386761567,
+    "APm": 19.10739596814202,
+    "APl": 22.14424609743064,
+    "ARs@500": 19.50678298817339
+  },
+  "commands": [
+    [
+      "F:\\conda-envs\\yolo-master\\python.exe",
+      "-X",
+      "utf8",
+      "E:\\desktop\\\u4fdd\u7814+\u5de5\u4f5c\\\u5c31\u4e1a\\\u5b9e\u8df5\\\u817e\u8baf\u7280\u725b\u9e1f\\YOLO-Master-A2-Smoke-2026\\scripts\\export_visdrone_det_txt.py",
+      "--predictions",
+      "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\evaluation\\s4-adaptive-minextent\\epoch-019\\attempt-2026-09-17T074249755987+0000\\val\\predictions.json",
+      "--annotations-dir",
+      "F:\\datasets\\VisDrone\\VisDrone2019-DET-val\\annotations",
+      "--output-dir",
+      "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\evaluation\\s4-adaptive-minextent\\epoch-019\\attempt-2026-09-17T074249755987+0000\\det"
+    ],
+    [
+      "F:\\conda-envs\\yolo-master\\python.exe",
+      "-X",
+      "utf8",
+      "E:\\desktop\\\u4fdd\u7814+\u5de5\u4f5c\\\u5c31\u4e1a\\\u5b9e\u8df5\\\u817e\u8baf\u7280\u725b\u9e1f\\YOLO-Master-A2-Smoke-2026\\scripts\\evaluate_visdrone_det_strict.py",
+      "--dataset-dir",
+      "F:\\datasets\\VisDrone\\VisDrone2019-DET-val",
+      "--results-dir",
+      "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\evaluation\\s4-adaptive-minextent\\epoch-019\\attempt-2026-09-17T074249755987+0000\\det",
+      "--output",
+      "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\evaluation\\s4-adaptive-minextent\\epoch-019\\attempt-2026-09-17T074249755987+0000\\det-metrics.json"
+    ]
+  ],
+  "files_sha256": {
+    "attempt-2026-09-17T074249755987+0000/launch.json": "de704eb4fb826030d41746af3fbd6afbdb5be072d6aef645f5b02a8966eb9b19",
+    "attempt-2026-09-17T074249755987+0000/det-metrics.json": "8e1bc0946970a5fcd7336755309a163529a3e02f5c297639a86f6d2d14473be3",
+    "attempt-2026-09-17T074249755987+0000/area-metrics.json": "d8d5b8fc9d785a17ceea545690a8af65c4ed4a296d9724351278bc66cd3f0d84",
+    "attempt-2026-09-17T074249755987+0000/conversion.log": "af5bd4bf5794e590b24be7e7270b69e4ef472bc58924d2b172e00ce29f8a9072",
+    "attempt-2026-09-17T074249755987+0000/det-evaluation.log": "ae8547829ac6cfcba273f795ef1b3cff0135e93c8dba1030b7cc41e795b1782f",
+    "attempt-2026-09-17T074249755987+0000/val/predictions.json": "78c3dd44d1c0f5cb0dd00979a7b30f77f3ed6dfe3e640be9b8f8a3c61bed5b99"
+  },
+  "scope": "20-epoch screening, not a P1 improvement claim"
+}

@@ -1,0 +1,69 @@
+{
+  "observed_at": "2026-09-17T08:12:56.304723+00:00",
+  "scope": "Published single-case screening evidence and observed login recovery; not P1 acceptance",
+  "case": "s4-adaptive-minextent",
+  "archive_manifest_sha256": "440ee48fd4d6b78554fef61db70a5e112d1e47b042ebcd4b661cbdec99d4f666",
+  "verified_archive_files": 105,
+  "gzip_round_trips_verified": true,
+  "doc_sha256": "a68f71c3e853bfa2518c4dfca7363da18306b625bb15b38f9cc51546e9e39576",
+  "checked_numeric_cells_and_epoch_values": 44,
+  "screening_eligible": false,
+  "delta": {
+    "AP": 0.3673731787654564,
+    "AP50": 0.6567461703172945,
+    "AP75": 0.38758578942475275,
+    "AR500": 0.3421191200795697,
+    "APs": 0.3336735129880539,
+    "APm": 0.16278015937144374,
+    "APl": -2.526110295420498,
+    "ARs@500": 0.6356370731982572
+  },
+  "zero_delta": {
+    "topk10_topk210/small": -0.03766345580714238,
+    "topk10_topk210/medium": -4.512268859027679e-06,
+    "topk10_topk210/large": 0.00015720798616569723
+  },
+  "counts": {
+    "s0-fixed": {
+      "small": {
+        "n": 1358930,
+        "zero": 114508
+      },
+      "medium": {
+        "n": 221618,
+        "zero": 46
+      },
+      "large": {
+        "n": 12722,
+        "zero": 3
+      }
+    },
+    "s4-adaptive-minextent": {
+      "small": {
+        "n": 1358930,
+        "zero": 63326
+      },
+      "medium": {
+        "n": 221618,
+        "zero": 45
+      },
+      "large": {
+        "n": 12722,
+        "zero": 5
+      }
+    }
+  },
+  "frozen_contract_unchanged": true,
+  "tests_exit_code_observed_by_caller": 0,
+  "recovery_files_sha256": {
+    "README.md": "dda68bd211398c0e717a7a25ff12eaedd4f3e9b5874a7b8826ffb8d0b8cfff49",
+    "tests.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tests.stdout.log": "0392a980a87de193773f99feca583a62b12e3fd50f8c210d797349871b3067cc",
+    "interrupted-attempt/gpu-2026-09-17T064804433282+0000.interrupted.json": "7ac6fb79ad2d0714ff43040122a73ca0054af8f5955cca78e24c6aa3a0ebb145",
+    "interrupted-attempt/gpu-2026-09-17T064804433282+0000.launch.json": "b2cfecaed7e7128dc7d104bc82ff4a174aabfbeb16b27acead3fdce922300fb9",
+    "interrupted-attempt/gpu-2026-09-17T064804433282+0000.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "interrupted-attempt/gpu-2026-09-17T064804433282+0000.stdout.log": "b83c0daf8df5b0ee40ae30e485a735b102a316ba316187e326a084c7d8b4182f",
+    "resumed-attempt/gpu-2026-09-17T074145564827+0000.launch.json": "06fc3d5ac75719f63222855c15fae8d7e767f24deab859a63d74d04369a905f9",
+    "resumed-attempt/runner-2026-09-17T074156651169+0000.json": "ccf7106d497da244d3f1f8089ffa007bf4d6eb8cf19f8093bbd8155afce4eab4"
+  }
+}

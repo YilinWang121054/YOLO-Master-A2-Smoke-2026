@@ -165,3 +165,19 @@ def test_normal_exit_still_supported(tmp_path):
     sidecar.unlink()
     (tmp_path / "cpu-attempt.exit.json").write_text('{"exit_code": 0}')
     assert archive.validate_child_logs(tmp_path) == []
+
+
+@pytest.mark.parametrize("provider", ["Microsoft-Windows-Kernel-Power", "User32", None])
+def test_unexpected_reboot_requires_correct_os_event(tmp_path, provider):
+    sidecar, receipt = interrupted_logs(tmp_path)
+    receipt["status"] = "interrupted_after_unexpected_reboot"
+    receipt["unexpected_restart_event"] = {"id": 41, "provider": provider,
+        "record_id": 10, "time": "2026-09-16T03:31:15+08:00"}
+    del receipt["shutdown_event"]
+    sidecar.write_text(json.dumps(receipt), encoding="utf-8")
+    if provider == "Microsoft-Windows-Kernel-Power":
+        assert archive.validate_child_logs(tmp_path) == [sidecar.name]
+        assert not list(tmp_path.glob("*.exit.json"))
+    else:
+        with pytest.raises(ValueError, match="event evidence"):
+            archive.validate_child_logs(tmp_path)

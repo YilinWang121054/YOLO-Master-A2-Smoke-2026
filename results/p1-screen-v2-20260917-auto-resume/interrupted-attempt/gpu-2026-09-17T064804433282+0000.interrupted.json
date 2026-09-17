@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "status": "interrupted_after_unexpected_reboot",
+  "worker": "gpu",
+  "case": "s5-adaptive-compact-k8",
+  "pid": 39596,
+  "started_at": "2026-09-17T06:48:04.449334+00:00",
+  "exit_code": null,
+  "child_present_at_observation": false,
+  "observed_at": "2026-09-17T08:07:34.0052621+00:00",
+  "unexpected_restart_event": {
+    "id": 41,
+    "provider": "Microsoft-Windows-Kernel-Power",
+    "record_id": 175057,
+    "time": "2026-09-17T15:40:15.1790246+08:00"
+  },
+  "boot_event": {
+    "id": 6005,
+    "provider": "EventLog",
+    "record_id": 175042,
+    "time": "2026-09-17T15:40:25.9229854+08:00"
+  },
+  "original_files_sha256": {
+    "gpu-2026-09-17T064804433282+0000.launch.json": "b2cfecaed7e7128dc7d104bc82ff4a174aabfbeb16b27acead3fdce922300fb9",
+    "gpu-2026-09-17T064804433282+0000.stdout.log": "b83c0daf8df5b0ee40ae30e485a735b102a316ba316187e326a084c7d8b4182f",
+    "gpu-2026-09-17T064804433282+0000.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_source": "Windows System event log and current process inventory inspected on 2026-09-17; original child launch/stdout/stderr hashed after the reboot.",
+  "recovery_observation": "The login task started a new GPU supervisor and child on 2026-09-17 15:41. Its runner record selected completed epoch 11 with no checkpoint errors and no CSV rewind; epoch 12 was subsequently saved.",
+  "limits": "No original exit code or exact interruption time was observed. Event 41 records an unclean previous shutdown at the next boot and does not identify the cause. This receipt is not a successful-exit record."
+}

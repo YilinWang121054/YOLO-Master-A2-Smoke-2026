@@ -1,0 +1,18 @@
+{
+  "checkpoint_sha256": "51f0def480b760d47e1dc3f45cb996351c0f922053a87c6324c0ce79c9ea7a7a",
+  "config_sha256": "fa913f6ed227e9d0d624c847fbe8fff145ea2782e13ce4ffd43ac079b9f27626",
+  "case": "s4-adaptive-minextent",
+  "epoch": 17,
+  "device": "cpu",
+  "quantize": 32,
+  "threads": 2,
+  "batch": 4,
+  "imgsz": 800,
+  "conf": 0.001,
+  "iou": 0.7,
+  "max_det": 500,
+  "rect": true,
+  "augment": false,
+  "workers": 0,
+  "started_at": "2026-09-15T19:19:59.791473+00:00"
+}
