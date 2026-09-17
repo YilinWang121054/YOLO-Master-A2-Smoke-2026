@@ -1,0 +1,11 @@
+{
+  "record_type": "supervisor_launcher_recovery",
+  "observed_on": "2026-09-17",
+  "failed_attempt": "Existing GPU scheduled task, started 14:45:48 Asia/Shanghai",
+  "failure": "Git status subprocess exited with 3221225794 during frozen-source verification before training child launch.",
+  "diagnostic": "The unchanged verify_frozen() routine subsequently passed using F:/conda-envs/yolo-master/python.exe in the current session.",
+  "root_cause": "Not yet established; do not attribute this startup failure to the model or checkpoint.",
+  "action": "Preserve the failure marker; start only the unchanged GPU supervisor with python.exe, a hidden window and redirected stdout/stderr.",
+  "protocol_changes": "None",
+  "limits": "This records the launch decision, not proof that training has resumed."
+}

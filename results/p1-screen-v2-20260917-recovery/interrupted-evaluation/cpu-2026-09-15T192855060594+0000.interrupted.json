@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "status": "interrupted_after_shutdown",
+  "worker": "cpu",
+  "case": "s4-adaptive-minextent",
+  "pid": 42912,
+  "started_at": "2026-09-15T19:28:55.087943+00:00",
+  "exit_code": null,
+  "child_present_at_observation": false,
+  "observed_at": "2026-09-17T06:50:00+00:00",
+  "shutdown_event": {
+    "id": 1074,
+    "provider": "User32",
+    "record_id": 174250,
+    "time": "2026-09-16T03:29:24.0598643+08:00"
+  },
+  "boot_event": {
+    "id": 6005,
+    "provider": "EventLog",
+    "record_id": 174281,
+    "time": "2026-09-16T03:31:20.7823509+08:00"
+  },
+  "original_files_sha256": {
+    "cpu-2026-09-15T192855060594+0000.launch.json": "fdafef8233df9ee361768e3bbe09d09fd1774fa3717ed1dea481495672cded82",
+    "cpu-2026-09-15T192855060594+0000.stdout.log": "7b12176e9021197b9a9a6db77f252e05dda757686e4ce758e981fd9766b62161",
+    "cpu-2026-09-15T192855060594+0000.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_source": "Windows System event log queried 2026-09-17; original launch/log hashes and current process inventory checked in the same recovery session.",
+  "limits": "Exit code was not recorded. This is a retrospective interruption receipt, not an original exit event or successful evaluation. Epoch 19 must be evaluated in a new attempt directory."
+}

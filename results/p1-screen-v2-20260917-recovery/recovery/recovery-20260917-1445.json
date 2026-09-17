@@ -1,0 +1,30 @@
+{
+  "record_type": "authorized_checkpoint_recovery_preflight",
+  "observed_on": "2026-09-17",
+  "timezone": "Asia/Shanghai",
+  "authorization": "User explicitly requested continuation of tasks and experiments on 2026-09-17.",
+  "case": "s5-adaptive-compact-k8",
+  "original_failure_sha256": "191e595d701fa20a8819e1db072ba3984eb8330f8a123f3a2df05a3e4f723d71",
+  "original_exit_code": 1073807364,
+  "original_child_ended_at": "2026-09-16T03:29:25.888776+08:00",
+  "system_shutdown_evidence": [
+    {"event_id": 1074, "provider": "User32", "time": "2026-09-16T03:29:24.0598643+08:00"},
+    {"event_id": 6006, "provider": "EventLog", "time": "2026-09-16T03:30:19+08:00"}
+  ],
+  "interpretation": "Interruption coincides with OS shutdown; not evidence of an algorithmic failure.",
+  "checkpoint_path": "s5-adaptive-compact-k8/weights/last.pt",
+  "checkpoint_sha256": "2e59f733b1df3d86cbf70adf709232e7042da906cbd644365ba666ead6776490",
+  "completed_epochs": 9,
+  "resume_epoch_one_based": 10,
+  "csv_epochs": 9,
+  "assignment_stat_epochs": 9,
+  "csv_rewind_required": false,
+  "checkpoint_config_matches": true,
+  "optimizer_present": true,
+  "scaler_present": true,
+  "floating_model_ema_optimizer_tensors_finite": true,
+  "prior_five_training_completions_hash_verified": true,
+  "frozen_source_and_contract_unchanged": true,
+  "planned_action": "Preserve failure marker under logs/recovery, then start only the existing GPU scheduled task. Existing CPU supervisor remains running.",
+  "limits": "The incomplete tenth epoch is rerun. No batch-level or bit-for-bit continuation claim. This record is a preflight, not a successful-restart receipt."
+}

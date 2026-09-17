@@ -1,0 +1,199 @@
+{
+  "observed_at": "2026-09-17T06:57:26.613007+00:00",
+  "scope": "Recovery and provenance only, not a completed screening result or P1 acceptance",
+  "training_pid_observed": 39596,
+  "training_command_observed": [
+    "F:\\conda-envs\\yolo-master\\python.exe",
+    "-X",
+    "utf8",
+    "E:\\desktop\\\u4fdd\u7814+\u5de5\u4f5c\\\u5c31\u4e1a\\\u5b9e\u8df5\\\u817e\u8baf\u7280\u725b\u9e1f\\YOLO-Master-A2-Smoke-2026\\scripts\\run_p1_screen.py",
+    "--case",
+    "s5-adaptive-compact-k8"
+  ],
+  "completed_training_cases_hash_verified": [
+    "s0-fixed",
+    "s1-adaptive-reference",
+    "s2-adaptive-k10",
+    "s3-adaptive-compact",
+    "s4-adaptive-minextent"
+  ],
+  "completed_evaluations_hash_verified": 23,
+  "s5_csv_epochs_at_observation": 9,
+  "interrupted_cpu_receipts_validated": [
+    "cpu-2026-09-15T192855060594+0000.interrupted.json"
+  ],
+  "frozen_protocol_unchanged": true,
+  "test_command": [
+    "F:\\conda-envs\\yolo-master\\python.exe",
+    "-X",
+    "utf8",
+    "-m",
+    "pytest",
+    "tests/test_archive_p1_screen_case.py",
+    "tests/test_p1_screen_contract.py",
+    "-q",
+    "-o",
+    "addopts="
+  ],
+  "tests_exit_code": 0,
+  "files": {
+    "recovery/gpu-failure-20260916-032925.acknowledged-20260917.json": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\logs\\recovery\\gpu-failure-20260916-032925.acknowledged-20260917.json",
+      "source_sha256": "191e595d701fa20a8819e1db072ba3984eb8330f8a123f3a2df05a3e4f723d71",
+      "source_bytes": 540,
+      "archived_sha256": "191e595d701fa20a8819e1db072ba3984eb8330f8a123f3a2df05a3e4f723d71",
+      "archived_bytes": 540,
+      "encoding": "original bytes"
+    },
+    "recovery/gpu-failure-20260917-144553.acknowledged.json": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\logs\\recovery\\gpu-failure-20260917-144553.acknowledged.json",
+      "source_sha256": "812568b50a70c86d65af07edb6bf62f9fead8ae6a35a3166df4c38fa5f987061",
+      "source_bytes": 351,
+      "archived_sha256": "812568b50a70c86d65af07edb6bf62f9fead8ae6a35a3166df4c38fa5f987061",
+      "archived_bytes": 351,
+      "encoding": "original bytes"
+    },
+    "recovery/launcher-recovery-20260917-1448.json": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\logs\\recovery\\launcher-recovery-20260917-1448.json",
+      "source_sha256": "6a36dfc4a48ca13698b51d97dfde301df1e36753792a0e53a9fb5033d04d9a04",
+      "source_bytes": 804,
+      "archived_sha256": "6a36dfc4a48ca13698b51d97dfde301df1e36753792a0e53a9fb5033d04d9a04",
+      "archived_bytes": 804,
+      "encoding": "original bytes"
+    },
+    "recovery/recovery-20260917-1445.json": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\logs\\recovery\\recovery-20260917-1445.json",
+      "source_sha256": "e2fe5957c6c5532c7464e9462d50b61170d2b7dde2412d44c220dec193603915",
+      "source_bytes": 1644,
+      "archived_sha256": "e2fe5957c6c5532c7464e9462d50b61170d2b7dde2412d44c220dec193603915",
+      "archived_bytes": 1644,
+      "encoding": "original bytes"
+    },
+    "interrupted-evaluation/cpu-2026-09-15T192855060594+0000.launch.json": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\logs\\s4-adaptive-minextent\\cpu-2026-09-15T192855060594+0000.launch.json",
+      "source_sha256": "fdafef8233df9ee361768e3bbe09d09fd1774fa3717ed1dea481495672cded82",
+      "source_bytes": 490,
+      "archived_sha256": "fdafef8233df9ee361768e3bbe09d09fd1774fa3717ed1dea481495672cded82",
+      "archived_bytes": 490,
+      "encoding": "original bytes"
+    },
+    "interrupted-evaluation/cpu-2026-09-15T192855060594+0000.stdout.log": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\logs\\s4-adaptive-minextent\\cpu-2026-09-15T192855060594+0000.stdout.log",
+      "source_sha256": "7b12176e9021197b9a9a6db77f252e05dda757686e4ce758e981fd9766b62161",
+      "source_bytes": 4731,
+      "archived_sha256": "7b12176e9021197b9a9a6db77f252e05dda757686e4ce758e981fd9766b62161",
+      "archived_bytes": 4731,
+      "encoding": "original bytes"
+    },
+    "interrupted-evaluation/cpu-2026-09-15T192855060594+0000.stderr.log": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\logs\\s4-adaptive-minextent\\cpu-2026-09-15T192855060594+0000.stderr.log",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_bytes": 0,
+      "archived_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archived_bytes": 0,
+      "encoding": "original bytes"
+    },
+    "interrupted-evaluation/cpu-2026-09-15T192855060594+0000.interrupted.json": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\logs\\s4-adaptive-minextent\\cpu-2026-09-15T192855060594+0000.interrupted.json",
+      "source_sha256": "b85450f1fac8916e9f745f5627cb8f17cc5ba58f5ded4b9a2fd651070fc82d89",
+      "source_bytes": 1332,
+      "archived_sha256": "b85450f1fac8916e9f745f5627cb8f17cc5ba58f5ded4b9a2fd651070fc82d89",
+      "archived_bytes": 1332,
+      "encoding": "original bytes"
+    },
+    "resumed-training/gpu-2026-09-17T064804433282+0000.launch.json": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\logs\\s5-adaptive-compact-k8\\gpu-2026-09-17T064804433282+0000.launch.json",
+      "source_sha256": "b2cfecaed7e7128dc7d104bc82ff4a174aabfbeb16b27acead3fdce922300fb9",
+      "source_bytes": 461,
+      "archived_sha256": "b2cfecaed7e7128dc7d104bc82ff4a174aabfbeb16b27acead3fdce922300fb9",
+      "archived_bytes": 461,
+      "encoding": "original bytes"
+    },
+    "resumed-training/runner-2026-09-17T064810005253+0000.json": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\logs\\s5-adaptive-compact-k8\\runner-2026-09-17T064810005253+0000.json",
+      "source_sha256": "c72c83ec3768a0979d8291da163326670be6d68ab42c7c672b6b84b2aeb52689",
+      "source_bytes": 11740,
+      "archived_sha256": "c72c83ec3768a0979d8291da163326670be6d68ab42c7c672b6b84b2aeb52689",
+      "archived_bytes": 11740,
+      "encoding": "original bytes"
+    },
+    "gpu-state-snapshot.json": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\gpu-state.json",
+      "source_sha256": "0595f29d17b4e2c18577c1ae8428076eb530ec3ee6f8db0c80d54ef2d4a025b5",
+      "source_bytes": 518,
+      "archived_sha256": "0595f29d17b4e2c18577c1ae8428076eb530ec3ee6f8db0c80d54ef2d4a025b5",
+      "archived_bytes": 518,
+      "encoding": "original bytes"
+    },
+    "cpu-state-snapshot.json": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\cpu-state.json",
+      "source_sha256": "28640a8f8224867be80d0f3d03ef30e6655280f3477e2951b858db2ae307bc3f",
+      "source_bytes": 191,
+      "archived_sha256": "28640a8f8224867be80d0f3d03ef30e6655280f3477e2951b858db2ae307bc3f",
+      "archived_bytes": 191,
+      "encoding": "original bytes"
+    },
+    "duplicate-guard-test/stdout.log": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\logs\\supervisor-gpu-20260917T0655019381806Z-d8b564d8494140138da54f97a4a12295.stdout.log",
+      "source_sha256": "37f618c45196c8e9a706ef47268b4605435c3bba7f8bd49bf81ab0d453f47c18",
+      "source_bytes": 34,
+      "archived_sha256": "37f618c45196c8e9a706ef47268b4605435c3bba7f8bd49bf81ab0d453f47c18",
+      "archived_bytes": 34,
+      "encoding": "original bytes"
+    },
+    "duplicate-guard-test/stderr.log": {
+      "source": "F:\\YOLO-Master-A2-P1\\p1-screen-v2-20260915\\logs\\supervisor-gpu-20260917T0655019381806Z-d8b564d8494140138da54f97a4a12295.stderr.log",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_bytes": 0,
+      "archived_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archived_bytes": 0,
+      "encoding": "original bytes"
+    },
+    "executed-sources/archive_p1_screen_recovery.py": {
+      "source": "E:\\desktop\\\u4fdd\u7814+\u5de5\u4f5c\\\u5c31\u4e1a\\\u5b9e\u8df5\\\u817e\u8baf\u7280\u725b\u9e1f\\YOLO-Master-A2-Smoke-2026\\scripts\\archive_p1_screen_recovery.py",
+      "source_sha256": "9f07786fcc65c47bb60e1eaf5076149a90c97ff7e7a0d3b56ffc786ec1b17176",
+      "source_bytes": 4014,
+      "archived_sha256": "9f07786fcc65c47bb60e1eaf5076149a90c97ff7e7a0d3b56ffc786ec1b17176",
+      "archived_bytes": 4014,
+      "encoding": "original bytes"
+    },
+    "executed-sources/archive_p1_screen_case.py": {
+      "source": "E:\\desktop\\\u4fdd\u7814+\u5de5\u4f5c\\\u5c31\u4e1a\\\u5b9e\u8df5\\\u817e\u8baf\u7280\u725b\u9e1f\\YOLO-Master-A2-Smoke-2026\\scripts\\archive_p1_screen_case.py",
+      "source_sha256": "156fca34fd96a8ef7370dd660a90abe85a3d99092915154f61442095a08876f8",
+      "source_bytes": 9629,
+      "archived_sha256": "156fca34fd96a8ef7370dd660a90abe85a3d99092915154f61442095a08876f8",
+      "archived_bytes": 9629,
+      "encoding": "original bytes"
+    },
+    "executed-sources/start_p1_screen_worker.ps1": {
+      "source": "E:\\desktop\\\u4fdd\u7814+\u5de5\u4f5c\\\u5c31\u4e1a\\\u5b9e\u8df5\\\u817e\u8baf\u7280\u725b\u9e1f\\YOLO-Master-A2-Smoke-2026\\scripts\\start_p1_screen_worker.ps1",
+      "source_sha256": "2749afc0bc57e02728ad89ee9e62ac1e313ed18347c5533c76f0f038dab408a5",
+      "source_bytes": 1599,
+      "archived_sha256": "2749afc0bc57e02728ad89ee9e62ac1e313ed18347c5533c76f0f038dab408a5",
+      "archived_bytes": 1599,
+      "encoding": "original bytes"
+    },
+    "executed-sources/install_p1_screen_recovery.ps1": {
+      "source": "E:\\desktop\\\u4fdd\u7814+\u5de5\u4f5c\\\u5c31\u4e1a\\\u5b9e\u8df5\\\u817e\u8baf\u7280\u725b\u9e1f\\YOLO-Master-A2-Smoke-2026\\scripts\\install_p1_screen_recovery.ps1",
+      "source_sha256": "3e6909f76ff46bb3a176be76b80a931eb4ad61a9eb4b8e915550bf19ed9af5cd",
+      "source_bytes": 1429,
+      "archived_sha256": "3e6909f76ff46bb3a176be76b80a931eb4ad61a9eb4b8e915550bf19ed9af5cd",
+      "archived_bytes": 1429,
+      "encoding": "original bytes"
+    },
+    "executed-sources/test_archive_p1_screen_case.py": {
+      "source": "E:\\desktop\\\u4fdd\u7814+\u5de5\u4f5c\\\u5c31\u4e1a\\\u5b9e\u8df5\\\u817e\u8baf\u7280\u725b\u9e1f\\YOLO-Master-A2-Smoke-2026\\tests\\test_archive_p1_screen_case.py",
+      "source_sha256": "3ce587e3dfcc84fe0fb6446582c3111ada7b2d619f99dbeeb4356684b9bde229",
+      "source_bytes": 5937,
+      "archived_sha256": "3ce587e3dfcc84fe0fb6446582c3111ada7b2d619f99dbeeb4356684b9bde229",
+      "archived_bytes": 5937,
+      "encoding": "original bytes"
+    },
+    "tests.stdout.log": {
+      "archived_sha256": "80b5d4159e0d5d0f40807c87a49a162b205d5aba230a002dc3d5f7aa84a9b0ef"
+    },
+    "tests.stderr.log": {
+      "archived_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+}

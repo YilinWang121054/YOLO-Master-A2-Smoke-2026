@@ -1,0 +1,5 @@
+{
+  "observed_at": "2026-09-17T06:45:53.505132+00:00",
+  "error": "CalledProcessError",
+  "detail": "Command '['git', '-C', 'E:\\\\desktop\\\\\u4fdd\u7814+\u5de5\u4f5c\\\\\u5c31\u4e1a\\\\\u5b9e\u8df5\\\\\u817e\u8baf\u7280\u725b\u9e1f\\\\YOLO-Master', 'status', '--porcelain', '--untracked-files=no']' returned non-zero exit status 3221225794."
+}

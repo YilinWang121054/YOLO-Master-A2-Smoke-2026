@@ -1,0 +1,7 @@
+{
+  "observed_at": "2026-09-17T06:57:04.798319+00:00",
+  "state": "waiting_for_memory",
+  "minimum_free_gib": 4.0,
+  "available_gib": 2.51458740234375,
+  "gpu_startup_settled": true
+}
